@@ -1,4 +1,4 @@
-# kubefuzzthesis
+# KubeFuzzThesis - (kubechainsaw)
 Master project at VU Amsterdam by Prashanth varma dommaraju.  This project focuses on applying error fuzzing to Kubernetes structs, leveraging the strengths of protobuf-mutator for comprehensive error testing.
 
 
@@ -36,5 +36,5 @@ Kubernetes relies heavily on structs and complex data structures to manage and o
    - Go functions receive the fuzzed data, which includes Kubernetes structs, and process them using the Kubernetes client libraries.
    - Customized processing logic in Go functions identifies errors or unexpected behavior in handling Kubernetes structs.
 
-Fuzzing with libprotobuf-mutator and libFuzzer to be a robust strategy for identifying errors within Kubernetes. This methodology provides a comprehensive approach to uncovering unexpected behavior by specifically targeting Kubernetes structs.
+Fuzzing with libprotobuf-mutator and libFuzzer is a robust strategy for identifying errors within Kubernetes. This methodology provides a comprehensive approach to uncovering unexpected behavior by specifically targeting Kubernetes structs.
 
