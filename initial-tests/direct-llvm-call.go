@@ -14,7 +14,7 @@ type SampleStruct struct {
 }
 
 
-
+//export LLVMFuzzerTestOneInput
 func LLVMFuzzerTestOneInput(data *C.char, size C.size_t) C.int {
 	// Cast the input data to the struct
 	inputStruct := (*SampleStruct)(unsafe.Pointer(data))
