@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/libs/protobuf-25.1/src/google/protobuf",
+                "${workspaceFolder}/libs/protobuf-25.1/src",
+                "/private/var/tmp/**",
+                "/private/var/tmp/_bazel_prashanthvarma/9edb70837c02d8d30742c99c5b879e9b/external/com_google_absl"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
