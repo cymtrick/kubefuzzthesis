@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libutf8_range.a CMakeFiles/utf8_range.dir/naive.c.o "CMakeFiles/utf8_range.dir/range2-neon.c.o" "CMakeFiles/utf8_range.dir/range2-sse.c.o"
+/Library/Developer/CommandLineTools/usr/bin/ranlib libutf8_range.a
