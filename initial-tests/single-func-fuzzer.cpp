@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <cstddef>
 #include <iostream>
-#include "../libs/protobuf-25.1/src/google/protobuf/timestamp.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 
 extern "C" void ProcessTimestamp(const uint8_t* data, size_t size);
 
