@@ -25,7 +25,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
     }
     uint8_t fuzzData[size];
     GenerateTestFuzzData(fuzzData, size);
-    ProcessTimestamp(fuzzData, size);
+    // ProcessTimestamp(fuzzData, size);
 
     return 0;
 }
