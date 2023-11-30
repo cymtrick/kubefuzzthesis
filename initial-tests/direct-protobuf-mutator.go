@@ -1,6 +1,7 @@
 package main
-import "C"
+
 import (
+	"C"
 	"fmt"
 	"runtime"
 	"strings"
@@ -13,17 +14,11 @@ type SampleStruct struct {
 	FloatValue float32
 }
 
-
-//export LLVMFuzzerTestOneInput
-func LLVMFuzzerTestOneInput(data *C.char, size C.size_t) C.int {
-	// Cast the input data to the struct
+//export FuzzStruct
+func FuzzStruct(data *C.char, size C.size_t) {
 	inputStruct := (*SampleStruct)(unsafe.Pointer(data))
-
 	processFuzzedData(inputStruct)
-
-	return 0
 }
-
 
 func processFuzzedData(data *SampleStruct) {
 	defer catchPanics()
@@ -52,4 +47,8 @@ func catchPanics() {
 }
 
 func main() {
+	// Keep this running or use a mechanism to keep it alive for fuzzing
+	select {}
 }
+
+//go build -o libgofuzzer.so -buildmode=c-shared FUZZ_TARGET.go
