@@ -1,27 +1,39 @@
 #include <iostream>
 #include "libprotobuf-mutator/src/mutator.h"
 #include "libfuzzstruct.h"
+#include <cstdint>
+#include <cstddef>
+#include <cstring>  
+#include <cstdlib>  
+#include <iostream>
+#include "test-struct.pb.h" 
 
-// Define the protobuf message structure
-struct SampleStruct {
+
+struct testStruct {
   int32_t IntValue;
   char CharValue;
   float FloatValue;
 };
-extern "C" void FuzzStruct(const uint8_t* data, size_t size);
 
-void mutateStruct(SampleStruct* sample) {
-  protobuf_mutator::SimpleMutator mutator;
+void mutateStruct(testStruct* sample) {
+  // Convert SampleStruct to protobuf message
+  teststruct::testStruct protoMessage;
+  // Use protobuf_mutator::Mutator to mutate the protobuf message
+  protobuf_mutator::Mutator mutator;
+  mutator.Mutate(&protoMessage, protoMessage.ByteSizeLong());
 
-  mutator.Mutate(sample, sizeof(SampleStruct));
+  // Convert the mutated protobuf message back to SampleStruct
+  sample->IntValue = protoMessage.intvalue();
+  sample->CharValue = protoMessage.charvalue();
+  sample->FloatValue = protoMessage.floatvalue();
 }
 
 int main() {
-  SampleStruct input;
+  testStruct input;
   for (int i = 0; i < 1000; ++i) {
-    mutateSampleStruct(&input);
+    mutateStruct(&input);
 
-    FuzzSampleStruct(reinterpret_cast<const uint8_t*>(&input), sizeof(SampleStruct));
+    FuzzStruct(reinterpret_cast<char*>(&input), sizeof(testStruct));
   }
 
   return 0;

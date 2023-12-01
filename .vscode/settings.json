@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "*.inc": "cpp"
+        "*.inc": "cpp",
+        "cstdlib": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.sourceDirectory": "/Users/prashanthvarma/Desktop/kubefuzzthesis-main/libs/protobuf-25.1"
