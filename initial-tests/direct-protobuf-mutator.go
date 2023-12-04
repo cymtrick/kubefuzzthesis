@@ -9,9 +9,7 @@ import (
 )
 
 type SampleStruct struct {
-	IntValue   int32
-	CharValue  byte
-	FloatValue float32
+	CharValue byte
 }
 
 //export FuzzStruct
@@ -23,8 +21,8 @@ func FuzzStruct(data *C.char, size C.size_t) {
 func processFuzzedData(data *SampleStruct) {
 	defer catchPanics()
 
-	fmt.Printf("Fuzzing with Struct: IntValue=%d, CharValue=%c, FloatValue=%.2f\n",
-		data.IntValue, data.CharValue, data.FloatValue)
+	fmt.Printf("Fuzzing with Struct:  CharValue=%c\n",
+		data.CharValue)
 }
 
 func catchPanics() {
