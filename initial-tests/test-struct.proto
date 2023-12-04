@@ -3,7 +3,7 @@ syntax = "proto2";
 package teststruct; // Replace with your actual package name
 
 message testStruct {
-  optional int32 IntValue = 1;
-  optional string CharValue = 2;
-  optional float FloatValue = 3;
+  required int32 IntValue = 1;
+  required string CharValue = 2;
+  required float FloatValue = 3;
 }
