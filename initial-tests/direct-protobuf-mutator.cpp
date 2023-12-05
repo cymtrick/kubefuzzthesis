@@ -4,30 +4,34 @@
 #include "test-struct.pb.h"
 
 struct testStruct {
-  teststruct::testStruct protoMessage;
-
-  std::string& CharValue() { return *protoMessage.mutable_charvalue(); }
+  char charValue=2;
+  
 };
 
-void mutateStruct(testStruct* sample) {
-  
-  std::cout << "Before mutation: " << sample->protoMessage.DebugString() << std::endl;
-
-  
+void mutateStruct(const uint8_t* data, size_t size) {
   protobuf_mutator::Mutator mutator;
-  mutator.Seed(123);
-  mutator.Mutate(&sample->protoMessage, 200);
-
+  teststruct::test setcharvalue;
+  setcharvalue.ParseFromArray(data, static_cast<int>(size));
+  std::cout << "Mutated Message Before: " << setcharvalue.charvalue() << std::endl;
+  mutator.Seed(99213129);
+  mutator.Mutate(&setcharvalue, 9921);
+  // std::string mutatedData = getmessage->SerializeAsString();
+  std::cout << "Mutated Message After: " << setcharvalue.SerializeAsString() << std::endl;
   
-  std::cout << "After mutation: " << sample->protoMessage.DebugString() << std::endl;
 }
 
 int main() {
   testStruct input;
-  for (int i = 0; i < 1000; ++i) {
-    mutateStruct(&input);
+  teststruct::test charvalue;
+  teststruct::test::Message* getmessage;
 
-    FuzzStruct(reinterpret_cast<char*>(&input), sizeof(testStruct));
+  for (int i = 37; i < 200; ++i) {
+      charvalue.set_charvalue("sadasd");
+      std::string data = charvalue.SerializeAsString();  
+      
+      mutateStruct(reinterpret_cast<const uint8_t*>(data.data()), data.size());
+    
+    // FuzzStruct(reinterpret_cast<char*>(&input), sizeof(testStruct));
   }
 
   return 0;

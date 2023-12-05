@@ -21,57 +21,50 @@ namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
 namespace teststruct {
-PROTOBUF_CONSTEXPR testStruct::testStruct(
+PROTOBUF_CONSTEXPR test::test(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.charvalue_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.intvalue_)*/0
-  , /*decltype(_impl_.floatvalue_)*/0} {}
-struct testStructDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR testStructDefaultTypeInternal()
+  , /*decltype(_impl_.charvalue_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+struct testDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR testDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~testStructDefaultTypeInternal() {}
+  ~testDefaultTypeInternal() {}
   union {
-    testStruct _instance;
+    test _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 testStructDefaultTypeInternal _testStruct_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 testDefaultTypeInternal _test_default_instance_;
 }  // namespace teststruct
 static ::_pb::Metadata file_level_metadata_test_2dstruct_2eproto[1];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_test_2dstruct_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_test_2dstruct_2eproto = nullptr;
 
 const uint32_t TableStruct_test_2dstruct_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::teststruct::testStruct, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::teststruct::testStruct, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::teststruct::test, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::teststruct::test, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::teststruct::testStruct, _impl_.intvalue_),
-  PROTOBUF_FIELD_OFFSET(::teststruct::testStruct, _impl_.charvalue_),
-  PROTOBUF_FIELD_OFFSET(::teststruct::testStruct, _impl_.floatvalue_),
-  1,
+  PROTOBUF_FIELD_OFFSET(::teststruct::test, _impl_.charvalue_),
   0,
-  2,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, -1, sizeof(::teststruct::testStruct)},
+  { 0, 7, -1, sizeof(::teststruct::test)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::teststruct::_testStruct_default_instance_._instance,
+  &::teststruct::_test_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_test_2dstruct_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021test-struct.proto\022\nteststruct\"E\n\ntestS"
-  "truct\022\020\n\010IntValue\030\001 \002(\005\022\021\n\tCharValue\030\002 \002"
-  "(\t\022\022\n\nFloatValue\030\003 \002(\002"
+  "\n\021test-struct.proto\022\nteststruct\"\031\n\004test\022"
+  "\021\n\tCharValue\030\002 \001(\t"
   ;
 static ::_pbi::once_flag descriptor_table_test_2dstruct_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_test_2dstruct_2eproto = {
-    false, false, 102, descriptor_table_protodef_test_2dstruct_2eproto,
+    false, false, 58, descriptor_table_protodef_test_2dstruct_2eproto,
     "test-struct.proto",
     &descriptor_table_test_2dstruct_2eproto_once, nullptr, 0, 1,
     schemas, file_default_instances, TableStruct_test_2dstruct_2eproto::offsets,
@@ -88,38 +81,27 @@ namespace teststruct {
 
 // ===================================================================
 
-class testStruct::_Internal {
+class test::_Internal {
  public:
-  using HasBits = decltype(std::declval<testStruct>()._impl_._has_bits_);
-  static void set_has_intvalue(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
+  using HasBits = decltype(std::declval<test>()._impl_._has_bits_);
   static void set_has_charvalue(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_floatvalue(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
-testStruct::testStruct(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+test::test(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:teststruct.testStruct)
+  // @@protoc_insertion_point(arena_constructor:teststruct.test)
 }
-testStruct::testStruct(const testStruct& from)
+test::test(const test& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  testStruct* const _this = this; (void)_this;
+  test* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.charvalue_){}
-    , decltype(_impl_.intvalue_){}
-    , decltype(_impl_.floatvalue_){}};
+    , decltype(_impl_.charvalue_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.charvalue_.InitDefault();
@@ -130,13 +112,10 @@ testStruct::testStruct(const testStruct& from)
     _this->_impl_.charvalue_.Set(from._internal_charvalue(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.intvalue_, &from._impl_.intvalue_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.floatvalue_) -
-    reinterpret_cast<char*>(&_impl_.intvalue_)) + sizeof(_impl_.floatvalue_));
-  // @@protoc_insertion_point(copy_constructor:teststruct.testStruct)
+  // @@protoc_insertion_point(copy_constructor:teststruct.test)
 }
 
-inline void testStruct::SharedCtor(
+inline void test::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -144,8 +123,6 @@ inline void testStruct::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.charvalue_){}
-    , decltype(_impl_.intvalue_){0}
-    , decltype(_impl_.floatvalue_){0}
   };
   _impl_.charvalue_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -153,8 +130,8 @@ inline void testStruct::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-testStruct::~testStruct() {
-  // @@protoc_insertion_point(destructor:teststruct.testStruct)
+test::~test() {
+  // @@protoc_insertion_point(destructor:teststruct.test)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -162,17 +139,17 @@ testStruct::~testStruct() {
   SharedDtor();
 }
 
-inline void testStruct::SharedDtor() {
+inline void test::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.charvalue_.Destroy();
 }
 
-void testStruct::SetCachedSize(int size) const {
+void test::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void testStruct::Clear() {
-// @@protoc_insertion_point(message_clear_start:teststruct.testStruct)
+void test::Clear() {
+// @@protoc_insertion_point(message_clear_start:teststruct.test)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -181,49 +158,26 @@ void testStruct::Clear() {
   if (cached_has_bits & 0x00000001u) {
     _impl_.charvalue_.ClearNonDefaultToEmpty();
   }
-  if (cached_has_bits & 0x00000006u) {
-    ::memset(&_impl_.intvalue_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.floatvalue_) -
-        reinterpret_cast<char*>(&_impl_.intvalue_)) + sizeof(_impl_.floatvalue_));
-  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* testStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* test::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 IntValue = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_intvalue(&has_bits);
-          _impl_.intvalue_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // required string CharValue = 2;
+      // optional string CharValue = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_charvalue();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
           #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "teststruct.testStruct.CharValue");
+          ::_pbi::VerifyUTF8(str, "teststruct.test.CharValue");
           #endif  // !NDEBUG
-        } else
-          goto handle_unusual;
-        continue;
-      // required float FloatValue = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          _Internal::set_has_floatvalue(&has_bits);
-          _impl_.floatvalue_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
@@ -251,136 +205,83 @@ failure:
 #undef CHK_
 }
 
-uint8_t* testStruct::_InternalSerialize(
+uint8_t* test::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:teststruct.testStruct)
+  // @@protoc_insertion_point(serialize_to_array_start:teststruct.test)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 IntValue = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_intvalue(), target);
-  }
-
-  // required string CharValue = 2;
+  // optional string CharValue = 2;
   if (cached_has_bits & 0x00000001u) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_charvalue().data(), static_cast<int>(this->_internal_charvalue().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "teststruct.testStruct.CharValue");
+      "teststruct.test.CharValue");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_charvalue(), target);
-  }
-
-  // required float FloatValue = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_floatvalue(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:teststruct.testStruct)
+  // @@protoc_insertion_point(serialize_to_array_end:teststruct.test)
   return target;
 }
 
-size_t testStruct::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:teststruct.testStruct)
+size_t test::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:teststruct.test)
   size_t total_size = 0;
 
-  if (_internal_has_charvalue()) {
-    // required string CharValue = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_charvalue());
-  }
-
-  if (_internal_has_intvalue()) {
-    // required int32 IntValue = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_intvalue());
-  }
-
-  if (_internal_has_floatvalue()) {
-    // required float FloatValue = 3;
-    total_size += 1 + 4;
-  }
-
-  return total_size;
-}
-size_t testStruct::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:teststruct.testStruct)
-  size_t total_size = 0;
-
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string CharValue = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_charvalue());
-
-    // required int32 IntValue = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_intvalue());
-
-    // required float FloatValue = 3;
-    total_size += 1 + 4;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // optional string CharValue = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_charvalue());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData testStruct::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData test::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    testStruct::MergeImpl
+    test::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*testStruct::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*test::GetClassData() const { return &_class_data_; }
 
 
-void testStruct::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<testStruct*>(&to_msg);
-  auto& from = static_cast<const testStruct&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:teststruct.testStruct)
+void test::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<test*>(&to_msg);
+  auto& from = static_cast<const test&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:teststruct.test)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_charvalue(from._internal_charvalue());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.intvalue_ = from._impl_.intvalue_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.floatvalue_ = from._impl_.floatvalue_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_has_charvalue()) {
+    _this->_internal_set_charvalue(from._internal_charvalue());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void testStruct::CopyFrom(const testStruct& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:teststruct.testStruct)
+void test::CopyFrom(const test& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:teststruct.test)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool testStruct::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+bool test::IsInitialized() const {
   return true;
 }
 
-void testStruct::InternalSwap(testStruct* other) {
+void test::InternalSwap(test* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -390,15 +291,9 @@ void testStruct::InternalSwap(testStruct* other) {
       &_impl_.charvalue_, lhs_arena,
       &other->_impl_.charvalue_, rhs_arena
   );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(testStruct, _impl_.floatvalue_)
-      + sizeof(testStruct::_impl_.floatvalue_)
-      - PROTOBUF_FIELD_OFFSET(testStruct, _impl_.intvalue_)>(
-          reinterpret_cast<char*>(&_impl_.intvalue_),
-          reinterpret_cast<char*>(&other->_impl_.intvalue_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata testStruct::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata test::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_test_2dstruct_2eproto_getter, &descriptor_table_test_2dstruct_2eproto_once,
       file_level_metadata_test_2dstruct_2eproto[0]);
@@ -407,9 +302,9 @@ void testStruct::InternalSwap(testStruct* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace teststruct
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::teststruct::testStruct*
-Arena::CreateMaybeMessage< ::teststruct::testStruct >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::teststruct::testStruct >(arena);
+template<> PROTOBUF_NOINLINE ::teststruct::test*
+Arena::CreateMaybeMessage< ::teststruct::test >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::teststruct::test >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
