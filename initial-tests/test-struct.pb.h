@@ -45,35 +45,35 @@ struct TableStruct_test_2dstruct_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_test_2dstruct_2eproto;
 namespace teststruct {
-class testStruct;
-struct testStructDefaultTypeInternal;
-extern testStructDefaultTypeInternal _testStruct_default_instance_;
+class test;
+struct testDefaultTypeInternal;
+extern testDefaultTypeInternal _test_default_instance_;
 }  // namespace teststruct
 PROTOBUF_NAMESPACE_OPEN
-template<> ::teststruct::testStruct* Arena::CreateMaybeMessage<::teststruct::testStruct>(Arena*);
+template<> ::teststruct::test* Arena::CreateMaybeMessage<::teststruct::test>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace teststruct {
 
 // ===================================================================
 
-class testStruct final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:teststruct.testStruct) */ {
+class test final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:teststruct.test) */ {
  public:
-  inline testStruct() : testStruct(nullptr) {}
-  ~testStruct() override;
-  explicit PROTOBUF_CONSTEXPR testStruct(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline test() : test(nullptr) {}
+  ~test() override;
+  explicit PROTOBUF_CONSTEXPR test(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  testStruct(const testStruct& from);
-  testStruct(testStruct&& from) noexcept
-    : testStruct() {
+  test(const test& from);
+  test(test&& from) noexcept
+    : test() {
     *this = ::std::move(from);
   }
 
-  inline testStruct& operator=(const testStruct& from) {
+  inline test& operator=(const test& from) {
     CopyFrom(from);
     return *this;
   }
-  inline testStruct& operator=(testStruct&& from) noexcept {
+  inline test& operator=(test&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -103,20 +103,20 @@ class testStruct final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const testStruct& default_instance() {
+  static const test& default_instance() {
     return *internal_default_instance();
   }
-  static inline const testStruct* internal_default_instance() {
-    return reinterpret_cast<const testStruct*>(
-               &_testStruct_default_instance_);
+  static inline const test* internal_default_instance() {
+    return reinterpret_cast<const test*>(
+               &_test_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(testStruct& a, testStruct& b) {
+  friend void swap(test& a, test& b) {
     a.Swap(&b);
   }
-  inline void Swap(testStruct* other) {
+  inline void Swap(test* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -129,7 +129,7 @@ class testStruct final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(testStruct* other) {
+  void UnsafeArenaSwap(test* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -137,14 +137,14 @@ class testStruct final :
 
   // implements Message ----------------------------------------------
 
-  testStruct* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<testStruct>(arena);
+  test* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<test>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const testStruct& from);
+  void CopyFrom(const test& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const testStruct& from) {
-    testStruct::MergeImpl(*this, from);
+  void MergeFrom( const test& from) {
+    test::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -162,15 +162,15 @@ class testStruct final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(testStruct* other);
+  void InternalSwap(test* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "teststruct.testStruct";
+    return "teststruct.test";
   }
   protected:
-  explicit testStruct(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit test(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -185,10 +185,8 @@ class testStruct final :
 
   enum : int {
     kCharValueFieldNumber = 2,
-    kIntValueFieldNumber = 1,
-    kFloatValueFieldNumber = 3,
   };
-  // required string CharValue = 2;
+  // optional string CharValue = 2;
   bool has_charvalue() const;
   private:
   bool _internal_has_charvalue() const;
@@ -206,38 +204,9 @@ class testStruct final :
   std::string* _internal_mutable_charvalue();
   public:
 
-  // required int32 IntValue = 1;
-  bool has_intvalue() const;
-  private:
-  bool _internal_has_intvalue() const;
-  public:
-  void clear_intvalue();
-  int32_t intvalue() const;
-  void set_intvalue(int32_t value);
-  private:
-  int32_t _internal_intvalue() const;
-  void _internal_set_intvalue(int32_t value);
-  public:
-
-  // required float FloatValue = 3;
-  bool has_floatvalue() const;
-  private:
-  bool _internal_has_floatvalue() const;
-  public:
-  void clear_floatvalue();
-  float floatvalue() const;
-  void set_floatvalue(float value);
-  private:
-  float _internal_floatvalue() const;
-  void _internal_set_floatvalue(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:teststruct.testStruct)
+  // @@protoc_insertion_point(class_scope:teststruct.test)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -246,8 +215,6 @@ class testStruct final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr charvalue_;
-    int32_t intvalue_;
-    float floatvalue_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_test_2dstruct_2eproto;
@@ -261,77 +228,49 @@ class testStruct final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// testStruct
+// test
 
-// required int32 IntValue = 1;
-inline bool testStruct::_internal_has_intvalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool testStruct::has_intvalue() const {
-  return _internal_has_intvalue();
-}
-inline void testStruct::clear_intvalue() {
-  _impl_.intvalue_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline int32_t testStruct::_internal_intvalue() const {
-  return _impl_.intvalue_;
-}
-inline int32_t testStruct::intvalue() const {
-  // @@protoc_insertion_point(field_get:teststruct.testStruct.IntValue)
-  return _internal_intvalue();
-}
-inline void testStruct::_internal_set_intvalue(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.intvalue_ = value;
-}
-inline void testStruct::set_intvalue(int32_t value) {
-  _internal_set_intvalue(value);
-  // @@protoc_insertion_point(field_set:teststruct.testStruct.IntValue)
-}
-
-// required string CharValue = 2;
-inline bool testStruct::_internal_has_charvalue() const {
+// optional string CharValue = 2;
+inline bool test::_internal_has_charvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool testStruct::has_charvalue() const {
+inline bool test::has_charvalue() const {
   return _internal_has_charvalue();
 }
-inline void testStruct::clear_charvalue() {
+inline void test::clear_charvalue() {
   _impl_.charvalue_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& testStruct::charvalue() const {
-  // @@protoc_insertion_point(field_get:teststruct.testStruct.CharValue)
+inline const std::string& test::charvalue() const {
+  // @@protoc_insertion_point(field_get:teststruct.test.CharValue)
   return _internal_charvalue();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void testStruct::set_charvalue(ArgT0&& arg0, ArgT... args) {
+void test::set_charvalue(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.charvalue_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:teststruct.testStruct.CharValue)
+  // @@protoc_insertion_point(field_set:teststruct.test.CharValue)
 }
-inline std::string* testStruct::mutable_charvalue() {
+inline std::string* test::mutable_charvalue() {
   std::string* _s = _internal_mutable_charvalue();
-  // @@protoc_insertion_point(field_mutable:teststruct.testStruct.CharValue)
+  // @@protoc_insertion_point(field_mutable:teststruct.test.CharValue)
   return _s;
 }
-inline const std::string& testStruct::_internal_charvalue() const {
+inline const std::string& test::_internal_charvalue() const {
   return _impl_.charvalue_.Get();
 }
-inline void testStruct::_internal_set_charvalue(const std::string& value) {
+inline void test::_internal_set_charvalue(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.charvalue_.Set(value, GetArenaForAllocation());
 }
-inline std::string* testStruct::_internal_mutable_charvalue() {
+inline std::string* test::_internal_mutable_charvalue() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.charvalue_.Mutable(GetArenaForAllocation());
 }
-inline std::string* testStruct::release_charvalue() {
-  // @@protoc_insertion_point(field_release:teststruct.testStruct.CharValue)
+inline std::string* test::release_charvalue() {
+  // @@protoc_insertion_point(field_release:teststruct.test.CharValue)
   if (!_internal_has_charvalue()) {
     return nullptr;
   }
@@ -344,7 +283,7 @@ inline std::string* testStruct::release_charvalue() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void testStruct::set_allocated_charvalue(std::string* charvalue) {
+inline void test::set_allocated_charvalue(std::string* charvalue) {
   if (charvalue != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -356,35 +295,7 @@ inline void testStruct::set_allocated_charvalue(std::string* charvalue) {
     _impl_.charvalue_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:teststruct.testStruct.CharValue)
-}
-
-// required float FloatValue = 3;
-inline bool testStruct::_internal_has_floatvalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool testStruct::has_floatvalue() const {
-  return _internal_has_floatvalue();
-}
-inline void testStruct::clear_floatvalue() {
-  _impl_.floatvalue_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline float testStruct::_internal_floatvalue() const {
-  return _impl_.floatvalue_;
-}
-inline float testStruct::floatvalue() const {
-  // @@protoc_insertion_point(field_get:teststruct.testStruct.FloatValue)
-  return _internal_floatvalue();
-}
-inline void testStruct::_internal_set_floatvalue(float value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.floatvalue_ = value;
-}
-inline void testStruct::set_floatvalue(float value) {
-  _internal_set_floatvalue(value);
-  // @@protoc_insertion_point(field_set:teststruct.testStruct.FloatValue)
+  // @@protoc_insertion_point(field_set_allocated:teststruct.test.CharValue)
 }
 
 #ifdef __GNUC__
