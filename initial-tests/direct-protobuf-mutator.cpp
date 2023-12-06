@@ -4,28 +4,32 @@
 #include "test-struct.pb.h"
 #include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
 
+using namespace protobuf_mutator;
+
 struct testStruct {
   char charValue=2;
   
 };
 
-DEFINE_PROTO_FUZZER(const teststruct::test& input) {
-  // Code which needs to be fuzzed.
-  std::cout << "Mutated Message Before: " << input.charvalue() << std::endl;
-}
+// DEFINE_PROTO_FUZZER(const teststruct::test& input) {
+ 
+//   std::cout << "Mutated Message Before: " << input.charvalue() << std::endl;
+// }
+
+
 void mutateStruct(const uint8_t* data, size_t size) {
   protobuf_mutator::Mutator mutator;
-  teststruct::test setcharvalue;
-  setcharvalue.ParseFromArray(data, static_cast<int>(size));
+  teststruct::test getdata;
+  typename teststruct::test::Message* message;
   
-  
-  mutator.Seed(99213129);
-  mutator.Fix(&setcharvalue);
-  mutator.Mutate(&setcharvalue, setcharvalue.ByteSizeLong());
+  message->ParseFromString("test");
+  mutator.Mutate(message, 200);
   // std::string mutatedData = getmessage->SerializeAsString();
-  std::cout << "Mutated Message After: " << setcharvalue.charvalue() << std::endl;
+  std::cout << "Mutated Message After: c" << message->DebugString() << std::endl;
   
 }
+
+
 
 int main() {
   testStruct input;
@@ -44,4 +48,4 @@ int main() {
   return 0;
 }
 
-//g++ -o protomutator -L/usr/local/lib/ -I/usr/local/include/libprotobuf-mutator -L-I../libs/libprotobuf-mutator/src/libfuzzer/ -L. -I. direct-protobuf-mutator.cpp test-struct.pb.cc  -lfuzzstruct -lpthread -lprotobuf-mutator -lprotobuf 
+//g++ -o protomutator -L/usr/local/lib/ -I/usr/local/include/libprotobuf-mutator -L../libs/libprotobuf-mutator/src/libfuzzer/ -I../libs/libprotobuf-mutator/src/libfuzzer/ -L. -I. direct-protobuf-mutator.cpp test-struct.pb.cc  -lfuzzstruct -lpthread -lprotobuf-mutator -lprotobuf 
