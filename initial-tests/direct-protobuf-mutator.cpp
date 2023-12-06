@@ -17,15 +17,16 @@ struct testStruct {
 // }
 
 
-void mutateStruct(const uint8_t* data, size_t size) {
+void mutateStruct(const char* data, size_t size) {
   protobuf_mutator::Mutator mutator;
   teststruct::test getdata;
-  typename teststruct::test::Message* message;
+  teststruct::test::Message* message;
   
-  message->ParseFromString("test");
-  mutator.Mutate(message, 200);
+  getdata.set_charvalue(data);
+  std::cout << "Mutated Message before: " << getdata.DebugString();
+  mutator.Mutate(&getdata, 200);
   // std::string mutatedData = getmessage->SerializeAsString();
-  std::cout << "Mutated Message After: c" << message->DebugString() << std::endl;
+  std::cout << "Mutated Message After: " << getdata.DebugString() << std::endl;
   
 }
 
@@ -40,7 +41,7 @@ int main() {
       charvalue.set_charvalue("sadasd"+std::to_string(i));
       std::string data = charvalue.SerializeAsString();  
       
-      mutateStruct(reinterpret_cast<const uint8_t*>(data.data()), data.size());
+      mutateStruct(reinterpret_cast<const char*>(data.data()), data.size());
     
     // FuzzStruct(reinterpret_cast<char*>(&input), sizeof(testStruct));
   }
