@@ -20,7 +20,8 @@ When building the program, ensuring that there's no conflicting main function an
 
 Modify the C++ program to generate random structs for fuzzing.
 
-## Running the protobuf-mutator 
+## Running the direct-protobuf-mutator.cpp
+ 
 To run this protobuf mutator please download the release version of libprotobuf-mutator https://github.com/google/libprotobuf-mutator/releases/tag/v1.1 and install with `LIB_PROTO_MUTATOR_DOWNLOAD_PROTOBUF=ON`
 
 please change the `-L` and `-I` depending on where these include and local libraries are installed
