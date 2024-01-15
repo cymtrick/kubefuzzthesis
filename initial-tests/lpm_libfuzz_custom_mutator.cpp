@@ -1,9 +1,12 @@
 #include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
 #include "test.pb.h"
-
+#include "libfuzzstruct.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
+extern "C" void FuzzStruct(char* data, size_t size);
+bool hasRegister = false;
 
 std::string ProtoToData(const TEST& test_proto) {
     std::stringstream all;
@@ -22,11 +25,12 @@ std::string ProtoToData(const TEST& test_proto) {
             of.write(res.data(), res.size());
         }
     }
+
+    // Print the serialized data to the standard output
+    std::cout << "Serialized Data: " << res << std::endl;
     return res;
 }
 
-extern "C" int FuzzTEST(const uint8_t* data, size_t size); // our customized fuzzing function
-bool hasRegister = false;
 
 DEFINE_PROTO_FUZZER(const TEST& test_proto) {
     /* Register post processor with our custom mutator method */
@@ -37,7 +41,7 @@ DEFINE_PROTO_FUZZER(const TEST& test_proto) {
                 TEST* t = static_cast<TEST*>(message);
                 /* test.b will only be "FUCK" or "SHIT" */
                 if (seed % 2) {
-                    t->set_b("FUCK");
+                    t->set_b("TEST");
                 } else {
                     t->set_b("SHIT");
                 }
@@ -47,5 +51,5 @@ DEFINE_PROTO_FUZZER(const TEST& test_proto) {
     }
 
     auto s = ProtoToData(test_proto);
-    FuzzTEST(reinterpret_cast<const uint8_t*>(s.data()), s.size());
+    FuzzStruct(reinterpret_cast<char*>(s.data()), s.size());
 }
