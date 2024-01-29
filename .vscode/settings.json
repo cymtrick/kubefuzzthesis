@@ -74,5 +74,5 @@
         "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "cmake.sourceDirectory": "/Users/prashanthvarma/Desktop/kubefuzzthesis-main/libs/protobuf-25.1"
+    "cmake.sourceDirectory": "/root/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf/src/external.protobuf/examples"
 }
