@@ -1,6 +1,7 @@
 #include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
 #include "test.pb.h"
 #include "libfuzzstruct.h"
+#include "libpodfuzzer.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -27,7 +28,7 @@ std::string ProtoToData(const TEST& test_proto) {
     }
 
     // Print the serialized data to the standard output
-    std::cout << "Serialized Data: " << res << std::endl;
+    // std::cout << "Serialized Data: " << res << std::endl;
     return res;
 }
 
@@ -39,9 +40,9 @@ DEFINE_PROTO_FUZZER(const TEST& test_proto) {
             TEST::descriptor(),
             [](google::protobuf::Message* message, unsigned int seed) {
                 TEST* t = static_cast<TEST*>(message);
-                /* test.b will only be "FUCK" or "SHIT" */
+                /* test.b will only be "THIS" or "SHIT" */
                 if (seed % 2) {
-                    t->set_b("TEST");
+                    t->set_b("THIS");
                 } else {
                     t->set_b("SHIT");
                 }
@@ -51,5 +52,5 @@ DEFINE_PROTO_FUZZER(const TEST& test_proto) {
     }
 
     auto s = ProtoToData(test_proto);
-    FuzzStruct(reinterpret_cast<char*>(s.data()), s.size());
+    FuzzPodMutator(reinterpret_cast<char*>(s.data()), s.size());
 }

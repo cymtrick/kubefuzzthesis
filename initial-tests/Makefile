@@ -10,7 +10,7 @@ PROTOBUF_LIB=$(PROTOBUF_DIR)/lib/libprotobufd.a
 LPM_LIB=$(LPM_DIR)/build/src/libfuzzer/libprotobuf-mutator-libfuzzer.a $(LPM_DIR)/build/src/libprotobuf-mutator.a
 INC=-I$(PROTOBUF_DIR)/include -I$(LPM_DIR)
 DFUZZ=-DLLVMFuzzerTestOneInput=FuzzTEST
-GO_EXPORT_LIB=./libfuzzstruct.a
+GO_EXPORT_LIB=./libpodfuzzer.a
 
 
 all: $(TARGET)
