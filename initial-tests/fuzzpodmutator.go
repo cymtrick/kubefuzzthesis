@@ -116,6 +116,7 @@ func catchPanics() {
 	if r := recover(); r != nil {
 		var err string
 		switch r.(type) {
+
 		case string:
 			err = r.(string)
 		case runtime.Error:
