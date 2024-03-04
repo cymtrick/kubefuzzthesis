@@ -1,0 +1,7 @@
+[submodule "libs/kubernetes"]
+    path = libs/kubernetes
+    url = https://github.com/cymtrick/kubernetes-error-fuzzer.git
+
+[submodule "libs/libprotobuf-mutator"]
+    path = libs/libprotobuf-mutator
+    url = https://github.com/google/libprotobuf-mutator.git
