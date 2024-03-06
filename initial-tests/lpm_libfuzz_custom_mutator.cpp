@@ -1,7 +1,7 @@
 #include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
 #include "test.pb.h"
 #include "libfuzzstruct.h"
-#include "libpodfuzzer.h"
+#include "libpodfuzzerkube.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
