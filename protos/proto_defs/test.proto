@@ -1,6 +1,16 @@
-syntax = "proto2";
+syntax = "proto3";
 
-message TEST {
-  required uint32 a = 1;
-  required string b = 2;
+package ttrpc;
+
+option go_package = "github.com/containerd/ttrpc/internal";
+
+message TestPayload {
+	string foo = 1;
+	int64 deadline = 2;
+	string metadata = 3;
+}
+
+message EchoPayload {
+	int64 seq = 1;
+	string msg = 2;
 }
