@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dfbe64a474ac53d9dcce9d519bdddfd09c49e3077245bb42abb3716e71a5e991
-size 295
+syntax = "proto3";
+
+package foo;
+
+option php_generic_services = true;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}

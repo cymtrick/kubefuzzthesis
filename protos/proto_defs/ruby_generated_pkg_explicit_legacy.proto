@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ca1e70e7864d6330a65aebb4f7dc9b86a51158811ce3ed84170966256c13a21
-size 131
+syntax = "proto3";
+
+package one.two.a_three.and;
+
+option ruby_package = "AA.BB.CC";
+
+message Four {
+  string another_string = 1;
+}

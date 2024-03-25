@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:038abbad6981d4e5d0c5fa5ca16f7925b7f22bea47e0d3873dc32dc99a19fc3f
-size 86
+syntax = "proto2";
+
+message TEST {
+  required uint32 a = 1;
+  required string b = 2;
+}

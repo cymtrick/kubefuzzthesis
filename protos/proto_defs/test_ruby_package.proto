@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e63143c60a37aa9a64e3f552f891a52631d48262ee08455dd9f01e5dd78758f0
-size 103
+syntax = "proto3";
+
+package foo_bar;
+
+option ruby_package = "A::B";
+
+message TestRubyPackageMessage {}

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9bf8a5c955b267894e475111624733ba4509e2cbcd2495ca34c092bb9ff8a938
-size 241
+syntax = "proto3";
+
+package bar;
+
+message TestInclude {
+  int32 a = 1;
+}
+
+message TestLegacyMessage {
+  NestedMessage message = 1;
+  NestedEnum enum = 2;
+  message NestedMessage {
+    int32 a = 1;
+  }
+  enum NestedEnum {
+    ZERO = 0;
+  }
+}

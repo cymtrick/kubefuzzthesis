@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b613047f2af36bf67c4c7614a0b5033dae3eb9450031b8bc1662ec7062f3774
-size 86
+syntax = "proto3";
+
+package one.two.a_three;
+
+message Four {
+  string a_string = 1;
+}

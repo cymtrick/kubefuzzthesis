@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6923fffbedf0a5446d216a3c3f42e50235fd2aabb1b8e1ab2c619e80bcfa0f0
-size 428
+syntax = "proto3";
+
+package ttrpc;
+
+import "proto/status.proto";
+
+option go_package = "github.com/containerd/ttrpc";
+
+message Request {
+	string service = 1;
+	string method = 2;
+	bytes payload = 3;
+	int64 timeout_nano = 4;
+	repeated KeyValue metadata = 5;
+}
+
+message Response {
+	Status status = 1;
+	bytes payload = 2;
+}
+
+message StringList {
+	repeated string list = 1;
+}
+
+message KeyValue {
+	string key = 1;
+	string value = 2;
+}

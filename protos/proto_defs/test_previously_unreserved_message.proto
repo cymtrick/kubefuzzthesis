@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b09ccfa5c407331b21d3ca43f1b5e58b341b50a61be1c1f83bcf992db24c57d
-size 58
+syntax = "proto3";
+
+package previous;
+
+message readonly {}

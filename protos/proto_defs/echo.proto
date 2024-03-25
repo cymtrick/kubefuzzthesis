@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b52a7e69fdc422c0d3336591668f96c201ba2251a3fe27ed4ab8ee400b10ee9b
-size 293
+syntax = "proto3";
+
+package empty.echo;
+
+message TestEmptyPackage {
+  int32 a = 1;
+
+  // Test nested messages, enums, and reserved names
+  NestedMessage nested_message = 2;
+  NestedEnum nested_enum = 3;
+  message NestedMessage {
+    int32 a = 1;
+  }
+  enum NestedEnum {
+      ZERO = 0;
+  };
+}

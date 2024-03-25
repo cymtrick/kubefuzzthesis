@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:891182677fa3885d90a9a14b5af05c21153a54f40a0a19efb13e851953edeb16
-size 328
+syntax = "proto3";
+
+import "unittest_issue6936_a.proto";
+
+package unittest_issues;
+
+option csharp_namespace = "UnitTest.Issues.TestProtos";
+
+// This file is used as part of a unit test for issue 6936
+// We don't need to use it, we just have to import it in "unittest_issue6936_c.proto"
+
+message Foo {
+    option (opt) = "foo";
+}

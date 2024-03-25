@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2d279745d0f521f60259184c37cdc57cecf48ba0ef97e9700bc060006527e1e4
-size 76
+syntax = "proto2";
+
+package foo_bar.proto2;
+
+message TestImportedMessage {}

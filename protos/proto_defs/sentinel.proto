@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04e0108dc78378fb41836acc7172be37ff4397f0ba377535dd4deca7ed874148
-size 358
+syntax = "proto3";
+package com.google.protobuf.jruby;
+option optimize_for = CODE_SIZE;
+
+message Sentinel {
+  int32 default_int32 = 1;
+  int64 default_int64 = 2;
+  uint32 default_unit32 = 3;
+  uint64 default_uint64 = 4;
+  string default_string = 5;
+  bool default_bool = 6;
+  float default_float = 7;
+  double default_double = 8;
+  bytes default_bytes = 9;
+}
