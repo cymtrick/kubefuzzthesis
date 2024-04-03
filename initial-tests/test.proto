@@ -1,6 +1,15 @@
 syntax = "proto2";
 
-message TEST {
-  required uint32 a = 1;
-  required string b = 2;
+message Pod {
+    // Unique identifier for the pod
+    required bytes uid = 1;
+    
+    // Name of the pod
+    required bytes name = 2;
+    
+    // Namespace of the pod
+    required bytes namespace = 3;
+    
+    // List of containers in the pod
+    
 }

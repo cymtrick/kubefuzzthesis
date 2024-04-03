@@ -28,7 +28,7 @@ std::string ProtoToData(const TEST& test_proto) {
     }
 
     // Print the serialized data to the standard output
-    // std::cout << "Serialized Data: " << res << std::endl;
+    std::cout << "Serialized Data: " << res << std::endl;
     return res;
 }
 

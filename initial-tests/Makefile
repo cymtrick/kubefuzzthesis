@@ -1,28 +1,38 @@
-TARGET=lpm_libfuzz_custom_mutator
-PB_SRC=./test.pb.cc
-
-CXX=clang++
-CXXFLAGS=-g -fsanitize=fuzzer,address -I./ 
-
-PROTOBUF_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf
-LPM_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator
-PROTOBUF_LIB=$(PROTOBUF_DIR)/lib/libprotobufd.a
-LPM_LIB=$(LPM_DIR)/build/src/libfuzzer/libprotobuf-mutator-libfuzzer.a $(LPM_DIR)/build/src/libprotobuf-mutator.a
-INC=-I$(PROTOBUF_DIR)/include -I$(LPM_DIR)
-DFUZZ=-DLLVMFuzzerTestOneInput=FuzzTEST
+# Paths and file locations
+PROTODEFS_DIR=$(HOME)/kubefuzzthesis/protos/proto_defs
+PROTOBUF_LIB_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf/lib
+LPM_LIB_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/src
+INC_DIRS=-I$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf/include -I$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator -I$(PROTODEFS_DIR)
 GO_EXPORT_LIB=./libpodfuzzermock.a
+# Compiler settings
+CXX=clang++
+CXXFLAGS=-g -fsanitize=fuzzer,address $(INC_DIRS)
+AR=ar
 
+# Libraries
+PROTOBUF_LIB=$(PROTOBUF_LIB_DIR)/libprotobufd.a
+LPM_LIBS=$(LPM_LIB_DIR)/libfuzzer/libprotobuf-mutator-libfuzzer.a $(LPM_LIB_DIR)/libprotobuf-mutator.a
 
+# Target
+TARGET=lpm_libfuzz_custom_mutator_struct_aware
+
+# Source files
+PB_SOURCES=$(wildcard $(PROTODEFS_DIR)/*.pb.cc)
+PB_OBJECTS=$(PB_SOURCES:.cc=.o)
 
 all: $(TARGET)
 
-# for testing libprotobuf + libfuzzer
-# compile harness first
-# then link lpm_libfuzz with harness.o & static libraries
+# Rule to compile Protocol Buffer source files into object files
+%.o: %.cc
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(TARGET): $(TARGET).cpp
-	$(CXX) $(CXXFLAGS)  -o $@ $^ $(PB_SRC) $(LPM_LIB) $(PROTOBUF_LIB) $(INC) $(GO_EXPORT_LIB) # $(LPM_LIB) must be placed before $(PROTOBUF_LIB)
+# Rule to create a static library from all Protocol Buffer object files
+libprotos.a: $(PB_OBJECTS)
+	$(AR) rcs $@ $(PB_OBJECTS)
 
-.PHONY: clean
-clean: 
-	rm $(TARGET) *.o
+# Main target
+$(TARGET): $(TARGET).cpp libprotos.a
+	$(CXX) $(CXXFLAGS) -o $@ $(TARGET).cpp libprotos.a $(LPM_LIBS) $(GO_EXPORT_LIB) $(PROTOBUF_LIB) 
+
+clean:
+	rm -f $(TARGET) $(PB_OBJECTS) libprotos.a

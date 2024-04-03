@@ -75,9 +75,9 @@ extern "C" {
 #endif
 
 
-// FuzzPodMutator is the exported function for fuzzing pod mutator.
+// FuzzUnknownObjectMutator is the exported function for fuzzing unknown object mutator.
 //
-extern void FuzzPodMutator(char* data, size_t size);
+extern void FuzzUnknownObjectMutator(void* dataPtr, size_t dataSize);
 
 #ifdef __cplusplus
 }

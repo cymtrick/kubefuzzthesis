@@ -44,33 +44,33 @@ struct TableStruct_test_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_test_2eproto;
-class TEST;
-struct TESTDefaultTypeInternal;
-extern TESTDefaultTypeInternal _TEST_default_instance_;
+class Pod;
+struct PodDefaultTypeInternal;
+extern PodDefaultTypeInternal _Pod_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template<> ::TEST* Arena::CreateMaybeMessage<::TEST>(Arena*);
+template<> ::Pod* Arena::CreateMaybeMessage<::Pod>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class TEST final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TEST) */ {
+class Pod final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Pod) */ {
  public:
-  inline TEST() : TEST(nullptr) {}
-  ~TEST() override;
-  explicit PROTOBUF_CONSTEXPR TEST(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Pod() : Pod(nullptr) {}
+  ~Pod() override;
+  explicit PROTOBUF_CONSTEXPR Pod(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  TEST(const TEST& from);
-  TEST(TEST&& from) noexcept
-    : TEST() {
+  Pod(const Pod& from);
+  Pod(Pod&& from) noexcept
+    : Pod() {
     *this = ::std::move(from);
   }
 
-  inline TEST& operator=(const TEST& from) {
+  inline Pod& operator=(const Pod& from) {
     CopyFrom(from);
     return *this;
   }
-  inline TEST& operator=(TEST&& from) noexcept {
+  inline Pod& operator=(Pod&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -100,20 +100,20 @@ class TEST final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const TEST& default_instance() {
+  static const Pod& default_instance() {
     return *internal_default_instance();
   }
-  static inline const TEST* internal_default_instance() {
-    return reinterpret_cast<const TEST*>(
-               &_TEST_default_instance_);
+  static inline const Pod* internal_default_instance() {
+    return reinterpret_cast<const Pod*>(
+               &_Pod_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(TEST& a, TEST& b) {
+  friend void swap(Pod& a, Pod& b) {
     a.Swap(&b);
   }
-  inline void Swap(TEST* other) {
+  inline void Swap(Pod* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -126,7 +126,7 @@ class TEST final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(TEST* other) {
+  void UnsafeArenaSwap(Pod* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -134,14 +134,14 @@ class TEST final :
 
   // implements Message ----------------------------------------------
 
-  TEST* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<TEST>(arena);
+  Pod* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Pod>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const TEST& from);
+  void CopyFrom(const Pod& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const TEST& from) {
-    TEST::MergeImpl(*this, from);
+  void MergeFrom( const Pod& from) {
+    Pod::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -159,15 +159,15 @@ class TEST final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(TEST* other);
+  void InternalSwap(Pod* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "TEST";
+    return "Pod";
   }
   protected:
-  explicit TEST(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Pod(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -181,41 +181,65 @@ class TEST final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBFieldNumber = 2,
-    kAFieldNumber = 1,
+    kUidFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kNamespaceFieldNumber = 3,
   };
-  // required string b = 2;
-  bool has_b() const;
+  // required bytes uid = 1;
+  bool has_uid() const;
   private:
-  bool _internal_has_b() const;
+  bool _internal_has_uid() const;
   public:
-  void clear_b();
-  const std::string& b() const;
+  void clear_uid();
+  const std::string& uid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_b(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_b();
-  PROTOBUF_NODISCARD std::string* release_b();
-  void set_allocated_b(std::string* b);
+  void set_uid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_uid();
+  PROTOBUF_NODISCARD std::string* release_uid();
+  void set_allocated_uid(std::string* uid);
   private:
-  const std::string& _internal_b() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_b(const std::string& value);
-  std::string* _internal_mutable_b();
+  const std::string& _internal_uid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uid(const std::string& value);
+  std::string* _internal_mutable_uid();
   public:
 
-  // required uint32 a = 1;
-  bool has_a() const;
+  // required bytes name = 2;
+  bool has_name() const;
   private:
-  bool _internal_has_a() const;
+  bool _internal_has_name() const;
   public:
-  void clear_a();
-  uint32_t a() const;
-  void set_a(uint32_t value);
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
   private:
-  uint32_t _internal_a() const;
-  void _internal_set_a(uint32_t value);
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:TEST)
+  // required bytes namespace = 3;
+  bool has_namespace_() const;
+  private:
+  bool _internal_has_namespace_() const;
+  public:
+  void clear_namespace_();
+  const std::string& namespace_() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_namespace_(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_namespace_();
+  PROTOBUF_NODISCARD std::string* release_namespace_();
+  void set_allocated_namespace_(std::string* namespace_);
+  private:
+  const std::string& _internal_namespace_() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_namespace_(const std::string& value);
+  std::string* _internal_mutable_namespace_();
+  public:
+
+  // @@protoc_insertion_point(class_scope:Pod)
  private:
   class _Internal;
 
@@ -228,8 +252,9 @@ class TEST final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr b_;
-    uint32_t a_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr namespace__;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_test_2eproto;
@@ -243,102 +268,210 @@ class TEST final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// TEST
+// Pod
 
-// required uint32 a = 1;
-inline bool TEST::_internal_has_a() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool TEST::has_a() const {
-  return _internal_has_a();
-}
-inline void TEST::clear_a() {
-  _impl_.a_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline uint32_t TEST::_internal_a() const {
-  return _impl_.a_;
-}
-inline uint32_t TEST::a() const {
-  // @@protoc_insertion_point(field_get:TEST.a)
-  return _internal_a();
-}
-inline void TEST::_internal_set_a(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.a_ = value;
-}
-inline void TEST::set_a(uint32_t value) {
-  _internal_set_a(value);
-  // @@protoc_insertion_point(field_set:TEST.a)
-}
-
-// required string b = 2;
-inline bool TEST::_internal_has_b() const {
+// required bytes uid = 1;
+inline bool Pod::_internal_has_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool TEST::has_b() const {
-  return _internal_has_b();
+inline bool Pod::has_uid() const {
+  return _internal_has_uid();
 }
-inline void TEST::clear_b() {
-  _impl_.b_.ClearToEmpty();
+inline void Pod::clear_uid() {
+  _impl_.uid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& TEST::b() const {
-  // @@protoc_insertion_point(field_get:TEST.b)
-  return _internal_b();
+inline const std::string& Pod::uid() const {
+  // @@protoc_insertion_point(field_get:Pod.uid)
+  return _internal_uid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void TEST::set_b(ArgT0&& arg0, ArgT... args) {
+void Pod::set_uid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.b_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:TEST.b)
+ _impl_.uid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:Pod.uid)
 }
-inline std::string* TEST::mutable_b() {
-  std::string* _s = _internal_mutable_b();
-  // @@protoc_insertion_point(field_mutable:TEST.b)
+inline std::string* Pod::mutable_uid() {
+  std::string* _s = _internal_mutable_uid();
+  // @@protoc_insertion_point(field_mutable:Pod.uid)
   return _s;
 }
-inline const std::string& TEST::_internal_b() const {
-  return _impl_.b_.Get();
+inline const std::string& Pod::_internal_uid() const {
+  return _impl_.uid_.Get();
 }
-inline void TEST::_internal_set_b(const std::string& value) {
+inline void Pod::_internal_set_uid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.b_.Set(value, GetArenaForAllocation());
+  _impl_.uid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* TEST::_internal_mutable_b() {
+inline std::string* Pod::_internal_mutable_uid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.b_.Mutable(GetArenaForAllocation());
+  return _impl_.uid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* TEST::release_b() {
-  // @@protoc_insertion_point(field_release:TEST.b)
-  if (!_internal_has_b()) {
+inline std::string* Pod::release_uid() {
+  // @@protoc_insertion_point(field_release:Pod.uid)
+  if (!_internal_has_uid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.b_.Release();
+  auto* p = _impl_.uid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.b_.IsDefault()) {
-    _impl_.b_.Set("", GetArenaForAllocation());
+  if (_impl_.uid_.IsDefault()) {
+    _impl_.uid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void TEST::set_allocated_b(std::string* b) {
-  if (b != nullptr) {
+inline void Pod::set_allocated_uid(std::string* uid) {
+  if (uid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.b_.SetAllocated(b, GetArenaForAllocation());
+  _impl_.uid_.SetAllocated(uid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.b_.IsDefault()) {
-    _impl_.b_.Set("", GetArenaForAllocation());
+  if (_impl_.uid_.IsDefault()) {
+    _impl_.uid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:TEST.b)
+  // @@protoc_insertion_point(field_set_allocated:Pod.uid)
+}
+
+// required bytes name = 2;
+inline bool Pod::_internal_has_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Pod::has_name() const {
+  return _internal_has_name();
+}
+inline void Pod::clear_name() {
+  _impl_.name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& Pod::name() const {
+  // @@protoc_insertion_point(field_get:Pod.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void Pod::set_name(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:Pod.name)
+}
+inline std::string* Pod::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:Pod.name)
+  return _s;
+}
+inline const std::string& Pod::_internal_name() const {
+  return _impl_.name_.Get();
+}
+inline void Pod::_internal_set_name(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.name_.Set(value, GetArenaForAllocation());
+}
+inline std::string* Pod::_internal_mutable_name() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.name_.Mutable(GetArenaForAllocation());
+}
+inline std::string* Pod::release_name() {
+  // @@protoc_insertion_point(field_release:Pod.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void Pod::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:Pod.name)
+}
+
+// required bytes namespace = 3;
+inline bool Pod::_internal_has_namespace_() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Pod::has_namespace_() const {
+  return _internal_has_namespace_();
+}
+inline void Pod::clear_namespace_() {
+  _impl_.namespace__.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& Pod::namespace_() const {
+  // @@protoc_insertion_point(field_get:Pod.namespace)
+  return _internal_namespace_();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void Pod::set_namespace_(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_.namespace__.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:Pod.namespace)
+}
+inline std::string* Pod::mutable_namespace_() {
+  std::string* _s = _internal_mutable_namespace_();
+  // @@protoc_insertion_point(field_mutable:Pod.namespace)
+  return _s;
+}
+inline const std::string& Pod::_internal_namespace_() const {
+  return _impl_.namespace__.Get();
+}
+inline void Pod::_internal_set_namespace_(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.namespace__.Set(value, GetArenaForAllocation());
+}
+inline std::string* Pod::_internal_mutable_namespace_() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.namespace__.Mutable(GetArenaForAllocation());
+}
+inline std::string* Pod::release_namespace_() {
+  // @@protoc_insertion_point(field_release:Pod.namespace)
+  if (!_internal_has_namespace_()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.namespace__.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.namespace__.IsDefault()) {
+    _impl_.namespace__.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void Pod::set_allocated_namespace_(std::string* namespace_) {
+  if (namespace_ != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.namespace__.SetAllocated(namespace_, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.namespace__.IsDefault()) {
+    _impl_.namespace__.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:Pod.namespace)
 }
 
 #ifdef __GNUC__
