@@ -1,0 +1,30 @@
+metadata {
+  name: ""
+  generateName: "\000\000\000\000\000\000\000\013"
+  selfLink: "\000\000\000\000\000\000\000\013"
+  managedFields {
+    operation: "\243"
+  }
+}
+spec {
+  hostname: "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+  automountServiceAccountToken: true
+  topologySpreadConstraints {
+    labelSelector {
+      matchLabels {
+        key: "\177\000"
+        value: ""
+      }
+    }
+  }
+  resourceClaims {
+    source {
+      resourceClaimTemplateName: "\000\000\000\000\000\000\000\010"
+    }
+  }
+}
+status {
+  resourceClaimStatuses {
+    resourceClaimName: "+"
+  }
+}
