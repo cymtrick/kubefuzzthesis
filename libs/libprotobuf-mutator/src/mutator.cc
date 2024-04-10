@@ -701,6 +701,7 @@ bool Mutator::MutateImpl(const ConstMessages& sources, const Messages& messages,
   while (mutations.any()) {
     MutationSampler mutation(keep_initialized_, mutations, &random_);
     for (Message* message : messages) mutation.Sample(message);
+
     switch (mutation.mutation()) {
       case Mutation::None:
         return true;

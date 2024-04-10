@@ -1,0 +1,20 @@
+metadata {
+}
+spec {
+  volumes {
+    volumeSource {
+    }
+  }
+  restartPolicy: "\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211\211"
+  activeDeadlineSeconds: 562949953421312
+}
+status {
+  qosClass: ""
+  initContainerStatuses {
+    lastState {
+    }
+    ready: false
+    resources {
+    }
+  }
+}

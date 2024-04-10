@@ -10,7 +10,7 @@ CXXFLAGS=-g -fsanitize=fuzzer,address $(INC_DIRS)
 AR=ar
 
 # Libraries
-PROTOBUF_LIB=$(PROTOBUF_LIB_DIR)/libprotobufd.a
+PROTOBUF_LIB=$(PROTOBUF_LIB_DIR)/libprotobuf.a
 LPM_LIBS=$(LPM_LIB_DIR)/libfuzzer/libprotobuf-mutator-libfuzzer.a $(LPM_LIB_DIR)/libprotobuf-mutator.a
 
 # Target
