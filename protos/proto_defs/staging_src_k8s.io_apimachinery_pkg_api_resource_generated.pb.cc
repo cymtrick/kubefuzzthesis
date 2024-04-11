@@ -96,8 +96,8 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "\n@staging_src_k8s.io_apimachinery_pkg_ap"
   "i_resource_generated.proto\022$k8s.io.apima"
   "chinery.pkg.api.resource\"\032\n\010Quantity\022\016\n\006"
-  "string\030\001 \001(\t\"\037\n\rQuantityValue\022\016\n\006string\030"
-  "\001 \001(\tB&Z$k8s.io/apimachinery/pkg/api/res"
+  "string\030\001 \001(\014\"\037\n\rQuantityValue\022\016\n\006string\030"
+  "\001 \001(\014B&Z$k8s.io/apimachinery/pkg/api/res"
   "ource"
   ;
 static ::_pbi::once_flag descriptor_table_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fpkg_5fapi_5fresource_5fgenerated_2eproto_once;
@@ -212,15 +212,12 @@ const char* Quantity::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string string = 1;
+      // optional bytes string = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_string();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.api.resource.Quantity.string");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -255,13 +252,9 @@ uint8_t* Quantity::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string string = 1;
+  // optional bytes string = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_string().data(), static_cast<int>(this->_internal_string().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.api.resource.Quantity.string");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_string(), target);
   }
 
@@ -281,11 +274,11 @@ size_t Quantity::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string string = 1;
+  // optional bytes string = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_string());
   }
 
@@ -432,15 +425,12 @@ const char* QuantityValue::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string string = 1;
+      // optional bytes string = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_string();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.api.resource.QuantityValue.string");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -475,13 +465,9 @@ uint8_t* QuantityValue::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string string = 1;
+  // optional bytes string = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_string().data(), static_cast<int>(this->_internal_string().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.api.resource.QuantityValue.string");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_string(), target);
   }
 
@@ -501,11 +487,11 @@ size_t QuantityValue::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string string = 1;
+  // optional bytes string = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_string());
   }
 

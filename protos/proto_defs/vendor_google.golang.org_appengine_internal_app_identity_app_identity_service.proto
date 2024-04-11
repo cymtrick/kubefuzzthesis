@@ -21,7 +21,7 @@ message SignForAppRequest {
 }
 
 message SignForAppResponse {
-  optional string key_name = 1;
+  optional bytes key_name = 1;
   optional bytes signature_bytes = 2;
 }
 
@@ -29,8 +29,8 @@ message GetPublicCertificateForAppRequest {
 }
 
 message PublicCertificate {
-  optional string key_name = 1;
-  optional string x509_certificate_pem = 2;
+  optional bytes key_name = 1;
+  optional bytes x509_certificate_pem = 2;
 }
 
 message GetPublicCertificateForAppResponse {
@@ -42,17 +42,17 @@ message GetServiceAccountNameRequest {
 }
 
 message GetServiceAccountNameResponse {
-  optional string service_account_name = 1;
+  optional bytes service_account_name = 1;
 }
 
 message GetAccessTokenRequest {
   repeated string scope = 1;
   optional int64 service_account_id = 2;
-  optional string service_account_name = 3;
+  optional bytes service_account_name = 3;
 }
 
 message GetAccessTokenResponse {
-  optional string access_token = 1;
+  optional bytes access_token = 1;
   optional int64 expiration_time = 2;
 }
 
@@ -60,5 +60,5 @@ message GetDefaultGcsBucketNameRequest {
 }
 
 message GetDefaultGcsBucketNameResponse {
-  optional string default_gcs_bucket_name = 1;
+  optional bytes default_gcs_bucket_name = 1;
 }

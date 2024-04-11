@@ -84,10 +84,10 @@ message Deployment {
 // DeploymentCondition describes the state of a deployment at a certain point.
 message DeploymentCondition {
   // Type of deployment condition.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // The last time this condition was updated.
   optional k8s.io.apimachinery.pkg.apis.meta.v1.Time lastUpdateTime = 6;
@@ -96,10 +96,10 @@ message DeploymentCondition {
   optional k8s.io.apimachinery.pkg.apis.meta.v1.Time lastTransitionTime = 7;
 
   // The reason for the condition's last transition.
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // A human readable message indicating details about the transition.
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // DeploymentList is a list of Deployments.
@@ -116,7 +116,7 @@ message DeploymentList {
 // DeploymentRollback stores the information required to rollback a deployment.
 message DeploymentRollback {
   // Required: This must match the Name of a deployment.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // The annotations to be updated to a deployment
   // +optional
@@ -223,7 +223,7 @@ message DeploymentStatus {
 message DeploymentStrategy {
   // Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
   // +optional
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Rolling update config params. Present only if DeploymentStrategyType =
   // RollingUpdate.
@@ -328,7 +328,7 @@ message ScaleStatus {
   // field and map-based selector field are populated.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
   // +optional
-  optional string targetSelector = 3;
+  optional bytes targetSelector = 3;
 }
 
 // DEPRECATED - This group version of StatefulSet is deprecated by apps/v1beta2/StatefulSet. See the release notes for
@@ -357,10 +357,10 @@ message StatefulSet {
 // StatefulSetCondition describes the state of a statefulset at a certain point.
 message StatefulSetCondition {
   // Type of statefulset condition.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // Last time the condition transitioned from one status to another.
   // +optional
@@ -368,11 +368,11 @@ message StatefulSetCondition {
 
   // The reason for the condition's last transition.
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // A human readable message indicating details about the transition.
   // +optional
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // StatefulSetList is a collection of StatefulSets.
@@ -405,14 +405,14 @@ message StatefulSetPersistentVolumeClaimRetentionPolicy {
   // VolumeClaimTemplates when the StatefulSet is deleted. The default policy
   // of `Retain` causes PVCs to not be affected by StatefulSet deletion. The
   // `Delete` policy causes those PVCs to be deleted.
-  optional string whenDeleted = 1;
+  optional bytes whenDeleted = 1;
 
   // whenScaled specifies what happens to PVCs created from StatefulSet
   // VolumeClaimTemplates when the StatefulSet is scaled down. The default
   // policy of `Retain` causes PVCs to not be affected by a scaledown. The
   // `Delete` policy causes the associated PVCs for any excess pods above
   // the replica count to be deleted.
-  optional string whenScaled = 2;
+  optional bytes whenScaled = 2;
 }
 
 // A StatefulSetSpec is the specification of a StatefulSet.
@@ -455,7 +455,7 @@ message StatefulSetSpec {
   // the network identity of the set. Pods get DNS/hostnames that follow the
   // pattern: pod-specific-string.serviceName.default.svc.cluster.local
   // where "pod-specific-string" is managed by the StatefulSet controller.
-  optional string serviceName = 5;
+  optional bytes serviceName = 5;
 
   // podManagementPolicy controls how pods are created during initial scale up,
   // when replacing pods on nodes, or when scaling down. The default policy is
@@ -466,7 +466,7 @@ message StatefulSetSpec {
   // to match the desired scale without waiting, and on scale down will delete
   // all pods at once.
   // +optional
-  optional string podManagementPolicy = 6;
+  optional bytes podManagementPolicy = 6;
 
   // updateStrategy indicates the StatefulSetUpdateStrategy that will be
   // employed to update Pods in the StatefulSet when a revision is made to
@@ -523,11 +523,11 @@ message StatefulSetStatus {
 
   // currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the
   // sequence [0,currentReplicas).
-  optional string currentRevision = 6;
+  optional bytes currentRevision = 6;
 
   // updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence
   // [replicas-updatedReplicas,replicas)
-  optional string updateRevision = 7;
+  optional bytes updateRevision = 7;
 
   // collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller
   // uses this field as a collision avoidance mechanism when it needs to create the name for the
@@ -553,7 +553,7 @@ message StatefulSetStatus {
 // necessary to perform the update for the indicated strategy.
 message StatefulSetUpdateStrategy {
   // Type indicates the type of the StatefulSetUpdateStrategy.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
   optional RollingUpdateStatefulSetStrategy rollingUpdate = 2;

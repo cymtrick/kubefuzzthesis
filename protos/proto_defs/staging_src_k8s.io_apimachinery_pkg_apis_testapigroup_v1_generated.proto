@@ -53,12 +53,12 @@ message CarpCondition {
   // Type is the type of the condition.
   // Currently only Ready.
   // More info: http://kubernetes.io/docs/user-guide/carp-states#carp-conditions
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status is the status of the condition.
   // Can be True, False, Unknown.
   // More info: http://kubernetes.io/docs/user-guide/carp-states#carp-conditions
-  optional string status = 2;
+  optional bytes status = 2;
 
   // Last time we probed the condition.
   // +optional
@@ -70,11 +70,11 @@ message CarpCondition {
 
   // Unique, one-word, CamelCase reason for the condition's last transition.
   // +optional
-  optional string reason = 5;
+  optional bytes reason = 5;
 
   // Human-readable message indicating details about last transition.
   // +optional
-  optional string message = 6;
+  optional bytes message = 6;
 }
 
 // CarpList is a list of Carps.
@@ -96,7 +96,7 @@ message CarpSpec {
   // Default to Always.
   // More info: http://kubernetes.io/docs/user-guide/carp-states#restartpolicy
   // +optional
-  optional string restartPolicy = 3;
+  optional bytes restartPolicy = 3;
 
   // Optional duration in seconds the carp needs to terminate gracefully. May be decreased in delete request.
   // Value must be non-negative integer. The value zero indicates delete immediately.
@@ -123,19 +123,19 @@ message CarpSpec {
   // ServiceAccountName is the name of the ServiceAccount to use to run this carp.
   // More info: https://kubernetes.io/docs/concepts/security/service-accounts/
   // +optional
-  optional string serviceAccountName = 8;
+  optional bytes serviceAccountName = 8;
 
   // DeprecatedServiceAccount is a deprecated alias for ServiceAccountName.
   // Deprecated: Use serviceAccountName instead.
   // +k8s:conversion-gen=false
   // +optional
-  optional string serviceAccount = 9;
+  optional bytes serviceAccount = 9;
 
   // NodeName is a request to schedule this carp onto a specific node. If it is non-empty,
   // the scheduler simply schedules this carp onto that node, assuming that it fits resource
   // requirements.
   // +optional
-  optional string nodeName = 10;
+  optional bytes nodeName = 10;
 
   // Host networking requested for this carp. Use the host's network namespace.
   // If this option is set, the ports that will be used must be specified.
@@ -159,17 +159,17 @@ message CarpSpec {
   // Specifies the hostname of the Carp
   // If not specified, the carp's hostname will be set to a system-defined value.
   // +optional
-  optional string hostname = 16;
+  optional bytes hostname = 16;
 
   // If specified, the fully qualified Carp hostname will be "<hostname>.<subdomain>.<carp namespace>.svc.<cluster domain>".
   // If not specified, the carp will not have a domainname at all.
   // +optional
-  optional string subdomain = 17;
+  optional bytes subdomain = 17;
 
   // If specified, the carp will be dispatched by specified scheduler.
   // If not specified, the carp will be dispatched by default scheduler.
   // +optional
-  optional string schedulername = 19;
+  optional bytes schedulername = 19;
 }
 
 // CarpStatus represents information about the status of a carp. Status may trail the actual
@@ -178,7 +178,7 @@ message CarpStatus {
   // Current condition of the carp.
   // More info: http://kubernetes.io/docs/user-guide/carp-states#carp-phase
   // +optional
-  optional string phase = 1;
+  optional bytes phase = 1;
 
   // Current service state of carp.
   // More info: http://kubernetes.io/docs/user-guide/carp-states#carp-conditions
@@ -187,21 +187,21 @@ message CarpStatus {
 
   // A human readable message indicating details about why the carp is in this condition.
   // +optional
-  optional string message = 3;
+  optional bytes message = 3;
 
   // A brief CamelCase message indicating details about why the carp is in this state.
   // e.g. 'DiskPressure'
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // IP address of the host to which the carp is assigned. Empty if not yet scheduled.
   // +optional
-  optional string hostIP = 5;
+  optional bytes hostIP = 5;
 
   // IP address allocated to the carp. Routable at least within the cluster.
   // Empty if not yet allocated.
   // +optional
-  optional string carpIP = 6;
+  optional bytes carpIP = 6;
 
   // RFC 3339 date and time at which the object was acknowledged by the Kubelet.
   // This is before the Kubelet pulled the container image(s) for the carp.

@@ -433,7 +433,7 @@ class APIGroup final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::meta::v1::ServerAddressByClientCIDR >&
       serveraddressbyclientcidrs() const;
 
-  // optional string name = 1;
+  // optional bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -840,7 +840,7 @@ class APIResource final :
   std::string* _internal_add_categories();
   public:
 
-  // optional string name = 1;
+  // optional bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -858,7 +858,7 @@ class APIResource final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -876,7 +876,7 @@ class APIResource final :
   std::string* _internal_mutable_kind();
   public:
 
-  // optional string singularName = 6;
+  // optional bytes singularName = 6;
   bool has_singularname() const;
   private:
   bool _internal_has_singularname() const;
@@ -894,7 +894,7 @@ class APIResource final :
   std::string* _internal_mutable_singularname();
   public:
 
-  // optional string group = 8;
+  // optional bytes group = 8;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -912,7 +912,7 @@ class APIResource final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string version = 9;
+  // optional bytes version = 9;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -930,7 +930,7 @@ class APIResource final :
   std::string* _internal_mutable_version();
   public:
 
-  // optional string storageVersionHash = 10;
+  // optional bytes storageVersionHash = 10;
   bool has_storageversionhash() const;
   private:
   bool _internal_has_storageversionhash() const;
@@ -1154,7 +1154,7 @@ class APIResourceList final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::meta::v1::APIResource >&
       resources() const;
 
-  // optional string groupVersion = 1;
+  // optional bytes groupVersion = 1;
   bool has_groupversion() const;
   private:
   bool _internal_has_groupversion() const;
@@ -1536,7 +1536,7 @@ class ApplyOptions final :
   std::string* _internal_add_dryrun();
   public:
 
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   bool has_fieldmanager() const;
   private:
   bool _internal_has_fieldmanager() const;
@@ -1721,7 +1721,7 @@ class Condition final :
     kLastTransitionTimeFieldNumber = 4,
     kObservedGenerationFieldNumber = 3,
   };
-  // optional string type = 1;
+  // optional bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -1739,7 +1739,7 @@ class Condition final :
   std::string* _internal_mutable_type();
   public:
 
-  // optional string status = 2;
+  // optional bytes status = 2;
   bool has_status() const;
   private:
   bool _internal_has_status() const;
@@ -1757,7 +1757,7 @@ class Condition final :
   std::string* _internal_mutable_status();
   public:
 
-  // optional string reason = 5;
+  // optional bytes reason = 5;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -1775,7 +1775,7 @@ class Condition final :
   std::string* _internal_mutable_reason();
   public:
 
-  // optional string message = 6;
+  // optional bytes message = 6;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -2002,7 +2002,7 @@ class CreateOptions final :
   std::string* _internal_add_dryrun();
   public:
 
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   bool has_fieldmanager() const;
   private:
   bool _internal_has_fieldmanager() const;
@@ -2020,7 +2020,7 @@ class CreateOptions final :
   std::string* _internal_mutable_fieldmanager();
   public:
 
-  // optional string fieldValidation = 4;
+  // optional bytes fieldValidation = 4;
   bool has_fieldvalidation() const;
   private:
   bool _internal_has_fieldvalidation() const;
@@ -2215,7 +2215,7 @@ class DeleteOptions final :
   std::string* _internal_add_dryrun();
   public:
 
-  // optional string propagationPolicy = 4;
+  // optional bytes propagationPolicy = 4;
   bool has_propagationpolicy() const;
   private:
   bool _internal_has_propagationpolicy() const;
@@ -2753,7 +2753,7 @@ class GetOptions final :
   enum : int {
     kResourceVersionFieldNumber = 1,
   };
-  // optional string resourceVersion = 1;
+  // optional bytes resourceVersion = 1;
   bool has_resourceversion() const;
   private:
   bool _internal_has_resourceversion() const;
@@ -2919,7 +2919,7 @@ class GroupKind final :
     kGroupFieldNumber = 1,
     kKindFieldNumber = 2,
   };
-  // optional string group = 1;
+  // optional bytes group = 1;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -2937,7 +2937,7 @@ class GroupKind final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string kind = 2;
+  // optional bytes kind = 2;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -3104,7 +3104,7 @@ class GroupResource final :
     kGroupFieldNumber = 1,
     kResourceFieldNumber = 2,
   };
-  // optional string group = 1;
+  // optional bytes group = 1;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -3122,7 +3122,7 @@ class GroupResource final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string resource = 2;
+  // optional bytes resource = 2;
   bool has_resource() const;
   private:
   bool _internal_has_resource() const;
@@ -3289,7 +3289,7 @@ class GroupVersion final :
     kGroupFieldNumber = 1,
     kVersionFieldNumber = 2,
   };
-  // optional string group = 1;
+  // optional bytes group = 1;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -3307,7 +3307,7 @@ class GroupVersion final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -3474,7 +3474,7 @@ class GroupVersionForDiscovery final :
     kGroupVersionFieldNumber = 1,
     kVersionFieldNumber = 2,
   };
-  // optional string groupVersion = 1;
+  // optional bytes groupVersion = 1;
   bool has_groupversion() const;
   private:
   bool _internal_has_groupversion() const;
@@ -3492,7 +3492,7 @@ class GroupVersionForDiscovery final :
   std::string* _internal_mutable_groupversion();
   public:
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -3660,7 +3660,7 @@ class GroupVersionKind final :
     kVersionFieldNumber = 2,
     kKindFieldNumber = 3,
   };
-  // optional string group = 1;
+  // optional bytes group = 1;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -3678,7 +3678,7 @@ class GroupVersionKind final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -3696,7 +3696,7 @@ class GroupVersionKind final :
   std::string* _internal_mutable_version();
   public:
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -3865,7 +3865,7 @@ class GroupVersionResource final :
     kVersionFieldNumber = 2,
     kResourceFieldNumber = 3,
   };
-  // optional string group = 1;
+  // optional bytes group = 1;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -3883,7 +3883,7 @@ class GroupVersionResource final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -3901,7 +3901,7 @@ class GroupVersionResource final :
   std::string* _internal_mutable_version();
   public:
 
-  // optional string resource = 3;
+  // optional bytes resource = 3;
   bool has_resource() const;
   private:
   bool _internal_has_resource() const;
@@ -4324,7 +4324,7 @@ class LabelSelectorRequirement final :
   std::string* _internal_add_values();
   public:
 
-  // optional string key = 1;
+  // optional bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -4342,7 +4342,7 @@ class LabelSelectorRequirement final :
   std::string* _internal_mutable_key();
   public:
 
-  // optional string operator = 2;
+  // optional bytes operator = 2;
   bool has_operator_() const;
   private:
   bool _internal_has_operator_() const;
@@ -4697,7 +4697,7 @@ class ListMeta final :
     kContinueFieldNumber = 3,
     kRemainingItemCountFieldNumber = 4,
   };
-  // optional string selfLink = 1;
+  // optional bytes selfLink = 1;
   bool has_selflink() const;
   private:
   bool _internal_has_selflink() const;
@@ -4715,7 +4715,7 @@ class ListMeta final :
   std::string* _internal_mutable_selflink();
   public:
 
-  // optional string resourceVersion = 2;
+  // optional bytes resourceVersion = 2;
   bool has_resourceversion() const;
   private:
   bool _internal_has_resourceversion() const;
@@ -4733,7 +4733,7 @@ class ListMeta final :
   std::string* _internal_mutable_resourceversion();
   public:
 
-  // optional string continue = 3;
+  // optional bytes continue = 3;
   bool has_continue_() const;
   private:
   bool _internal_has_continue_() const;
@@ -4923,7 +4923,7 @@ class ListOptions final :
     kAllowWatchBookmarksFieldNumber = 9,
     kSendInitialEventsFieldNumber = 11,
   };
-  // optional string labelSelector = 1;
+  // optional bytes labelSelector = 1;
   bool has_labelselector() const;
   private:
   bool _internal_has_labelselector() const;
@@ -4941,7 +4941,7 @@ class ListOptions final :
   std::string* _internal_mutable_labelselector();
   public:
 
-  // optional string fieldSelector = 2;
+  // optional bytes fieldSelector = 2;
   bool has_fieldselector() const;
   private:
   bool _internal_has_fieldselector() const;
@@ -4959,7 +4959,7 @@ class ListOptions final :
   std::string* _internal_mutable_fieldselector();
   public:
 
-  // optional string resourceVersion = 4;
+  // optional bytes resourceVersion = 4;
   bool has_resourceversion() const;
   private:
   bool _internal_has_resourceversion() const;
@@ -4977,7 +4977,7 @@ class ListOptions final :
   std::string* _internal_mutable_resourceversion();
   public:
 
-  // optional string continue = 8;
+  // optional bytes continue = 8;
   bool has_continue_() const;
   private:
   bool _internal_has_continue_() const;
@@ -4995,7 +4995,7 @@ class ListOptions final :
   std::string* _internal_mutable_continue_();
   public:
 
-  // optional string resourceVersionMatch = 10;
+  // optional bytes resourceVersionMatch = 10;
   bool has_resourceversionmatch() const;
   private:
   bool _internal_has_resourceversionmatch() const;
@@ -5240,7 +5240,7 @@ class ManagedFieldsEntry final :
     kTimeFieldNumber = 4,
     kFieldsV1FieldNumber = 7,
   };
-  // optional string manager = 1;
+  // optional bytes manager = 1;
   bool has_manager() const;
   private:
   bool _internal_has_manager() const;
@@ -5258,7 +5258,7 @@ class ManagedFieldsEntry final :
   std::string* _internal_mutable_manager();
   public:
 
-  // optional string operation = 2;
+  // optional bytes operation = 2;
   bool has_operation() const;
   private:
   bool _internal_has_operation() const;
@@ -5276,7 +5276,7 @@ class ManagedFieldsEntry final :
   std::string* _internal_mutable_operation();
   public:
 
-  // optional string apiVersion = 3;
+  // optional bytes apiVersion = 3;
   bool has_apiversion() const;
   private:
   bool _internal_has_apiversion() const;
@@ -5294,7 +5294,7 @@ class ManagedFieldsEntry final :
   std::string* _internal_mutable_apiversion();
   public:
 
-  // optional string fieldsType = 6;
+  // optional bytes fieldsType = 6;
   bool has_fieldstype() const;
   private:
   bool _internal_has_fieldstype() const;
@@ -5312,7 +5312,7 @@ class ManagedFieldsEntry final :
   std::string* _internal_mutable_fieldstype();
   public:
 
-  // optional string subresource = 8;
+  // optional bytes subresource = 8;
   bool has_subresource() const;
   private:
   bool _internal_has_subresource() const;
@@ -5885,7 +5885,7 @@ class ObjectMeta final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::meta::v1::ManagedFieldsEntry >&
       managedfields() const;
 
-  // optional string name = 1;
+  // optional bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -5903,7 +5903,7 @@ class ObjectMeta final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string generateName = 2;
+  // optional bytes generateName = 2;
   bool has_generatename() const;
   private:
   bool _internal_has_generatename() const;
@@ -5921,7 +5921,7 @@ class ObjectMeta final :
   std::string* _internal_mutable_generatename();
   public:
 
-  // optional string namespace = 3;
+  // optional bytes namespace = 3;
   bool has_namespace_() const;
   private:
   bool _internal_has_namespace_() const;
@@ -5939,7 +5939,7 @@ class ObjectMeta final :
   std::string* _internal_mutable_namespace_();
   public:
 
-  // optional string selfLink = 4;
+  // optional bytes selfLink = 4;
   bool has_selflink() const;
   private:
   bool _internal_has_selflink() const;
@@ -5957,7 +5957,7 @@ class ObjectMeta final :
   std::string* _internal_mutable_selflink();
   public:
 
-  // optional string uid = 5;
+  // optional bytes uid = 5;
   bool has_uid() const;
   private:
   bool _internal_has_uid() const;
@@ -5975,7 +5975,7 @@ class ObjectMeta final :
   std::string* _internal_mutable_uid();
   public:
 
-  // optional string resourceVersion = 6;
+  // optional bytes resourceVersion = 6;
   bool has_resourceversion() const;
   private:
   bool _internal_has_resourceversion() const;
@@ -6229,7 +6229,7 @@ class OwnerReference final :
     kControllerFieldNumber = 6,
     kBlockOwnerDeletionFieldNumber = 7,
   };
-  // optional string kind = 1;
+  // optional bytes kind = 1;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -6247,7 +6247,7 @@ class OwnerReference final :
   std::string* _internal_mutable_kind();
   public:
 
-  // optional string name = 3;
+  // optional bytes name = 3;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -6265,7 +6265,7 @@ class OwnerReference final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string uid = 4;
+  // optional bytes uid = 4;
   bool has_uid() const;
   private:
   bool _internal_has_uid() const;
@@ -6283,7 +6283,7 @@ class OwnerReference final :
   std::string* _internal_mutable_uid();
   public:
 
-  // optional string apiVersion = 5;
+  // optional bytes apiVersion = 5;
   bool has_apiversion() const;
   private:
   bool _internal_has_apiversion() const;
@@ -6981,7 +6981,7 @@ class PatchOptions final :
   std::string* _internal_add_dryrun();
   public:
 
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   bool has_fieldmanager() const;
   private:
   bool _internal_has_fieldmanager() const;
@@ -6999,7 +6999,7 @@ class PatchOptions final :
   std::string* _internal_mutable_fieldmanager();
   public:
 
-  // optional string fieldValidation = 4;
+  // optional bytes fieldValidation = 4;
   bool has_fieldvalidation() const;
   private:
   bool _internal_has_fieldvalidation() const;
@@ -7181,7 +7181,7 @@ class Preconditions final :
     kUidFieldNumber = 1,
     kResourceVersionFieldNumber = 2,
   };
-  // optional string uid = 1;
+  // optional bytes uid = 1;
   bool has_uid() const;
   private:
   bool _internal_has_uid() const;
@@ -7199,7 +7199,7 @@ class Preconditions final :
   std::string* _internal_mutable_uid();
   public:
 
-  // optional string resourceVersion = 2;
+  // optional bytes resourceVersion = 2;
   bool has_resourceversion() const;
   private:
   bool _internal_has_resourceversion() const;
@@ -7536,7 +7536,7 @@ class ServerAddressByClientCIDR final :
     kClientCIDRFieldNumber = 1,
     kServerAddressFieldNumber = 2,
   };
-  // optional string clientCIDR = 1;
+  // optional bytes clientCIDR = 1;
   bool has_clientcidr() const;
   private:
   bool _internal_has_clientcidr() const;
@@ -7554,7 +7554,7 @@ class ServerAddressByClientCIDR final :
   std::string* _internal_mutable_clientcidr();
   public:
 
-  // optional string serverAddress = 2;
+  // optional bytes serverAddress = 2;
   bool has_serveraddress() const;
   private:
   bool _internal_has_serveraddress() const;
@@ -7725,7 +7725,7 @@ class Status final :
     kDetailsFieldNumber = 5,
     kCodeFieldNumber = 6,
   };
-  // optional string status = 2;
+  // optional bytes status = 2;
   bool has_status() const;
   private:
   bool _internal_has_status() const;
@@ -7743,7 +7743,7 @@ class Status final :
   std::string* _internal_mutable_status();
   public:
 
-  // optional string message = 3;
+  // optional bytes message = 3;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -7761,7 +7761,7 @@ class Status final :
   std::string* _internal_mutable_message();
   public:
 
-  // optional string reason = 4;
+  // optional bytes reason = 4;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -7982,7 +7982,7 @@ class StatusCause final :
     kMessageFieldNumber = 2,
     kFieldFieldNumber = 3,
   };
-  // optional string reason = 1;
+  // optional bytes reason = 1;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -8000,7 +8000,7 @@ class StatusCause final :
   std::string* _internal_mutable_reason();
   public:
 
-  // optional string message = 2;
+  // optional bytes message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -8018,7 +8018,7 @@ class StatusCause final :
   std::string* _internal_mutable_message();
   public:
 
-  // optional string field = 3;
+  // optional bytes field = 3;
   bool has_field() const;
   private:
   bool _internal_has_field() const;
@@ -8208,7 +8208,7 @@ class StatusDetails final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::meta::v1::StatusCause >&
       causes() const;
 
-  // optional string name = 1;
+  // optional bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -8226,7 +8226,7 @@ class StatusDetails final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string group = 2;
+  // optional bytes group = 2;
   bool has_group() const;
   private:
   bool _internal_has_group() const;
@@ -8244,7 +8244,7 @@ class StatusDetails final :
   std::string* _internal_mutable_group();
   public:
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -8262,7 +8262,7 @@ class StatusDetails final :
   std::string* _internal_mutable_kind();
   public:
 
-  // optional string uid = 6;
+  // optional bytes uid = 6;
   bool has_uid() const;
   private:
   bool _internal_has_uid() const;
@@ -8445,7 +8445,7 @@ class TableOptions final :
   enum : int {
     kIncludeObjectFieldNumber = 1,
   };
-  // optional string includeObject = 1;
+  // optional bytes includeObject = 1;
   bool has_includeobject() const;
   private:
   bool _internal_has_includeobject() const;
@@ -8961,7 +8961,7 @@ class TypeMeta final :
     kKindFieldNumber = 1,
     kApiVersionFieldNumber = 2,
   };
-  // optional string kind = 1;
+  // optional bytes kind = 1;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -8979,7 +8979,7 @@ class TypeMeta final :
   std::string* _internal_mutable_kind();
   public:
 
-  // optional string apiVersion = 2;
+  // optional bytes apiVersion = 2;
   bool has_apiversion() const;
   private:
   bool _internal_has_apiversion() const;
@@ -9171,7 +9171,7 @@ class UpdateOptions final :
   std::string* _internal_add_dryrun();
   public:
 
-  // optional string fieldManager = 2;
+  // optional bytes fieldManager = 2;
   bool has_fieldmanager() const;
   private:
   bool _internal_has_fieldmanager() const;
@@ -9189,7 +9189,7 @@ class UpdateOptions final :
   std::string* _internal_mutable_fieldmanager();
   public:
 
-  // optional string fieldValidation = 3;
+  // optional bytes fieldValidation = 3;
   bool has_fieldvalidation() const;
   private:
   bool _internal_has_fieldvalidation() const;
@@ -9527,7 +9527,7 @@ class WatchEvent final :
     kTypeFieldNumber = 1,
     kObjectFieldNumber = 2,
   };
-  // optional string type = 1;
+  // optional bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -9590,7 +9590,7 @@ class WatchEvent final :
 #endif  // __GNUC__
 // APIGroup
 
-// optional string name = 1;
+// optional bytes name = 1;
 inline bool APIGroup::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9610,7 +9610,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIGroup::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIGroup.name)
 }
 inline std::string* APIGroup::mutable_name() {
@@ -9876,7 +9876,7 @@ APIGroupList::groups() const {
 
 // APIResource
 
-// optional string name = 1;
+// optional bytes name = 1;
 inline bool APIResource::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9896,7 +9896,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.name)
 }
 inline std::string* APIResource::mutable_name() {
@@ -9944,7 +9944,7 @@ inline void APIResource::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.name)
 }
 
-// optional string singularName = 6;
+// optional bytes singularName = 6;
 inline bool APIResource::_internal_has_singularname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9964,7 +9964,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_singularname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.singularname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.singularname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.singularName)
 }
 inline std::string* APIResource::mutable_singularname() {
@@ -10040,7 +10040,7 @@ inline void APIResource::set_namespaced(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.namespaced)
 }
 
-// optional string group = 8;
+// optional bytes group = 8;
 inline bool APIResource::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10060,7 +10060,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.group)
 }
 inline std::string* APIResource::mutable_group() {
@@ -10108,7 +10108,7 @@ inline void APIResource::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.group)
 }
 
-// optional string version = 9;
+// optional bytes version = 9;
 inline bool APIResource::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -10128,7 +10128,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.version)
 }
 inline std::string* APIResource::mutable_version() {
@@ -10176,7 +10176,7 @@ inline void APIResource::set_allocated_version(std::string* version) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.version)
 }
 
-// optional string kind = 3;
+// optional bytes kind = 3;
 inline bool APIResource::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10196,7 +10196,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.kind)
 }
 inline std::string* APIResource::mutable_kind() {
@@ -10484,7 +10484,7 @@ APIResource::mutable_categories() {
   return &_impl_.categories_;
 }
 
-// optional string storageVersionHash = 10;
+// optional bytes storageVersionHash = 10;
 inline bool APIResource::_internal_has_storageversionhash() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -10504,7 +10504,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResource::set_storageversionhash(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.storageversionhash_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.storageversionhash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.storageVersionHash)
 }
 inline std::string* APIResource::mutable_storageversionhash() {
@@ -10556,7 +10556,7 @@ inline void APIResource::set_allocated_storageversionhash(std::string* storageve
 
 // APIResourceList
 
-// optional string groupVersion = 1;
+// optional bytes groupVersion = 1;
 inline bool APIResourceList::_internal_has_groupversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10576,7 +10576,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void APIResourceList::set_groupversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.groupversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.groupversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.APIResourceList.groupVersion)
 }
 inline std::string* APIResourceList::mutable_groupversion() {
@@ -10890,7 +10890,7 @@ inline void ApplyOptions::set_force(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ApplyOptions.force)
 }
 
-// optional string fieldManager = 3;
+// optional bytes fieldManager = 3;
 inline bool ApplyOptions::_internal_has_fieldmanager() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10910,7 +10910,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ApplyOptions::set_fieldmanager(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.fieldmanager_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldmanager_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ApplyOptions.fieldManager)
 }
 inline std::string* ApplyOptions::mutable_fieldmanager() {
@@ -10962,7 +10962,7 @@ inline void ApplyOptions::set_allocated_fieldmanager(std::string* fieldmanager) 
 
 // Condition
 
-// optional string type = 1;
+// optional bytes type = 1;
 inline bool Condition::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10982,7 +10982,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Condition::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.type)
 }
 inline std::string* Condition::mutable_type() {
@@ -11030,7 +11030,7 @@ inline void Condition::set_allocated_type(std::string* type) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.type)
 }
 
-// optional string status = 2;
+// optional bytes status = 2;
 inline bool Condition::_internal_has_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11050,7 +11050,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Condition::set_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.status_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.status)
 }
 inline std::string* Condition::mutable_status() {
@@ -11216,7 +11216,7 @@ inline void Condition::set_allocated_lasttransitiontime(::k8s::io::apimachinery:
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.lastTransitionTime)
 }
 
-// optional string reason = 5;
+// optional bytes reason = 5;
 inline bool Condition::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11236,7 +11236,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Condition::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.reason)
 }
 inline std::string* Condition::mutable_reason() {
@@ -11284,7 +11284,7 @@ inline void Condition::set_allocated_reason(std::string* reason) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.reason)
 }
 
-// optional string message = 6;
+// optional bytes message = 6;
 inline bool Condition::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11304,7 +11304,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Condition::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Condition.message)
 }
 inline std::string* Condition::mutable_message() {
@@ -11431,7 +11431,7 @@ CreateOptions::mutable_dryrun() {
   return &_impl_.dryrun_;
 }
 
-// optional string fieldManager = 3;
+// optional bytes fieldManager = 3;
 inline bool CreateOptions::_internal_has_fieldmanager() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11451,7 +11451,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CreateOptions::set_fieldmanager(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.fieldmanager_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldmanager_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldManager)
 }
 inline std::string* CreateOptions::mutable_fieldmanager() {
@@ -11499,7 +11499,7 @@ inline void CreateOptions::set_allocated_fieldmanager(std::string* fieldmanager)
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldManager)
 }
 
-// optional string fieldValidation = 4;
+// optional bytes fieldValidation = 4;
 inline bool CreateOptions::_internal_has_fieldvalidation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11519,7 +11519,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CreateOptions::set_fieldvalidation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.fieldvalidation_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldvalidation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldValidation)
 }
 inline std::string* CreateOptions::mutable_fieldvalidation() {
@@ -11717,7 +11717,7 @@ inline void DeleteOptions::set_orphandependents(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.DeleteOptions.orphanDependents)
 }
 
-// optional string propagationPolicy = 4;
+// optional bytes propagationPolicy = 4;
 inline bool DeleteOptions::_internal_has_propagationpolicy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11737,7 +11737,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeleteOptions::set_propagationpolicy(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.propagationpolicy_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.propagationpolicy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.DeleteOptions.propagationPolicy)
 }
 inline std::string* DeleteOptions::mutable_propagationpolicy() {
@@ -11968,7 +11968,7 @@ inline void FieldsV1::set_allocated_raw(std::string* raw) {
 
 // GetOptions
 
-// optional string resourceVersion = 1;
+// optional bytes resourceVersion = 1;
 inline bool GetOptions::_internal_has_resourceversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11988,7 +11988,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetOptions::set_resourceversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.resourceversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GetOptions.resourceVersion)
 }
 inline std::string* GetOptions::mutable_resourceversion() {
@@ -12040,7 +12040,7 @@ inline void GetOptions::set_allocated_resourceversion(std::string* resourceversi
 
 // GroupKind
 
-// optional string group = 1;
+// optional bytes group = 1;
 inline bool GroupKind::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12060,7 +12060,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupKind::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.group)
 }
 inline std::string* GroupKind::mutable_group() {
@@ -12108,7 +12108,7 @@ inline void GroupKind::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.group)
 }
 
-// optional string kind = 2;
+// optional bytes kind = 2;
 inline bool GroupKind::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12128,7 +12128,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupKind::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.kind)
 }
 inline std::string* GroupKind::mutable_kind() {
@@ -12180,7 +12180,7 @@ inline void GroupKind::set_allocated_kind(std::string* kind) {
 
 // GroupResource
 
-// optional string group = 1;
+// optional bytes group = 1;
 inline bool GroupResource::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12200,7 +12200,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupResource::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.group)
 }
 inline std::string* GroupResource::mutable_group() {
@@ -12248,7 +12248,7 @@ inline void GroupResource::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.group)
 }
 
-// optional string resource = 2;
+// optional bytes resource = 2;
 inline bool GroupResource::_internal_has_resource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12268,7 +12268,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupResource::set_resource(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.resource_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resource_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.resource)
 }
 inline std::string* GroupResource::mutable_resource() {
@@ -12320,7 +12320,7 @@ inline void GroupResource::set_allocated_resource(std::string* resource) {
 
 // GroupVersion
 
-// optional string group = 1;
+// optional bytes group = 1;
 inline bool GroupVersion::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12340,7 +12340,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersion::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.group)
 }
 inline std::string* GroupVersion::mutable_group() {
@@ -12388,7 +12388,7 @@ inline void GroupVersion::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.group)
 }
 
-// optional string version = 2;
+// optional bytes version = 2;
 inline bool GroupVersion::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12408,7 +12408,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersion::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.version)
 }
 inline std::string* GroupVersion::mutable_version() {
@@ -12460,7 +12460,7 @@ inline void GroupVersion::set_allocated_version(std::string* version) {
 
 // GroupVersionForDiscovery
 
-// optional string groupVersion = 1;
+// optional bytes groupVersion = 1;
 inline bool GroupVersionForDiscovery::_internal_has_groupversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12480,7 +12480,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionForDiscovery::set_groupversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.groupversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.groupversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.groupVersion)
 }
 inline std::string* GroupVersionForDiscovery::mutable_groupversion() {
@@ -12528,7 +12528,7 @@ inline void GroupVersionForDiscovery::set_allocated_groupversion(std::string* gr
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.groupVersion)
 }
 
-// optional string version = 2;
+// optional bytes version = 2;
 inline bool GroupVersionForDiscovery::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12548,7 +12548,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionForDiscovery::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.version)
 }
 inline std::string* GroupVersionForDiscovery::mutable_version() {
@@ -12600,7 +12600,7 @@ inline void GroupVersionForDiscovery::set_allocated_version(std::string* version
 
 // GroupVersionKind
 
-// optional string group = 1;
+// optional bytes group = 1;
 inline bool GroupVersionKind::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12620,7 +12620,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionKind::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.group)
 }
 inline std::string* GroupVersionKind::mutable_group() {
@@ -12668,7 +12668,7 @@ inline void GroupVersionKind::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.group)
 }
 
-// optional string version = 2;
+// optional bytes version = 2;
 inline bool GroupVersionKind::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12688,7 +12688,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionKind::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.version)
 }
 inline std::string* GroupVersionKind::mutable_version() {
@@ -12736,7 +12736,7 @@ inline void GroupVersionKind::set_allocated_version(std::string* version) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.version)
 }
 
-// optional string kind = 3;
+// optional bytes kind = 3;
 inline bool GroupVersionKind::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12756,7 +12756,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionKind::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.kind)
 }
 inline std::string* GroupVersionKind::mutable_kind() {
@@ -12808,7 +12808,7 @@ inline void GroupVersionKind::set_allocated_kind(std::string* kind) {
 
 // GroupVersionResource
 
-// optional string group = 1;
+// optional bytes group = 1;
 inline bool GroupVersionResource::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12828,7 +12828,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionResource::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.group)
 }
 inline std::string* GroupVersionResource::mutable_group() {
@@ -12876,7 +12876,7 @@ inline void GroupVersionResource::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.group)
 }
 
-// optional string version = 2;
+// optional bytes version = 2;
 inline bool GroupVersionResource::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12896,7 +12896,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionResource::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.version)
 }
 inline std::string* GroupVersionResource::mutable_version() {
@@ -12944,7 +12944,7 @@ inline void GroupVersionResource::set_allocated_version(std::string* version) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.version)
 }
 
-// optional string resource = 3;
+// optional bytes resource = 3;
 inline bool GroupVersionResource::_internal_has_resource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12964,7 +12964,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GroupVersionResource::set_resource(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.resource_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resource_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.resource)
 }
 inline std::string* GroupVersionResource::mutable_resource() {
@@ -13091,7 +13091,7 @@ LabelSelector::matchexpressions() const {
 
 // LabelSelectorRequirement
 
-// optional string key = 1;
+// optional bytes key = 1;
 inline bool LabelSelectorRequirement::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13111,7 +13111,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LabelSelectorRequirement::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.key)
 }
 inline std::string* LabelSelectorRequirement::mutable_key() {
@@ -13159,7 +13159,7 @@ inline void LabelSelectorRequirement::set_allocated_key(std::string* key) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.key)
 }
 
-// optional string operator = 2;
+// optional bytes operator = 2;
 inline bool LabelSelectorRequirement::_internal_has_operator_() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13179,7 +13179,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LabelSelectorRequirement::set_operator_(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.operator__.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.operator__.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.operator)
 }
 inline std::string* LabelSelectorRequirement::mutable_operator_() {
@@ -13437,7 +13437,7 @@ List::items() const {
 
 // ListMeta
 
-// optional string selfLink = 1;
+// optional bytes selfLink = 1;
 inline bool ListMeta::_internal_has_selflink() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13457,7 +13457,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListMeta::set_selflink(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selflink_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.selflink_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.selfLink)
 }
 inline std::string* ListMeta::mutable_selflink() {
@@ -13505,7 +13505,7 @@ inline void ListMeta::set_allocated_selflink(std::string* selflink) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.selfLink)
 }
 
-// optional string resourceVersion = 2;
+// optional bytes resourceVersion = 2;
 inline bool ListMeta::_internal_has_resourceversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13525,7 +13525,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListMeta::set_resourceversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.resourceversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.resourceVersion)
 }
 inline std::string* ListMeta::mutable_resourceversion() {
@@ -13573,7 +13573,7 @@ inline void ListMeta::set_allocated_resourceversion(std::string* resourceversion
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.resourceVersion)
 }
 
-// optional string continue = 3;
+// optional bytes continue = 3;
 inline bool ListMeta::_internal_has_continue_() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13593,7 +13593,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListMeta::set_continue_(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.continue__.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.continue__.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.continue)
 }
 inline std::string* ListMeta::mutable_continue_() {
@@ -13673,7 +13673,7 @@ inline void ListMeta::set_remainingitemcount(int64_t value) {
 
 // ListOptions
 
-// optional string labelSelector = 1;
+// optional bytes labelSelector = 1;
 inline bool ListOptions::_internal_has_labelselector() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13693,7 +13693,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListOptions::set_labelselector(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.labelselector_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.labelselector_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.labelSelector)
 }
 inline std::string* ListOptions::mutable_labelselector() {
@@ -13741,7 +13741,7 @@ inline void ListOptions::set_allocated_labelselector(std::string* labelselector)
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.labelSelector)
 }
 
-// optional string fieldSelector = 2;
+// optional bytes fieldSelector = 2;
 inline bool ListOptions::_internal_has_fieldselector() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13761,7 +13761,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListOptions::set_fieldselector(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.fieldselector_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldselector_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.fieldSelector)
 }
 inline std::string* ListOptions::mutable_fieldselector() {
@@ -13865,7 +13865,7 @@ inline void ListOptions::set_allowwatchbookmarks(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.allowWatchBookmarks)
 }
 
-// optional string resourceVersion = 4;
+// optional bytes resourceVersion = 4;
 inline bool ListOptions::_internal_has_resourceversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13885,7 +13885,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListOptions::set_resourceversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.resourceversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersion)
 }
 inline std::string* ListOptions::mutable_resourceversion() {
@@ -13933,7 +13933,7 @@ inline void ListOptions::set_allocated_resourceversion(std::string* resourcevers
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersion)
 }
 
-// optional string resourceVersionMatch = 10;
+// optional bytes resourceVersionMatch = 10;
 inline bool ListOptions::_internal_has_resourceversionmatch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -13953,7 +13953,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListOptions::set_resourceversionmatch(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.resourceversionmatch_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversionmatch_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersionMatch)
 }
 inline std::string* ListOptions::mutable_resourceversionmatch() {
@@ -14057,7 +14057,7 @@ inline void ListOptions::set_limit(int64_t value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.limit)
 }
 
-// optional string continue = 8;
+// optional bytes continue = 8;
 inline bool ListOptions::_internal_has_continue_() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14077,7 +14077,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListOptions::set_continue_(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.continue__.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.continue__.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.continue)
 }
 inline std::string* ListOptions::mutable_continue_() {
@@ -14157,7 +14157,7 @@ inline void ListOptions::set_sendinitialevents(bool value) {
 
 // ManagedFieldsEntry
 
-// optional string manager = 1;
+// optional bytes manager = 1;
 inline bool ManagedFieldsEntry::_internal_has_manager() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14177,7 +14177,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ManagedFieldsEntry::set_manager(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.manager_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.manager_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.manager)
 }
 inline std::string* ManagedFieldsEntry::mutable_manager() {
@@ -14225,7 +14225,7 @@ inline void ManagedFieldsEntry::set_allocated_manager(std::string* manager) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.manager)
 }
 
-// optional string operation = 2;
+// optional bytes operation = 2;
 inline bool ManagedFieldsEntry::_internal_has_operation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14245,7 +14245,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ManagedFieldsEntry::set_operation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.operation_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.operation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.operation)
 }
 inline std::string* ManagedFieldsEntry::mutable_operation() {
@@ -14293,7 +14293,7 @@ inline void ManagedFieldsEntry::set_allocated_operation(std::string* operation) 
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.operation)
 }
 
-// optional string apiVersion = 3;
+// optional bytes apiVersion = 3;
 inline bool ManagedFieldsEntry::_internal_has_apiversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14313,7 +14313,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ManagedFieldsEntry::set_apiversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.apiversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apiversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.apiVersion)
 }
 inline std::string* ManagedFieldsEntry::mutable_apiversion() {
@@ -14451,7 +14451,7 @@ inline void ManagedFieldsEntry::set_allocated_time(::k8s::io::apimachinery::pkg:
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.time)
 }
 
-// optional string fieldsType = 6;
+// optional bytes fieldsType = 6;
 inline bool ManagedFieldsEntry::_internal_has_fieldstype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14471,7 +14471,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ManagedFieldsEntry::set_fieldstype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.fieldstype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldstype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.fieldsType)
 }
 inline std::string* ManagedFieldsEntry::mutable_fieldstype() {
@@ -14609,7 +14609,7 @@ inline void ManagedFieldsEntry::set_allocated_fieldsv1(::k8s::io::apimachinery::
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.fieldsV1)
 }
 
-// optional string subresource = 8;
+// optional bytes subresource = 8;
 inline bool ManagedFieldsEntry::_internal_has_subresource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -14629,7 +14629,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ManagedFieldsEntry::set_subresource(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.subresource_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.subresource_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.subresource)
 }
 inline std::string* ManagedFieldsEntry::mutable_subresource() {
@@ -14745,7 +14745,7 @@ inline void MicroTime::set_nanos(int32_t value) {
 
 // ObjectMeta
 
-// optional string name = 1;
+// optional bytes name = 1;
 inline bool ObjectMeta::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14765,7 +14765,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.name)
 }
 inline std::string* ObjectMeta::mutable_name() {
@@ -14813,7 +14813,7 @@ inline void ObjectMeta::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.name)
 }
 
-// optional string generateName = 2;
+// optional bytes generateName = 2;
 inline bool ObjectMeta::_internal_has_generatename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14833,7 +14833,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_generatename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.generatename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.generatename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.generateName)
 }
 inline std::string* ObjectMeta::mutable_generatename() {
@@ -14881,7 +14881,7 @@ inline void ObjectMeta::set_allocated_generatename(std::string* generatename) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.generateName)
 }
 
-// optional string namespace = 3;
+// optional bytes namespace = 3;
 inline bool ObjectMeta::_internal_has_namespace_() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14901,7 +14901,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_namespace_(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.namespace__.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.namespace__.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.namespace)
 }
 inline std::string* ObjectMeta::mutable_namespace_() {
@@ -14949,7 +14949,7 @@ inline void ObjectMeta::set_allocated_namespace_(std::string* namespace_) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.namespace)
 }
 
-// optional string selfLink = 4;
+// optional bytes selfLink = 4;
 inline bool ObjectMeta::_internal_has_selflink() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14969,7 +14969,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_selflink(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.selflink_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.selflink_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.selfLink)
 }
 inline std::string* ObjectMeta::mutable_selflink() {
@@ -15017,7 +15017,7 @@ inline void ObjectMeta::set_allocated_selflink(std::string* selflink) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.selfLink)
 }
 
-// optional string uid = 5;
+// optional bytes uid = 5;
 inline bool ObjectMeta::_internal_has_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -15037,7 +15037,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_uid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.uid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.uid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.uid)
 }
 inline std::string* ObjectMeta::mutable_uid() {
@@ -15085,7 +15085,7 @@ inline void ObjectMeta::set_allocated_uid(std::string* uid) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.uid)
 }
 
-// optional string resourceVersion = 6;
+// optional bytes resourceVersion = 6;
 inline bool ObjectMeta::_internal_has_resourceversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -15105,7 +15105,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectMeta::set_resourceversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.resourceversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.resourceVersion)
 }
 inline std::string* ObjectMeta::mutable_resourceversion() {
@@ -15606,7 +15606,7 @@ ObjectMeta::managedfields() const {
 
 // OwnerReference
 
-// optional string apiVersion = 5;
+// optional bytes apiVersion = 5;
 inline bool OwnerReference::_internal_has_apiversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -15626,7 +15626,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OwnerReference::set_apiversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.apiversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apiversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.apiVersion)
 }
 inline std::string* OwnerReference::mutable_apiversion() {
@@ -15674,7 +15674,7 @@ inline void OwnerReference::set_allocated_apiversion(std::string* apiversion) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.apiVersion)
 }
 
-// optional string kind = 1;
+// optional bytes kind = 1;
 inline bool OwnerReference::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15694,7 +15694,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OwnerReference::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.kind)
 }
 inline std::string* OwnerReference::mutable_kind() {
@@ -15742,7 +15742,7 @@ inline void OwnerReference::set_allocated_kind(std::string* kind) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.kind)
 }
 
-// optional string name = 3;
+// optional bytes name = 3;
 inline bool OwnerReference::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15762,7 +15762,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OwnerReference::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.name)
 }
 inline std::string* OwnerReference::mutable_name() {
@@ -15810,7 +15810,7 @@ inline void OwnerReference::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.name)
 }
 
-// optional string uid = 4;
+// optional bytes uid = 4;
 inline bool OwnerReference::_internal_has_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -15830,7 +15830,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OwnerReference::set_uid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.uid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.uid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.uid)
 }
 inline std::string* OwnerReference::mutable_uid() {
@@ -16273,7 +16273,7 @@ inline void PatchOptions::set_force(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.force)
 }
 
-// optional string fieldManager = 3;
+// optional bytes fieldManager = 3;
 inline bool PatchOptions::_internal_has_fieldmanager() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16293,7 +16293,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PatchOptions::set_fieldmanager(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.fieldmanager_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldmanager_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldManager)
 }
 inline std::string* PatchOptions::mutable_fieldmanager() {
@@ -16341,7 +16341,7 @@ inline void PatchOptions::set_allocated_fieldmanager(std::string* fieldmanager) 
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldManager)
 }
 
-// optional string fieldValidation = 4;
+// optional bytes fieldValidation = 4;
 inline bool PatchOptions::_internal_has_fieldvalidation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16361,7 +16361,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PatchOptions::set_fieldvalidation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.fieldvalidation_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldvalidation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldValidation)
 }
 inline std::string* PatchOptions::mutable_fieldvalidation() {
@@ -16413,7 +16413,7 @@ inline void PatchOptions::set_allocated_fieldvalidation(std::string* fieldvalida
 
 // Preconditions
 
-// optional string uid = 1;
+// optional bytes uid = 1;
 inline bool Preconditions::_internal_has_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16433,7 +16433,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Preconditions::set_uid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.uid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.uid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.uid)
 }
 inline std::string* Preconditions::mutable_uid() {
@@ -16481,7 +16481,7 @@ inline void Preconditions::set_allocated_uid(std::string* uid) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.uid)
 }
 
-// optional string resourceVersion = 2;
+// optional bytes resourceVersion = 2;
 inline bool Preconditions::_internal_has_resourceversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16501,7 +16501,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Preconditions::set_resourceversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.resourceversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.resourceversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.resourceVersion)
 }
 inline std::string* Preconditions::mutable_resourceversion() {
@@ -16632,7 +16632,7 @@ RootPaths::mutable_paths() {
 
 // ServerAddressByClientCIDR
 
-// optional string clientCIDR = 1;
+// optional bytes clientCIDR = 1;
 inline bool ServerAddressByClientCIDR::_internal_has_clientcidr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16652,7 +16652,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServerAddressByClientCIDR::set_clientcidr(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.clientcidr_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.clientcidr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.clientCIDR)
 }
 inline std::string* ServerAddressByClientCIDR::mutable_clientcidr() {
@@ -16700,7 +16700,7 @@ inline void ServerAddressByClientCIDR::set_allocated_clientcidr(std::string* cli
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.clientCIDR)
 }
 
-// optional string serverAddress = 2;
+// optional bytes serverAddress = 2;
 inline bool ServerAddressByClientCIDR::_internal_has_serveraddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16720,7 +16720,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServerAddressByClientCIDR::set_serveraddress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.serveraddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.serveraddress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.serverAddress)
 }
 inline std::string* ServerAddressByClientCIDR::mutable_serveraddress() {
@@ -16862,7 +16862,7 @@ inline void Status::set_allocated_metadata(::k8s::io::apimachinery::pkg::apis::m
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Status.metadata)
 }
 
-// optional string status = 2;
+// optional bytes status = 2;
 inline bool Status::_internal_has_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16882,7 +16882,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Status::set_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Status.status)
 }
 inline std::string* Status::mutable_status() {
@@ -16930,7 +16930,7 @@ inline void Status::set_allocated_status(std::string* status) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Status.status)
 }
 
-// optional string message = 3;
+// optional bytes message = 3;
 inline bool Status::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16950,7 +16950,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Status::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Status.message)
 }
 inline std::string* Status::mutable_message() {
@@ -16998,7 +16998,7 @@ inline void Status::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.Status.message)
 }
 
-// optional string reason = 4;
+// optional bytes reason = 4;
 inline bool Status::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -17018,7 +17018,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Status::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.Status.reason)
 }
 inline std::string* Status::mutable_reason() {
@@ -17188,7 +17188,7 @@ inline void Status::set_code(int32_t value) {
 
 // StatusCause
 
-// optional string reason = 1;
+// optional bytes reason = 1;
 inline bool StatusCause::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17208,7 +17208,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusCause::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.reason)
 }
 inline std::string* StatusCause::mutable_reason() {
@@ -17256,7 +17256,7 @@ inline void StatusCause::set_allocated_reason(std::string* reason) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.reason)
 }
 
-// optional string message = 2;
+// optional bytes message = 2;
 inline bool StatusCause::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17276,7 +17276,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusCause::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.message)
 }
 inline std::string* StatusCause::mutable_message() {
@@ -17324,7 +17324,7 @@ inline void StatusCause::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.message)
 }
 
-// optional string field = 3;
+// optional bytes field = 3;
 inline bool StatusCause::_internal_has_field() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -17344,7 +17344,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusCause::set_field(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.field_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.field_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.field)
 }
 inline std::string* StatusCause::mutable_field() {
@@ -17396,7 +17396,7 @@ inline void StatusCause::set_allocated_field(std::string* field) {
 
 // StatusDetails
 
-// optional string name = 1;
+// optional bytes name = 1;
 inline bool StatusDetails::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17416,7 +17416,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusDetails::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.name)
 }
 inline std::string* StatusDetails::mutable_name() {
@@ -17464,7 +17464,7 @@ inline void StatusDetails::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.name)
 }
 
-// optional string group = 2;
+// optional bytes group = 2;
 inline bool StatusDetails::_internal_has_group() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17484,7 +17484,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusDetails::set_group(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.group_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.group_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.group)
 }
 inline std::string* StatusDetails::mutable_group() {
@@ -17532,7 +17532,7 @@ inline void StatusDetails::set_allocated_group(std::string* group) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.group)
 }
 
-// optional string kind = 3;
+// optional bytes kind = 3;
 inline bool StatusDetails::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -17552,7 +17552,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusDetails::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.kind)
 }
 inline std::string* StatusDetails::mutable_kind() {
@@ -17600,7 +17600,7 @@ inline void StatusDetails::set_allocated_kind(std::string* kind) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.kind)
 }
 
-// optional string uid = 6;
+// optional bytes uid = 6;
 inline bool StatusDetails::_internal_has_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -17620,7 +17620,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StatusDetails::set_uid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.uid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.uid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.uid)
 }
 inline std::string* StatusDetails::mutable_uid() {
@@ -17740,7 +17740,7 @@ inline void StatusDetails::set_retryafterseconds(int32_t value) {
 
 // TableOptions
 
-// optional string includeObject = 1;
+// optional bytes includeObject = 1;
 inline bool TableOptions::_internal_has_includeobject() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17760,7 +17760,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TableOptions::set_includeobject(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.includeobject_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.includeobject_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.TableOptions.includeObject)
 }
 inline std::string* TableOptions::mutable_includeobject() {
@@ -17932,7 +17932,7 @@ inline void Timestamp::set_nanos(int32_t value) {
 
 // TypeMeta
 
-// optional string kind = 1;
+// optional bytes kind = 1;
 inline bool TypeMeta::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17952,7 +17952,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TypeMeta::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.kind)
 }
 inline std::string* TypeMeta::mutable_kind() {
@@ -18000,7 +18000,7 @@ inline void TypeMeta::set_allocated_kind(std::string* kind) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.kind)
 }
 
-// optional string apiVersion = 2;
+// optional bytes apiVersion = 2;
 inline bool TypeMeta::_internal_has_apiversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18020,7 +18020,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TypeMeta::set_apiversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.apiversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apiversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.apiVersion)
 }
 inline std::string* TypeMeta::mutable_apiversion() {
@@ -18147,7 +18147,7 @@ UpdateOptions::mutable_dryrun() {
   return &_impl_.dryrun_;
 }
 
-// optional string fieldManager = 2;
+// optional bytes fieldManager = 2;
 inline bool UpdateOptions::_internal_has_fieldmanager() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18167,7 +18167,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void UpdateOptions::set_fieldmanager(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.fieldmanager_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldmanager_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldManager)
 }
 inline std::string* UpdateOptions::mutable_fieldmanager() {
@@ -18215,7 +18215,7 @@ inline void UpdateOptions::set_allocated_fieldmanager(std::string* fieldmanager)
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldManager)
 }
 
-// optional string fieldValidation = 3;
+// optional bytes fieldValidation = 3;
 inline bool UpdateOptions::_internal_has_fieldvalidation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18235,7 +18235,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void UpdateOptions::set_fieldvalidation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.fieldvalidation_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fieldvalidation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldValidation)
 }
 inline std::string* UpdateOptions::mutable_fieldvalidation() {
@@ -18366,7 +18366,7 @@ Verbs::mutable_items() {
 
 // WatchEvent
 
-// optional string type = 1;
+// optional bytes type = 1;
 inline bool WatchEvent::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18386,7 +18386,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WatchEvent::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.meta.v1.WatchEvent.type)
 }
 inline std::string* WatchEvent::mutable_type() {

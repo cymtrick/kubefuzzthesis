@@ -6,7 +6,7 @@ option go_package = "base";
 package appengine.base;
 
 message StringProto {
-  required string value = 1;
+  require bytes value = 1;
 }
 
 message Integer32Proto {

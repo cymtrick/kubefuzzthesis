@@ -3,36 +3,36 @@
 syntax = "proto2";
 
 message criu_page_server_info {
-	optional string		address	= 1;
+	optional bytes		address	= 1;
 	optional int32		port	= 2;
 	optional int32		pid	= 3;
 	optional int32		fd	= 4;
 }
 
 message criu_veth_pair {
-	required string		if_in	= 1;
-	required string		if_out	= 2;
+	require bytes		if_in	= 1;
+	require bytes		if_out	= 2;
 };
 
 message ext_mount_map {
-	required string		key	= 1;
-	required string		val	= 2;
+	require bytes		key	= 1;
+	require bytes		val	= 2;
 };
 
 message join_namespace {
-	required string		ns		= 1;
-	required string		ns_file		= 2;
-	optional string		extra_opt	= 3;
+	require bytes		ns		= 1;
+	require bytes		ns_file		= 2;
+	optional bytes		extra_opt	= 3;
 }
 
 message inherit_fd {
-	required string		key	= 1;
+	require bytes		key	= 1;
 	required int32		fd	= 2;
 };
 
 message cgroup_root {
-	optional string		ctrl	= 1;
-	required string		path	= 2;
+	optional bytes		ctrl	= 1;
+	require bytes		path	= 2;
 };
 
 message unix_sk {
@@ -65,14 +65,14 @@ message criu_opts {
 	optional bool			shell_job	= 7;
 	optional bool			file_locks	= 8;
 	optional int32			log_level	= 9 [default = 2];
-	optional string			log_file	= 10; /* No subdirs are allowed. Consider using work-dir */
+	optional bytes			log_file	= 10; /* No subdirs are allowed. Consider using work-dir */
 
 	optional criu_page_server_info	ps		= 11;
 
 	optional bool			notify_scripts	= 12;
 
-	optional string			root		= 13;
-	optional string			parent_img	= 14;
+	optional bytes			root		= 13;
+	optional bytes			parent_img	= 14;
 	optional bool			track_mem	= 15;
 	optional bool			auto_dedup	= 16;
 
@@ -107,30 +107,30 @@ message criu_opts {
 	optional uint32			empty_ns	= 38;
 	repeated join_namespace		join_ns		= 39;
 
-	optional string			cgroup_props		= 41;
-	optional string			cgroup_props_file	= 42;
+	optional bytes			cgroup_props		= 41;
+	optional bytes			cgroup_props_file	= 42;
 	repeated string			cgroup_dump_controller	= 43;
 
-	optional string			freeze_cgroup		= 44;
+	optional bytes			freeze_cgroup		= 44;
 	optional uint32			timeout			= 45;
 	optional bool			tcp_skip_in_flight	= 46;
 	optional bool			weak_sysctls		= 47;
 	optional bool			lazy_pages		= 48;
 	optional int32			status_fd		= 49;
 	optional bool			orphan_pts_master	= 50;
-	optional string			config_file		= 51;
+	optional bytes			config_file		= 51;
 	optional bool			tcp_close		= 52;
-	optional string			lsm_profile		= 53;
-	optional string			tls_cacert		= 54;
-	optional string			tls_cacrl		= 55;
-	optional string			tls_cert		= 56;
-	optional string			tls_key			= 57;
+	optional bytes			lsm_profile		= 53;
+	optional bytes			tls_cacert		= 54;
+	optional bytes			tls_cacrl		= 55;
+	optional bytes			tls_cert		= 56;
+	optional bytes			tls_key			= 57;
 	optional bool			tls			= 58;
 	optional bool			tls_no_cn_verify	= 59;
-	optional string			cgroup_yard		= 60;
+	optional bytes			cgroup_yard		= 60;
 	optional criu_pre_dump_mode	pre_dump_mode		= 61 [default = SPLICE];
 	optional int32			pidfd_store_sk		= 62;
-	optional string			lsm_mount_context	= 63;
+	optional bytes			lsm_mount_context	= 63;
 /*	optional bool			check_mounts		= 128;	*/
 }
 
@@ -143,7 +143,7 @@ message criu_restore_resp {
 }
 
 message criu_notify {
-	optional string script		= 1;
+	optional bytes script		= 1;
 	optional int32	pid		= 2;
 }
 
@@ -222,7 +222,7 @@ message criu_resp {
 
 	optional int32			cr_errno	= 7;
 	optional criu_features		features	= 8;
-	optional string			cr_errmsg	= 9;
+	optional bytes			cr_errmsg	= 9;
 	optional criu_version		version		= 10;
 
 	optional int32			status		= 11;
@@ -232,8 +232,8 @@ message criu_resp {
 message criu_version {
 	required int32			major_number	= 1;
 	required int32			minor_number	= 2;
-	optional string			gitid		= 3;
+	optional bytes			gitid		= 3;
 	optional int32			sublevel	= 4;
 	optional int32			extra		= 5;
-	optional string			name		= 6;
+	optional bytes			name		= 6;
 }

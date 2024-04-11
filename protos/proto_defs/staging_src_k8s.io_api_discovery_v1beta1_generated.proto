@@ -49,7 +49,7 @@ message Endpoint {
   // fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS
   // Label (RFC 1123) validation.
   // +optional
-  optional string hostname = 3;
+  optional bytes hostname = 3;
 
   // targetRef is a reference to a Kubernetes object that represents this
   // endpoint.
@@ -75,7 +75,7 @@ message Endpoint {
   // nodeName represents the name of the Node hosting this endpoint. This can
   // be used to determine endpoints local to a Node.
   // +optional
-  optional string nodeName = 6;
+  optional bytes nodeName = 6;
 
   // hints contains information associated with how an endpoint should be
   // consumed.
@@ -125,12 +125,12 @@ message EndpointPort {
   // * must consist of lower case alphanumeric characters or '-'.
   // * must start and end with an alphanumeric character.
   // Default is empty string.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // protocol represents the IP protocol for this port.
   // Must be UDP, TCP, or SCTP.
   // Default is TCP.
-  optional string protocol = 2;
+  optional bytes protocol = 2;
 
   // port represents the port number of the endpoint.
   // If this is not specified, ports are not restricted and must be
@@ -144,7 +144,7 @@ message EndpointPort {
   // Non-standard protocols should use prefixed names such as
   // mycompany.com/my-custom-protocol.
   // +optional
-  optional string appProtocol = 4;
+  optional bytes appProtocol = 4;
 }
 
 // EndpointSlice represents a subset of the endpoints that implement a service.
@@ -162,7 +162,7 @@ message EndpointSlice {
   // * IPv4: Represents an IPv4 Address.
   // * IPv6: Represents an IPv6 Address.
   // * FQDN: Represents a Fully Qualified Domain Name.
-  optional string addressType = 4;
+  optional bytes addressType = 4;
 
   // endpoints is a list of unique endpoints in this slice. Each slice may
   // include a maximum of 1000 endpoints.
@@ -192,6 +192,6 @@ message EndpointSliceList {
 // ForZone provides information about which zones should consume this endpoint.
 message ForZone {
   // name represents the name of the zone.
-  optional string name = 1;
+  optional bytes name = 1;
 }
 

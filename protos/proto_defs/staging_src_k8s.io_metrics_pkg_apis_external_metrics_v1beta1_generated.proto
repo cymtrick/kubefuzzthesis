@@ -34,7 +34,7 @@ option go_package = "k8s.io/metrics/pkg/apis/external_metrics/v1beta1";
 // For one metric there can be multiple values with different sets of labels.
 message ExternalMetricValue {
   // the name of the metric
-  optional string metricName = 1;
+  optional bytes metricName = 1;
 
   // a set of labels that identify a single time series for the metric
   map<string, string> metricLabels = 2;

@@ -46,22 +46,22 @@ message CertificateSigningRequest {
 
 message CertificateSigningRequestCondition {
   // type of the condition. Known conditions include "Approved", "Denied", and "Failed".
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
   // Approved, Denied, and Failed conditions may not be "False" or "Unknown".
   // Defaults to "True".
   // If unset, should be treated as "True".
   // +optional
-  optional string status = 6;
+  optional bytes status = 6;
 
   // brief reason for the request state
   // +optional
-  optional string reason = 2;
+  optional bytes reason = 2;
 
   // human readable message with details about the request state
   // +optional
-  optional string message = 3;
+  optional bytes message = 3;
 
   // timestamp for the last update to this condition
   // +optional
@@ -98,7 +98,7 @@ message CertificateSigningRequestSpec {
   // Distribution of trust for signers happens out of band.
   // You can select on this field using `spec.signerName`.
   // +optional
-  optional string signerName = 7;
+  optional bytes signerName = 7;
 
   // expirationSeconds is the requested duration of validity of the issued
   // certificate. The certificate signer may issue a certificate with a different
@@ -158,12 +158,12 @@ message CertificateSigningRequestSpec {
   // Information about the requesting user.
   // See user.Info interface for details.
   // +optional
-  optional string username = 2;
+  optional bytes username = 2;
 
   // UID information about the requesting user.
   // See user.Info interface for details.
   // +optional
-  optional string uid = 3;
+  optional bytes uid = 3;
 
   // Group information about the requesting user.
   // See user.Info interface for details.

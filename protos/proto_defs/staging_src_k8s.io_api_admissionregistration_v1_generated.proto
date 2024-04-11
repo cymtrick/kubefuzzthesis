@@ -39,7 +39,7 @@ message MatchCondition {
   // optional DNS subdomain prefix and '/' (e.g. 'example.com/MyName')
   //
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // Expression represents the expression which will be evaluated by CEL. Must evaluate to bool.
   // CEL expressions have access to the contents of the AdmissionRequest and Authorizer, organized into CEL variables:
@@ -54,7 +54,7 @@ message MatchCondition {
   // Documentation on CEL: https://kubernetes.io/docs/reference/using-api/cel/
   //
   // Required.
-  optional string expression = 2;
+  optional bytes expression = 2;
 }
 
 // MutatingWebhook describes an admission webhook and the resources and operations it applies to.
@@ -64,7 +64,7 @@ message MutatingWebhook {
   // "imagepolicy" is the name of the webhook, and kubernetes.io is the name
   // of the organization.
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // ClientConfig defines how to communicate with the hook.
   // Required
@@ -82,7 +82,7 @@ message MutatingWebhook {
   // FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
   // allowed values are Ignore or Fail. Defaults to Fail.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // matchPolicy defines how the "rules" list is used to match incoming requests.
   // Allowed values are "Exact" or "Equivalent".
@@ -99,7 +99,7 @@ message MutatingWebhook {
   //
   // Defaults to "Equivalent"
   // +optional
-  optional string matchPolicy = 9;
+  optional bytes matchPolicy = 9;
 
   // NamespaceSelector decides whether to run the webhook on an object based
   // on whether the namespace for that object matches the selector. If the
@@ -167,7 +167,7 @@ message MutatingWebhook {
   // rejected by a future step in the admission chain and the side effects therefore need to be undone.
   // Requests with the dryRun attribute will be auto-rejected if they match a webhook with
   // sideEffects == Unknown or Some.
-  optional string sideEffects = 6;
+  optional bytes sideEffects = 6;
 
   // TimeoutSeconds specifies the timeout for this webhook. After the timeout passes,
   // the webhook call will be ignored or the API call will fail based on the
@@ -203,7 +203,7 @@ message MutatingWebhook {
   //
   // Defaults to "Never".
   // +optional
-  optional string reinvocationPolicy = 10;
+  optional bytes reinvocationPolicy = 10;
 
   // MatchConditions is a list of conditions that must be met for a request to be sent to this
   // webhook. Match conditions filter requests that have already been matched by the rules,
@@ -297,7 +297,7 @@ message Rule {
   // Default is "*".
   //
   // +optional
-  optional string scope = 4;
+  optional bytes scope = 4;
 }
 
 // RuleWithOperations is a tuple of Operations and Resources. It is recommended to make
@@ -319,16 +319,16 @@ message RuleWithOperations {
 message ServiceReference {
   // `namespace` is the namespace of the service.
   // Required
-  optional string namespace = 1;
+  optional bytes namespace = 1;
 
   // `name` is the name of the service.
   // Required
-  optional string name = 2;
+  optional bytes name = 2;
 
   // `path` is an optional URL path which will be sent in any request to
   // this service.
   // +optional
-  optional string path = 3;
+  optional bytes path = 3;
 
   // If specified, the port on the service that hosting webhook.
   // Default to 443 for backward compatibility.
@@ -344,7 +344,7 @@ message ValidatingWebhook {
   // "imagepolicy" is the name of the webhook, and kubernetes.io is the name
   // of the organization.
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // ClientConfig defines how to communicate with the hook.
   // Required
@@ -362,7 +362,7 @@ message ValidatingWebhook {
   // FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
   // allowed values are Ignore or Fail. Defaults to Fail.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // matchPolicy defines how the "rules" list is used to match incoming requests.
   // Allowed values are "Exact" or "Equivalent".
@@ -379,7 +379,7 @@ message ValidatingWebhook {
   //
   // Defaults to "Equivalent"
   // +optional
-  optional string matchPolicy = 9;
+  optional bytes matchPolicy = 9;
 
   // NamespaceSelector decides whether to run the webhook on an object based
   // on whether the namespace for that object matches the selector. If the
@@ -447,7 +447,7 @@ message ValidatingWebhook {
   // rejected by a future step in the admission chain and the side effects therefore need to be undone.
   // Requests with the dryRun attribute will be auto-rejected if they match a webhook with
   // sideEffects == Unknown or Some.
-  optional string sideEffects = 6;
+  optional bytes sideEffects = 6;
 
   // TimeoutSeconds specifies the timeout for this webhook. After the timeout passes,
   // the webhook call will be ignored or the API call will fail based on the
@@ -546,7 +546,7 @@ message WebhookClientConfig {
   // allowed, either.
   //
   // +optional
-  optional string url = 3;
+  optional bytes url = 3;
 
   // `service` is a reference to the service for this webhook. Either
   // `service` or `url` must be specified.

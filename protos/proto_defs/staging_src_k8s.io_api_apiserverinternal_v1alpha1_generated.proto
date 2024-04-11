@@ -32,11 +32,11 @@ option go_package = "k8s.io/api/apiserverinternal/v1alpha1";
 // encodes objects to when persisting objects in the backend.
 message ServerStorageVersion {
   // The ID of the reporting API server.
-  optional string apiServerID = 1;
+  optional bytes apiServerID = 1;
 
   // The API server encodes the object to this version when persisting it in
   // the backend (e.g., etcd).
-  optional string encodingVersion = 2;
+  optional bytes encodingVersion = 2;
 
   // The API server can decode objects encoded in these versions.
   // The encodingVersion must be included in the decodableVersions.
@@ -66,11 +66,11 @@ message StorageVersion {
 message StorageVersionCondition {
   // Type of the condition.
   // +required
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
   // +required
-  optional string status = 2;
+  optional bytes status = 2;
 
   // If set, this represents the .metadata.generation that the condition was set based upon.
   // +optional
@@ -82,11 +82,11 @@ message StorageVersionCondition {
 
   // The reason for the condition's last transition.
   // +required
-  optional string reason = 5;
+  optional bytes reason = 5;
 
   // A human readable message indicating details about the transition.
   // +required
-  optional string message = 6;
+  optional bytes message = 6;
 }
 
 // A list of StorageVersions.
@@ -118,7 +118,7 @@ message StorageVersionStatus {
   // API servers should finish updating its storageVersionStatus entry before
   // serving write operations, so that this field will be in sync with the reality.
   // +optional
-  optional string commonEncodingVersion = 2;
+  optional bytes commonEncodingVersion = 2;
 
   // The latest available observations of the storageVersion's state.
   // +optional

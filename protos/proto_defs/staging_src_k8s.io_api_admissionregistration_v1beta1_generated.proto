@@ -46,7 +46,7 @@ message AuditAnnotation {
   // will be discarded.
   //
   // Required.
-  optional string key = 1;
+  optional bytes key = 1;
 
   // valueExpression represents the expression which is evaluated by CEL to
   // produce an audit annotation value. The expression must evaluate to either
@@ -63,7 +63,7 @@ message AuditAnnotation {
   // will be joined together in a comma-separated list.
   //
   // Required.
-  optional string valueExpression = 2;
+  optional bytes valueExpression = 2;
 }
 
 // ExpressionWarning is a warning information that targets a specific expression.
@@ -71,12 +71,12 @@ message ExpressionWarning {
   // The path to the field that refers the expression.
   // For example, the reference to the expression of the first item of
   // validations is "spec.validations[0].expression"
-  optional string fieldRef = 2;
+  optional bytes fieldRef = 2;
 
   // The content of type checking information in a human-readable form.
   // Each line of the warning contains the type that the expression is checked
   // against, followed by the type check error from the compiler.
-  optional string warning = 3;
+  optional bytes warning = 3;
 }
 
 // MatchCondition represents a condition which must be fulfilled for a request to be sent to a webhook.
@@ -90,7 +90,7 @@ message MatchCondition {
   // optional DNS subdomain prefix and '/' (e.g. 'example.com/MyName')
   //
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // Expression represents the expression which will be evaluated by CEL. Must evaluate to bool.
   // CEL expressions have access to the contents of the AdmissionRequest and Authorizer, organized into CEL variables:
@@ -105,7 +105,7 @@ message MatchCondition {
   // Documentation on CEL: https://kubernetes.io/docs/reference/using-api/cel/
   //
   // Required.
-  optional string expression = 2;
+  optional bytes expression = 2;
 }
 
 // MatchResources decides whether to run the admission control policy on an object based
@@ -200,7 +200,7 @@ message MatchResources {
   //
   // Defaults to "Equivalent"
   // +optional
-  optional string matchPolicy = 7;
+  optional bytes matchPolicy = 7;
 }
 
 // MutatingWebhook describes an admission webhook and the resources and operations it applies to.
@@ -210,7 +210,7 @@ message MutatingWebhook {
   // "imagepolicy" is the name of the webhook, and kubernetes.io is the name
   // of the organization.
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // ClientConfig defines how to communicate with the hook.
   // Required
@@ -228,7 +228,7 @@ message MutatingWebhook {
   // FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
   // allowed values are Ignore or Fail. Defaults to Ignore.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // matchPolicy defines how the "rules" list is used to match incoming requests.
   // Allowed values are "Exact" or "Equivalent".
@@ -245,7 +245,7 @@ message MutatingWebhook {
   //
   // Defaults to "Exact"
   // +optional
-  optional string matchPolicy = 9;
+  optional bytes matchPolicy = 9;
 
   // NamespaceSelector decides whether to run the webhook on an object based
   // on whether the namespace for that object matches the selector. If the
@@ -314,7 +314,7 @@ message MutatingWebhook {
   // Requests with the dryRun attribute will be auto-rejected if they match a webhook with
   // sideEffects == Unknown or Some. Defaults to Unknown.
   // +optional
-  optional string sideEffects = 6;
+  optional bytes sideEffects = 6;
 
   // TimeoutSeconds specifies the timeout for this webhook. After the timeout passes,
   // the webhook call will be ignored or the API call will fail based on the
@@ -352,7 +352,7 @@ message MutatingWebhook {
   //
   // Defaults to "Never".
   // +optional
-  optional string reinvocationPolicy = 10;
+  optional bytes reinvocationPolicy = 10;
 
   // MatchConditions is a list of conditions that must be met for a request to be sent to this
   // webhook. Match conditions filter requests that have already been matched by the rules,
@@ -422,11 +422,11 @@ message ParamKind {
   // APIVersion is the API group version the resources belong to.
   // In format of "group/version".
   // Required.
-  optional string apiVersion = 1;
+  optional bytes apiVersion = 1;
 
   // Kind is the API kind the resources belong to.
   // Required.
-  optional string kind = 2;
+  optional bytes kind = 2;
 }
 
 // ParamRef describes how to locate the params to be used as input to
@@ -441,7 +441,7 @@ message ParamRef {
   // A single parameter used for all admission requests can be configured
   // by setting the `name` field, leaving `selector` blank, and setting namespace
   // if `paramKind` is namespace-scoped.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // namespace is the namespace of the referenced resource. Allows limiting
   // the search for params to a specific namespace. Applies to both `name` and
@@ -459,7 +459,7 @@ message ParamRef {
   // resources, which will result in an error.
   //
   // +optional
-  optional string namespace = 2;
+  optional bytes namespace = 2;
 
   // selector can be used to match multiple param objects based on their labels.
   // Supply selector: {} to match all resources of the ParamKind.
@@ -483,23 +483,23 @@ message ParamRef {
   // Allowed values are `Allow` or `Deny`
   //
   // Required
-  optional string parameterNotFoundAction = 4;
+  optional bytes parameterNotFoundAction = 4;
 }
 
 // ServiceReference holds a reference to Service.legacy.k8s.io
 message ServiceReference {
   // `namespace` is the namespace of the service.
   // Required
-  optional string namespace = 1;
+  optional bytes namespace = 1;
 
   // `name` is the name of the service.
   // Required
-  optional string name = 2;
+  optional bytes name = 2;
 
   // `path` is an optional URL path which will be sent in any request to
   // this service.
   // +optional
-  optional string path = 3;
+  optional bytes path = 3;
 
   // If specified, the port on the service that hosting webhook.
   // Default to 443 for backward compatibility.
@@ -575,7 +575,7 @@ message ValidatingAdmissionPolicyBindingSpec {
   // PolicyName references a ValidatingAdmissionPolicy name which the ValidatingAdmissionPolicyBinding binds to.
   // If the referenced resource does not exist, this binding is considered invalid and will be ignored
   // Required.
-  optional string policyName = 1;
+  optional bytes policyName = 1;
 
   // paramRef specifies the parameter resource used to configure the admission control policy.
   // It should point to a resource of the type specified in ParamKind of the bound ValidatingAdmissionPolicy.
@@ -685,7 +685,7 @@ message ValidatingAdmissionPolicySpec {
   //
   // Allowed values are Ignore or Fail. Defaults to Fail.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // auditAnnotations contains CEL expressions which are used to produce audit
   // annotations for the audit event of the API request.
@@ -757,7 +757,7 @@ message ValidatingWebhook {
   // "imagepolicy" is the name of the webhook, and kubernetes.io is the name
   // of the organization.
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // ClientConfig defines how to communicate with the hook.
   // Required
@@ -775,7 +775,7 @@ message ValidatingWebhook {
   // FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
   // allowed values are Ignore or Fail. Defaults to Ignore.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // matchPolicy defines how the "rules" list is used to match incoming requests.
   // Allowed values are "Exact" or "Equivalent".
@@ -792,7 +792,7 @@ message ValidatingWebhook {
   //
   // Defaults to "Exact"
   // +optional
-  optional string matchPolicy = 9;
+  optional bytes matchPolicy = 9;
 
   // NamespaceSelector decides whether to run the webhook on an object based
   // on whether the namespace for that object matches the selector. If the
@@ -862,7 +862,7 @@ message ValidatingWebhook {
   // sideEffects == Unknown or Some. Defaults to Unknown.
   // +optional
   // +listType=atomic
-  optional string sideEffects = 6;
+  optional bytes sideEffects = 6;
 
   // TimeoutSeconds specifies the timeout for this webhook. After the timeout passes,
   // the webhook call will be ignored or the API call will fail based on the
@@ -977,7 +977,7 @@ message Validation {
   //     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
   //     non-intersecting keys are appended, retaining their partial order.
   // Required.
-  optional string Expression = 1;
+  optional bytes Expression = 1;
 
   // Message represents the message displayed when validation fails. The message is required if the Expression contains
   // line breaks. The message must not contain line breaks.
@@ -987,7 +987,7 @@ message Validation {
   // The message must not contain line breaks.
   // If unset, the message is "failed Expression: {Expression}".
   // +optional
-  optional string message = 2;
+  optional bytes message = 2;
 
   // Reason represents a machine-readable description of why this validation failed.
   // If this is the first validation in the list to fail, this reason, as well as the
@@ -996,7 +996,7 @@ message Validation {
   // The currently supported reasons are: "Unauthorized", "Forbidden", "Invalid", "RequestEntityTooLarge".
   // If not set, StatusReasonInvalid is used in the response to the client.
   // +optional
-  optional string reason = 3;
+  optional bytes reason = 3;
 
   // messageExpression declares a CEL expression that evaluates to the validation failure message that is returned when this rule fails.
   // Since messageExpression is used as a failure message, it must evaluate to a string.
@@ -1009,7 +1009,7 @@ message Validation {
   // Example:
   // "object.x must be less than max ("+string(params.max)+")"
   // +optional
-  optional string messageExpression = 4;
+  optional bytes messageExpression = 4;
 }
 
 // Variable is the definition of a variable that is used for composition. A variable is defined as a named expression.
@@ -1018,11 +1018,11 @@ message Variable {
   // Name is the name of the variable. The name must be a valid CEL identifier and unique among all variables.
   // The variable can be accessed in other expressions through `variables`
   // For example, if name is "foo", the variable will be available as `variables.foo`
-  optional string Name = 1;
+  optional bytes Name = 1;
 
   // Expression is the expression that will be evaluated as the value of the variable.
   // The CEL expression has access to the same identifiers as the CEL expressions in Validation.
-  optional string Expression = 2;
+  optional bytes Expression = 2;
 }
 
 // WebhookClientConfig contains the information to make a TLS
@@ -1055,7 +1055,7 @@ message WebhookClientConfig {
   // allowed, either.
   //
   // +optional
-  optional string url = 3;
+  optional bytes url = 3;
 
   // `service` is a reference to the service for this webhook. Either
   // `service` or `url` must be specified.

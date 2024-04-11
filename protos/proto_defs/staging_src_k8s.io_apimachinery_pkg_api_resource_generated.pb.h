@@ -205,7 +205,7 @@ class Quantity final :
   enum : int {
     kStringFieldNumber = 1,
   };
-  // optional string string = 1;
+  // optional bytes string = 1;
   bool has_string() const;
   private:
   bool _internal_has_string() const;
@@ -370,7 +370,7 @@ class QuantityValue final :
   enum : int {
     kStringFieldNumber = 1,
   };
-  // optional string string = 1;
+  // optional bytes string = 1;
   bool has_string() const;
   private:
   bool _internal_has_string() const;
@@ -414,7 +414,7 @@ class QuantityValue final :
 #endif  // __GNUC__
 // Quantity
 
-// optional string string = 1;
+// optional bytes string = 1;
 inline bool Quantity::_internal_has_string() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -434,7 +434,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Quantity::set_string(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.string_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.string_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.api.resource.Quantity.string)
 }
 inline std::string* Quantity::mutable_string() {
@@ -486,7 +486,7 @@ inline void Quantity::set_allocated_string(std::string* string) {
 
 // QuantityValue
 
-// optional string string = 1;
+// optional bytes string = 1;
 inline bool QuantityValue::_internal_has_string() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -506,7 +506,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void QuantityValue::set_string(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.string_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.string_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.api.resource.QuantityValue.string)
 }
 inline std::string* QuantityValue::mutable_string() {

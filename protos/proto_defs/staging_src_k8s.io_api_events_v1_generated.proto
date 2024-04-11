@@ -50,19 +50,19 @@ message Event {
 
   // reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
   // This field cannot be empty for new Events.
-  optional string reportingController = 4;
+  optional bytes reportingController = 4;
 
   // reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`.
   // This field cannot be empty for new Events and it can have at most 128 characters.
-  optional string reportingInstance = 5;
+  optional bytes reportingInstance = 5;
 
   // action is what action was taken/failed regarding to the regarding object. It is machine-readable.
   // This field cannot be empty for new Events and it can have at most 128 characters.
-  optional string action = 6;
+  optional bytes action = 6;
 
   // reason is why the action was taken. It is human-readable.
   // This field cannot be empty for new Events and it can have at most 128 characters.
-  optional string reason = 7;
+  optional bytes reason = 7;
 
   // regarding contains the object this Event is about. In most cases it's an Object reporting controller
   // implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because
@@ -79,12 +79,12 @@ message Event {
   // Maximal length of the note is 1kB, but libraries should be prepared to
   // handle values up to 64kB.
   // +optional
-  optional string note = 10;
+  optional bytes note = 10;
 
   // type is the type of this event (Normal, Warning), new types could be added in the future.
   // It is machine-readable.
   // This field cannot be empty for new Events.
-  optional string type = 11;
+  optional bytes type = 11;
 
   // deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
   // +optional

@@ -98,7 +98,7 @@ message PodSchedulingContextSpec {
   // are referenced by the Pod and that use "WaitForFirstConsumer"
   // allocation is to be attempted.
   // +optional
-  optional string selectedNode = 1;
+  optional bytes selectedNode = 1;
 
   // PotentialNodes lists nodes where the Pod might be able to run.
   //
@@ -154,16 +154,16 @@ message ResourceClaimConsumerReference {
   // empty for the core API. This matches the group in the APIVersion
   // that is used when creating the resources.
   // +optional
-  optional string apiGroup = 1;
+  optional bytes apiGroup = 1;
 
   // Resource is the type of resource being referenced, for example "pods".
-  optional string resource = 3;
+  optional bytes resource = 3;
 
   // Name is the name of resource being referenced.
-  optional string name = 4;
+  optional bytes name = 4;
 
   // UID identifies exactly one incarnation of the resource.
-  optional string uid = 5;
+  optional bytes uid = 5;
 }
 
 // ResourceClaimList is a collection of claims.
@@ -184,14 +184,14 @@ message ResourceClaimParametersReference {
   // empty for the core API. This matches the group in the APIVersion
   // that is used when creating the resources.
   // +optional
-  optional string apiGroup = 1;
+  optional bytes apiGroup = 1;
 
   // Kind is the type of resource being referenced. This is the same
   // value as in the parameter object's metadata, for example "ConfigMap".
-  optional string kind = 2;
+  optional bytes kind = 2;
 
   // Name is the name of resource being referenced.
-  optional string name = 3;
+  optional bytes name = 3;
 }
 
 // ResourceClaimSchedulingStatus contains information about one particular
@@ -199,7 +199,7 @@ message ResourceClaimParametersReference {
 message ResourceClaimSchedulingStatus {
   // Name matches the pod.spec.resourceClaims[*].Name field.
   // +optional
-  optional string name = 1;
+  optional bytes name = 1;
 
   // UnsuitableNodes lists nodes that the ResourceClaim cannot be
   // allocated for.
@@ -218,7 +218,7 @@ message ResourceClaimSpec {
   // ResourceClassName references the driver and additional parameters
   // via the name of a ResourceClass that was created as part of the
   // driver deployment.
-  optional string resourceClassName = 1;
+  optional bytes resourceClassName = 1;
 
   // ParametersRef references a separate object with arbitrary parameters
   // that will be used by the driver when allocating a resource for the
@@ -231,7 +231,7 @@ message ResourceClaimSpec {
   // Allocation can start immediately or when a Pod wants to use the
   // resource. "WaitForFirstConsumer" is the default.
   // +optional
-  optional string allocationMode = 3;
+  optional bytes allocationMode = 3;
 }
 
 // ResourceClaimStatus tracks whether the resource has been allocated and what
@@ -240,7 +240,7 @@ message ResourceClaimStatus {
   // DriverName is a copy of the driver name from the ResourceClass at
   // the time when allocation started.
   // +optional
-  optional string driverName = 1;
+  optional bytes driverName = 1;
 
   // Allocation is set by the resource driver once a resource or set of
   // resources has been allocated successfully. If this is not specified, the
@@ -327,7 +327,7 @@ message ResourceClass {
   //
   // Resource drivers have a unique name in forward domain order
   // (acme.example.com).
-  optional string driverName = 2;
+  optional bytes driverName = 2;
 
   // ParametersRef references an arbitrary separate object that may hold
   // parameters that will be used by the driver when allocating a
@@ -363,20 +363,20 @@ message ResourceClassParametersReference {
   // empty for the core API. This matches the group in the APIVersion
   // that is used when creating the resources.
   // +optional
-  optional string apiGroup = 1;
+  optional bytes apiGroup = 1;
 
   // Kind is the type of resource being referenced. This is the same
   // value as in the parameter object's metadata.
-  optional string kind = 2;
+  optional bytes kind = 2;
 
   // Name is the name of resource being referenced.
-  optional string name = 3;
+  optional bytes name = 3;
 
   // Namespace that contains the referenced resource. Must be empty
   // for cluster-scoped resources and non-empty for namespaced
   // resources.
   // +optional
-  optional string namespace = 4;
+  optional bytes namespace = 4;
 }
 
 // ResourceHandle holds opaque resource data for processing by a specific kubelet plugin.
@@ -385,7 +385,7 @@ message ResourceHandle {
   // plugin should be invoked to process this ResourceHandle's data once it
   // lands on a node. This may differ from the DriverName set in
   // ResourceClaimStatus this ResourceHandle is embedded in.
-  optional string driverName = 1;
+  optional bytes driverName = 1;
 
   // Data contains the opaque data associated with this ResourceHandle. It is
   // set by the controller component of the resource driver whose name
@@ -397,6 +397,6 @@ message ResourceHandle {
   // The maximum size of this field is 16KiB. This may get increased in the
   // future, but not reduced.
   // +optional
-  optional string data = 2;
+  optional bytes data = 2;
 }
 

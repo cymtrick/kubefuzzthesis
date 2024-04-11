@@ -59,11 +59,11 @@ message LocalSubjectAccessReview {
 message NonResourceAttributes {
   // Path is the URL path of the request
   // +optional
-  optional string path = 1;
+  optional bytes path = 1;
 
   // Verb is the standard HTTP verb
   // +optional
-  optional string verb = 2;
+  optional bytes verb = 2;
 }
 
 // NonResourceRule holds information that describes a rule for the non-resource
@@ -86,31 +86,31 @@ message ResourceAttributes {
   // "" (empty) is empty for cluster-scoped resources
   // "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
   // +optional
-  optional string namespace = 1;
+  optional bytes namespace = 1;
 
   // Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
   // +optional
-  optional string verb = 2;
+  optional bytes verb = 2;
 
   // Group is the API Group of the Resource.  "*" means all.
   // +optional
-  optional string group = 3;
+  optional bytes group = 3;
 
   // Version is the API Version of the Resource.  "*" means all.
   // +optional
-  optional string version = 4;
+  optional bytes version = 4;
 
   // Resource is one of the existing resource types.  "*" means all.
   // +optional
-  optional string resource = 5;
+  optional bytes resource = 5;
 
   // Subresource is one of the existing resource types.  "" means none.
   // +optional
-  optional string subresource = 6;
+  optional bytes subresource = 6;
 
   // Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
   // +optional
-  optional string name = 7;
+  optional bytes name = 7;
 }
 
 // ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant,
@@ -190,7 +190,7 @@ message SelfSubjectRulesReview {
 // SelfSubjectRulesReviewSpec defines the specification for SelfSubjectRulesReview.
 message SelfSubjectRulesReviewSpec {
   // Namespace to evaluate rules for. Required.
-  optional string namespace = 1;
+  optional bytes namespace = 1;
 }
 
 // SubjectAccessReview checks whether or not a user or group can perform an action.
@@ -222,7 +222,7 @@ message SubjectAccessReviewSpec {
   // User is the user you're testing for.
   // If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
   // +optional
-  optional string user = 3;
+  optional bytes user = 3;
 
   // Groups is the groups you're testing for.
   // +optional
@@ -236,7 +236,7 @@ message SubjectAccessReviewSpec {
 
   // UID information about the requesting user.
   // +optional
-  optional string uid = 6;
+  optional bytes uid = 6;
 }
 
 // SubjectAccessReviewStatus
@@ -253,13 +253,13 @@ message SubjectAccessReviewStatus {
 
   // Reason is optional.  It indicates why a request was allowed or denied.
   // +optional
-  optional string reason = 2;
+  optional bytes reason = 2;
 
   // EvaluationError is an indication that some error occurred during the authorization check.
   // It is entirely possible to get an error and be able to continue determine authorization status in spite of it.
   // For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
   // +optional
-  optional string evaluationError = 3;
+  optional bytes evaluationError = 3;
 }
 
 // SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete depending on
@@ -285,6 +285,6 @@ message SubjectRulesReviewStatus {
   // rule evaluation, such as an authorizer that doesn't support rule evaluation, and that
   // ResourceRules and/or NonResourceRules may be incomplete.
   // +optional
-  optional string evaluationError = 4;
+  optional bytes evaluationError = 4;
 }
 

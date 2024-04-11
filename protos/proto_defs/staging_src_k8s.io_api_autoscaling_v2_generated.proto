@@ -39,13 +39,13 @@ option go_package = "k8s.io/api/autoscaling/v2";
 // should be set.
 message ContainerResourceMetricSource {
   // name is the name of the resource in question.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // target specifies the target value for the given metric
   optional MetricTarget target = 2;
 
   // container is the name of the container in the pods of the scaling target
-  optional string container = 3;
+  optional bytes container = 3;
 }
 
 // ContainerResourceMetricStatus indicates the current value of a resource metric known to
@@ -55,26 +55,26 @@ message ContainerResourceMetricSource {
 // normal per-pod metrics using the "pods" source.
 message ContainerResourceMetricStatus {
   // name is the name of the resource in question.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // current contains the current value for the given metric
   optional MetricValueStatus current = 2;
 
   // container is the name of the container in the pods of the scaling target
-  optional string container = 3;
+  optional bytes container = 3;
 }
 
 // CrossVersionObjectReference contains enough information to let you identify the referred resource.
 message CrossVersionObjectReference {
   // kind is the kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-  optional string kind = 1;
+  optional bytes kind = 1;
 
   // name is the name of the referent; More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-  optional string name = 2;
+  optional bytes name = 2;
 
   // apiVersion is the API version of the referent
   // +optional
-  optional string apiVersion = 3;
+  optional bytes apiVersion = 3;
 }
 
 // ExternalMetricSource indicates how to scale on a metric not associated with
@@ -101,7 +101,7 @@ message ExternalMetricStatus {
 // HPAScalingPolicy is a single policy which must hold true for a specified past interval.
 message HPAScalingPolicy {
   // type is used to specify the scaling policy.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // value contains the amount of change which is permitted by the policy.
   // It must be greater than zero
@@ -131,7 +131,7 @@ message HPAScalingRules {
   // selectPolicy is used to specify which policy should be used.
   // If not set, the default value Max is used.
   // +optional
-  optional string selectPolicy = 1;
+  optional bytes selectPolicy = 1;
 
   // policies is a list of potential scaling polices which can be used during scaling.
   // At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
@@ -182,10 +182,10 @@ message HorizontalPodAutoscalerBehavior {
 // a HorizontalPodAutoscaler at a certain point.
 message HorizontalPodAutoscalerCondition {
   // type describes the current condition
-  optional string type = 1;
+  optional bytes type = 1;
 
   // status is the status of the condition (True, False, Unknown)
-  optional string status = 2;
+  optional bytes status = 2;
 
   // lastTransitionTime is the last time the condition transitioned from
   // one status to another
@@ -194,12 +194,12 @@ message HorizontalPodAutoscalerCondition {
 
   // reason is the reason for the condition's last transition.
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // message is a human-readable explanation containing details about
   // the transition
   // +optional
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
@@ -287,7 +287,7 @@ message HorizontalPodAutoscalerStatus {
 // MetricIdentifier defines the name and optionally selector for a metric
 message MetricIdentifier {
   // name is the name of the given metric
-  optional string name = 1;
+  optional bytes name = 1;
 
   // selector is the string-encoded form of a standard kubernetes label selector for the given metric
   // When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping.
@@ -303,7 +303,7 @@ message MetricSpec {
   // "Object", "Pods" or "Resource", each mapping to a matching field in the object.
   // Note: "ContainerResource" type is available on when the feature-gate
   // HPAContainerMetrics is enabled
-  optional string type = 1;
+  optional bytes type = 1;
 
   // object refers to a metric describing a single kubernetes object
   // (for example, hits-per-second on an Ingress object).
@@ -348,7 +348,7 @@ message MetricStatus {
   // "Object", "Pods" or "Resource", each corresponds to a matching field in the object.
   // Note: "ContainerResource" type is available on when the feature-gate
   // HPAContainerMetrics is enabled
-  optional string type = 1;
+  optional bytes type = 1;
 
   // object refers to a metric describing a single kubernetes object
   // (for example, hits-per-second on an Ingress object).
@@ -389,7 +389,7 @@ message MetricStatus {
 // MetricTarget defines the target value, average value, or average utilization of a specific metric
 message MetricTarget {
   // type represents whether the metric type is Utilization, Value, or AverageValue
-  optional string type = 1;
+  optional bytes type = 1;
 
   // value is the target value of the metric (as a quantity).
   // +optional
@@ -483,7 +483,7 @@ message PodsMetricStatus {
 // should be set.
 message ResourceMetricSource {
   // name is the name of the resource in question.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // target specifies the target value for the given metric
   optional MetricTarget target = 2;
@@ -496,7 +496,7 @@ message ResourceMetricSource {
 // normal per-pod metrics using the "pods" source.
 message ResourceMetricStatus {
   // name is the name of the resource in question.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // current contains the current value for the given metric
   optional MetricValueStatus current = 2;

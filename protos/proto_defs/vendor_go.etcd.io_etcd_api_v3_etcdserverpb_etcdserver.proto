@@ -10,11 +10,11 @@ option (gogoproto.goproto_getters_all) = false;
 
 message Request {
 	optional uint64 ID         =  1 [(gogoproto.nullable) = false];
-	optional string Method     =  2 [(gogoproto.nullable) = false];
-	optional string Path       =  3 [(gogoproto.nullable) = false];
-	optional string Val        =  4 [(gogoproto.nullable) = false];
+	optional bytes Method     =  2 [(gogoproto.nullable) = false];
+	optional bytes Path       =  3 [(gogoproto.nullable) = false];
+	optional bytes Val        =  4 [(gogoproto.nullable) = false];
 	optional bool   Dir        =  5 [(gogoproto.nullable) = false];
-	optional string PrevValue  =  6 [(gogoproto.nullable) = false];
+	optional bytes PrevValue  =  6 [(gogoproto.nullable) = false];
 	optional uint64 PrevIndex  =  7 [(gogoproto.nullable) = false];
 	optional bool   PrevExist  =  8 [(gogoproto.nullable) = true];
 	optional int64  Expiration =  9 [(gogoproto.nullable) = false];

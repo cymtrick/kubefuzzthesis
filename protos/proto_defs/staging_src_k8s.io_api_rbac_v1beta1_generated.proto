@@ -185,13 +185,13 @@ message RoleList {
 // RoleRef contains information that points to the role being used
 message RoleRef {
   // APIGroup is the group for the resource being referenced
-  optional string apiGroup = 1;
+  optional bytes apiGroup = 1;
 
   // Kind is the type of resource being referenced
-  optional string kind = 2;
+  optional bytes kind = 2;
 
   // Name is the name of resource being referenced
-  optional string name = 3;
+  optional bytes name = 3;
 }
 
 // Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference,
@@ -199,20 +199,20 @@ message RoleRef {
 message Subject {
   // Kind of object being referenced. Values defined by this API group are "User", "Group", and "ServiceAccount".
   // If the Authorizer does not recognized the kind value, the Authorizer should report an error.
-  optional string kind = 1;
+  optional bytes kind = 1;
 
   // APIGroup holds the API group of the referenced subject.
   // Defaults to "" for ServiceAccount subjects.
   // Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
   // +optional
-  optional string apiGroup = 2;
+  optional bytes apiGroup = 2;
 
   // Name of the object being referenced.
-  optional string name = 3;
+  optional bytes name = 3;
 
   // Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty
   // the Authorizer should report an error.
   // +optional
-  optional string namespace = 4;
+  optional bytes namespace = 4;
 }
 

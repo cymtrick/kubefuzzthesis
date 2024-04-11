@@ -22,7 +22,7 @@ message GetModulesResponse {
 }
 
 message GetVersionsRequest {
-  optional string module = 1;
+  optional bytes module = 1;
 }
 
 message GetVersionsResponse {
@@ -30,16 +30,16 @@ message GetVersionsResponse {
 }
 
 message GetDefaultVersionRequest {
-  optional string module = 1;
+  optional bytes module = 1;
 }
 
 message GetDefaultVersionResponse {
-  required string version = 1;
+  require bytes version = 1;
 }
 
 message GetNumInstancesRequest {
-  optional string module = 1;
-  optional string version = 2;
+  optional bytes module = 1;
+  optional bytes version = 2;
 }
 
 message GetNumInstancesResponse {
@@ -47,34 +47,34 @@ message GetNumInstancesResponse {
 }
 
 message SetNumInstancesRequest {
-  optional string module = 1;
-  optional string version = 2;
+  optional bytes module = 1;
+  optional bytes version = 2;
   required int64 instances = 3;
 }
 
 message SetNumInstancesResponse {}
 
 message StartModuleRequest {
-  required string module = 1;
-  required string version = 2;
+  require bytes module = 1;
+  require bytes version = 2;
 }
 
 message StartModuleResponse {}
 
 message StopModuleRequest {
-  optional string module = 1;
-  optional string version = 2;
+  optional bytes module = 1;
+  optional bytes version = 2;
 }
 
 message StopModuleResponse {}
 
 message GetHostnameRequest {
-  optional string module = 1;
-  optional string version = 2;
-  optional string instance = 3;
+  optional bytes module = 1;
+  optional bytes version = 2;
+  optional bytes instance = 3;
 }
 
 message GetHostnameResponse {
-  required string hostname = 1;
+  require bytes hostname = 1;
 }
 

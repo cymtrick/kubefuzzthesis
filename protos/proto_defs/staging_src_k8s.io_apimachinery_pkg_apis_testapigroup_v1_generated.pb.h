@@ -440,7 +440,7 @@ class CarpCondition final :
     kLastProbeTimeFieldNumber = 3,
     kLastTransitionTimeFieldNumber = 4,
   };
-  // optional string type = 1;
+  // optional bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -458,7 +458,7 @@ class CarpCondition final :
   std::string* _internal_mutable_type();
   public:
 
-  // optional string status = 2;
+  // optional bytes status = 2;
   bool has_status() const;
   private:
   bool _internal_has_status() const;
@@ -476,7 +476,7 @@ class CarpCondition final :
   std::string* _internal_mutable_status();
   public:
 
-  // optional string reason = 5;
+  // optional bytes reason = 5;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -494,7 +494,7 @@ class CarpCondition final :
   std::string* _internal_mutable_reason();
   public:
 
-  // optional string message = 6;
+  // optional bytes message = 6;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -957,7 +957,7 @@ class CarpSpec final :
   ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
       mutable_nodeselector();
 
-  // optional string restartPolicy = 3;
+  // optional bytes restartPolicy = 3;
   bool has_restartpolicy() const;
   private:
   bool _internal_has_restartpolicy() const;
@@ -975,7 +975,7 @@ class CarpSpec final :
   std::string* _internal_mutable_restartpolicy();
   public:
 
-  // optional string serviceAccountName = 8;
+  // optional bytes serviceAccountName = 8;
   bool has_serviceaccountname() const;
   private:
   bool _internal_has_serviceaccountname() const;
@@ -993,7 +993,7 @@ class CarpSpec final :
   std::string* _internal_mutable_serviceaccountname();
   public:
 
-  // optional string serviceAccount = 9;
+  // optional bytes serviceAccount = 9;
   bool has_serviceaccount() const;
   private:
   bool _internal_has_serviceaccount() const;
@@ -1011,7 +1011,7 @@ class CarpSpec final :
   std::string* _internal_mutable_serviceaccount();
   public:
 
-  // optional string nodeName = 10;
+  // optional bytes nodeName = 10;
   bool has_nodename() const;
   private:
   bool _internal_has_nodename() const;
@@ -1029,7 +1029,7 @@ class CarpSpec final :
   std::string* _internal_mutable_nodename();
   public:
 
-  // optional string hostname = 16;
+  // optional bytes hostname = 16;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -1047,7 +1047,7 @@ class CarpSpec final :
   std::string* _internal_mutable_hostname();
   public:
 
-  // optional string subdomain = 17;
+  // optional bytes subdomain = 17;
   bool has_subdomain() const;
   private:
   bool _internal_has_subdomain() const;
@@ -1065,7 +1065,7 @@ class CarpSpec final :
   std::string* _internal_mutable_subdomain();
   public:
 
-  // optional string schedulername = 19;
+  // optional bytes schedulername = 19;
   bool has_schedulername() const;
   private:
   bool _internal_has_schedulername() const;
@@ -1335,7 +1335,7 @@ class CarpStatus final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::testapigroup::v1::CarpCondition >&
       conditions() const;
 
-  // optional string phase = 1;
+  // optional bytes phase = 1;
   bool has_phase() const;
   private:
   bool _internal_has_phase() const;
@@ -1353,7 +1353,7 @@ class CarpStatus final :
   std::string* _internal_mutable_phase();
   public:
 
-  // optional string message = 3;
+  // optional bytes message = 3;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -1371,7 +1371,7 @@ class CarpStatus final :
   std::string* _internal_mutable_message();
   public:
 
-  // optional string reason = 4;
+  // optional bytes reason = 4;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -1389,7 +1389,7 @@ class CarpStatus final :
   std::string* _internal_mutable_reason();
   public:
 
-  // optional string hostIP = 5;
+  // optional bytes hostIP = 5;
   bool has_hostip() const;
   private:
   bool _internal_has_hostip() const;
@@ -1407,7 +1407,7 @@ class CarpStatus final :
   std::string* _internal_mutable_hostip();
   public:
 
-  // optional string carpIP = 6;
+  // optional bytes carpIP = 6;
   bool has_carpip() const;
   private:
   bool _internal_has_carpip() const;
@@ -1746,7 +1746,7 @@ inline void Carp::set_allocated_status(::k8s::io::apimachinery::pkg::apis::testa
 
 // CarpCondition
 
-// optional string type = 1;
+// optional bytes type = 1;
 inline bool CarpCondition::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1766,7 +1766,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpCondition::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.type)
 }
 inline std::string* CarpCondition::mutable_type() {
@@ -1814,7 +1814,7 @@ inline void CarpCondition::set_allocated_type(std::string* type) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.type)
 }
 
-// optional string status = 2;
+// optional bytes status = 2;
 inline bool CarpCondition::_internal_has_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1834,7 +1834,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpCondition::set_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.status_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.status)
 }
 inline std::string* CarpCondition::mutable_status() {
@@ -2056,7 +2056,7 @@ inline void CarpCondition::set_allocated_lasttransitiontime(::k8s::io::apimachin
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.lastTransitionTime)
 }
 
-// optional string reason = 5;
+// optional bytes reason = 5;
 inline bool CarpCondition::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2076,7 +2076,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpCondition::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.reason)
 }
 inline std::string* CarpCondition::mutable_reason() {
@@ -2124,7 +2124,7 @@ inline void CarpCondition::set_allocated_reason(std::string* reason) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.reason)
 }
 
-// optional string message = 6;
+// optional bytes message = 6;
 inline bool CarpCondition::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2144,7 +2144,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpCondition::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.message)
 }
 inline std::string* CarpCondition::mutable_message() {
@@ -2329,7 +2329,7 @@ CarpList::items() const {
 
 // CarpSpec
 
-// optional string restartPolicy = 3;
+// optional bytes restartPolicy = 3;
 inline bool CarpSpec::_internal_has_restartpolicy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2349,7 +2349,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_restartpolicy(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.restartpolicy_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.restartpolicy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.restartPolicy)
 }
 inline std::string* CarpSpec::mutable_restartpolicy() {
@@ -2482,7 +2482,7 @@ CarpSpec::mutable_nodeselector() {
   return _internal_mutable_nodeselector();
 }
 
-// optional string serviceAccountName = 8;
+// optional bytes serviceAccountName = 8;
 inline bool CarpSpec::_internal_has_serviceaccountname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2502,7 +2502,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_serviceaccountname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.serviceaccountname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.serviceaccountname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccountName)
 }
 inline std::string* CarpSpec::mutable_serviceaccountname() {
@@ -2550,7 +2550,7 @@ inline void CarpSpec::set_allocated_serviceaccountname(std::string* serviceaccou
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccountName)
 }
 
-// optional string serviceAccount = 9;
+// optional bytes serviceAccount = 9;
 inline bool CarpSpec::_internal_has_serviceaccount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2570,7 +2570,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_serviceaccount(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.serviceaccount_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.serviceaccount_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccount)
 }
 inline std::string* CarpSpec::mutable_serviceaccount() {
@@ -2618,7 +2618,7 @@ inline void CarpSpec::set_allocated_serviceaccount(std::string* serviceaccount) 
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccount)
 }
 
-// optional string nodeName = 10;
+// optional bytes nodeName = 10;
 inline bool CarpSpec::_internal_has_nodename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2638,7 +2638,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_nodename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.nodename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.nodename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.nodeName)
 }
 inline std::string* CarpSpec::mutable_nodename() {
@@ -2770,7 +2770,7 @@ inline void CarpSpec::set_hostipc(bool value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.hostIPC)
 }
 
-// optional string hostname = 16;
+// optional bytes hostname = 16;
 inline bool CarpSpec::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2790,7 +2790,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.hostname)
 }
 inline std::string* CarpSpec::mutable_hostname() {
@@ -2838,7 +2838,7 @@ inline void CarpSpec::set_allocated_hostname(std::string* hostname) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.hostname)
 }
 
-// optional string subdomain = 17;
+// optional bytes subdomain = 17;
 inline bool CarpSpec::_internal_has_subdomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2858,7 +2858,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_subdomain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.subdomain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.subdomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.subdomain)
 }
 inline std::string* CarpSpec::mutable_subdomain() {
@@ -2906,7 +2906,7 @@ inline void CarpSpec::set_allocated_subdomain(std::string* subdomain) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.subdomain)
 }
 
-// optional string schedulername = 19;
+// optional bytes schedulername = 19;
 inline bool CarpSpec::_internal_has_schedulername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2926,7 +2926,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpSpec::set_schedulername(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.schedulername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.schedulername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.schedulername)
 }
 inline std::string* CarpSpec::mutable_schedulername() {
@@ -2978,7 +2978,7 @@ inline void CarpSpec::set_allocated_schedulername(std::string* schedulername) {
 
 // CarpStatus
 
-// optional string phase = 1;
+// optional bytes phase = 1;
 inline bool CarpStatus::_internal_has_phase() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2998,7 +2998,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpStatus::set_phase(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.phase_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.phase_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.phase)
 }
 inline std::string* CarpStatus::mutable_phase() {
@@ -3086,7 +3086,7 @@ CarpStatus::conditions() const {
   return _impl_.conditions_;
 }
 
-// optional string message = 3;
+// optional bytes message = 3;
 inline bool CarpStatus::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3106,7 +3106,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpStatus::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.message)
 }
 inline std::string* CarpStatus::mutable_message() {
@@ -3154,7 +3154,7 @@ inline void CarpStatus::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.message)
 }
 
-// optional string reason = 4;
+// optional bytes reason = 4;
 inline bool CarpStatus::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3174,7 +3174,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpStatus::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.reason)
 }
 inline std::string* CarpStatus::mutable_reason() {
@@ -3222,7 +3222,7 @@ inline void CarpStatus::set_allocated_reason(std::string* reason) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.reason)
 }
 
-// optional string hostIP = 5;
+// optional bytes hostIP = 5;
 inline bool CarpStatus::_internal_has_hostip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3242,7 +3242,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpStatus::set_hostip(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.hostip_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostip_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.hostIP)
 }
 inline std::string* CarpStatus::mutable_hostip() {
@@ -3290,7 +3290,7 @@ inline void CarpStatus::set_allocated_hostip(std::string* hostip) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.hostIP)
 }
 
-// optional string carpIP = 6;
+// optional bytes carpIP = 6;
 inline bool CarpStatus::_internal_has_carpip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3310,7 +3310,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CarpStatus::set_carpip(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.carpip_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.carpip_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.carpIP)
 }
 inline std::string* CarpStatus::mutable_carpip() {

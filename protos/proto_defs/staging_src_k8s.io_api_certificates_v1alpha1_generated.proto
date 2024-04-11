@@ -85,7 +85,7 @@ message ClusterTrustBundleSpec {
   // using a `spec.signerName=NAME` field selector.
   //
   // +optional
-  optional string signerName = 1;
+  optional bytes signerName = 1;
 
   // trustBundle contains the individual X.509 trust anchors for this
   // bundle, as PEM bundle of PEM-wrapped, DER-formatted X.509 certificates.
@@ -98,6 +98,6 @@ message ClusterTrustBundleSpec {
   // Users of ClusterTrustBundles, including Kubelet, are free to reorder and
   // deduplicate certificate blocks in this file according to their own logic,
   // as well as to drop PEM block headers and inter-block data.
-  optional string trustBundle = 2;
+  optional bytes trustBundle = 2;
 }
 

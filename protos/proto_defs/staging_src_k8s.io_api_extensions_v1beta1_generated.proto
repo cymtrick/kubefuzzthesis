@@ -56,10 +56,10 @@ message DaemonSet {
 // DaemonSetCondition describes the state of a DaemonSet at a certain point.
 message DaemonSetCondition {
   // Type of DaemonSet condition.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // Last time the condition transitioned from one status to another.
   // +optional
@@ -67,11 +67,11 @@ message DaemonSetCondition {
 
   // The reason for the condition's last transition.
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // A human readable message indicating details about the transition.
   // +optional
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // DaemonSetList is a collection of daemon sets.
@@ -188,7 +188,7 @@ message DaemonSetUpdateStrategy {
   // Type of daemon set update. Can be "RollingUpdate" or "OnDelete".
   // Default is OnDelete.
   // +optional
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Rolling update config params. Present only if type = "RollingUpdate".
   // ---
@@ -219,10 +219,10 @@ message Deployment {
 // DeploymentCondition describes the state of a deployment at a certain point.
 message DeploymentCondition {
   // Type of deployment condition.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // The last time this condition was updated.
   optional k8s.io.apimachinery.pkg.apis.meta.v1.Time lastUpdateTime = 6;
@@ -231,10 +231,10 @@ message DeploymentCondition {
   optional k8s.io.apimachinery.pkg.apis.meta.v1.Time lastTransitionTime = 7;
 
   // The reason for the condition's last transition.
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // A human readable message indicating details about the transition.
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // DeploymentList is a list of Deployments.
@@ -251,7 +251,7 @@ message DeploymentList {
 // DeploymentRollback stores the information required to rollback a deployment.
 message DeploymentRollback {
   // Required: This must match the Name of a deployment.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // The annotations to be updated to a deployment
   // +optional
@@ -360,7 +360,7 @@ message DeploymentStatus {
 message DeploymentStrategy {
   // Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
   // +optional
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Rolling update config params. Present only if DeploymentStrategyType =
   // RollingUpdate.
@@ -379,7 +379,7 @@ message HTTPIngressPath {
   // as defined by RFC 3986. Paths must begin with a '/'. When unspecified,
   // all paths from incoming requests are matched.
   // +optional
-  optional string path = 1;
+  optional bytes path = 1;
 
   // PathType determines the interpretation of the Path matching. PathType can
   // be one of the following values:
@@ -396,7 +396,7 @@ message HTTPIngressPath {
   //   or treat it identically to Prefix or Exact path types.
   // Implementations are required to support all path types.
   // Defaults to ImplementationSpecific.
-  optional string pathType = 3;
+  optional bytes pathType = 3;
 
   // Backend defines the referenced service endpoint to which the traffic
   // will be forwarded to.
@@ -421,7 +421,7 @@ message HTTPIngressRuleValue {
 message IPBlock {
   // CIDR is a string representing the IP Block
   // Valid examples are "192.168.1.0/24" or "2001:db8::/64"
-  optional string cidr = 1;
+  optional bytes cidr = 1;
 
   // Except is a slice of CIDRs that should not be included within an IP Block
   // Valid examples are "192.168.1.0/24" or "2001:db8::/64"
@@ -457,7 +457,7 @@ message Ingress {
 message IngressBackend {
   // Specifies the name of the referenced service.
   // +optional
-  optional string serviceName = 1;
+  optional bytes serviceName = 1;
 
   // Specifies the port of the referenced service.
   // +optional
@@ -485,11 +485,11 @@ message IngressList {
 message IngressLoadBalancerIngress {
   // IP is set for load-balancer ingress points that are IP based.
   // +optional
-  optional string ip = 1;
+  optional bytes ip = 1;
 
   // Hostname is set for load-balancer ingress points that are DNS based.
   // +optional
-  optional string hostname = 2;
+  optional bytes hostname = 2;
 
   // Ports provides information about the ports exposed by this LoadBalancer.
   // +listType=atomic
@@ -512,7 +512,7 @@ message IngressPortStatus {
 
   // Protocol is the protocol of the ingress port.
   // The supported values are: "TCP", "UDP", "SCTP"
-  optional string protocol = 2;
+  optional bytes protocol = 2;
 
   // Error is to record the problem with the service port
   // The format of the error shall comply with the following rules:
@@ -526,7 +526,7 @@ message IngressPortStatus {
   // +kubebuilder:validation:Required
   // +kubebuilder:validation:Pattern=`^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$`
   // +kubebuilder:validation:MaxLength=316
-  optional string error = 3;
+  optional bytes error = 3;
 }
 
 // IngressRule represents the rules mapping the paths under a specified host to
@@ -556,7 +556,7 @@ message IngressRule {
   // 2. If Host is a wildcard, then the request matches this rule if the http host header
   // is to equal to the suffix (removing the first label) of the wildcard rule.
   // +optional
-  optional string host = 1;
+  optional bytes host = 1;
 
   // IngressRuleValue represents a rule to route requests for this IngressRule.
   // If unspecified, the rule defaults to a http catch-all. Whether that sends
@@ -594,7 +594,7 @@ message IngressSpec {
   // be used to set a default value for this field. For more information,
   // refer to the IngressClass documentation.
   // +optional
-  optional string ingressClassName = 4;
+  optional bytes ingressClassName = 4;
 
   // A default backend capable of servicing requests that don't match any
   // rule. At least one of 'backend' or 'rules' must be specified. This field
@@ -642,7 +642,7 @@ message IngressTLS {
   // by an IngressRule, the SNI host is used for termination and value of the
   // Host header is used for routing.
   // +optional
-  optional string secretName = 2;
+  optional bytes secretName = 2;
 }
 
 // DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking/v1/NetworkPolicy.
@@ -747,7 +747,7 @@ message NetworkPolicyPort {
   // Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match.
   // If not specified, this field defaults to TCP.
   // +optional
-  optional string protocol = 1;
+  optional bytes protocol = 1;
 
   // The port on the given protocol. This can either be a numerical or named
   // port on a pod. If this field is not provided, this matches all port names and
@@ -837,10 +837,10 @@ message ReplicaSet {
 // ReplicaSetCondition describes the state of a replica set at a certain point.
 message ReplicaSetCondition {
   // Type of replica set condition.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // The last time the condition transitioned from one status to another.
   // +optional
@@ -848,11 +848,11 @@ message ReplicaSetCondition {
 
   // The reason for the condition's last transition.
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // A human readable message indicating details about the transition.
   // +optional
-  optional string message = 5;
+  optional bytes message = 5;
 }
 
 // ReplicaSetList is a collection of ReplicaSets.
@@ -1045,6 +1045,6 @@ message ScaleStatus {
   // field and map-based selector field are populated.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
   // +optional
-  optional string targetSelector = 3;
+  optional bytes targetSelector = 3;
 }
 

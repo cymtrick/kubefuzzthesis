@@ -79,7 +79,7 @@ message TokenReview {
 message TokenReviewSpec {
   // Token is the opaque bearer token.
   // +optional
-  optional string token = 1;
+  optional bytes token = 1;
 
   // Audiences is a list of the identifiers that the resource server presented
   // with the token identifies as. Audience-aware token authenticators will
@@ -116,7 +116,7 @@ message TokenReviewStatus {
 
   // Error indicates that the token couldn't be checked
   // +optional
-  optional string error = 3;
+  optional bytes error = 3;
 }
 
 // UserInfo holds the information about the user needed to implement the
@@ -124,13 +124,13 @@ message TokenReviewStatus {
 message UserInfo {
   // The name that uniquely identifies this user among all active users.
   // +optional
-  optional string username = 1;
+  optional bytes username = 1;
 
   // A unique value that identifies this user across time. If this user is
   // deleted and another user by the same name is added, they will have
   // different UIDs.
   // +optional
-  optional string uid = 2;
+  optional bytes uid = 2;
 
   // The names of groups this user is a part of.
   // +optional

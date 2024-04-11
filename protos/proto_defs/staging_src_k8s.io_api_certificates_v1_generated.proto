@@ -71,19 +71,19 @@ message CertificateSigningRequestCondition {
   // Approved, Denied, and Failed conditions cannot be removed once added.
   //
   // Only one condition of a given type is allowed.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // status of the condition, one of True, False, Unknown.
   // Approved, Denied, and Failed conditions may not be "False" or "Unknown".
-  optional string status = 6;
+  optional bytes status = 6;
 
   // reason indicates a brief reason for the request state
   // +optional
-  optional string reason = 2;
+  optional bytes reason = 2;
 
   // message contains a human readable message with details about the request state
   // +optional
-  optional string message = 3;
+  optional bytes message = 3;
 
   // lastUpdateTime is the time of the last update to this condition
   // +optional
@@ -133,7 +133,7 @@ message CertificateSigningRequestSpec {
   //  4. Required, permitted, or forbidden key usages / extended key usages.
   //  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
   //  6. Whether or not requests for CA certificates are allowed.
-  optional string signerName = 7;
+  optional bytes signerName = 7;
 
   // expirationSeconds is the requested duration of validity of the issued
   // certificate. The certificate signer may issue a certificate with a different
@@ -177,12 +177,12 @@ message CertificateSigningRequestSpec {
   // username contains the name of the user that created the CertificateSigningRequest.
   // Populated by the API server on creation and immutable.
   // +optional
-  optional string username = 2;
+  optional bytes username = 2;
 
   // uid contains the uid of the user that created the CertificateSigningRequest.
   // Populated by the API server on creation and immutable.
   // +optional
-  optional string uid = 3;
+  optional bytes uid = 3;
 
   // groups contains group membership of the user that created the CertificateSigningRequest.
   // Populated by the API server on creation and immutable.

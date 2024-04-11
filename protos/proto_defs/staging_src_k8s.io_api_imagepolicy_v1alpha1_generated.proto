@@ -47,7 +47,7 @@ message ImageReview {
 message ImageReviewContainerSpec {
   // This can be in the form image:tag or image@SHA:012345679abcdef.
   // +optional
-  optional string image = 1;
+  optional bytes image = 1;
 }
 
 // ImageReviewSpec is a description of the pod creation request.
@@ -65,7 +65,7 @@ message ImageReviewSpec {
 
   // Namespace is the namespace the pod is being created in.
   // +optional
-  optional string namespace = 3;
+  optional bytes namespace = 3;
 }
 
 // ImageReviewStatus is the result of the review for the pod creation request.
@@ -77,7 +77,7 @@ message ImageReviewStatus {
   // may contain a short description of what is wrong.  Kubernetes
   // may truncate excessively long errors when displaying to the user.
   // +optional
-  optional string reason = 2;
+  optional bytes reason = 2;
 
   // AuditAnnotations will be added to the attributes object of the
   // admission controller request using 'AddAnnotation'.  The keys should

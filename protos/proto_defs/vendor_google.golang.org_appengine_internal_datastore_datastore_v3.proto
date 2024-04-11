@@ -8,7 +8,7 @@ message Action{}
 message PropertyValue {
   optional int64 int64Value = 1;
   optional bool booleanValue = 2;
-  optional string stringValue = 3;
+  optional bytes stringValue = 3;
   optional double doubleValue = 4;
 
   optional group PointValue = 5 {
@@ -17,20 +17,20 @@ message PropertyValue {
   }
 
   optional group UserValue = 8 {
-    required string email = 9;
-    required string auth_domain = 10;
-    optional string nickname = 11;
-    optional string federated_identity = 21;
-    optional string federated_provider = 22;
+    require bytes email = 9;
+    require bytes auth_domain = 10;
+    optional bytes nickname = 11;
+    optional bytes federated_identity = 21;
+    optional bytes federated_provider = 22;
   }
 
   optional group ReferenceValue = 12 {
-    required string app = 13;
-    optional string name_space = 20;
+    require bytes app = 13;
+    optional bytes name_space = 20;
     repeated group PathElement = 14 {
-      required string type = 15;
+      require bytes type = 15;
       optional int64 id = 16;
-      optional string name = 17;
+      optional bytes name = 17;
     }
   }
 }
@@ -66,9 +66,9 @@ message Property {
   };
 
   optional Meaning meaning = 1 [default = NO_MEANING];
-  optional string meaning_uri = 2;
+  optional bytes meaning_uri = 2;
 
-  required string name = 3;
+  require bytes name = 3;
 
   required PropertyValue value = 5;
 
@@ -83,29 +83,29 @@ message Property {
 
   optional FtsTokenizationOption fts_tokenization_option = 8;
 
-  optional string locale = 9 [default = "en"];
+  optional bytes locale = 9 [default = "en"];
 }
 
 message Path {
   repeated group Element = 1 {
-    required string type = 2;
+    require bytes type = 2;
     optional int64 id = 3;
-    optional string name = 4;
+    optional bytes name = 4;
   }
 }
 
 message Reference {
-  required string app = 13;
-  optional string name_space = 20;
+  require bytes app = 13;
+  optional bytes name_space = 20;
   required Path path = 14;
 }
 
 message User {
-  required string email = 1;
-  required string auth_domain = 2;
-  optional string nickname = 3;
-  optional string federated_identity = 6;
-  optional string federated_provider = 7;
+  require bytes email = 1;
+  require bytes auth_domain = 2;
+  optional bytes nickname = 3;
+  optional bytes federated_identity = 6;
+  optional bytes federated_provider = 7;
 }
 
 message EntityProto {
@@ -119,7 +119,7 @@ message EntityProto {
     GD_MESSAGE = 3;
   }
   optional Kind kind = 4;
-  optional string kind_uri = 5;
+  optional bytes kind_uri = 5;
 
   repeated Property property = 14;
   repeated Property raw_property = 15;
@@ -133,10 +133,10 @@ message CompositeProperty {
 }
 
 message Index {
-  required string entity_type = 1;
+  require bytes entity_type = 1;
   required bool ancestor = 5;
   repeated group Property = 2 {
-    required string name = 3;
+    require bytes name = 3;
     enum Direction {
       ASCENDING = 1;
       DESCENDING = 2;
@@ -146,7 +146,7 @@ message Index {
 }
 
 message CompositeIndex {
-  required string app_id = 1;
+  require bytes app_id = 1;
   required int64 id = 2;
   required Index definition = 3;
 
@@ -163,7 +163,7 @@ message CompositeIndex {
 
 message IndexPostfix {
   message IndexValue {
-    required string property_name = 1;
+    require bytes property_name = 1;
     required PropertyValue value = 2;
   }
 
@@ -175,7 +175,7 @@ message IndexPostfix {
 }
 
 message IndexPosition {
-  optional string key = 1;
+  optional bytes key = 1;
 
   optional bool before = 2 [default=true];
 }
@@ -190,23 +190,23 @@ message Snapshot {
 }
 
 message InternalHeader {
-  optional string qos = 1;
+  optional bytes qos = 1;
 }
 
 message Transaction {
   optional InternalHeader header = 4;
   required fixed64 handle = 1;
-  required string app = 2;
+  require bytes app = 2;
   optional bool mark_changes = 3 [default = false];
 }
 
 message Query {
   optional InternalHeader header = 39;
 
-  required string app = 1;
-  optional string name_space = 29;
+  require bytes app = 1;
+  optional bytes name_space = 29;
 
-  optional string kind = 3;
+  optional bytes kind = 3;
   optional Reference ancestor = 17;
 
   repeated group Filter = 4 {
@@ -224,7 +224,7 @@ message Query {
     repeated Property property = 14;
   }
 
-  optional string search_query = 8;
+  optional bytes search_query = 8;
 
   repeated group Order = 9 {
     enum Direction {
@@ -232,7 +232,7 @@ message Query {
       DESCENDING = 2;
     }
 
-    required string property = 10;
+    require bytes property = 10;
     optional Direction direction = 11 [default = ASCENDING];
   }
 
@@ -281,11 +281,11 @@ message Query {
 
 message CompiledQuery {
   required group PrimaryScan = 1 {
-    optional string index_name = 2;
+    optional bytes index_name = 2;
 
-    optional string start_key = 3;
+    optional bytes start_key = 3;
     optional bool start_inclusive = 4;
-    optional string end_key = 5;
+    optional bytes end_key = 5;
     optional bool end_inclusive = 6;
 
     repeated string start_postfix_value = 22;
@@ -295,7 +295,7 @@ message CompiledQuery {
   }
 
   repeated group MergeJoinScan = 7 {
-    required string index_name = 8;
+    require bytes index_name = 8;
 
     repeated string prefix_value = 9;
 
@@ -317,17 +317,17 @@ message CompiledQuery {
   optional group EntityFilter = 13 {
     optional bool distinct = 14 [default=false];
 
-    optional string kind = 17;
+    optional bytes kind = 17;
     optional Reference ancestor = 18;
   }
 }
 
 message CompiledCursor {
   optional group Position = 2 {
-    optional string start_key = 27;
+    optional bytes start_key = 27;
 
     repeated group IndexValue = 29 {
-      optional string property = 30;
+      optional bytes property = 30;
       required PropertyValue value = 31;
     }
 
@@ -340,7 +340,7 @@ message CompiledCursor {
 message Cursor {
   required fixed64 cursor = 1;
 
-  optional string app = 2;
+  optional bytes app = 2;
 }
 
 message Error {
@@ -527,9 +527,9 @@ message AddActionsResponse {
 message BeginTransactionRequest {
   optional InternalHeader header = 3;
 
-  required string app = 1;
+  require bytes app = 1;
   optional bool allow_multiple_eg = 2 [default = false];
-  optional string database_id = 4;
+  optional bytes database_id = 4;
 
   enum TransactionMode {
     UNKNOWN = 0;

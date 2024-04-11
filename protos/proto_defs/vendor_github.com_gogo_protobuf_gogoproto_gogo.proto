@@ -39,12 +39,12 @@ extend google.protobuf.EnumOptions {
 	optional bool goproto_enum_prefix = 62001;
 	optional bool goproto_enum_stringer = 62021;
 	optional bool enum_stringer = 62022;
-	optional string enum_customname = 62023;
+	optional bytes enum_customname = 62023;
 	optional bool enumdecl = 62024;
 }
 
 extend google.protobuf.EnumValueOptions {
-	optional string enumvalue_customname = 66001;
+	optional bytes enumvalue_customname = 66001;
 }
 
 extend google.protobuf.FileOptions {
@@ -129,13 +129,13 @@ extend google.protobuf.MessageOptions {
 extend google.protobuf.FieldOptions {
 	optional bool nullable = 65001;
 	optional bool embed = 65002;
-	optional string customtype = 65003;
-	optional string customname = 65004;
-	optional string jsontag = 65005;
-	optional string moretags = 65006;
-	optional string casttype = 65007;
-	optional string castkey = 65008;
-	optional string castvalue = 65009;
+	optional bytes customtype = 65003;
+	optional bytes customname = 65004;
+	optional bytes jsontag = 65005;
+	optional bytes moretags = 65006;
+	optional bytes casttype = 65007;
+	optional bytes castkey = 65008;
+	optional bytes castvalue = 65009;
 
 	optional bool stdtime = 65010;
 	optional bool stdduration = 65011;

@@ -38,6 +38,6 @@ message IntOrString {
 
   optional int32 intVal = 2;
 
-  optional string strVal = 3;
+  optional bytes strVal = 3;
 }
 

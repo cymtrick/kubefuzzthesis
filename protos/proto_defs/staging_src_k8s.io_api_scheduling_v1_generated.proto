@@ -52,13 +52,13 @@ message PriorityClass {
   // description is an arbitrary string that usually provides guidelines on
   // when this priority class should be used.
   // +optional
-  optional string description = 4;
+  optional bytes description = 4;
 
   // preemptionPolicy is the Policy for preempting pods with lower priority.
   // One of Never, PreemptLowerPriority.
   // Defaults to PreemptLowerPriority if unset.
   // +optional
-  optional string preemptionPolicy = 5;
+  optional bytes preemptionPolicy = 5;
 }
 
 // PriorityClassList is a collection of priority classes.

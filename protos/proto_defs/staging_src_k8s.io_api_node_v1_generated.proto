@@ -59,7 +59,7 @@ message RuntimeClass {
   // in a pod.
   // The Handler must be lowercase, conform to the DNS Label (RFC 1123) requirements,
   // and is immutable.
-  optional string handler = 2;
+  optional bytes handler = 2;
 
   // overhead represents the resource overhead associated with running a pod for a
   // given RuntimeClass. For more details, see

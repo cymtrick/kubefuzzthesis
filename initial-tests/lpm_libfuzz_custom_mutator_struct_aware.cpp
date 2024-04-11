@@ -23,6 +23,22 @@ public:
     // }
 };
 
+void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod *pod)
+{
+    if (!pod->has_spec() || !pod->has_status()) {
+        return; 
+    }
+
+    auto* spec = pod->mutable_spec();
+    auto* status = pod->mutable_status();
+    if (!spec->containers().empty() && !status->containerstatuses().empty()) {
+        auto& mutable_container_status = *status->mutable_containerstatuses()->Mutable(0);
+        const auto& container_name = spec->containers(0).name();
+        mutable_container_status.set_name(container_name);
+    }
+}
+
+
 void MutatePodMetadataNameAndNamespace(k8s::io::api::core::v1::Pod *pod, unsigned int seed)
 {
     if (!pod->has_metadata())
@@ -72,6 +88,7 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::Pod &test_proto_input)
             test_proto.has_status())
         {
             MutatePodMetadataNameAndNamespace(&test_proto, 123);
+             EnsureConsistentContainerNames(&test_proto);
 
             size_t size = test_proto.ByteSizeLong();
             std::vector<uint8_t> data(size);

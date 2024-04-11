@@ -62,7 +62,7 @@ message CronJobList {
 // CronJobSpec describes how the job execution will look like and when it will actually run.
 message CronJobSpec {
   // The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
-  optional string schedule = 1;
+  optional bytes schedule = 1;
 
   // The time zone name for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
   // If not specified, this will default to the time zone of the kube-controller-manager process.
@@ -74,7 +74,7 @@ message CronJobSpec {
   // reason UnknownTimeZone.
   // More information can be found in https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#time-zones
   // +optional
-  optional string timeZone = 8;
+  optional bytes timeZone = 8;
 
   // Optional deadline in seconds for starting the job if it misses scheduled
   // time for any reason.  Missed jobs executions will be counted as failed ones.
@@ -88,7 +88,7 @@ message CronJobSpec {
   // - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet;
   // - "Replace": cancels currently running job and replaces it with a new one
   // +optional
-  optional string concurrencyPolicy = 3;
+  optional bytes concurrencyPolicy = 3;
 
   // This flag tells the controller to suspend subsequent executions, it does
   // not apply to already started executions.  Defaults to false.

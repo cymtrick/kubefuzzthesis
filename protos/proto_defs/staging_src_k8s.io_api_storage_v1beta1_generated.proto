@@ -160,7 +160,7 @@ message CSIDriverSpec {
   // if a fstype is defined and the volume's access mode contains ReadWriteOnce.
   //
   // +optional
-  optional string fsGroupPolicy = 5;
+  optional bytes fsGroupPolicy = 5;
 
   // tokenRequests indicates the CSI driver needs pods' service account
   // tokens it is mounting volume for to do necessary authentication. Kubelet
@@ -240,7 +240,7 @@ message CSINodeDriver {
   // name represents the name of the CSI driver that this object refers to.
   // This MUST be the same name returned by the CSI GetPluginName() call for
   // that driver.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // nodeID of the node from the driver point of view.
   // This field enables Kubernetes to communicate with storage systems that do
@@ -250,7 +250,7 @@ message CSINodeDriver {
   // system to attach a volume to a specific node, it can use this field to
   // refer to the node name using the ID that the storage system will
   // understand, e.g. "nodeA" instead of "node1". This field is required.
-  optional string nodeID = 2;
+  optional bytes nodeID = 2;
 
   // topologyKeys is the list of keys supported by the driver.
   // When a driver is initialized on a cluster, it provides a set of topology
@@ -346,7 +346,7 @@ message CSIStorageCapacity {
   // the CSIStorageCapacity object is obsolete and should be removed by its
   // creator.
   // This field is immutable.
-  optional string storageClassName = 3;
+  optional bytes storageClassName = 3;
 
   // capacity is the value reported by the CSI driver in its GetCapacityResponse
   // for a GetCapacityRequest with topology and parameters that match the
@@ -398,7 +398,7 @@ message StorageClass {
   optional k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta metadata = 1;
 
   // provisioner indicates the type of the provisioner.
-  optional string provisioner = 2;
+  optional bytes provisioner = 2;
 
   // parameters holds the parameters for the provisioner that should
   // create volumes of this storage class.
@@ -408,7 +408,7 @@ message StorageClass {
   // reclaimPolicy controls the reclaimPolicy for dynamically provisioned PersistentVolumes of this storage class.
   // Defaults to Delete.
   // +optional
-  optional string reclaimPolicy = 4;
+  optional bytes reclaimPolicy = 4;
 
   // mountOptions controls the mountOptions for dynamically provisioned PersistentVolumes of this storage class.
   // e.g. ["ro", "soft"]. Not validated -
@@ -425,7 +425,7 @@ message StorageClass {
   // provisioned and bound.  When unset, VolumeBindingImmediate is used.
   // This field is only honored by servers that enable the VolumeScheduling feature.
   // +optional
-  optional string volumeBindingMode = 7;
+  optional bytes volumeBindingMode = 7;
 
   // allowedTopologies restrict the node topologies where volumes can be dynamically provisioned.
   // Each volume plugin defines its own supported topology specifications.
@@ -451,7 +451,7 @@ message StorageClassList {
 message TokenRequest {
   // audience is the intended audience of the token in "TokenRequestSpec".
   // It will default to the audiences of kube apiserver.
-  optional string audience = 1;
+  optional bytes audience = 1;
 
   // expirationSeconds is the duration of validity of the token in "TokenRequestSpec".
   // It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
@@ -499,7 +499,7 @@ message VolumeAttachmentList {
 message VolumeAttachmentSource {
   // persistentVolumeName represents the name of the persistent volume to attach.
   // +optional
-  optional string persistentVolumeName = 1;
+  optional bytes persistentVolumeName = 1;
 
   // inlineVolumeSpec contains all the information necessary to attach
   // a persistent volume defined by a pod's inline VolumeSource. This field
@@ -515,13 +515,13 @@ message VolumeAttachmentSource {
 message VolumeAttachmentSpec {
   // attacher indicates the name of the volume driver that MUST handle this
   // request. This is the name returned by GetPluginName().
-  optional string attacher = 1;
+  optional bytes attacher = 1;
 
   // source represents the volume that should be attached.
   optional VolumeAttachmentSource source = 2;
 
   // nodeName represents the node that the volume should be attached to.
-  optional string nodeName = 3;
+  optional bytes nodeName = 3;
 }
 
 // VolumeAttachmentStatus is the status of a VolumeAttachment request.
@@ -562,7 +562,7 @@ message VolumeError {
   // This string may be logged, so it should not contain sensitive
   // information.
   // +optional
-  optional string message = 2;
+  optional bytes message = 2;
 }
 
 // VolumeNodeResources is a set of resource limits for scheduling of volumes.

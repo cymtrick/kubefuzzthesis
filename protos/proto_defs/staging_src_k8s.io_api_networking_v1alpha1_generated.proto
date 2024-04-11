@@ -70,19 +70,19 @@ message IPAddressSpec {
 message ParentReference {
   // Group is the group of the object being referenced.
   // +optional
-  optional string group = 1;
+  optional bytes group = 1;
 
   // Resource is the resource of the object being referenced.
   // +required
-  optional string resource = 2;
+  optional bytes resource = 2;
 
   // Namespace is the namespace of the object being referenced.
   // +optional
-  optional string namespace = 3;
+  optional bytes namespace = 3;
 
   // Name is the name of the object being referenced.
   // +required
-  optional string name = 4;
+  optional bytes name = 4;
 }
 
 // ServiceCIDR defines a range of IP addresses using CIDR format (e.g. 192.168.0.0/24 or 2001:db2::/64).

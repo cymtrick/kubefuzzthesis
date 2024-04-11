@@ -31,7 +31,7 @@ option go_package = "k8s.io/apimachinery/pkg/apis/meta/v1";
 // of a group.
 message APIGroup {
   // name is the name of the group.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // versions are the versions supported in this group.
   // +listType=atomic
@@ -65,26 +65,26 @@ message APIGroupList {
 // APIResource specifies the name of a resource and whether it is namespaced.
 message APIResource {
   // name is the plural name of the resource.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // singularName is the singular name of the resource.  This allows clients to handle plural and singular opaquely.
   // The singularName is more correct for reporting status on a single item and both singular and plural are allowed
   // from the kubectl CLI interface.
-  optional string singularName = 6;
+  optional bytes singularName = 6;
 
   // namespaced indicates if a resource is namespaced or not.
   optional bool namespaced = 2;
 
   // group is the preferred group of the resource.  Empty implies the group of the containing resource list.
   // For subresources, this may have a different value, for example: Scale".
-  optional string group = 8;
+  optional bytes group = 8;
 
   // version is the preferred version of the resource.  Empty implies the version of the containing resource list
   // For subresources, this may have a different value, for example: v1 (while inside a v1beta1 version of the core resource's group)".
-  optional string version = 9;
+  optional bytes version = 9;
 
   // kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')
-  optional string kind = 3;
+  optional bytes kind = 3;
 
   // verbs is a list of supported kube verbs (this includes get, list, watch, create,
   // update, patch, delete, deletecollection, and proxy)
@@ -106,7 +106,7 @@ message APIResource {
   // StorageVersionHash feature gate is enabled.
   // This field will remain optional even if it graduates.
   // +optional
-  optional string storageVersionHash = 10;
+  optional bytes storageVersionHash = 10;
 }
 
 // APIResourceList is a list of APIResource, it is used to expose the name of the
@@ -114,7 +114,7 @@ message APIResource {
 // is namespaced.
 message APIResourceList {
   // groupVersion is the group and version this APIResourceList is for.
-  optional string groupVersion = 1;
+  optional bytes groupVersion = 1;
 
   // resources contains the name of the resources and if they are namespaced.
   // +listType=atomic
@@ -165,7 +165,7 @@ message ApplyOptions {
   // 128 characters long, and only contain printable characters,
   // as defined by https://golang.org/pkg/unicode/#IsPrint. This
   // field is required.
-  optional string fieldManager = 3;
+  optional bytes fieldManager = 3;
 }
 
 // Condition contains details for one aspect of the current state of this API Resource.
@@ -193,13 +193,13 @@ message Condition {
   // +kubebuilder:validation:Required
   // +kubebuilder:validation:Pattern=`^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$`
   // +kubebuilder:validation:MaxLength=316
-  optional string type = 1;
+  optional bytes type = 1;
 
   // status of the condition, one of True, False, Unknown.
   // +required
   // +kubebuilder:validation:Required
   // +kubebuilder:validation:Enum=True;False;Unknown
-  optional string status = 2;
+  optional bytes status = 2;
 
   // observedGeneration represents the .metadata.generation that the condition was set based upon.
   // For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
@@ -226,14 +226,14 @@ message Condition {
   // +kubebuilder:validation:MaxLength=1024
   // +kubebuilder:validation:MinLength=1
   // +kubebuilder:validation:Pattern=`^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$`
-  optional string reason = 5;
+  optional bytes reason = 5;
 
   // message is a human readable message indicating details about the transition.
   // This may be an empty string.
   // +required
   // +kubebuilder:validation:Required
   // +kubebuilder:validation:MaxLength=32768
-  optional string message = 6;
+  optional bytes message = 6;
 }
 
 // CreateOptions may be provided when creating an API object.
@@ -252,7 +252,7 @@ message CreateOptions {
   // 128 characters long, and only contain printable characters,
   // as defined by https://golang.org/pkg/unicode/#IsPrint.
   // +optional
-  optional string fieldManager = 3;
+  optional bytes fieldManager = 3;
 
   // fieldValidation instructs the server on how to handle
   // objects in the request (POST/PUT/PATCH) containing unknown
@@ -271,7 +271,7 @@ message CreateOptions {
   // duplicate fields are present. The error returned from the server
   // will contain all unknown and duplicate fields encountered.
   // +optional
-  optional string fieldValidation = 4;
+  optional bytes fieldValidation = 4;
 }
 
 // DeleteOptions may be provided when deleting an API object.
@@ -305,7 +305,7 @@ message DeleteOptions {
   // 'Foreground' - a cascading policy that deletes all dependents in the
   // foreground.
   // +optional
-  optional string propagationPolicy = 4;
+  optional bytes propagationPolicy = 4;
 
   // When present, indicates that modifications should not be
   // persisted. An invalid or unrecognized dryRun directive will
@@ -349,7 +349,7 @@ message GetOptions {
   //
   // Defaults to unset
   // +optional
-  optional string resourceVersion = 1;
+  optional bytes resourceVersion = 1;
 }
 
 // GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying
@@ -357,9 +357,9 @@ message GetOptions {
 //
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 message GroupKind {
-  optional string group = 1;
+  optional bytes group = 1;
 
-  optional string kind = 2;
+  optional bytes kind = 2;
 }
 
 // GroupResource specifies a Group and a Resource, but does not force a version.  This is useful for identifying
@@ -367,29 +367,29 @@ message GroupKind {
 //
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 message GroupResource {
-  optional string group = 1;
+  optional bytes group = 1;
 
-  optional string resource = 2;
+  optional bytes resource = 2;
 }
 
 // GroupVersion contains the "group" and the "version", which uniquely identifies the API.
 //
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 message GroupVersion {
-  optional string group = 1;
+  optional bytes group = 1;
 
-  optional string version = 2;
+  optional bytes version = 2;
 }
 
 // GroupVersion contains the "group/version" and "version" string of a version.
 // It is made a struct to keep extensibility.
 message GroupVersionForDiscovery {
   // groupVersion specifies the API group and version in the form "group/version"
-  optional string groupVersion = 1;
+  optional bytes groupVersion = 1;
 
   // version specifies the version in the form of "version". This is to save
   // the clients the trouble of splitting the GroupVersion.
-  optional string version = 2;
+  optional bytes version = 2;
 }
 
 // GroupVersionKind unambiguously identifies a kind.  It doesn't anonymously include GroupVersion
@@ -397,11 +397,11 @@ message GroupVersionForDiscovery {
 //
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 message GroupVersionKind {
-  optional string group = 1;
+  optional bytes group = 1;
 
-  optional string version = 2;
+  optional bytes version = 2;
 
-  optional string kind = 3;
+  optional bytes kind = 3;
 }
 
 // GroupVersionResource unambiguously identifies a resource.  It doesn't anonymously include GroupVersion
@@ -409,11 +409,11 @@ message GroupVersionKind {
 //
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 message GroupVersionResource {
-  optional string group = 1;
+  optional bytes group = 1;
 
-  optional string version = 2;
+  optional bytes version = 2;
 
-  optional string resource = 3;
+  optional bytes resource = 3;
 }
 
 // A label selector is a label query over a set of resources. The result of matchLabels and
@@ -437,11 +437,11 @@ message LabelSelector {
 // relates the key and values.
 message LabelSelectorRequirement {
   // key is the label key that the selector applies to.
-  optional string key = 1;
+  optional bytes key = 1;
 
   // operator represents a key's relationship to a set of values.
   // Valid operators are In, NotIn, Exists and DoesNotExist.
-  optional string operator = 2;
+  optional bytes operator = 2;
 
   // values is an array of string values. If the operator is In or NotIn,
   // the values array must be non-empty. If the operator is Exists or DoesNotExist,
@@ -468,7 +468,7 @@ message List {
 message ListMeta {
   // Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
   // +optional
-  optional string selfLink = 1;
+  optional bytes selfLink = 1;
 
   // String that identifies the server's internal version of this object that
   // can be used by clients to determine when objects have changed.
@@ -477,7 +477,7 @@ message ListMeta {
   // Read-only.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
   // +optional
-  optional string resourceVersion = 2;
+  optional bytes resourceVersion = 2;
 
   // continue may be set if the user set a limit on the number of items returned, and indicates that
   // the server has more data available. The value is opaque and may be used to issue another request
@@ -486,7 +486,7 @@ message ListMeta {
   // minutes have passed. The resourceVersion field returned when using this continue value will be
   // identical to the value in the first response, unless you have received this token from an error
   // message.
-  optional string continue = 3;
+  optional bytes continue = 3;
 
   // remainingItemCount is the number of subsequent items in the list which are not included in this
   // list response. If the list request contained label or field selectors, then the number of
@@ -506,12 +506,12 @@ message ListOptions {
   // A selector to restrict the list of returned objects by their labels.
   // Defaults to everything.
   // +optional
-  optional string labelSelector = 1;
+  optional bytes labelSelector = 1;
 
   // A selector to restrict the list of returned objects by their fields.
   // Defaults to everything.
   // +optional
-  optional string fieldSelector = 2;
+  optional bytes fieldSelector = 2;
 
   // Watch for changes to the described resources and return them as a stream of
   // add, update, and remove notifications. Specify resourceVersion.
@@ -533,7 +533,7 @@ message ListOptions {
   //
   // Defaults to unset
   // +optional
-  optional string resourceVersion = 4;
+  optional bytes resourceVersion = 4;
 
   // resourceVersionMatch determines how resourceVersion is applied to list calls.
   // It is highly recommended that resourceVersionMatch be set for list calls where
@@ -543,7 +543,7 @@ message ListOptions {
   //
   // Defaults to unset
   // +optional
-  optional string resourceVersionMatch = 10;
+  optional bytes resourceVersionMatch = 10;
 
   // Timeout for the list/watch call.
   // This limits the duration of the call, regardless of any activity or inactivity.
@@ -582,7 +582,7 @@ message ListOptions {
   //
   // This field is not supported when watch is true. Clients may start a watch from the last
   // resourceVersion value returned by the server and not miss any modifications.
-  optional string continue = 8;
+  optional bytes continue = 8;
 
   // `sendInitialEvents=true` may be set together with `watch=true`.
   // In that case, the watch stream will begin with synthetic events to
@@ -615,17 +615,17 @@ message ListOptions {
 // that the fieldset applies to.
 message ManagedFieldsEntry {
   // Manager is an identifier of the workflow managing these fields.
-  optional string manager = 1;
+  optional bytes manager = 1;
 
   // Operation is the type of operation which lead to this ManagedFieldsEntry being created.
   // The only valid values for this field are 'Apply' and 'Update'.
-  optional string operation = 2;
+  optional bytes operation = 2;
 
   // APIVersion defines the version of this resource that this field set
   // applies to. The format is "group/version" just like the top-level
   // APIVersion field. It is necessary to track the version of a field
   // set because it cannot be automatically converted.
-  optional string apiVersion = 3;
+  optional bytes apiVersion = 3;
 
   // Time is the timestamp of when the ManagedFields entry was added. The
   // timestamp will also be updated if a field is added, the manager
@@ -637,7 +637,7 @@ message ManagedFieldsEntry {
 
   // FieldsType is the discriminator for the different fields format and version.
   // There is currently only one possible value: "FieldsV1"
-  optional string fieldsType = 6;
+  optional bytes fieldsType = 6;
 
   // FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.
   // +optional
@@ -650,7 +650,7 @@ message ManagedFieldsEntry {
   // regular update using the same manager name.
   // Note that the APIVersion field is not related to the Subresource field and
   // it always corresponds to the version of the main resource.
-  optional string subresource = 8;
+  optional bytes subresource = 8;
 }
 
 // MicroTime is version of Time with microsecond level precision.
@@ -681,7 +681,7 @@ message ObjectMeta {
   // Cannot be updated.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
   // +optional
-  optional string name = 1;
+  optional bytes name = 1;
 
   // GenerateName is an optional prefix, used by the server, to generate a unique
   // name ONLY IF the Name field has not been provided.
@@ -696,7 +696,7 @@ message ObjectMeta {
   // Applied only if Name is not specified.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
   // +optional
-  optional string generateName = 2;
+  optional bytes generateName = 2;
 
   // Namespace defines the space within which each name must be unique. An empty namespace is
   // equivalent to the "default" namespace, but "default" is the canonical representation.
@@ -707,11 +707,11 @@ message ObjectMeta {
   // Cannot be updated.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces
   // +optional
-  optional string namespace = 3;
+  optional bytes namespace = 3;
 
   // Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
   // +optional
-  optional string selfLink = 4;
+  optional bytes selfLink = 4;
 
   // UID is the unique in time and space value for this object. It is typically generated by
   // the server on successful creation of a resource and is not allowed to change on PUT
@@ -721,7 +721,7 @@ message ObjectMeta {
   // Read-only.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
   // +optional
-  optional string uid = 5;
+  optional bytes uid = 5;
 
   // An opaque value that represents the internal version of this object that can
   // be used by clients to determine when objects have changed. May be used for optimistic
@@ -734,7 +734,7 @@ message ObjectMeta {
   // Value must be treated as opaque by clients and .
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
   // +optional
-  optional string resourceVersion = 6;
+  optional bytes resourceVersion = 6;
 
   // A sequence number representing a specific generation of the desired state.
   // Populated by the system. Read-only.
@@ -842,19 +842,19 @@ message ObjectMeta {
 // +structType=atomic
 message OwnerReference {
   // API version of the referent.
-  optional string apiVersion = 5;
+  optional bytes apiVersion = 5;
 
   // Kind of the referent.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-  optional string kind = 1;
+  optional bytes kind = 1;
 
   // Name of the referent.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
-  optional string name = 3;
+  optional bytes name = 3;
 
   // UID of the referent.
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
-  optional string uid = 4;
+  optional bytes uid = 4;
 
   // If true, this reference points to the managing controller.
   // +optional
@@ -924,7 +924,7 @@ message PatchOptions {
   // (application/apply-patch) but optional for non-apply patch
   // types (JsonPatch, MergePatch, StrategicMergePatch).
   // +optional
-  optional string fieldManager = 3;
+  optional bytes fieldManager = 3;
 
   // fieldValidation instructs the server on how to handle
   // objects in the request (POST/PUT/PATCH) containing unknown
@@ -943,18 +943,18 @@ message PatchOptions {
   // duplicate fields are present. The error returned from the server
   // will contain all unknown and duplicate fields encountered.
   // +optional
-  optional string fieldValidation = 4;
+  optional bytes fieldValidation = 4;
 }
 
 // Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
 message Preconditions {
   // Specifies the target UID.
   // +optional
-  optional string uid = 1;
+  optional bytes uid = 1;
 
   // Specifies the target ResourceVersion
   // +optional
-  optional string resourceVersion = 2;
+  optional bytes resourceVersion = 2;
 }
 
 // RootPaths lists the paths available at root.
@@ -968,11 +968,11 @@ message RootPaths {
 // ServerAddressByClientCIDR helps the client to determine the server address that they should use, depending on the clientCIDR that they match.
 message ServerAddressByClientCIDR {
   // The CIDR with which clients can match their IP to figure out the server address that they should use.
-  optional string clientCIDR = 1;
+  optional bytes clientCIDR = 1;
 
   // Address of this server, suitable for a client that matches the above CIDR.
   // This can be a hostname, hostname:port, IP or IP:port.
-  optional string serverAddress = 2;
+  optional bytes serverAddress = 2;
 }
 
 // Status is a return value for calls that don't return other objects.
@@ -986,18 +986,18 @@ message Status {
   // One of: "Success" or "Failure".
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
   // +optional
-  optional string status = 2;
+  optional bytes status = 2;
 
   // A human-readable description of the status of this operation.
   // +optional
-  optional string message = 3;
+  optional bytes message = 3;
 
   // A machine-readable description of why this operation is in the
   // "Failure" status. If this value is empty there
   // is no information available. A Reason clarifies an HTTP status
   // code but does not override it.
   // +optional
-  optional string reason = 4;
+  optional bytes reason = 4;
 
   // Extended data associated with the reason.  Each reason may define its
   // own extended details. This field is optional and the data returned
@@ -1018,12 +1018,12 @@ message StatusCause {
   // A machine-readable description of the cause of the error. If this value is
   // empty there is no information available.
   // +optional
-  optional string reason = 1;
+  optional bytes reason = 1;
 
   // A human-readable description of the cause of the error.  This field may be
   // presented as-is to a reader.
   // +optional
-  optional string message = 2;
+  optional bytes message = 2;
 
   // The field of the resource that has caused this error, as named by its JSON
   // serialization. May include dot and postfix notation for nested attributes.
@@ -1035,7 +1035,7 @@ message StatusCause {
   //   "name" - the field "name" on the current resource
   //   "items[0].name" - the field "name" on the first array entry in "items"
   // +optional
-  optional string field = 3;
+  optional bytes field = 3;
 }
 
 // StatusDetails is a set of additional properties that MAY be set by the
@@ -1048,23 +1048,23 @@ message StatusDetails {
   // The name attribute of the resource associated with the status StatusReason
   // (when there is a single name which can be described).
   // +optional
-  optional string name = 1;
+  optional bytes name = 1;
 
   // The group attribute of the resource associated with the status StatusReason.
   // +optional
-  optional string group = 2;
+  optional bytes group = 2;
 
   // The kind attribute of the resource associated with the status StatusReason.
   // On some operations may differ from the requested resource Kind.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
   // +optional
-  optional string kind = 3;
+  optional bytes kind = 3;
 
   // UID of the resource.
   // (when there is a single resource which can be described).
   // More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
   // +optional
-  optional string uid = 6;
+  optional bytes uid = 6;
 
   // The Causes array includes more details associated with the StatusReason
   // failure. Not all StatusReasons may provide detailed causes.
@@ -1086,7 +1086,7 @@ message TableOptions {
   // Specifying "None" will return no object, specifying "Object" will return the full object contents, and
   // specifying "Metadata" (the default) will return the object's metadata in the PartialObjectMetadata kind
   // in version v1beta1 of the meta.k8s.io API group.
-  optional string includeObject = 1;
+  optional bytes includeObject = 1;
 }
 
 // Time is a wrapper around time.Time which supports correct
@@ -1137,14 +1137,14 @@ message TypeMeta {
   // In CamelCase.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
   // +optional
-  optional string kind = 1;
+  optional bytes kind = 1;
 
   // APIVersion defines the versioned schema of this representation of an object.
   // Servers should convert recognized schemas to the latest internal value, and
   // may reject unrecognized values.
   // More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
   // +optional
-  optional string apiVersion = 2;
+  optional bytes apiVersion = 2;
 }
 
 // UpdateOptions may be provided when updating an API object.
@@ -1164,7 +1164,7 @@ message UpdateOptions {
   // 128 characters long, and only contain printable characters,
   // as defined by https://golang.org/pkg/unicode/#IsPrint.
   // +optional
-  optional string fieldManager = 2;
+  optional bytes fieldManager = 2;
 
   // fieldValidation instructs the server on how to handle
   // objects in the request (POST/PUT/PATCH) containing unknown
@@ -1183,7 +1183,7 @@ message UpdateOptions {
   // duplicate fields are present. The error returned from the server
   // will contain all unknown and duplicate fields encountered.
   // +optional
-  optional string fieldValidation = 3;
+  optional bytes fieldValidation = 3;
 }
 
 // Verbs masks the value so protobuf can generate
@@ -1202,7 +1202,7 @@ message Verbs {
 // +k8s:deepcopy-gen=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 message WatchEvent {
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Object is:
   //  * If Type is Added or Modified: the new state of the object.

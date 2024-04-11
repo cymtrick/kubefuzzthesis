@@ -46,7 +46,7 @@ message AuditAnnotation {
   // will be discarded.
   //
   // Required.
-  optional string key = 1;
+  optional bytes key = 1;
 
   // valueExpression represents the expression which is evaluated by CEL to
   // produce an audit annotation value. The expression must evaluate to either
@@ -63,7 +63,7 @@ message AuditAnnotation {
   // will be joined together in a comma-separated list.
   //
   // Required.
-  optional string valueExpression = 2;
+  optional bytes valueExpression = 2;
 }
 
 // ExpressionWarning is a warning information that targets a specific expression.
@@ -71,12 +71,12 @@ message ExpressionWarning {
   // The path to the field that refers the expression.
   // For example, the reference to the expression of the first item of
   // validations is "spec.validations[0].expression"
-  optional string fieldRef = 2;
+  optional bytes fieldRef = 2;
 
   // The content of type checking information in a human-readable form.
   // Each line of the warning contains the type that the expression is checked
   // against, followed by the type check error from the compiler.
-  optional string warning = 3;
+  optional bytes warning = 3;
 }
 
 message MatchCondition {
@@ -89,7 +89,7 @@ message MatchCondition {
   // optional DNS subdomain prefix and '/' (e.g. 'example.com/MyName')
   //
   // Required.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // Expression represents the expression which will be evaluated by CEL. Must evaluate to bool.
   // CEL expressions have access to the contents of the AdmissionRequest and Authorizer, organized into CEL variables:
@@ -104,7 +104,7 @@ message MatchCondition {
   // Documentation on CEL: https://kubernetes.io/docs/reference/using-api/cel/
   //
   // Required.
-  optional string expression = 2;
+  optional bytes expression = 2;
 }
 
 // MatchResources decides whether to run the admission control policy on an object based
@@ -199,7 +199,7 @@ message MatchResources {
   //
   // Defaults to "Equivalent"
   // +optional
-  optional string matchPolicy = 7;
+  optional bytes matchPolicy = 7;
 }
 
 // NamedRuleWithOperations is a tuple of Operations and Resources with ResourceNames.
@@ -220,11 +220,11 @@ message ParamKind {
   // APIVersion is the API group version the resources belong to.
   // In format of "group/version".
   // Required.
-  optional string apiVersion = 1;
+  optional bytes apiVersion = 1;
 
   // Kind is the API kind the resources belong to.
   // Required.
-  optional string kind = 2;
+  optional bytes kind = 2;
 }
 
 // ParamRef describes how to locate the params to be used as input to
@@ -237,7 +237,7 @@ message ParamRef {
   // the other must be unset.
   //
   // +optional
-  optional string name = 1;
+  optional bytes name = 1;
 
   // namespace is the namespace of the referenced resource. Allows limiting
   // the search for params to a specific namespace. Applies to both `name` and
@@ -255,7 +255,7 @@ message ParamRef {
   // resources, which will result in an error.
   //
   // +optional
-  optional string namespace = 2;
+  optional bytes namespace = 2;
 
   // selector can be used to match multiple param objects based on their labels.
   // Supply selector: {} to match all resources of the ParamKind.
@@ -279,7 +279,7 @@ message ParamRef {
   // Allowed values are `Allow` or `Deny`
   // Default to `Deny`
   // +optional
-  optional string parameterNotFoundAction = 4;
+  optional bytes parameterNotFoundAction = 4;
 }
 
 // TypeChecking contains results of type checking the expressions in the
@@ -344,7 +344,7 @@ message ValidatingAdmissionPolicyBindingSpec {
   // PolicyName references a ValidatingAdmissionPolicy name which the ValidatingAdmissionPolicyBinding binds to.
   // If the referenced resource does not exist, this binding is considered invalid and will be ignored
   // Required.
-  optional string policyName = 1;
+  optional bytes policyName = 1;
 
   // paramRef specifies the parameter resource used to configure the admission control policy.
   // It should point to a resource of the type specified in ParamKind of the bound ValidatingAdmissionPolicy.
@@ -452,7 +452,7 @@ message ValidatingAdmissionPolicySpec {
   //
   // Allowed values are Ignore or Fail. Defaults to Fail.
   // +optional
-  optional string failurePolicy = 4;
+  optional bytes failurePolicy = 4;
 
   // auditAnnotations contains CEL expressions which are used to produce audit
   // annotations for the audit event of the API request.
@@ -560,7 +560,7 @@ message Validation {
   //     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
   //     non-intersecting keys are appended, retaining their partial order.
   // Required.
-  optional string Expression = 1;
+  optional bytes Expression = 1;
 
   // Message represents the message displayed when validation fails. The message is required if the Expression contains
   // line breaks. The message must not contain line breaks.
@@ -570,7 +570,7 @@ message Validation {
   // The message must not contain line breaks.
   // If unset, the message is "failed Expression: {Expression}".
   // +optional
-  optional string message = 2;
+  optional bytes message = 2;
 
   // Reason represents a machine-readable description of why this validation failed.
   // If this is the first validation in the list to fail, this reason, as well as the
@@ -579,7 +579,7 @@ message Validation {
   // The currently supported reasons are: "Unauthorized", "Forbidden", "Invalid", "RequestEntityTooLarge".
   // If not set, StatusReasonInvalid is used in the response to the client.
   // +optional
-  optional string reason = 3;
+  optional bytes reason = 3;
 
   // messageExpression declares a CEL expression that evaluates to the validation failure message that is returned when this rule fails.
   // Since messageExpression is used as a failure message, it must evaluate to a string.
@@ -592,7 +592,7 @@ message Validation {
   // Example:
   // "object.x must be less than max ("+string(params.max)+")"
   // +optional
-  optional string messageExpression = 4;
+  optional bytes messageExpression = 4;
 }
 
 // Variable is the definition of a variable that is used for composition.
@@ -600,10 +600,10 @@ message Variable {
   // Name is the name of the variable. The name must be a valid CEL identifier and unique among all variables.
   // The variable can be accessed in other expressions through `variables`
   // For example, if name is "foo", the variable will be available as `variables.foo`
-  optional string Name = 1;
+  optional bytes Name = 1;
 
   // Expression is the expression that will be evaluated as the value of the variable.
   // The CEL expression has access to the same identifiers as the CEL expressions in Validation.
-  optional string Expression = 2;
+  optional bytes Expression = 2;
 }
 

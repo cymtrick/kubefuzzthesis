@@ -372,7 +372,7 @@ class TypeMeta final :
     kApiVersionFieldNumber = 1,
     kKindFieldNumber = 2,
   };
-  // optional string apiVersion = 1;
+  // optional bytes apiVersion = 1;
   bool has_apiversion() const;
   private:
   bool _internal_has_apiversion() const;
@@ -390,7 +390,7 @@ class TypeMeta final :
   std::string* _internal_mutable_apiversion();
   public:
 
-  // optional string kind = 2;
+  // optional bytes kind = 2;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -577,7 +577,7 @@ class Unknown final :
   std::string* _internal_mutable_raw();
   public:
 
-  // optional string contentEncoding = 3;
+  // optional bytes contentEncoding = 3;
   bool has_contentencoding() const;
   private:
   bool _internal_has_contentencoding() const;
@@ -595,7 +595,7 @@ class Unknown final :
   std::string* _internal_mutable_contentencoding();
   public:
 
-  // optional string contentType = 4;
+  // optional bytes contentType = 4;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -732,7 +732,7 @@ inline void RawExtension::set_allocated_raw(std::string* raw) {
 
 // TypeMeta
 
-// optional string apiVersion = 1;
+// optional bytes apiVersion = 1;
 inline bool TypeMeta::_internal_has_apiversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -752,7 +752,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TypeMeta::set_apiversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apiversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apiversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.runtime.TypeMeta.apiVersion)
 }
 inline std::string* TypeMeta::mutable_apiversion() {
@@ -800,7 +800,7 @@ inline void TypeMeta::set_allocated_apiversion(std::string* apiversion) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.runtime.TypeMeta.apiVersion)
 }
 
-// optional string kind = 2;
+// optional bytes kind = 2;
 inline bool TypeMeta::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -820,7 +820,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TypeMeta::set_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.kind_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.runtime.TypeMeta.kind)
 }
 inline std::string* TypeMeta::mutable_kind() {
@@ -1030,7 +1030,7 @@ inline void Unknown::set_allocated_raw(std::string* raw) {
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.runtime.Unknown.raw)
 }
 
-// optional string contentEncoding = 3;
+// optional bytes contentEncoding = 3;
 inline bool Unknown::_internal_has_contentencoding() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1050,7 +1050,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Unknown::set_contentencoding(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.contentencoding_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contentencoding_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.runtime.Unknown.contentEncoding)
 }
 inline std::string* Unknown::mutable_contentencoding() {
@@ -1098,7 +1098,7 @@ inline void Unknown::set_allocated_contentencoding(std::string* contentencoding)
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.runtime.Unknown.contentEncoding)
 }
 
-// optional string contentType = 4;
+// optional bytes contentType = 4;
 inline bool Unknown::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1118,7 +1118,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Unknown::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.runtime.Unknown.contentType)
 }
 inline std::string* Unknown::mutable_contenttype() {

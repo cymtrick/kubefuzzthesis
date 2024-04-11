@@ -203,7 +203,7 @@ class IntOrString final :
     kTypeFieldNumber = 1,
     kIntValFieldNumber = 2,
   };
-  // optional string strVal = 3;
+  // optional bytes strVal = 3;
   bool has_strval() const;
   private:
   bool _internal_has_strval() const;
@@ -331,7 +331,7 @@ inline void IntOrString::set_intval(int32_t value) {
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.util.intstr.IntOrString.intVal)
 }
 
-// optional string strVal = 3;
+// optional bytes strVal = 3;
 inline bool IntOrString::_internal_has_strval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -351,7 +351,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IntOrString::set_strval(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.strval_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.strval_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:k8s.io.apimachinery.pkg.util.intstr.IntOrString.strVal)
 }
 inline std::string* IntOrString::mutable_strval() {

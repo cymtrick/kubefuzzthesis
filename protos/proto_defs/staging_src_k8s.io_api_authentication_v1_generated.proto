@@ -32,19 +32,19 @@ option go_package = "k8s.io/api/authentication/v1";
 message BoundObjectReference {
   // Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
   // +optional
-  optional string kind = 1;
+  optional bytes kind = 1;
 
   // API version of the referent.
   // +optional
-  optional string apiVersion = 2;
+  optional bytes apiVersion = 2;
 
   // Name of the referent.
   // +optional
-  optional string name = 3;
+  optional bytes name = 3;
 
   // UID of the referent.
   // +optional
-  optional string uID = 4;
+  optional bytes uID = 4;
 }
 
 // ExtraValue masks the value so protobuf can generate
@@ -120,7 +120,7 @@ message TokenRequestSpec {
 // TokenRequestStatus is the result of a token request.
 message TokenRequestStatus {
   // Token is the opaque bearer token.
-  optional string token = 1;
+  optional bytes token = 1;
 
   // ExpirationTimestamp is the time of expiration of the returned token.
   optional k8s.io.apimachinery.pkg.apis.meta.v1.Time expirationTimestamp = 2;
@@ -147,7 +147,7 @@ message TokenReview {
 message TokenReviewSpec {
   // Token is the opaque bearer token.
   // +optional
-  optional string token = 1;
+  optional bytes token = 1;
 
   // Audiences is a list of the identifiers that the resource server presented
   // with the token identifies as. Audience-aware token authenticators will
@@ -184,7 +184,7 @@ message TokenReviewStatus {
 
   // Error indicates that the token couldn't be checked
   // +optional
-  optional string error = 3;
+  optional bytes error = 3;
 }
 
 // UserInfo holds the information about the user needed to implement the
@@ -192,13 +192,13 @@ message TokenReviewStatus {
 message UserInfo {
   // The name that uniquely identifies this user among all active users.
   // +optional
-  optional string username = 1;
+  optional bytes username = 1;
 
   // A unique value that identifies this user across time. If this user is
   // deleted and another user by the same name is added, they will have
   // different UIDs.
   // +optional
-  optional string uid = 2;
+  optional bytes uid = 2;
 
   // The names of groups this user is a part of.
   // +optional

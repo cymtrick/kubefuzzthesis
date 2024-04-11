@@ -119,7 +119,7 @@ message PodDisruptionBudgetSpec {
   // This field is beta-level. The eviction API uses this field when
   // the feature gate PDBUnhealthyPodEvictionPolicy is enabled (enabled by default).
   // +optional
-  optional string unhealthyPodEvictionPolicy = 4;
+  optional bytes unhealthyPodEvictionPolicy = 4;
 }
 
 // PodDisruptionBudgetStatus represents information about the status of a

@@ -61,7 +61,7 @@ message CodeGeneratorRequest {
   repeated string file_to_generate = 1;
 
   // The generator parameter passed on the command-line.
-  optional string parameter = 2;
+  optional bytes parameter = 2;
 
   // FileDescriptorProtos for all files in files_to_generate and everything
   // they import.  The files will appear in topological order, so each file
@@ -87,7 +87,7 @@ message CodeGeneratorResponse {
   // problem in protoc itself -- such as the input CodeGeneratorRequest being
   // unparseable -- should be reported by writing a message to stderr and
   // exiting with a non-zero status code.
-  optional string error = 1;
+  optional bytes error = 1;
 
   // Represents a single generated file.
   message File {
@@ -102,7 +102,7 @@ message CodeGeneratorResponse {
     // files need not reside completely in memory at one time.  Note that as of
     // this writing protoc does not optimize for this -- it will read the entire
     // CodeGeneratorResponse before writing files to disk.
-    optional string name = 1;
+    optional bytes name = 1;
 
     // If non-empty, indicates that the named file should already exist, and the
     // content here is to be inserted into that file at a defined insertion
@@ -141,10 +141,10 @@ message CodeGeneratorResponse {
     // command line.
     //
     // If |insertion_point| is present, |name| must also be present.
-    optional string insertion_point = 2;
+    optional bytes insertion_point = 2;
 
     // The file contents.
-    optional string content = 15;
+    optional bytes content = 15;
   }
   repeated File file = 15;
 }

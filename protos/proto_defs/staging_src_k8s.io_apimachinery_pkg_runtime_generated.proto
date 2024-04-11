@@ -99,10 +99,10 @@ message RawExtension {
 // +k8s:openapi-gen=true
 message TypeMeta {
   // +optional
-  optional string apiVersion = 1;
+  optional bytes apiVersion = 1;
 
   // +optional
-  optional string kind = 2;
+  optional bytes kind = 2;
 }
 
 // Unknown allows api objects with unknown types to be passed-through. This can be used
@@ -125,10 +125,10 @@ message Unknown {
 
   // ContentEncoding is encoding used to encode 'Raw' data.
   // Unspecified means no encoding.
-  optional string contentEncoding = 3;
+  optional bytes contentEncoding = 3;
 
   // ContentType  is serialization method used to serialize 'Raw'.
   // Unspecified means ContentTypeJSON.
-  optional string contentType = 4;
+  optional bytes contentType = 4;
 }
 

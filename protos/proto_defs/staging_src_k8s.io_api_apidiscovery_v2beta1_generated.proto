@@ -67,7 +67,7 @@ message APIResourceDiscovery {
   // for this resource across all versions in the API group.
   // Resources with non-empty groups are located at /apis/<APIGroupDiscovery.objectMeta.name>/<APIVersionDiscovery.version>/<APIResourceDiscovery.Resource>
   // Resources with empty groups are located at /api/v1/<APIResourceDiscovery.Resource>
-  optional string resource = 1;
+  optional bytes resource = 1;
 
   // responseKind describes the group, version, and kind of the serialization schema for the object type this endpoint typically returns.
   // APIs may return other objects types at their discretion, such as error conditions, requests for alternate representations, or other operation specific behavior.
@@ -75,13 +75,13 @@ message APIResourceDiscovery {
   optional k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind responseKind = 2;
 
   // scope indicates the scope of a resource, either Cluster or Namespaced
-  optional string scope = 3;
+  optional bytes scope = 3;
 
   // singularResource is the singular name of the resource.  This allows clients to handle plural and singular opaquely.
   // For many clients the singular form of the resource will be more understandable to users reading messages and should be used when integrating the name of the resource into a sentence.
   // The command line tool kubectl, for example, allows use of the singular resource name in place of plurals.
   // The singular form of a resource should always be an optional element - when in doubt use the canonical resource name.
-  optional string singularResource = 4;
+  optional bytes singularResource = 4;
 
   // verbs is a list of supported API operation types (this includes
   // but is not limited to get, list, watch, create, update, patch,
@@ -108,7 +108,7 @@ message APIResourceDiscovery {
 message APISubresourceDiscovery {
   // subresource is the name of the subresource.  This is used in the URL path and is the unique identifier
   // for this resource across all versions.
-  optional string subresource = 1;
+  optional bytes subresource = 1;
 
   // responseKind describes the group, version, and kind of the serialization schema for the object type this endpoint typically returns.
   // Some subresources do not return normal resources, these will have null or empty return types.
@@ -137,7 +137,7 @@ message APISubresourceDiscovery {
 // APIVersionDiscovery holds a list of APIResourceDiscovery types that are served for a particular version within an API Group.
 message APIVersionDiscovery {
   // version is the name of the version within a group version.
-  optional string version = 1;
+  optional bytes version = 1;
 
   // resources is a list of APIResourceDiscovery objects for the corresponding group version.
   // +listType=map
@@ -151,6 +151,6 @@ message APIVersionDiscovery {
   // significantly out of date. Clients that require the latest
   // version of the discovery information be retrieved before
   // performing an operation should not use the aggregated document
-  optional string freshness = 3;
+  optional bytes freshness = 3;
 }
 

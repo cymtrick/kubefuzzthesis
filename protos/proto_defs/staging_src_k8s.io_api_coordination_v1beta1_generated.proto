@@ -55,7 +55,7 @@ message LeaseList {
 message LeaseSpec {
   // holderIdentity contains the identity of the holder of a current lease.
   // +optional
-  optional string holderIdentity = 1;
+  optional bytes holderIdentity = 1;
 
   // leaseDurationSeconds is a duration that candidates for a lease need
   // to wait to force acquire it. This is measure against time of last

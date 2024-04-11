@@ -61,7 +61,7 @@ message CronJobList {
 // CronJobSpec describes how the job execution will look like and when it will actually run.
 message CronJobSpec {
   // The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
-  optional string schedule = 1;
+  optional bytes schedule = 1;
 
   // The time zone name for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
   // If not specified, this will default to the time zone of the kube-controller-manager process.
@@ -73,7 +73,7 @@ message CronJobSpec {
   // reason UnknownTimeZone.
   // More information can be found in https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#time-zones
   // +optional
-  optional string timeZone = 8;
+  optional bytes timeZone = 8;
 
   // Optional deadline in seconds for starting the job if it misses scheduled
   // time for any reason.  Missed jobs executions will be counted as failed ones.
@@ -87,7 +87,7 @@ message CronJobSpec {
   // - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet;
   // - "Replace": cancels currently running job and replaces it with a new one
   // +optional
-  optional string concurrencyPolicy = 3;
+  optional bytes concurrencyPolicy = 3;
 
   // This flag tells the controller to suspend subsequent executions, it does
   // not apply to already started executions.  Defaults to false.
@@ -145,10 +145,10 @@ message Job {
 // JobCondition describes current state of a job.
 message JobCondition {
   // Type of job condition, Complete or Failed.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Status of the condition, one of True, False, Unknown.
-  optional string status = 2;
+  optional bytes status = 2;
 
   // Last time the condition was checked.
   // +optional
@@ -160,11 +160,11 @@ message JobCondition {
 
   // (brief) reason for the condition's last transition.
   // +optional
-  optional string reason = 5;
+  optional bytes reason = 5;
 
   // Human readable message indicating details about last transition.
   // +optional
-  optional string message = 6;
+  optional bytes message = 6;
 }
 
 // JobList is a collection of jobs.
@@ -304,7 +304,7 @@ message JobSpec {
   // is possible during upgrades due to version skew, the controller
   // skips updates for the Job.
   // +optional
-  optional string completionMode = 9;
+  optional bytes completionMode = 9;
 
   // suspend specifies whether the Job controller should create Pods or not. If
   // a Job is created with suspend set to true, no Pods are created by the Job
@@ -329,7 +329,7 @@ message JobSpec {
   // This is an beta field. To use this, enable the JobPodReplacementPolicy feature toggle.
   // This is on by default.
   // +optional
-  optional string podReplacementPolicy = 14;
+  optional bytes podReplacementPolicy = 14;
 }
 
 // JobStatus represents the current state of a Job.
@@ -390,7 +390,7 @@ message JobStatus {
   // For example, if the completed indexes are 1, 3, 4, 5 and 7, they are
   // represented as "1,3-5,7".
   // +optional
-  optional string completedIndexes = 7;
+  optional bytes completedIndexes = 7;
 
   // FailedIndexes holds the failed indexes when backoffLimitPerIndex=true.
   // The indexes are represented in the text format analogous as for the
@@ -403,7 +403,7 @@ message JobStatus {
   // This field is beta-level. It can be used when the `JobBackoffLimitPerIndex`
   // feature gate is enabled (enabled by default).
   // +optional
-  optional string failedIndexes = 10;
+  optional bytes failedIndexes = 10;
 
   // uncountedTerminatedPods holds the UIDs of Pods that have terminated but
   // the job controller hasn't yet accounted for in the status counters.
@@ -463,7 +463,7 @@ message PodFailurePolicyOnExitCodesRequirement {
   // When specified, it should match one the container or initContainer
   // names in the pod template.
   // +optional
-  optional string containerName = 1;
+  optional bytes containerName = 1;
 
   // Represents the relationship between the container exit code(s) and the
   // specified values. Containers completed with success (exit code 0) are
@@ -477,7 +477,7 @@ message PodFailurePolicyOnExitCodesRequirement {
   //   by the 'containerName' field) is not in the set of specified values.
   // Additional values are considered to be added in the future. Clients should
   // react to an unknown operator by assuming the requirement is not satisfied.
-  optional string operator = 2;
+  optional bytes operator = 2;
 
   // Specifies the set of values. Each returned container exit code (might be
   // multiple in case of multiple containers) is checked against this set of
@@ -493,12 +493,12 @@ message PodFailurePolicyOnExitCodesRequirement {
 message PodFailurePolicyOnPodConditionsPattern {
   // Specifies the required Pod condition type. To match a pod condition
   // it is required that specified type equals the pod condition type.
-  optional string type = 1;
+  optional bytes type = 1;
 
   // Specifies the required Pod condition status. To match a pod condition
   // it is required that the specified status equals the pod condition status.
   // Defaults to True.
-  optional string status = 2;
+  optional bytes status = 2;
 }
 
 // PodFailurePolicyRule describes how a pod failure is handled when the requirements are met.
@@ -519,7 +519,7 @@ message PodFailurePolicyRule {
   //   counter towards the .backoffLimit is incremented.
   // Additional values are considered to be added in the future. Clients should
   // react to an unknown action by skipping the rule.
-  optional string action = 1;
+  optional bytes action = 1;
 
   // Represents the requirement on the container exit codes.
   // +optional

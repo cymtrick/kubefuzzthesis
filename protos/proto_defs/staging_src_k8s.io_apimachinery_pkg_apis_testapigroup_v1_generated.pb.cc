@@ -282,30 +282,30 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "stapigroup.v1.CarpSpec\022H\n\006status\030\003 \001(\01328"
   ".k8s.io.apimachinery.pkg.apis.testapigro"
   "up.v1.CarpStatus\"\331\001\n\rCarpCondition\022\014\n\004ty"
-  "pe\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022A\n\rlastProbeTim"
+  "pe\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022A\n\rlastProbeTim"
   "e\030\003 \001(\0132*.k8s.io.apimachinery.pkg.apis.m"
   "eta.v1.Time\022F\n\022lastTransitionTime\030\004 \001(\0132"
   "*.k8s.io.apimachinery.pkg.apis.meta.v1.T"
-  "ime\022\016\n\006reason\030\005 \001(\t\022\017\n\007message\030\006 \001(\t\"\217\001\n"
+  "ime\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001(\014\"\217\001\n"
   "\010CarpList\022@\n\010metadata\030\001 \001(\0132..k8s.io.api"
   "machinery.pkg.apis.meta.v1.ListMeta\022A\n\005i"
   "tems\030\002 \003(\01322.k8s.io.apimachinery.pkg.api"
   "s.testapigroup.v1.Carp\"\265\003\n\010CarpSpec\022\025\n\rr"
-  "estartPolicy\030\003 \001(\t\022%\n\035terminationGracePe"
+  "estartPolicy\030\003 \001(\014\022%\n\035terminationGracePe"
   "riodSeconds\030\004 \001(\003\022\035\n\025activeDeadlineSecon"
   "ds\030\005 \001(\003\022^\n\014nodeSelector\030\007 \003(\0132H.k8s.io."
   "apimachinery.pkg.apis.testapigroup.v1.Ca"
   "rpSpec.NodeSelectorEntry\022\032\n\022serviceAccou"
-  "ntName\030\010 \001(\t\022\026\n\016serviceAccount\030\t \001(\t\022\020\n\010"
-  "nodeName\030\n \001(\t\022\023\n\013hostNetwork\030\013 \001(\010\022\017\n\007h"
+  "ntName\030\010 \001(\014\022\026\n\016serviceAccount\030\t \001(\014\022\020\n\010"
+  "nodeName\030\n \001(\014\022\023\n\013hostNetwork\030\013 \001(\010\022\017\n\007h"
   "ostPID\030\014 \001(\010\022\017\n\007hostIPC\030\r \001(\010\022\020\n\010hostnam"
-  "e\030\020 \001(\t\022\021\n\tsubdomain\030\021 \001(\t\022\025\n\rschedulern"
-  "ame\030\023 \001(\t\0323\n\021NodeSelectorEntry\022\013\n\003key\030\001 "
+  "e\030\020 \001(\014\022\021\n\tsubdomain\030\021 \001(\014\022\025\n\rschedulern"
+  "ame\030\023 \001(\014\0323\n\021NodeSelectorEntry\022\013\n\003key\030\001 "
   "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\354\001\n\nCarpStatus\022\r\n"
-  "\005phase\030\001 \001(\t\022O\n\nconditions\030\002 \003(\0132;.k8s.i"
+  "\005phase\030\001 \001(\014\022O\n\nconditions\030\002 \003(\0132;.k8s.i"
   "o.apimachinery.pkg.apis.testapigroup.v1."
-  "CarpCondition\022\017\n\007message\030\003 \001(\t\022\016\n\006reason"
-  "\030\004 \001(\t\022\016\n\006hostIP\030\005 \001(\t\022\016\n\006carpIP\030\006 \001(\t\022="
+  "CarpCondition\022\017\n\007message\030\003 \001(\014\022\016\n\006reason"
+  "\030\004 \001(\014\022\016\n\006hostIP\030\005 \001(\014\022\016\n\006carpIP\030\006 \001(\014\022="
   "\n\tstartTime\030\007 \001(\0132*.k8s.io.apimachinery."
   "pkg.apis.meta.v1.TimeB.Z,k8s.io/apimachi"
   "nery/pkg/apis/testapigroup/v1"
@@ -847,27 +847,21 @@ const char* CarpCondition::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string type = 1;
+      // optional bytes type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.type");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string status = 2;
+      // optional bytes status = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_status();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.status");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -887,27 +881,21 @@ const char* CarpCondition::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // optional string reason = 5;
+      // optional bytes reason = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_reason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.reason");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string message = 6;
+      // optional bytes message = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.message");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -942,23 +930,15 @@ uint8_t* CarpCondition::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string type = 1;
+  // optional bytes type = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_type().data(), static_cast<int>(this->_internal_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.type");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_type(), target);
   }
 
-  // optional string status = 2;
+  // optional bytes status = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.status");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_status(), target);
   }
 
@@ -976,23 +956,15 @@ uint8_t* CarpCondition::_InternalSerialize(
         _Internal::lasttransitiontime(this).GetCachedSize(), target, stream);
   }
 
-  // optional string reason = 5;
+  // optional bytes reason = 5;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.reason");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_reason(), target);
   }
 
-  // optional string message = 6;
+  // optional bytes message = 6;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpCondition.message");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_message(), target);
   }
 
@@ -1014,31 +986,31 @@ size_t CarpCondition::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string type = 1;
+    // optional bytes type = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_type());
     }
 
-    // optional string status = 2;
+    // optional bytes status = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_status());
     }
 
-    // optional string reason = 5;
+    // optional bytes reason = 5;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_reason());
     }
 
-    // optional string message = 6;
+    // optional bytes message = 6;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_message());
     }
 
@@ -1672,15 +1644,12 @@ const char* CarpSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string restartPolicy = 3;
+      // optional bytes restartPolicy = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_restartpolicy();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.restartPolicy");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1715,39 +1684,30 @@ const char* CarpSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // optional string serviceAccountName = 8;
+      // optional bytes serviceAccountName = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_serviceaccountname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccountName");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string serviceAccount = 9;
+      // optional bytes serviceAccount = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_serviceaccount();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccount");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string nodeName = 10;
+      // optional bytes nodeName = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_nodename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.nodeName");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1778,39 +1738,30 @@ const char* CarpSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // optional string hostname = 16;
+      // optional bytes hostname = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           auto str = _internal_mutable_hostname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.hostname");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string subdomain = 17;
+      // optional bytes subdomain = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           auto str = _internal_mutable_subdomain();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.subdomain");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string schedulername = 19;
+      // optional bytes schedulername = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
           auto str = _internal_mutable_schedulername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.schedulername");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1845,13 +1796,9 @@ uint8_t* CarpSpec::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string restartPolicy = 3;
+  // optional bytes restartPolicy = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_restartpolicy().data(), static_cast<int>(this->_internal_restartpolicy().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.restartPolicy");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_restartpolicy(), target);
   }
 
@@ -1897,33 +1844,21 @@ uint8_t* CarpSpec::_InternalSerialize(
     }
   }
 
-  // optional string serviceAccountName = 8;
+  // optional bytes serviceAccountName = 8;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_serviceaccountname().data(), static_cast<int>(this->_internal_serviceaccountname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccountName");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         8, this->_internal_serviceaccountname(), target);
   }
 
-  // optional string serviceAccount = 9;
+  // optional bytes serviceAccount = 9;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_serviceaccount().data(), static_cast<int>(this->_internal_serviceaccount().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.serviceAccount");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         9, this->_internal_serviceaccount(), target);
   }
 
-  // optional string nodeName = 10;
+  // optional bytes nodeName = 10;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_nodename().data(), static_cast<int>(this->_internal_nodename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.nodeName");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         10, this->_internal_nodename(), target);
   }
 
@@ -1945,33 +1880,21 @@ uint8_t* CarpSpec::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(13, this->_internal_hostipc(), target);
   }
 
-  // optional string hostname = 16;
+  // optional bytes hostname = 16;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_hostname().data(), static_cast<int>(this->_internal_hostname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.hostname");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         16, this->_internal_hostname(), target);
   }
 
-  // optional string subdomain = 17;
+  // optional bytes subdomain = 17;
   if (cached_has_bits & 0x00000020u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_subdomain().data(), static_cast<int>(this->_internal_subdomain().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.subdomain");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         17, this->_internal_subdomain(), target);
   }
 
-  // optional string schedulername = 19;
+  // optional bytes schedulername = 19;
   if (cached_has_bits & 0x00000040u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_schedulername().data(), static_cast<int>(this->_internal_schedulername().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpSpec.schedulername");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         19, this->_internal_schedulername(), target);
   }
 
@@ -2002,52 +1925,52 @@ size_t CarpSpec::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional string restartPolicy = 3;
+    // optional bytes restartPolicy = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_restartpolicy());
     }
 
-    // optional string serviceAccountName = 8;
+    // optional bytes serviceAccountName = 8;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_serviceaccountname());
     }
 
-    // optional string serviceAccount = 9;
+    // optional bytes serviceAccount = 9;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_serviceaccount());
     }
 
-    // optional string nodeName = 10;
+    // optional bytes nodeName = 10;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_nodename());
     }
 
-    // optional string hostname = 16;
+    // optional bytes hostname = 16;
     if (cached_has_bits & 0x00000010u) {
       total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_hostname());
     }
 
-    // optional string subdomain = 17;
+    // optional bytes subdomain = 17;
     if (cached_has_bits & 0x00000020u) {
       total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_subdomain());
     }
 
-    // optional string schedulername = 19;
+    // optional bytes schedulername = 19;
     if (cached_has_bits & 0x00000040u) {
       total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_schedulername());
     }
 
@@ -2406,15 +2329,12 @@ const char* CarpStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string phase = 1;
+      // optional bytes phase = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_phase();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.phase");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2431,51 +2351,39 @@ const char* CarpStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // optional string message = 3;
+      // optional bytes message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.message");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string reason = 4;
+      // optional bytes reason = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_reason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.reason");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string hostIP = 5;
+      // optional bytes hostIP = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_hostip();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.hostIP");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string carpIP = 6;
+      // optional bytes carpIP = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_carpip();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.carpIP");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2518,13 +2426,9 @@ uint8_t* CarpStatus::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string phase = 1;
+  // optional bytes phase = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_phase().data(), static_cast<int>(this->_internal_phase().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.phase");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_phase(), target);
   }
 
@@ -2536,43 +2440,27 @@ uint8_t* CarpStatus::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // optional string message = 3;
+  // optional bytes message = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.message");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_message(), target);
   }
 
-  // optional string reason = 4;
+  // optional bytes reason = 4;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.reason");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_reason(), target);
   }
 
-  // optional string hostIP = 5;
+  // optional bytes hostIP = 5;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_hostip().data(), static_cast<int>(this->_internal_hostip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.hostIP");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_hostip(), target);
   }
 
-  // optional string carpIP = 6;
+  // optional bytes carpIP = 6;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_carpip().data(), static_cast<int>(this->_internal_carpip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.testapigroup.v1.CarpStatus.carpIP");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_carpip(), target);
   }
 
@@ -2608,38 +2496,38 @@ size_t CarpStatus::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string phase = 1;
+    // optional bytes phase = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_phase());
     }
 
-    // optional string message = 3;
+    // optional bytes message = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_message());
     }
 
-    // optional string reason = 4;
+    // optional bytes reason = 4;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_reason());
     }
 
-    // optional string hostIP = 5;
+    // optional bytes hostIP = 5;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_hostip());
     }
 
-    // optional string carpIP = 6;
+    // optional bytes carpIP = 6;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_carpip());
     }
 

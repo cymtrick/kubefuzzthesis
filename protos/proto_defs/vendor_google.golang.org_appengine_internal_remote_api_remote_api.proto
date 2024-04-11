@@ -4,15 +4,15 @@ option go_package = "remote_api";
 package remote_api;
 
 message Request {
-  required string service_name = 2;
-  required string method = 3;
+  require bytes service_name = 2;
+  require bytes method = 3;
   required bytes request = 4;
-  optional string request_id = 5;
+  optional bytes request_id = 5;
 }
 
 message ApplicationError {
   required int32 code = 1;
-  required string detail = 2;
+  require bytes detail = 2;
 }
 
 message RpcError {
@@ -32,7 +32,7 @@ message RpcError {
     DEADLINE_EXCEEDED = 12;
   }
   required int32 code = 1;
-  optional string detail = 2;
+  optional bytes detail = 2;
 }
 
 message Response {

@@ -1464,7 +1464,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "s.io_apimachinery_pkg_runtime_generated."
   "proto\032Bstaging_src_k8s.io_apimachinery_p"
   "kg_runtime_schema_generated.proto\"\251\002\n\010AP"
-  "IGroup\022\014\n\004name\030\001 \001(\t\022P\n\010versions\030\002 \003(\0132>"
+  "IGroup\022\014\n\004name\030\001 \001(\014\022P\n\010versions\030\002 \003(\0132>"
   ".k8s.io.apimachinery.pkg.apis.meta.v1.Gr"
   "oupVersionForDiscovery\022X\n\020preferredVersi"
   "on\030\003 \001(\0132>.k8s.io.apimachinery.pkg.apis."
@@ -1474,73 +1474,73 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "sByClientCIDR\"N\n\014APIGroupList\022>\n\006groups\030"
   "\001 \003(\0132..k8s.io.apimachinery.pkg.apis.met"
   "a.v1.APIGroup\"\363\001\n\013APIResource\022\014\n\004name\030\001 "
-  "\001(\t\022\024\n\014singularName\030\006 \001(\t\022\022\n\nnamespaced\030"
-  "\002 \001(\010\022\r\n\005group\030\010 \001(\t\022\017\n\007version\030\t \001(\t\022\014\n"
-  "\004kind\030\003 \001(\t\022:\n\005verbs\030\004 \001(\0132+.k8s.io.apim"
+  "\001(\014\022\024\n\014singularName\030\006 \001(\014\022\022\n\nnamespaced\030"
+  "\002 \001(\010\022\r\n\005group\030\010 \001(\014\022\017\n\007version\030\t \001(\014\022\014\n"
+  "\004kind\030\003 \001(\014\022:\n\005verbs\030\004 \001(\0132+.k8s.io.apim"
   "achinery.pkg.apis.meta.v1.Verbs\022\022\n\nshort"
   "Names\030\005 \003(\t\022\022\n\ncategories\030\007 \003(\t\022\032\n\022stora"
-  "geVersionHash\030\n \001(\t\"m\n\017APIResourceList\022\024"
-  "\n\014groupVersion\030\001 \001(\t\022D\n\tresources\030\002 \003(\0132"
+  "geVersionHash\030\n \001(\014\"m\n\017APIResourceList\022\024"
+  "\n\014groupVersion\030\001 \001(\014\022D\n\tresources\030\002 \003(\0132"
   "1.k8s.io.apimachinery.pkg.apis.meta.v1.A"
   "PIResource\"\204\001\n\013APIVersions\022\020\n\010versions\030\001"
   " \003(\t\022c\n\032serverAddressByClientCIDRs\030\002 \003(\013"
   "2\?.k8s.io.apimachinery.pkg.apis.meta.v1."
   "ServerAddressByClientCIDR\"C\n\014ApplyOption"
   "s\022\016\n\006dryRun\030\001 \003(\t\022\r\n\005force\030\002 \001(\010\022\024\n\014fiel"
-  "dManager\030\003 \001(\t\"\256\001\n\tCondition\022\014\n\004type\030\001 \001"
-  "(\t\022\016\n\006status\030\002 \001(\t\022\032\n\022observedGeneration"
+  "dManager\030\003 \001(\014\"\256\001\n\tCondition\022\014\n\004type\030\001 \001"
+  "(\014\022\016\n\006status\030\002 \001(\014\022\032\n\022observedGeneration"
   "\030\003 \001(\003\022F\n\022lastTransitionTime\030\004 \001(\0132*.k8s"
   ".io.apimachinery.pkg.apis.meta.v1.Time\022\016"
-  "\n\006reason\030\005 \001(\t\022\017\n\007message\030\006 \001(\t\"N\n\rCreat"
+  "\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001(\014\"N\n\rCreat"
   "eOptions\022\016\n\006dryRun\030\001 \003(\t\022\024\n\014fieldManager"
-  "\030\003 \001(\t\022\027\n\017fieldValidation\030\004 \001(\t\"\274\001\n\rDele"
+  "\030\003 \001(\014\022\027\n\017fieldValidation\030\004 \001(\014\"\274\001\n\rDele"
   "teOptions\022\032\n\022gracePeriodSeconds\030\001 \001(\003\022J\n"
   "\rpreconditions\030\002 \001(\01323.k8s.io.apimachine"
   "ry.pkg.apis.meta.v1.Preconditions\022\030\n\020orp"
   "hanDependents\030\003 \001(\010\022\031\n\021propagationPolicy"
-  "\030\004 \001(\t\022\016\n\006dryRun\030\005 \003(\t\"\034\n\010Duration\022\020\n\010du"
+  "\030\004 \001(\014\022\016\n\006dryRun\030\005 \003(\t\"\034\n\010Duration\022\020\n\010du"
   "ration\030\001 \001(\003\"\027\n\010FieldsV1\022\013\n\003Raw\030\001 \001(\014\"%\n"
-  "\nGetOptions\022\027\n\017resourceVersion\030\001 \001(\t\"(\n\t"
-  "GroupKind\022\r\n\005group\030\001 \001(\t\022\014\n\004kind\030\002 \001(\t\"0"
-  "\n\rGroupResource\022\r\n\005group\030\001 \001(\t\022\020\n\010resour"
-  "ce\030\002 \001(\t\".\n\014GroupVersion\022\r\n\005group\030\001 \001(\t\022"
-  "\017\n\007version\030\002 \001(\t\"A\n\030GroupVersionForDisco"
-  "very\022\024\n\014groupVersion\030\001 \001(\t\022\017\n\007version\030\002 "
-  "\001(\t\"@\n\020GroupVersionKind\022\r\n\005group\030\001 \001(\t\022\017"
-  "\n\007version\030\002 \001(\t\022\014\n\004kind\030\003 \001(\t\"H\n\024GroupVe"
-  "rsionResource\022\r\n\005group\030\001 \001(\t\022\017\n\007version\030"
-  "\002 \001(\t\022\020\n\010resource\030\003 \001(\t\"\370\001\n\rLabelSelecto"
+  "\nGetOptions\022\027\n\017resourceVersion\030\001 \001(\014\"(\n\t"
+  "GroupKind\022\r\n\005group\030\001 \001(\014\022\014\n\004kind\030\002 \001(\014\"0"
+  "\n\rGroupResource\022\r\n\005group\030\001 \001(\014\022\020\n\010resour"
+  "ce\030\002 \001(\014\".\n\014GroupVersion\022\r\n\005group\030\001 \001(\014\022"
+  "\017\n\007version\030\002 \001(\014\"A\n\030GroupVersionForDisco"
+  "very\022\024\n\014groupVersion\030\001 \001(\014\022\017\n\007version\030\002 "
+  "\001(\014\"@\n\020GroupVersionKind\022\r\n\005group\030\001 \001(\014\022\017"
+  "\n\007version\030\002 \001(\014\022\014\n\004kind\030\003 \001(\014\"H\n\024GroupVe"
+  "rsionResource\022\r\n\005group\030\001 \001(\014\022\017\n\007version\030"
+  "\002 \001(\014\022\020\n\010resource\030\003 \001(\014\"\370\001\n\rLabelSelecto"
   "r\022Y\n\013matchLabels\030\001 \003(\0132D.k8s.io.apimachi"
   "nery.pkg.apis.meta.v1.LabelSelector.Matc"
   "hLabelsEntry\022X\n\020matchExpressions\030\002 \003(\0132>"
   ".k8s.io.apimachinery.pkg.apis.meta.v1.La"
   "belSelectorRequirement\0322\n\020MatchLabelsEnt"
   "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\030La"
-  "belSelectorRequirement\022\013\n\003key\030\001 \001(\t\022\020\n\010o"
-  "perator\030\002 \001(\t\022\016\n\006values\030\003 \003(\t\"\206\001\n\004List\022@"
+  "belSelectorRequirement\022\013\n\003key\030\001 \001(\014\022\020\n\010o"
+  "perator\030\002 \001(\014\022\016\n\006values\030\003 \003(\t\"\206\001\n\004List\022@"
   "\n\010metadata\030\001 \001(\0132..k8s.io.apimachinery.p"
   "kg.apis.meta.v1.ListMeta\022<\n\005items\030\002 \003(\0132"
   "-.k8s.io.apimachinery.pkg.runtime.RawExt"
-  "ension\"c\n\010ListMeta\022\020\n\010selfLink\030\001 \001(\t\022\027\n\017"
-  "resourceVersion\030\002 \001(\t\022\020\n\010continue\030\003 \001(\t\022"
+  "ension\"c\n\010ListMeta\022\020\n\010selfLink\030\001 \001(\014\022\027\n\017"
+  "resourceVersion\030\002 \001(\014\022\020\n\010continue\030\003 \001(\014\022"
   "\032\n\022remainingItemCount\030\004 \001(\003\"\362\001\n\013ListOpti"
-  "ons\022\025\n\rlabelSelector\030\001 \001(\t\022\025\n\rfieldSelec"
-  "tor\030\002 \001(\t\022\r\n\005watch\030\003 \001(\010\022\033\n\023allowWatchBo"
-  "okmarks\030\t \001(\010\022\027\n\017resourceVersion\030\004 \001(\t\022\034"
-  "\n\024resourceVersionMatch\030\n \001(\t\022\026\n\016timeoutS"
+  "ons\022\025\n\rlabelSelector\030\001 \001(\014\022\025\n\rfieldSelec"
+  "tor\030\002 \001(\014\022\r\n\005watch\030\003 \001(\010\022\033\n\023allowWatchBo"
+  "okmarks\030\t \001(\010\022\027\n\017resourceVersion\030\004 \001(\014\022\034"
+  "\n\024resourceVersionMatch\030\n \001(\014\022\026\n\016timeoutS"
   "econds\030\005 \001(\003\022\r\n\005limit\030\007 \001(\003\022\020\n\010continue\030"
-  "\010 \001(\t\022\031\n\021sendInitialEvents\030\013 \001(\010\"\361\001\n\022Man"
-  "agedFieldsEntry\022\017\n\007manager\030\001 \001(\t\022\021\n\toper"
-  "ation\030\002 \001(\t\022\022\n\napiVersion\030\003 \001(\t\0228\n\004time\030"
+  "\010 \001(\014\022\031\n\021sendInitialEvents\030\013 \001(\010\"\361\001\n\022Man"
+  "agedFieldsEntry\022\017\n\007manager\030\001 \001(\014\022\021\n\toper"
+  "ation\030\002 \001(\014\022\022\n\napiVersion\030\003 \001(\014\0228\n\004time\030"
   "\004 \001(\0132*.k8s.io.apimachinery.pkg.apis.met"
-  "a.v1.Time\022\022\n\nfieldsType\030\006 \001(\t\022@\n\010fieldsV"
+  "a.v1.Time\022\022\n\nfieldsType\030\006 \001(\014\022@\n\010fieldsV"
   "1\030\007 \001(\0132..k8s.io.apimachinery.pkg.apis.m"
-  "eta.v1.FieldsV1\022\023\n\013subresource\030\010 \001(\t\"+\n\t"
+  "eta.v1.FieldsV1\022\023\n\013subresource\030\010 \001(\014\"+\n\t"
   "MicroTime\022\017\n\007seconds\030\001 \001(\003\022\r\n\005nanos\030\002 \001("
-  "\005\"\376\005\n\nObjectMeta\022\014\n\004name\030\001 \001(\t\022\024\n\014genera"
-  "teName\030\002 \001(\t\022\021\n\tnamespace\030\003 \001(\t\022\020\n\010selfL"
-  "ink\030\004 \001(\t\022\013\n\003uid\030\005 \001(\t\022\027\n\017resourceVersio"
-  "n\030\006 \001(\t\022\022\n\ngeneration\030\007 \001(\003\022E\n\021creationT"
+  "\005\"\376\005\n\nObjectMeta\022\014\n\004name\030\001 \001(\014\022\024\n\014genera"
+  "teName\030\002 \001(\014\022\021\n\tnamespace\030\003 \001(\014\022\020\n\010selfL"
+  "ink\030\004 \001(\014\022\013\n\003uid\030\005 \001(\014\022\027\n\017resourceVersio"
+  "n\030\006 \001(\014\022\022\n\ngeneration\030\007 \001(\003\022E\n\021creationT"
   "imestamp\030\010 \001(\0132*.k8s.io.apimachinery.pkg"
   ".apis.meta.v1.Time\022E\n\021deletionTimestamp\030"
   "\t \001(\0132*.k8s.io.apimachinery.pkg.apis.met"
@@ -1557,8 +1557,8 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0322"
   "\n\020AnnotationsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value"
   "\030\002 \001(\t:\0028\001\"}\n\016OwnerReference\022\022\n\napiVersi"
-  "on\030\005 \001(\t\022\014\n\004kind\030\001 \001(\t\022\014\n\004name\030\003 \001(\t\022\013\n\003"
-  "uid\030\004 \001(\t\022\022\n\ncontroller\030\006 \001(\010\022\032\n\022blockOw"
+  "on\030\005 \001(\014\022\014\n\004kind\030\001 \001(\014\022\014\n\004name\030\003 \001(\014\022\013\n\003"
+  "uid\030\004 \001(\014\022\022\n\ncontroller\030\006 \001(\010\022\032\n\022blockOw"
   "nerDeletion\030\007 \001(\010\"[\n\025PartialObjectMetada"
   "ta\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimachine"
   "ry.pkg.apis.meta.v1.ObjectMeta\"\251\001\n\031Parti"
@@ -1567,31 +1567,31 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "stMeta\022J\n\005items\030\002 \003(\0132;.k8s.io.apimachin"
   "ery.pkg.apis.meta.v1.PartialObjectMetada"
   "ta\"\007\n\005Patch\"\\\n\014PatchOptions\022\016\n\006dryRun\030\001 "
-  "\003(\t\022\r\n\005force\030\002 \001(\010\022\024\n\014fieldManager\030\003 \001(\t"
-  "\022\027\n\017fieldValidation\030\004 \001(\t\"5\n\rPreconditio"
-  "ns\022\013\n\003uid\030\001 \001(\t\022\027\n\017resourceVersion\030\002 \001(\t"
+  "\003(\t\022\r\n\005force\030\002 \001(\010\022\024\n\014fieldManager\030\003 \001(\014"
+  "\022\027\n\017fieldValidation\030\004 \001(\014\"5\n\rPreconditio"
+  "ns\022\013\n\003uid\030\001 \001(\014\022\027\n\017resourceVersion\030\002 \001(\014"
   "\"\032\n\tRootPaths\022\r\n\005paths\030\001 \003(\t\"F\n\031ServerAd"
-  "dressByClientCIDR\022\022\n\nclientCIDR\030\001 \001(\t\022\025\n"
-  "\rserverAddress\030\002 \001(\t\"\317\001\n\006Status\022@\n\010metad"
+  "dressByClientCIDR\022\022\n\nclientCIDR\030\001 \001(\014\022\025\n"
+  "\rserverAddress\030\002 \001(\014\"\317\001\n\006Status\022@\n\010metad"
   "ata\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis"
-  ".meta.v1.ListMeta\022\016\n\006status\030\002 \001(\t\022\017\n\007mes"
-  "sage\030\003 \001(\t\022\016\n\006reason\030\004 \001(\t\022D\n\007details\030\005 "
+  ".meta.v1.ListMeta\022\016\n\006status\030\002 \001(\014\022\017\n\007mes"
+  "sage\030\003 \001(\014\022\016\n\006reason\030\004 \001(\014\022D\n\007details\030\005 "
   "\001(\01323.k8s.io.apimachinery.pkg.apis.meta."
   "v1.StatusDetails\022\014\n\004code\030\006 \001(\005\"=\n\013Status"
-  "Cause\022\016\n\006reason\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\022\r"
-  "\n\005field\030\003 \001(\t\"\245\001\n\rStatusDetails\022\014\n\004name\030"
-  "\001 \001(\t\022\r\n\005group\030\002 \001(\t\022\014\n\004kind\030\003 \001(\t\022\013\n\003ui"
-  "d\030\006 \001(\t\022A\n\006causes\030\004 \003(\01321.k8s.io.apimach"
+  "Cause\022\016\n\006reason\030\001 \001(\014\022\017\n\007message\030\002 \001(\014\022\r"
+  "\n\005field\030\003 \001(\014\"\245\001\n\rStatusDetails\022\014\n\004name\030"
+  "\001 \001(\014\022\r\n\005group\030\002 \001(\014\022\014\n\004kind\030\003 \001(\014\022\013\n\003ui"
+  "d\030\006 \001(\014\022A\n\006causes\030\004 \003(\01321.k8s.io.apimach"
   "inery.pkg.apis.meta.v1.StatusCause\022\031\n\021re"
   "tryAfterSeconds\030\005 \001(\005\"%\n\014TableOptions\022\025\n"
-  "\rincludeObject\030\001 \001(\t\"&\n\004Time\022\017\n\007seconds\030"
+  "\rincludeObject\030\001 \001(\014\"&\n\004Time\022\017\n\007seconds\030"
   "\001 \001(\003\022\r\n\005nanos\030\002 \001(\005\"+\n\tTimestamp\022\017\n\007sec"
   "onds\030\001 \001(\003\022\r\n\005nanos\030\002 \001(\005\",\n\010TypeMeta\022\014\n"
-  "\004kind\030\001 \001(\t\022\022\n\napiVersion\030\002 \001(\t\"N\n\rUpdat"
+  "\004kind\030\001 \001(\014\022\022\n\napiVersion\030\002 \001(\014\"N\n\rUpdat"
   "eOptions\022\016\n\006dryRun\030\001 \003(\t\022\024\n\014fieldManager"
-  "\030\002 \001(\t\022\027\n\017fieldValidation\030\003 \001(\t\"\026\n\005Verbs"
+  "\030\002 \001(\014\022\027\n\017fieldValidation\030\003 \001(\014\"\026\n\005Verbs"
   "\022\r\n\005items\030\001 \003(\t\"Y\n\nWatchEvent\022\014\n\004type\030\001 "
-  "\001(\t\022=\n\006object\030\002 \001(\0132-.k8s.io.apimachiner"
+  "\001(\014\022=\n\006object\030\002 \001(\0132-.k8s.io.apimachiner"
   "y.pkg.runtime.RawExtensionB&Z$k8s.io/api"
   "machinery/pkg/apis/meta/v1"
   ;
@@ -1740,15 +1740,12 @@ const char* APIGroup::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string name = 1;
+      // optional bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIGroup.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1817,13 +1814,9 @@ uint8_t* APIGroup::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
+  // optional bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIGroup.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -1882,10 +1875,10 @@ size_t APIGroup::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string name = 1;
+    // optional bytes name = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
@@ -2377,15 +2370,12 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string name = 1;
+      // optional bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2398,15 +2388,12 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string kind = 3;
+      // optional bytes kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2435,15 +2422,12 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string singularName = 6;
+      // optional bytes singularName = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_singularname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.singularName");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2464,39 +2448,30 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string group = 8;
+      // optional bytes group = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string version = 9;
+      // optional bytes version = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.version");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string storageVersionHash = 10;
+      // optional bytes storageVersionHash = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_storageversionhash();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.storageVersionHash");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2531,13 +2506,9 @@ uint8_t* APIResource::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
+  // optional bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -2547,13 +2518,9 @@ uint8_t* APIResource::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_namespaced(), target);
   }
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_kind(), target);
   }
 
@@ -2574,13 +2541,9 @@ uint8_t* APIResource::_InternalSerialize(
     target = stream->WriteString(5, s, target);
   }
 
-  // optional string singularName = 6;
+  // optional bytes singularName = 6;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_singularname().data(), static_cast<int>(this->_internal_singularname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.singularName");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_singularname(), target);
   }
 
@@ -2594,33 +2557,21 @@ uint8_t* APIResource::_InternalSerialize(
     target = stream->WriteString(7, s, target);
   }
 
-  // optional string group = 8;
+  // optional bytes group = 8;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         8, this->_internal_group(), target);
   }
 
-  // optional string version = 9;
+  // optional bytes version = 9;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.version");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         9, this->_internal_version(), target);
   }
 
-  // optional string storageVersionHash = 10;
+  // optional bytes storageVersionHash = 10;
   if (cached_has_bits & 0x00000020u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_storageversionhash().data(), static_cast<int>(this->_internal_storageversionhash().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.storageVersionHash");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         10, this->_internal_storageversionhash(), target);
   }
 
@@ -2658,45 +2609,45 @@ size_t APIResource::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional string name = 1;
+    // optional bytes name = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string kind = 3;
+    // optional bytes kind = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
-    // optional string singularName = 6;
+    // optional bytes singularName = 6;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_singularname());
     }
 
-    // optional string group = 8;
+    // optional bytes group = 8;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string version = 9;
+    // optional bytes version = 9;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_version());
     }
 
-    // optional string storageVersionHash = 10;
+    // optional bytes storageVersionHash = 10;
     if (cached_has_bits & 0x00000020u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_storageversionhash());
     }
 
@@ -2916,15 +2867,12 @@ const char* APIResourceList::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string groupVersion = 1;
+      // optional bytes groupVersion = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_groupversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.APIResourceList.groupVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -2972,13 +2920,9 @@ uint8_t* APIResourceList::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string groupVersion = 1;
+  // optional bytes groupVersion = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_groupversion().data(), static_cast<int>(this->_internal_groupversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.APIResourceList.groupVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_groupversion(), target);
   }
 
@@ -3013,11 +2957,11 @@ size_t APIResourceList::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional string groupVersion = 1;
+  // optional bytes groupVersion = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_groupversion());
   }
 
@@ -3429,15 +3373,12 @@ const char* ApplyOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldManager = 3;
+      // optional bytes fieldManager = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_fieldmanager();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ApplyOptions.fieldManager");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -3488,13 +3429,9 @@ uint8_t* ApplyOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_force(), target);
   }
 
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldmanager().data(), static_cast<int>(this->_internal_fieldmanager().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ApplyOptions.fieldManager");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_fieldmanager(), target);
   }
 
@@ -3524,10 +3461,10 @@ size_t ApplyOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string fieldManager = 3;
+    // optional bytes fieldManager = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldmanager());
     }
 
@@ -3780,27 +3717,21 @@ const char* Condition::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string type = 1;
+      // optional bytes type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.type");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string status = 2;
+      // optional bytes status = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_status();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.status");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -3821,27 +3752,21 @@ const char* Condition::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // optional string reason = 5;
+      // optional bytes reason = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_reason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.reason");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string message = 6;
+      // optional bytes message = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.message");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -3876,23 +3801,15 @@ uint8_t* Condition::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string type = 1;
+  // optional bytes type = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_type().data(), static_cast<int>(this->_internal_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.type");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_type(), target);
   }
 
-  // optional string status = 2;
+  // optional bytes status = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.status");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_status(), target);
   }
 
@@ -3909,23 +3826,15 @@ uint8_t* Condition::_InternalSerialize(
         _Internal::lasttransitiontime(this).GetCachedSize(), target, stream);
   }
 
-  // optional string reason = 5;
+  // optional bytes reason = 5;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.reason");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_reason(), target);
   }
 
-  // optional string message = 6;
+  // optional bytes message = 6;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Condition.message");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_message(), target);
   }
 
@@ -3947,31 +3856,31 @@ size_t Condition::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string type = 1;
+    // optional bytes type = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_type());
     }
 
-    // optional string status = 2;
+    // optional bytes status = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_status());
     }
 
-    // optional string reason = 5;
+    // optional bytes reason = 5;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_reason());
     }
 
-    // optional string message = 6;
+    // optional bytes message = 6;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_message());
     }
 
@@ -4213,27 +4122,21 @@ const char* CreateOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldManager = 3;
+      // optional bytes fieldManager = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_fieldmanager();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldManager");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldValidation = 4;
+      // optional bytes fieldValidation = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_fieldvalidation();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldValidation");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -4278,23 +4181,15 @@ uint8_t* CreateOptions::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldmanager().data(), static_cast<int>(this->_internal_fieldmanager().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldManager");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_fieldmanager(), target);
   }
 
-  // optional string fieldValidation = 4;
+  // optional bytes fieldValidation = 4;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldvalidation().data(), static_cast<int>(this->_internal_fieldvalidation().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.CreateOptions.fieldValidation");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_fieldvalidation(), target);
   }
 
@@ -4324,17 +4219,17 @@ size_t CreateOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string fieldManager = 3;
+    // optional bytes fieldManager = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldmanager());
     }
 
-    // optional string fieldValidation = 4;
+    // optional bytes fieldValidation = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldvalidation());
     }
 
@@ -4562,15 +4457,12 @@ const char* DeleteOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // optional string propagationPolicy = 4;
+      // optional bytes propagationPolicy = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_propagationpolicy();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.DeleteOptions.propagationPolicy");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -4641,13 +4533,9 @@ uint8_t* DeleteOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_orphandependents(), target);
   }
 
-  // optional string propagationPolicy = 4;
+  // optional bytes propagationPolicy = 4;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_propagationpolicy().data(), static_cast<int>(this->_internal_propagationpolicy().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.DeleteOptions.propagationPolicy");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_propagationpolicy(), target);
   }
 
@@ -4687,10 +4575,10 @@ size_t DeleteOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
-    // optional string propagationPolicy = 4;
+    // optional bytes propagationPolicy = 4;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_propagationpolicy());
     }
 
@@ -5281,15 +5169,12 @@ const char* GetOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string resourceVersion = 1;
+      // optional bytes resourceVersion = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_resourceversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GetOptions.resourceVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -5324,13 +5209,9 @@ uint8_t* GetOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string resourceVersion = 1;
+  // optional bytes resourceVersion = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversion().data(), static_cast<int>(this->_internal_resourceversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GetOptions.resourceVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_resourceversion(), target);
   }
 
@@ -5350,11 +5231,11 @@ size_t GetOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string resourceVersion = 1;
+  // optional bytes resourceVersion = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_resourceversion());
   }
 
@@ -5524,27 +5405,21 @@ const char* GroupKind::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string group = 1;
+      // optional bytes group = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string kind = 2;
+      // optional bytes kind = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -5579,23 +5454,15 @@ uint8_t* GroupKind::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string group = 1;
+  // optional bytes group = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_group(), target);
   }
 
-  // optional string kind = 2;
+  // optional bytes kind = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupKind.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_kind(), target);
   }
 
@@ -5617,17 +5484,17 @@ size_t GroupKind::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string group = 1;
+    // optional bytes group = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string kind = 2;
+    // optional bytes kind = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
@@ -5808,27 +5675,21 @@ const char* GroupResource::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string group = 1;
+      // optional bytes group = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string resource = 2;
+      // optional bytes resource = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_resource();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.resource");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -5863,23 +5724,15 @@ uint8_t* GroupResource::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string group = 1;
+  // optional bytes group = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_group(), target);
   }
 
-  // optional string resource = 2;
+  // optional bytes resource = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resource().data(), static_cast<int>(this->_internal_resource().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupResource.resource");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_resource(), target);
   }
 
@@ -5901,17 +5754,17 @@ size_t GroupResource::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string group = 1;
+    // optional bytes group = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string resource = 2;
+    // optional bytes resource = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resource());
     }
 
@@ -6092,27 +5945,21 @@ const char* GroupVersion::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string group = 1;
+      // optional bytes group = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string version = 2;
+      // optional bytes version = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.version");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -6147,23 +5994,15 @@ uint8_t* GroupVersion::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string group = 1;
+  // optional bytes group = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_group(), target);
   }
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersion.version");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_version(), target);
   }
 
@@ -6185,17 +6024,17 @@ size_t GroupVersion::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string group = 1;
+    // optional bytes group = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string version = 2;
+    // optional bytes version = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_version());
     }
 
@@ -6376,27 +6215,21 @@ const char* GroupVersionForDiscovery::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string groupVersion = 1;
+      // optional bytes groupVersion = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_groupversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.groupVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string version = 2;
+      // optional bytes version = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.version");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -6431,23 +6264,15 @@ uint8_t* GroupVersionForDiscovery::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string groupVersion = 1;
+  // optional bytes groupVersion = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_groupversion().data(), static_cast<int>(this->_internal_groupversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.groupVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_groupversion(), target);
   }
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery.version");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_version(), target);
   }
 
@@ -6469,17 +6294,17 @@ size_t GroupVersionForDiscovery::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string groupVersion = 1;
+    // optional bytes groupVersion = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_groupversion());
     }
 
-    // optional string version = 2;
+    // optional bytes version = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_version());
     }
 
@@ -6681,39 +6506,30 @@ const char* GroupVersionKind::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string group = 1;
+      // optional bytes group = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string version = 2;
+      // optional bytes version = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.version");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string kind = 3;
+      // optional bytes kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -6748,33 +6564,21 @@ uint8_t* GroupVersionKind::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string group = 1;
+  // optional bytes group = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_group(), target);
   }
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.version");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_version(), target);
   }
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionKind.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_kind(), target);
   }
 
@@ -6796,24 +6600,24 @@ size_t GroupVersionKind::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    // optional string group = 1;
+    // optional bytes group = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string version = 2;
+    // optional bytes version = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_version());
     }
 
-    // optional string kind = 3;
+    // optional bytes kind = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
@@ -7022,39 +6826,30 @@ const char* GroupVersionResource::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string group = 1;
+      // optional bytes group = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string version = 2;
+      // optional bytes version = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.version");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string resource = 3;
+      // optional bytes resource = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_resource();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.resource");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -7089,33 +6884,21 @@ uint8_t* GroupVersionResource::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string group = 1;
+  // optional bytes group = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_group(), target);
   }
 
-  // optional string version = 2;
+  // optional bytes version = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.version");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_version(), target);
   }
 
-  // optional string resource = 3;
+  // optional bytes resource = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resource().data(), static_cast<int>(this->_internal_resource().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.GroupVersionResource.resource");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_resource(), target);
   }
 
@@ -7137,24 +6920,24 @@ size_t GroupVersionResource::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    // optional string group = 1;
+    // optional bytes group = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string version = 2;
+    // optional bytes version = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_version());
     }
 
-    // optional string resource = 3;
+    // optional bytes resource = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resource());
     }
 
@@ -7613,27 +7396,21 @@ const char* LabelSelectorRequirement::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string key = 1;
+      // optional bytes key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.key");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string operator = 2;
+      // optional bytes operator = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_operator_();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.operator");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -7685,23 +7462,15 @@ uint8_t* LabelSelectorRequirement::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string key = 1;
+  // optional bytes key = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_key().data(), static_cast<int>(this->_internal_key().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.key");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_key(), target);
   }
 
-  // optional string operator = 2;
+  // optional bytes operator = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_operator_().data(), static_cast<int>(this->_internal_operator_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.operator");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_operator_(), target);
   }
 
@@ -7741,17 +7510,17 @@ size_t LabelSelectorRequirement::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string key = 1;
+    // optional bytes key = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_key());
     }
 
-    // optional string operator = 2;
+    // optional bytes operator = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_operator_());
     }
 
@@ -8205,39 +7974,30 @@ const char* ListMeta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string selfLink = 1;
+      // optional bytes selfLink = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_selflink();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.selfLink");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string resourceVersion = 2;
+      // optional bytes resourceVersion = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_resourceversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.resourceVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string continue = 3;
+      // optional bytes continue = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_continue_();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.continue");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -8281,33 +8041,21 @@ uint8_t* ListMeta::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string selfLink = 1;
+  // optional bytes selfLink = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_selflink().data(), static_cast<int>(this->_internal_selflink().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.selfLink");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_selflink(), target);
   }
 
-  // optional string resourceVersion = 2;
+  // optional bytes resourceVersion = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversion().data(), static_cast<int>(this->_internal_resourceversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.resourceVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_resourceversion(), target);
   }
 
-  // optional string continue = 3;
+  // optional bytes continue = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_continue_().data(), static_cast<int>(this->_internal_continue_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListMeta.continue");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_continue_(), target);
   }
 
@@ -8335,24 +8083,24 @@ size_t ListMeta::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
-    // optional string selfLink = 1;
+    // optional bytes selfLink = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_selflink());
     }
 
-    // optional string resourceVersion = 2;
+    // optional bytes resourceVersion = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resourceversion());
     }
 
-    // optional string continue = 3;
+    // optional bytes continue = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_continue_());
     }
 
@@ -8651,27 +8399,21 @@ const char* ListOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string labelSelector = 1;
+      // optional bytes labelSelector = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_labelselector();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.labelSelector");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldSelector = 2;
+      // optional bytes fieldSelector = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_fieldselector();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.fieldSelector");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -8684,15 +8426,12 @@ const char* ListOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string resourceVersion = 4;
+      // optional bytes resourceVersion = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_resourceversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -8714,15 +8453,12 @@ const char* ListOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string continue = 8;
+      // optional bytes continue = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_continue_();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.continue");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -8735,15 +8471,12 @@ const char* ListOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string resourceVersionMatch = 10;
+      // optional bytes resourceVersionMatch = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_resourceversionmatch();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersionMatch");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -8787,23 +8520,15 @@ uint8_t* ListOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string labelSelector = 1;
+  // optional bytes labelSelector = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_labelselector().data(), static_cast<int>(this->_internal_labelselector().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.labelSelector");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_labelselector(), target);
   }
 
-  // optional string fieldSelector = 2;
+  // optional bytes fieldSelector = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldselector().data(), static_cast<int>(this->_internal_fieldselector().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.fieldSelector");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_fieldselector(), target);
   }
 
@@ -8813,13 +8538,9 @@ uint8_t* ListOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_watch(), target);
   }
 
-  // optional string resourceVersion = 4;
+  // optional bytes resourceVersion = 4;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversion().data(), static_cast<int>(this->_internal_resourceversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_resourceversion(), target);
   }
 
@@ -8835,13 +8556,9 @@ uint8_t* ListOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_limit(), target);
   }
 
-  // optional string continue = 8;
+  // optional bytes continue = 8;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_continue_().data(), static_cast<int>(this->_internal_continue_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.continue");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         8, this->_internal_continue_(), target);
   }
 
@@ -8851,13 +8568,9 @@ uint8_t* ListOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_allowwatchbookmarks(), target);
   }
 
-  // optional string resourceVersionMatch = 10;
+  // optional bytes resourceVersionMatch = 10;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversionmatch().data(), static_cast<int>(this->_internal_resourceversionmatch().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ListOptions.resourceVersionMatch");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         10, this->_internal_resourceversionmatch(), target);
   }
 
@@ -8885,38 +8598,38 @@ size_t ListOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional string labelSelector = 1;
+    // optional bytes labelSelector = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_labelselector());
     }
 
-    // optional string fieldSelector = 2;
+    // optional bytes fieldSelector = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldselector());
     }
 
-    // optional string resourceVersion = 4;
+    // optional bytes resourceVersion = 4;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resourceversion());
     }
 
-    // optional string continue = 8;
+    // optional bytes continue = 8;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_continue_());
     }
 
-    // optional string resourceVersionMatch = 10;
+    // optional bytes resourceVersionMatch = 10;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resourceversionmatch());
     }
 
@@ -9269,39 +8982,30 @@ const char* ManagedFieldsEntry::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string manager = 1;
+      // optional bytes manager = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_manager();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.manager");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string operation = 2;
+      // optional bytes operation = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_operation();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.operation");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string apiVersion = 3;
+      // optional bytes apiVersion = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_apiversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.apiVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -9313,15 +9017,12 @@ const char* ManagedFieldsEntry::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldsType = 6;
+      // optional bytes fieldsType = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_fieldstype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.fieldsType");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -9333,15 +9034,12 @@ const char* ManagedFieldsEntry::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // optional string subresource = 8;
+      // optional bytes subresource = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_subresource();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.subresource");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -9376,33 +9074,21 @@ uint8_t* ManagedFieldsEntry::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string manager = 1;
+  // optional bytes manager = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_manager().data(), static_cast<int>(this->_internal_manager().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.manager");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_manager(), target);
   }
 
-  // optional string operation = 2;
+  // optional bytes operation = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_operation().data(), static_cast<int>(this->_internal_operation().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.operation");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_operation(), target);
   }
 
-  // optional string apiVersion = 3;
+  // optional bytes apiVersion = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_apiversion().data(), static_cast<int>(this->_internal_apiversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.apiVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_apiversion(), target);
   }
 
@@ -9413,13 +9099,9 @@ uint8_t* ManagedFieldsEntry::_InternalSerialize(
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // optional string fieldsType = 6;
+  // optional bytes fieldsType = 6;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldstype().data(), static_cast<int>(this->_internal_fieldstype().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.fieldsType");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_fieldstype(), target);
   }
 
@@ -9430,13 +9112,9 @@ uint8_t* ManagedFieldsEntry::_InternalSerialize(
         _Internal::fieldsv1(this).GetCachedSize(), target, stream);
   }
 
-  // optional string subresource = 8;
+  // optional bytes subresource = 8;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_subresource().data(), static_cast<int>(this->_internal_subresource().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry.subresource");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         8, this->_internal_subresource(), target);
   }
 
@@ -9458,38 +9136,38 @@ size_t ManagedFieldsEntry::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
-    // optional string manager = 1;
+    // optional bytes manager = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_manager());
     }
 
-    // optional string operation = 2;
+    // optional bytes operation = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_operation());
     }
 
-    // optional string apiVersion = 3;
+    // optional bytes apiVersion = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_apiversion());
     }
 
-    // optional string fieldsType = 6;
+    // optional bytes fieldsType = 6;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldstype());
     }
 
-    // optional string subresource = 8;
+    // optional bytes subresource = 8;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_subresource());
     }
 
@@ -10155,75 +9833,57 @@ const char* ObjectMeta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string name = 1;
+      // optional bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string generateName = 2;
+      // optional bytes generateName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_generatename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.generateName");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string namespace = 3;
+      // optional bytes namespace = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_namespace_();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.namespace");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string selfLink = 4;
+      // optional bytes selfLink = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_selflink();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.selfLink");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string uid = 5;
+      // optional bytes uid = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_uid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.uid");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string resourceVersion = 6;
+      // optional bytes resourceVersion = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_resourceversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.resourceVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -10361,63 +10021,39 @@ uint8_t* ObjectMeta::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
+  // optional bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
-  // optional string generateName = 2;
+  // optional bytes generateName = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_generatename().data(), static_cast<int>(this->_internal_generatename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.generateName");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_generatename(), target);
   }
 
-  // optional string namespace = 3;
+  // optional bytes namespace = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_namespace_().data(), static_cast<int>(this->_internal_namespace_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.namespace");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_namespace_(), target);
   }
 
-  // optional string selfLink = 4;
+  // optional bytes selfLink = 4;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_selflink().data(), static_cast<int>(this->_internal_selflink().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.selfLink");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_selflink(), target);
   }
 
-  // optional string uid = 5;
+  // optional bytes uid = 5;
   if (cached_has_bits & 0x00000010u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.uid");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_uid(), target);
   }
 
-  // optional string resourceVersion = 6;
+  // optional bytes resourceVersion = 6;
   if (cached_has_bits & 0x00000020u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversion().data(), static_cast<int>(this->_internal_resourceversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta.resourceVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_resourceversion(), target);
   }
 
@@ -10591,45 +10227,45 @@ size_t ObjectMeta::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional string name = 1;
+    // optional bytes name = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string generateName = 2;
+    // optional bytes generateName = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_generatename());
     }
 
-    // optional string namespace = 3;
+    // optional bytes namespace = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_namespace_());
     }
 
-    // optional string selfLink = 4;
+    // optional bytes selfLink = 4;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_selflink());
     }
 
-    // optional string uid = 5;
+    // optional bytes uid = 5;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_uid());
     }
 
-    // optional string resourceVersion = 6;
+    // optional bytes resourceVersion = 6;
     if (cached_has_bits & 0x00000020u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resourceversion());
     }
 
@@ -10955,51 +10591,39 @@ const char* OwnerReference::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string kind = 1;
+      // optional bytes kind = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 3;
+      // optional bytes name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string uid = 4;
+      // optional bytes uid = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_uid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.uid");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string apiVersion = 5;
+      // optional bytes apiVersion = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_apiversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.apiVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -11052,43 +10676,27 @@ uint8_t* OwnerReference::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string kind = 1;
+  // optional bytes kind = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_kind(), target);
   }
 
-  // optional string name = 3;
+  // optional bytes name = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name(), target);
   }
 
-  // optional string uid = 4;
+  // optional bytes uid = 4;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.uid");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_uid(), target);
   }
 
-  // optional string apiVersion = 5;
+  // optional bytes apiVersion = 5;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_apiversion().data(), static_cast<int>(this->_internal_apiversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.OwnerReference.apiVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_apiversion(), target);
   }
 
@@ -11122,31 +10730,31 @@ size_t OwnerReference::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string kind = 1;
+    // optional bytes kind = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
-    // optional string name = 3;
+    // optional bytes name = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string uid = 4;
+    // optional bytes uid = 4;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_uid());
     }
 
-    // optional string apiVersion = 5;
+    // optional bytes apiVersion = 5;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_apiversion());
     }
 
@@ -11887,27 +11495,21 @@ const char* PatchOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldManager = 3;
+      // optional bytes fieldManager = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_fieldmanager();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldManager");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldValidation = 4;
+      // optional bytes fieldValidation = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_fieldvalidation();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldValidation");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -11958,23 +11560,15 @@ uint8_t* PatchOptions::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_force(), target);
   }
 
-  // optional string fieldManager = 3;
+  // optional bytes fieldManager = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldmanager().data(), static_cast<int>(this->_internal_fieldmanager().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldManager");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_fieldmanager(), target);
   }
 
-  // optional string fieldValidation = 4;
+  // optional bytes fieldValidation = 4;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldvalidation().data(), static_cast<int>(this->_internal_fieldvalidation().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.PatchOptions.fieldValidation");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_fieldvalidation(), target);
   }
 
@@ -12004,17 +11598,17 @@ size_t PatchOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    // optional string fieldManager = 3;
+    // optional bytes fieldManager = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldmanager());
     }
 
-    // optional string fieldValidation = 4;
+    // optional bytes fieldValidation = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldvalidation());
     }
 
@@ -12207,27 +11801,21 @@ const char* Preconditions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string uid = 1;
+      // optional bytes uid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_uid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.uid");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string resourceVersion = 2;
+      // optional bytes resourceVersion = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_resourceversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.resourceVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -12262,23 +11850,15 @@ uint8_t* Preconditions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string uid = 1;
+  // optional bytes uid = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.uid");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_uid(), target);
   }
 
-  // optional string resourceVersion = 2;
+  // optional bytes resourceVersion = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_resourceversion().data(), static_cast<int>(this->_internal_resourceversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Preconditions.resourceVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_resourceversion(), target);
   }
 
@@ -12300,17 +11880,17 @@ size_t Preconditions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string uid = 1;
+    // optional bytes uid = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_uid());
     }
 
-    // optional string resourceVersion = 2;
+    // optional bytes resourceVersion = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_resourceversion());
     }
 
@@ -12683,27 +12263,21 @@ const char* ServerAddressByClientCIDR::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string clientCIDR = 1;
+      // optional bytes clientCIDR = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_clientcidr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.clientCIDR");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string serverAddress = 2;
+      // optional bytes serverAddress = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_serveraddress();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.serverAddress");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -12738,23 +12312,15 @@ uint8_t* ServerAddressByClientCIDR::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string clientCIDR = 1;
+  // optional bytes clientCIDR = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_clientcidr().data(), static_cast<int>(this->_internal_clientcidr().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.clientCIDR");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_clientcidr(), target);
   }
 
-  // optional string serverAddress = 2;
+  // optional bytes serverAddress = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_serveraddress().data(), static_cast<int>(this->_internal_serveraddress().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR.serverAddress");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_serveraddress(), target);
   }
 
@@ -12776,17 +12342,17 @@ size_t ServerAddressByClientCIDR::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string clientCIDR = 1;
+    // optional bytes clientCIDR = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_clientcidr());
     }
 
-    // optional string serverAddress = 2;
+    // optional bytes serverAddress = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_serveraddress());
     }
 
@@ -13039,39 +12605,30 @@ const char* Status::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // optional string status = 2;
+      // optional bytes status = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_status();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Status.status");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string message = 3;
+      // optional bytes message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Status.message");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string reason = 4;
+      // optional bytes reason = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_reason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.Status.reason");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13130,33 +12687,21 @@ uint8_t* Status::_InternalSerialize(
         _Internal::metadata(this).GetCachedSize(), target, stream);
   }
 
-  // optional string status = 2;
+  // optional bytes status = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Status.status");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_status(), target);
   }
 
-  // optional string message = 3;
+  // optional bytes message = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Status.message");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_message(), target);
   }
 
-  // optional string reason = 4;
+  // optional bytes reason = 4;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.Status.reason");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_reason(), target);
   }
 
@@ -13191,24 +12736,24 @@ size_t Status::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string status = 2;
+    // optional bytes status = 2;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_status());
     }
 
-    // optional string message = 3;
+    // optional bytes message = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_message());
     }
 
-    // optional string reason = 4;
+    // optional bytes reason = 4;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_reason());
     }
 
@@ -13454,39 +12999,30 @@ const char* StatusCause::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string reason = 1;
+      // optional bytes reason = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_reason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.reason");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string message = 2;
+      // optional bytes message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.message");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string field = 3;
+      // optional bytes field = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_field();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.field");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13521,33 +13057,21 @@ uint8_t* StatusCause::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string reason = 1;
+  // optional bytes reason = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.reason");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_reason(), target);
   }
 
-  // optional string message = 2;
+  // optional bytes message = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.message");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_message(), target);
   }
 
-  // optional string field = 3;
+  // optional bytes field = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_field().data(), static_cast<int>(this->_internal_field().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusCause.field");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_field(), target);
   }
 
@@ -13569,24 +13093,24 @@ size_t StatusCause::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    // optional string reason = 1;
+    // optional bytes reason = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_reason());
     }
 
-    // optional string message = 2;
+    // optional bytes message = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_message());
     }
 
-    // optional string field = 3;
+    // optional bytes field = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_field());
     }
 
@@ -13827,39 +13351,30 @@ const char* StatusDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string name = 1;
+      // optional bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string group = 2;
+      // optional bytes group = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_group();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.group");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string kind = 3;
+      // optional bytes kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13885,15 +13400,12 @@ const char* StatusDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // optional string uid = 6;
+      // optional bytes uid = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_uid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.uid");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13928,33 +13440,21 @@ uint8_t* StatusDetails::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
+  // optional bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
-  // optional string group = 2;
+  // optional bytes group = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_group().data(), static_cast<int>(this->_internal_group().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.group");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_group(), target);
   }
 
-  // optional string kind = 3;
+  // optional bytes kind = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_kind(), target);
   }
 
@@ -13972,13 +13472,9 @@ uint8_t* StatusDetails::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_retryafterseconds(), target);
   }
 
-  // optional string uid = 6;
+  // optional bytes uid = 6;
   if (cached_has_bits & 0x00000008u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.StatusDetails.uid");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_uid(), target);
   }
 
@@ -14007,31 +13503,31 @@ size_t StatusDetails::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
-    // optional string name = 1;
+    // optional bytes name = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string group = 2;
+    // optional bytes group = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_group());
     }
 
-    // optional string kind = 3;
+    // optional bytes kind = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
-    // optional string uid = 6;
+    // optional bytes uid = 6;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_uid());
     }
 
@@ -14215,15 +13711,12 @@ const char* TableOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string includeObject = 1;
+      // optional bytes includeObject = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_includeobject();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.TableOptions.includeObject");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -14258,13 +13751,9 @@ uint8_t* TableOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string includeObject = 1;
+  // optional bytes includeObject = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_includeobject().data(), static_cast<int>(this->_internal_includeobject().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.TableOptions.includeObject");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_includeobject(), target);
   }
 
@@ -14284,11 +13773,11 @@ size_t TableOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string includeObject = 1;
+  // optional bytes includeObject = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_includeobject());
   }
 
@@ -14932,27 +14421,21 @@ const char* TypeMeta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string kind = 1;
+      // optional bytes kind = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_kind();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.kind");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string apiVersion = 2;
+      // optional bytes apiVersion = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_apiversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.apiVersion");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -14987,23 +14470,15 @@ uint8_t* TypeMeta::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string kind = 1;
+  // optional bytes kind = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_kind().data(), static_cast<int>(this->_internal_kind().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.kind");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_kind(), target);
   }
 
-  // optional string apiVersion = 2;
+  // optional bytes apiVersion = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_apiversion().data(), static_cast<int>(this->_internal_apiversion().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.TypeMeta.apiVersion");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_apiversion(), target);
   }
 
@@ -15025,17 +14500,17 @@ size_t TypeMeta::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string kind = 1;
+    // optional bytes kind = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_kind());
     }
 
-    // optional string apiVersion = 2;
+    // optional bytes apiVersion = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_apiversion());
     }
 
@@ -15237,27 +14712,21 @@ const char* UpdateOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldManager = 2;
+      // optional bytes fieldManager = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_fieldmanager();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldManager");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string fieldValidation = 3;
+      // optional bytes fieldValidation = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_fieldvalidation();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldValidation");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -15302,23 +14771,15 @@ uint8_t* UpdateOptions::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string fieldManager = 2;
+  // optional bytes fieldManager = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldmanager().data(), static_cast<int>(this->_internal_fieldmanager().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldManager");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_fieldmanager(), target);
   }
 
-  // optional string fieldValidation = 3;
+  // optional bytes fieldValidation = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_fieldvalidation().data(), static_cast<int>(this->_internal_fieldvalidation().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.UpdateOptions.fieldValidation");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_fieldvalidation(), target);
   }
 
@@ -15348,17 +14809,17 @@ size_t UpdateOptions::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string fieldManager = 2;
+    // optional bytes fieldManager = 2;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldmanager());
     }
 
-    // optional string fieldValidation = 3;
+    // optional bytes fieldValidation = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_fieldvalidation());
     }
 
@@ -15734,15 +15195,12 @@ const char* WatchEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string type = 1;
+      // optional bytes type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.apis.meta.v1.WatchEvent.type");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -15785,13 +15243,9 @@ uint8_t* WatchEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string type = 1;
+  // optional bytes type = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_type().data(), static_cast<int>(this->_internal_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.apis.meta.v1.WatchEvent.type");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_type(), target);
   }
 
@@ -15820,10 +15274,10 @@ size_t WatchEvent::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string type = 1;
+    // optional bytes type = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_type());
     }
 

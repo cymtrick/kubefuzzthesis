@@ -79,7 +79,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fp
   "il_intstr_generated.proto\022#k8s.io.apimac"
   "hinery.pkg.util.intstr\";\n\013IntOrString\022\014\n"
   "\004type\030\001 \001(\003\022\016\n\006intVal\030\002 \001(\005\022\016\n\006strVal\030\003 "
-  "\001(\tB%Z#k8s.io/apimachinery/pkg/util/ints"
+  "\001(\014B%Z#k8s.io/apimachinery/pkg/util/ints"
   "tr"
   ;
 static ::_pbi::once_flag descriptor_table_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fpkg_5futil_5fintstr_5fgenerated_2eproto_once;
@@ -230,15 +230,12 @@ const char* IntOrString::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // optional string strVal = 3;
+      // optional bytes strVal = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_strval();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "k8s.io.apimachinery.pkg.util.intstr.IntOrString.strVal");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -285,13 +282,9 @@ uint8_t* IntOrString::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_intval(), target);
   }
 
-  // optional string strVal = 3;
+  // optional bytes strVal = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_strval().data(), static_cast<int>(this->_internal_strval().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.apimachinery.pkg.util.intstr.IntOrString.strVal");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_strval(), target);
   }
 
@@ -313,10 +306,10 @@ size_t IntOrString::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    // optional string strVal = 3;
+    // optional bytes strVal = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_strval());
     }
 

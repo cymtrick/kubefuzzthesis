@@ -82,7 +82,7 @@ message CSIStorageCapacity {
   // the CSIStorageCapacity object is obsolete and should be removed by its
   // creator.
   // This field is immutable.
-  optional string storageClassName = 3;
+  optional bytes storageClassName = 3;
 
   // capacity is the value reported by the CSI driver in its GetCapacityResponse
   // for a GetCapacityRequest with topology and parameters that match the
@@ -161,7 +161,7 @@ message VolumeAttachmentList {
 message VolumeAttachmentSource {
   // persistentVolumeName represents the name of the persistent volume to attach.
   // +optional
-  optional string persistentVolumeName = 1;
+  optional bytes persistentVolumeName = 1;
 
   // inlineVolumeSpec contains all the information necessary to attach
   // a persistent volume defined by a pod's inline VolumeSource. This field
@@ -177,13 +177,13 @@ message VolumeAttachmentSource {
 message VolumeAttachmentSpec {
   // attacher indicates the name of the volume driver that MUST handle this
   // request. This is the name returned by GetPluginName().
-  optional string attacher = 1;
+  optional bytes attacher = 1;
 
   // source represents the volume that should be attached.
   optional VolumeAttachmentSource source = 2;
 
   // nodeName represents the node that the volume should be attached to.
-  optional string nodeName = 3;
+  optional bytes nodeName = 3;
 }
 
 // VolumeAttachmentStatus is the status of a VolumeAttachment request.
@@ -225,7 +225,7 @@ message VolumeAttributesClass {
 
   // Name of the CSI driver
   // This field is immutable.
-  optional string driverName = 2;
+  optional bytes driverName = 2;
 
   // parameters hold volume attributes defined by the CSI driver. These values
   // are opaque to the Kubernetes and are passed directly to the CSI driver.
@@ -264,6 +264,6 @@ message VolumeError {
   // This string maybe logged, so it should not contain sensitive
   // information.
   // +optional
-  optional string message = 2;
+  optional bytes message = 2;
 }
 

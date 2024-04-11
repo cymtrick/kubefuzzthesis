@@ -33,7 +33,7 @@ option go_package = "k8s.io/metrics/pkg/apis/metrics/v1alpha1";
 // ContainerMetrics sets resource usage metrics of a container.
 message ContainerMetrics {
   // Container name corresponding to the one from pod.spec.containers.
-  optional string name = 1;
+  optional bytes name = 1;
 
   // The memory usage is the memory working set.
   map<string, k8s.io.apimachinery.pkg.api.resource.Quantity> usage = 2;
