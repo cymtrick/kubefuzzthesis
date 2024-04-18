@@ -1,0 +1,14 @@
+metadata {
+}
+spec {
+  terminationGracePeriodSeconds: 0
+  activeDeadlineSeconds: 0
+  tolerations {
+  }
+  priorityClassName: "\237"
+  ephemeralContainers {
+    targetContainerName: "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+  }
+}
+status {
+}

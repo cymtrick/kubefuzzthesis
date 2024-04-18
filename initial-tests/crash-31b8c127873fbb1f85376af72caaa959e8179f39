@@ -1,0 +1,11 @@
+metadata {
+  deletionGracePeriodSeconds: 4398046511104
+  finalizers: "\001\000\000\200"
+}
+spec {
+}
+status {
+  resourceClaimStatuses {
+    name: "."
+  }
+}

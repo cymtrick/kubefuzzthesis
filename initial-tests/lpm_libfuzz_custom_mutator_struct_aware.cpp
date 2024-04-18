@@ -96,7 +96,7 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::Pod &test_proto_input)
             std::cout << "Mutated name: " << test_proto.metadata().name()
                       << "Mutated uid: " << test_proto.metadata().uid()
                       << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
-            FuzzUnknownObjectMutator(data.data(), size);
+            SyncPodsSetStatusToFailedForPodsThatRunTooLong(data.data(), size);
             std::cout << "Fuzzing Pod with mutated metadata." << std::endl;
         }
     }

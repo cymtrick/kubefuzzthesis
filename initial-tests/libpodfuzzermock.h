@@ -74,10 +74,9 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-
-// FuzzUnknownObjectMutator is the exported function for fuzzing unknown object mutator.
-//
-extern void FuzzUnknownObjectMutator(void* dataPtr, size_t dataSize);
+extern void DoesNotDeletePodDirsIfContainerIsRunning(void* dataPtr, size_t dataSize);
+extern void SyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtr, size_t dataSize);
+extern void SyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(void* dataPtr, size_t dataSize);
 
 #ifdef __cplusplus
 }
