@@ -1,0 +1,21 @@
+metadata {
+  generateName: "\353"
+  namespace: "\001\000\000\000\000\000\000\017"
+  selfLink: "\001\000\000\000\000\000\000\017"
+  resourceVersion: "\353"
+  deletionTimestamp {
+    nanos: 0
+  }
+  managedFields {
+  }
+}
+spec {
+  nodeSelector {
+    key: "targetPort"
+    value: ""
+  }
+  hostIPC: true
+  automountServiceAccountToken: true
+}
+status {
+}

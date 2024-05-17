@@ -30,6 +30,10 @@ import "staging_src_k8s.io_apimachinery_pkg_util_intstr_generated.proto";
 // Package-wide variables from generator "generated".
 option go_package = "k8s.io/api/core/v1";
 
+message PodOrNode {
+    required Pod pod = 1;
+    required Node node = 2;
+}
 // Represents a Persistent Disk resource in AWS.
 //
 // An AWS EBS disk must exist before mounting to a container. The disk

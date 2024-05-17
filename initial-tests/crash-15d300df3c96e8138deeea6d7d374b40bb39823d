@@ -1,0 +1,8 @@
+metadata {
+  deletionGracePeriodSeconds: 0
+}
+spec {
+}
+status {
+  phase: "\377\377\377\177"
+}

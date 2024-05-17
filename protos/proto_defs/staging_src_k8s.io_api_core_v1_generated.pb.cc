@@ -25,6 +25,21 @@ namespace io {
 namespace api {
 namespace core {
 namespace v1 {
+PROTOBUF_CONSTEXPR PodOrNode::PodOrNode(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.pod_)*/nullptr
+  , /*decltype(_impl_.node_)*/nullptr} {}
+struct PodOrNodeDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PodOrNodeDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PodOrNodeDefaultTypeInternal() {}
+  union {
+    PodOrNode _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PodOrNodeDefaultTypeInternal _PodOrNode_default_instance_;
 PROTOBUF_CONSTEXPR AWSElasticBlockStoreVolumeSource::AWSElasticBlockStoreVolumeSource(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -4169,11 +4184,21 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace api
 }  // namespace io
 }  // namespace k8s
-static ::_pb::Metadata file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[254];
+static ::_pb::Metadata file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[255];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto = nullptr;
 
 const uint32_t TableStruct_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::PodOrNode, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::PodOrNode, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::PodOrNode, _impl_.pod_),
+  PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::PodOrNode, _impl_.node_),
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -7638,263 +7663,265 @@ const uint32_t TableStruct_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerate
   3,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 10, -1, sizeof(::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource)},
-  { 14, 23, -1, sizeof(::k8s::io::api::core::v1::Affinity)},
-  { 26, 34, -1, sizeof(::k8s::io::api::core::v1::AttachedVolume)},
-  { 36, -1, -1, sizeof(::k8s::io::api::core::v1::AvoidPods)},
-  { 43, 55, -1, sizeof(::k8s::io::api::core::v1::AzureDiskVolumeSource)},
-  { 61, 71, -1, sizeof(::k8s::io::api::core::v1::AzureFilePersistentVolumeSource)},
-  { 75, 84, -1, sizeof(::k8s::io::api::core::v1::AzureFileVolumeSource)},
-  { 87, 95, -1, sizeof(::k8s::io::api::core::v1::Binding)},
-  { 97, 105, -1, sizeof(::k8s::io::api::core::v1::CSIPersistentVolumeSource_VolumeAttributesEntry_DoNotUse)},
-  { 107, 123, -1, sizeof(::k8s::io::api::core::v1::CSIPersistentVolumeSource)},
-  { 133, 141, -1, sizeof(::k8s::io::api::core::v1::CSIVolumeSource_VolumeAttributesEntry_DoNotUse)},
-  { 143, 154, -1, sizeof(::k8s::io::api::core::v1::CSIVolumeSource)},
-  { 159, -1, -1, sizeof(::k8s::io::api::core::v1::Capabilities)},
-  { 167, 179, -1, sizeof(::k8s::io::api::core::v1::CephFSPersistentVolumeSource)},
-  { 185, 197, -1, sizeof(::k8s::io::api::core::v1::CephFSVolumeSource)},
-  { 203, 213, -1, sizeof(::k8s::io::api::core::v1::CinderPersistentVolumeSource)},
-  { 217, 227, -1, sizeof(::k8s::io::api::core::v1::CinderVolumeSource)},
-  { 231, 239, -1, sizeof(::k8s::io::api::core::v1::ClaimSource)},
-  { 241, 248, -1, sizeof(::k8s::io::api::core::v1::ClientIPConfig)},
-  { 249, 260, -1, sizeof(::k8s::io::api::core::v1::ClusterTrustBundleProjection)},
-  { 265, 275, -1, sizeof(::k8s::io::api::core::v1::ComponentCondition)},
-  { 279, 287, -1, sizeof(::k8s::io::api::core::v1::ComponentStatus)},
-  { 289, 297, -1, sizeof(::k8s::io::api::core::v1::ComponentStatusList)},
-  { 299, 307, -1, sizeof(::k8s::io::api::core::v1::ConfigMap_DataEntry_DoNotUse)},
-  { 309, 317, -1, sizeof(::k8s::io::api::core::v1::ConfigMap_BinaryDataEntry_DoNotUse)},
-  { 319, 329, -1, sizeof(::k8s::io::api::core::v1::ConfigMap)},
-  { 333, 341, -1, sizeof(::k8s::io::api::core::v1::ConfigMapEnvSource)},
-  { 343, 352, -1, sizeof(::k8s::io::api::core::v1::ConfigMapKeySelector)},
-  { 355, 363, -1, sizeof(::k8s::io::api::core::v1::ConfigMapList)},
-  { 365, 376, -1, sizeof(::k8s::io::api::core::v1::ConfigMapNodeConfigSource)},
-  { 381, 390, -1, sizeof(::k8s::io::api::core::v1::ConfigMapProjection)},
-  { 393, 403, -1, sizeof(::k8s::io::api::core::v1::ConfigMapVolumeSource)},
-  { 407, 437, -1, sizeof(::k8s::io::api::core::v1::Container)},
-  { 461, 469, -1, sizeof(::k8s::io::api::core::v1::ContainerImage)},
-  { 471, 482, -1, sizeof(::k8s::io::api::core::v1::ContainerPort)},
-  { 487, 495, -1, sizeof(::k8s::io::api::core::v1::ContainerResizePolicy)},
-  { 497, 506, -1, sizeof(::k8s::io::api::core::v1::ContainerState)},
-  { 509, 516, -1, sizeof(::k8s::io::api::core::v1::ContainerStateRunning)},
-  { 517, 530, -1, sizeof(::k8s::io::api::core::v1::ContainerStateTerminated)},
-  { 537, 545, -1, sizeof(::k8s::io::api::core::v1::ContainerStateWaiting)},
-  { 547, 555, -1, sizeof(::k8s::io::api::core::v1::ContainerStatus_AllocatedResourcesEntry_DoNotUse)},
-  { 557, 574, -1, sizeof(::k8s::io::api::core::v1::ContainerStatus)},
-  { 585, 592, -1, sizeof(::k8s::io::api::core::v1::DaemonEndpoint)},
-  { 593, -1, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIProjection)},
-  { 600, 610, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIVolumeFile)},
-  { 614, 622, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIVolumeSource)},
-  { 624, 632, -1, sizeof(::k8s::io::api::core::v1::EmptyDirVolumeSource)},
-  { 634, 644, -1, sizeof(::k8s::io::api::core::v1::EndpointAddress)},
-  { 648, 658, -1, sizeof(::k8s::io::api::core::v1::EndpointPort)},
-  { 662, -1, -1, sizeof(::k8s::io::api::core::v1::EndpointSubset)},
-  { 671, 679, -1, sizeof(::k8s::io::api::core::v1::Endpoints)},
-  { 681, 689, -1, sizeof(::k8s::io::api::core::v1::EndpointsList)},
-  { 691, 700, -1, sizeof(::k8s::io::api::core::v1::EnvFromSource)},
-  { 703, 712, -1, sizeof(::k8s::io::api::core::v1::EnvVar)},
-  { 715, 725, -1, sizeof(::k8s::io::api::core::v1::EnvVarSource)},
-  { 729, 737, -1, sizeof(::k8s::io::api::core::v1::EphemeralContainer)},
-  { 739, 769, -1, sizeof(::k8s::io::api::core::v1::EphemeralContainerCommon)},
-  { 793, 800, -1, sizeof(::k8s::io::api::core::v1::EphemeralVolumeSource)},
-  { 801, 822, -1, sizeof(::k8s::io::api::core::v1::Event)},
-  { 837, 845, -1, sizeof(::k8s::io::api::core::v1::EventList)},
-  { 847, 855, -1, sizeof(::k8s::io::api::core::v1::EventSeries)},
-  { 857, 865, -1, sizeof(::k8s::io::api::core::v1::EventSource)},
-  { 867, -1, -1, sizeof(::k8s::io::api::core::v1::ExecAction)},
-  { 874, 885, -1, sizeof(::k8s::io::api::core::v1::FCVolumeSource)},
-  { 890, 898, -1, sizeof(::k8s::io::api::core::v1::FlexPersistentVolumeSource_OptionsEntry_DoNotUse)},
-  { 900, 911, -1, sizeof(::k8s::io::api::core::v1::FlexPersistentVolumeSource)},
-  { 916, 924, -1, sizeof(::k8s::io::api::core::v1::FlexVolumeSource_OptionsEntry_DoNotUse)},
-  { 926, 937, -1, sizeof(::k8s::io::api::core::v1::FlexVolumeSource)},
-  { 942, 950, -1, sizeof(::k8s::io::api::core::v1::FlockerVolumeSource)},
-  { 952, 962, -1, sizeof(::k8s::io::api::core::v1::GCEPersistentDiskVolumeSource)},
-  { 966, 974, -1, sizeof(::k8s::io::api::core::v1::GRPCAction)},
-  { 976, 985, -1, sizeof(::k8s::io::api::core::v1::GitRepoVolumeSource)},
-  { 988, 998, -1, sizeof(::k8s::io::api::core::v1::GlusterfsPersistentVolumeSource)},
-  { 1002, 1011, -1, sizeof(::k8s::io::api::core::v1::GlusterfsVolumeSource)},
-  { 1014, 1025, -1, sizeof(::k8s::io::api::core::v1::HTTPGetAction)},
-  { 1030, 1038, -1, sizeof(::k8s::io::api::core::v1::HTTPHeader)},
-  { 1040, 1048, -1, sizeof(::k8s::io::api::core::v1::HostAlias)},
-  { 1050, 1057, -1, sizeof(::k8s::io::api::core::v1::HostIP)},
-  { 1058, 1066, -1, sizeof(::k8s::io::api::core::v1::HostPathVolumeSource)},
-  { 1068, 1085, -1, sizeof(::k8s::io::api::core::v1::ISCSIPersistentVolumeSource)},
-  { 1096, 1113, -1, sizeof(::k8s::io::api::core::v1::ISCSIVolumeSource)},
-  { 1124, 1133, -1, sizeof(::k8s::io::api::core::v1::KeyToPath)},
-  { 1136, 1144, -1, sizeof(::k8s::io::api::core::v1::Lifecycle)},
-  { 1146, 1156, -1, sizeof(::k8s::io::api::core::v1::LifecycleHandler)},
-  { 1160, 1168, -1, sizeof(::k8s::io::api::core::v1::LimitRange)},
-  { 1170, 1178, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MaxEntry_DoNotUse)},
-  { 1180, 1188, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MinEntry_DoNotUse)},
-  { 1190, 1198, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_DefaultEntry_DoNotUse)},
-  { 1200, 1208, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_DefaultRequestEntry_DoNotUse)},
-  { 1210, 1218, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MaxLimitRequestRatioEntry_DoNotUse)},
-  { 1220, 1232, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem)},
-  { 1238, 1246, -1, sizeof(::k8s::io::api::core::v1::LimitRangeList)},
-  { 1248, -1, -1, sizeof(::k8s::io::api::core::v1::LimitRangeSpec)},
-  { 1255, 1263, -1, sizeof(::k8s::io::api::core::v1::List)},
-  { 1265, 1275, -1, sizeof(::k8s::io::api::core::v1::LoadBalancerIngress)},
-  { 1279, -1, -1, sizeof(::k8s::io::api::core::v1::LoadBalancerStatus)},
-  { 1286, 1293, -1, sizeof(::k8s::io::api::core::v1::LocalObjectReference)},
-  { 1294, 1302, -1, sizeof(::k8s::io::api::core::v1::LocalVolumeSource)},
-  { 1304, 1312, -1, sizeof(::k8s::io::api::core::v1::ModifyVolumeStatus)},
-  { 1314, 1323, -1, sizeof(::k8s::io::api::core::v1::NFSVolumeSource)},
-  { 1326, 1335, -1, sizeof(::k8s::io::api::core::v1::Namespace)},
-  { 1338, 1349, -1, sizeof(::k8s::io::api::core::v1::NamespaceCondition)},
-  { 1354, 1362, -1, sizeof(::k8s::io::api::core::v1::NamespaceList)},
-  { 1364, -1, -1, sizeof(::k8s::io::api::core::v1::NamespaceSpec)},
-  { 1371, 1379, -1, sizeof(::k8s::io::api::core::v1::NamespaceStatus)},
-  { 1381, 1390, -1, sizeof(::k8s::io::api::core::v1::Node)},
-  { 1393, 1401, -1, sizeof(::k8s::io::api::core::v1::NodeAddress)},
-  { 1403, 1411, -1, sizeof(::k8s::io::api::core::v1::NodeAffinity)},
-  { 1413, 1425, -1, sizeof(::k8s::io::api::core::v1::NodeCondition)},
-  { 1431, 1438, -1, sizeof(::k8s::io::api::core::v1::NodeConfigSource)},
-  { 1439, 1449, -1, sizeof(::k8s::io::api::core::v1::NodeConfigStatus)},
-  { 1453, 1460, -1, sizeof(::k8s::io::api::core::v1::NodeDaemonEndpoints)},
-  { 1461, 1469, -1, sizeof(::k8s::io::api::core::v1::NodeList)},
-  { 1471, 1478, -1, sizeof(::k8s::io::api::core::v1::NodeProxyOptions)},
-  { 1479, 1487, -1, sizeof(::k8s::io::api::core::v1::NodeResources_CapacityEntry_DoNotUse)},
-  { 1489, -1, -1, sizeof(::k8s::io::api::core::v1::NodeResources)},
-  { 1496, -1, -1, sizeof(::k8s::io::api::core::v1::NodeSelector)},
-  { 1503, 1512, -1, sizeof(::k8s::io::api::core::v1::NodeSelectorRequirement)},
-  { 1515, -1, -1, sizeof(::k8s::io::api::core::v1::NodeSelectorTerm)},
-  { 1523, 1536, -1, sizeof(::k8s::io::api::core::v1::NodeSpec)},
-  { 1543, 1551, -1, sizeof(::k8s::io::api::core::v1::NodeStatus_CapacityEntry_DoNotUse)},
-  { 1553, 1561, -1, sizeof(::k8s::io::api::core::v1::NodeStatus_AllocatableEntry_DoNotUse)},
-  { 1563, 1580, -1, sizeof(::k8s::io::api::core::v1::NodeStatus)},
-  { 1591, 1607, -1, sizeof(::k8s::io::api::core::v1::NodeSystemInfo)},
-  { 1617, 1625, -1, sizeof(::k8s::io::api::core::v1::ObjectFieldSelector)},
-  { 1627, 1640, -1, sizeof(::k8s::io::api::core::v1::ObjectReference)},
-  { 1647, 1656, -1, sizeof(::k8s::io::api::core::v1::PersistentVolume)},
-  { 1659, 1668, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaim)},
-  { 1671, 1683, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimCondition)},
-  { 1689, 1697, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimList)},
-  { 1699, 1714, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimSpec)},
-  { 1723, 1731, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_CapacityEntry_DoNotUse)},
-  { 1733, 1741, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_AllocatedResourcesEntry_DoNotUse)},
-  { 1743, 1751, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_AllocatedResourceStatusesEntry_DoNotUse)},
-  { 1753, 1767, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus)},
-  { 1775, 1783, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimTemplate)},
-  { 1785, 1793, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimVolumeSource)},
-  { 1795, 1803, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeList)},
-  { 1805, 1833, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSource)},
-  { 1855, 1863, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSpec_CapacityEntry_DoNotUse)},
-  { 1865, 1881, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSpec)},
-  { 1891, 1901, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeStatus)},
-  { 1905, 1913, -1, sizeof(::k8s::io::api::core::v1::PhotonPersistentDiskVolumeSource)},
-  { 1915, 1924, -1, sizeof(::k8s::io::api::core::v1::Pod)},
-  { 1927, -1, -1, sizeof(::k8s::io::api::core::v1::PodAffinity)},
-  { 1935, 1947, -1, sizeof(::k8s::io::api::core::v1::PodAffinityTerm)},
-  { 1953, -1, -1, sizeof(::k8s::io::api::core::v1::PodAntiAffinity)},
-  { 1961, 1972, -1, sizeof(::k8s::io::api::core::v1::PodAttachOptions)},
-  { 1977, 1989, -1, sizeof(::k8s::io::api::core::v1::PodCondition)},
-  { 1995, -1, -1, sizeof(::k8s::io::api::core::v1::PodDNSConfig)},
-  { 2004, 2012, -1, sizeof(::k8s::io::api::core::v1::PodDNSConfigOption)},
-  { 2014, 2026, -1, sizeof(::k8s::io::api::core::v1::PodExecOptions)},
-  { 2032, 2039, -1, sizeof(::k8s::io::api::core::v1::PodIP)},
-  { 2040, 2048, -1, sizeof(::k8s::io::api::core::v1::PodList)},
-  { 2050, 2065, -1, sizeof(::k8s::io::api::core::v1::PodLogOptions)},
-  { 2074, 2081, -1, sizeof(::k8s::io::api::core::v1::PodOS)},
-  { 2082, -1, -1, sizeof(::k8s::io::api::core::v1::PodPortForwardOptions)},
-  { 2089, 2096, -1, sizeof(::k8s::io::api::core::v1::PodProxyOptions)},
-  { 2097, 2104, -1, sizeof(::k8s::io::api::core::v1::PodReadinessGate)},
-  { 2105, 2113, -1, sizeof(::k8s::io::api::core::v1::PodResourceClaim)},
-  { 2115, 2123, -1, sizeof(::k8s::io::api::core::v1::PodResourceClaimStatus)},
-  { 2125, 2132, -1, sizeof(::k8s::io::api::core::v1::PodSchedulingGate)},
-  { 2133, 2149, -1, sizeof(::k8s::io::api::core::v1::PodSecurityContext)},
-  { 2159, 2166, -1, sizeof(::k8s::io::api::core::v1::PodSignature)},
-  { 2167, 2175, -1, sizeof(::k8s::io::api::core::v1::PodSpec_NodeSelectorEntry_DoNotUse)},
-  { 2177, 2185, -1, sizeof(::k8s::io::api::core::v1::PodSpec_OverheadEntry_DoNotUse)},
-  { 2187, 2232, -1, sizeof(::k8s::io::api::core::v1::PodSpec)},
-  { 2271, 2293, -1, sizeof(::k8s::io::api::core::v1::PodStatus)},
-  { 2309, 2317, -1, sizeof(::k8s::io::api::core::v1::PodStatusResult)},
-  { 2319, 2327, -1, sizeof(::k8s::io::api::core::v1::PodTemplate)},
-  { 2329, 2337, -1, sizeof(::k8s::io::api::core::v1::PodTemplateList)},
-  { 2339, 2347, -1, sizeof(::k8s::io::api::core::v1::PodTemplateSpec)},
-  { 2349, 2358, -1, sizeof(::k8s::io::api::core::v1::PortStatus)},
-  { 2361, 2370, -1, sizeof(::k8s::io::api::core::v1::PortworxVolumeSource)},
-  { 2373, 2380, -1, sizeof(::k8s::io::api::core::v1::Preconditions)},
-  { 2381, 2391, -1, sizeof(::k8s::io::api::core::v1::PreferAvoidPodsEntry)},
-  { 2395, 2403, -1, sizeof(::k8s::io::api::core::v1::PreferredSchedulingTerm)},
-  { 2405, 2418, -1, sizeof(::k8s::io::api::core::v1::Probe)},
-  { 2425, 2435, -1, sizeof(::k8s::io::api::core::v1::ProbeHandler)},
-  { 2439, 2447, -1, sizeof(::k8s::io::api::core::v1::ProjectedVolumeSource)},
-  { 2449, 2461, -1, sizeof(::k8s::io::api::core::v1::QuobyteVolumeSource)},
-  { 2467, 2481, -1, sizeof(::k8s::io::api::core::v1::RBDPersistentVolumeSource)},
-  { 2489, 2503, -1, sizeof(::k8s::io::api::core::v1::RBDVolumeSource)},
-  { 2511, 2520, -1, sizeof(::k8s::io::api::core::v1::RangeAllocation)},
-  { 2523, 2532, -1, sizeof(::k8s::io::api::core::v1::ReplicationController)},
-  { 2535, 2546, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerCondition)},
-  { 2551, 2559, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerList)},
-  { 2561, 2569, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerSpec_SelectorEntry_DoNotUse)},
-  { 2571, 2581, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerSpec)},
-  { 2585, 2597, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerStatus)},
-  { 2603, 2610, -1, sizeof(::k8s::io::api::core::v1::ResourceClaim)},
-  { 2611, 2620, -1, sizeof(::k8s::io::api::core::v1::ResourceFieldSelector)},
-  { 2623, 2632, -1, sizeof(::k8s::io::api::core::v1::ResourceQuota)},
-  { 2635, 2643, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaList)},
-  { 2645, 2653, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaSpec_HardEntry_DoNotUse)},
-  { 2655, 2664, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaSpec)},
-  { 2667, 2675, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus_HardEntry_DoNotUse)},
-  { 2677, 2685, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus_UsedEntry_DoNotUse)},
-  { 2687, -1, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus)},
-  { 2695, 2703, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements_LimitsEntry_DoNotUse)},
-  { 2705, 2713, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements_RequestsEntry_DoNotUse)},
-  { 2715, -1, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements)},
-  { 2724, 2734, -1, sizeof(::k8s::io::api::core::v1::SELinuxOptions)},
-  { 2738, 2754, -1, sizeof(::k8s::io::api::core::v1::ScaleIOPersistentVolumeSource)},
-  { 2764, 2780, -1, sizeof(::k8s::io::api::core::v1::ScaleIOVolumeSource)},
-  { 2790, -1, -1, sizeof(::k8s::io::api::core::v1::ScopeSelector)},
-  { 2797, 2806, -1, sizeof(::k8s::io::api::core::v1::ScopedResourceSelectorRequirement)},
-  { 2809, 2817, -1, sizeof(::k8s::io::api::core::v1::SeccompProfile)},
-  { 2819, 2827, -1, sizeof(::k8s::io::api::core::v1::Secret_DataEntry_DoNotUse)},
-  { 2829, 2837, -1, sizeof(::k8s::io::api::core::v1::Secret_StringDataEntry_DoNotUse)},
-  { 2839, 2850, -1, sizeof(::k8s::io::api::core::v1::Secret)},
-  { 2855, 2863, -1, sizeof(::k8s::io::api::core::v1::SecretEnvSource)},
-  { 2865, 2874, -1, sizeof(::k8s::io::api::core::v1::SecretKeySelector)},
-  { 2877, 2885, -1, sizeof(::k8s::io::api::core::v1::SecretList)},
-  { 2887, 2896, -1, sizeof(::k8s::io::api::core::v1::SecretProjection)},
-  { 2899, 2907, -1, sizeof(::k8s::io::api::core::v1::SecretReference)},
-  { 2909, 2919, -1, sizeof(::k8s::io::api::core::v1::SecretVolumeSource)},
-  { 2923, 2940, -1, sizeof(::k8s::io::api::core::v1::SecurityContext)},
-  { 2951, 2958, -1, sizeof(::k8s::io::api::core::v1::SerializedReference)},
-  { 2959, 2968, -1, sizeof(::k8s::io::api::core::v1::Service)},
-  { 2971, 2981, -1, sizeof(::k8s::io::api::core::v1::ServiceAccount)},
-  { 2985, 2993, -1, sizeof(::k8s::io::api::core::v1::ServiceAccountList)},
-  { 2995, 3004, -1, sizeof(::k8s::io::api::core::v1::ServiceAccountTokenProjection)},
-  { 3007, 3015, -1, sizeof(::k8s::io::api::core::v1::ServiceList)},
-  { 3017, 3029, -1, sizeof(::k8s::io::api::core::v1::ServicePort)},
-  { 3035, 3042, -1, sizeof(::k8s::io::api::core::v1::ServiceProxyOptions)},
-  { 3043, 3051, -1, sizeof(::k8s::io::api::core::v1::ServiceSpec_SelectorEntry_DoNotUse)},
-  { 3053, 3078, -1, sizeof(::k8s::io::api::core::v1::ServiceSpec)},
-  { 3097, 3105, -1, sizeof(::k8s::io::api::core::v1::ServiceStatus)},
-  { 3107, 3114, -1, sizeof(::k8s::io::api::core::v1::SessionAffinityConfig)},
-  { 3115, 3122, -1, sizeof(::k8s::io::api::core::v1::SleepAction)},
-  { 3123, 3134, -1, sizeof(::k8s::io::api::core::v1::StorageOSPersistentVolumeSource)},
-  { 3139, 3150, -1, sizeof(::k8s::io::api::core::v1::StorageOSVolumeSource)},
-  { 3155, 3163, -1, sizeof(::k8s::io::api::core::v1::Sysctl)},
-  { 3165, 3173, -1, sizeof(::k8s::io::api::core::v1::TCPSocketAction)},
-  { 3175, 3185, -1, sizeof(::k8s::io::api::core::v1::Taint)},
-  { 3189, 3200, -1, sizeof(::k8s::io::api::core::v1::Toleration)},
-  { 3205, 3213, -1, sizeof(::k8s::io::api::core::v1::TopologySelectorLabelRequirement)},
-  { 3215, -1, -1, sizeof(::k8s::io::api::core::v1::TopologySelectorTerm)},
-  { 3222, 3236, -1, sizeof(::k8s::io::api::core::v1::TopologySpreadConstraint)},
-  { 3244, 3253, -1, sizeof(::k8s::io::api::core::v1::TypedLocalObjectReference)},
-  { 3256, 3266, -1, sizeof(::k8s::io::api::core::v1::TypedObjectReference)},
-  { 3270, 3278, -1, sizeof(::k8s::io::api::core::v1::Volume)},
-  { 3280, 3288, -1, sizeof(::k8s::io::api::core::v1::VolumeDevice)},
-  { 3290, 3302, -1, sizeof(::k8s::io::api::core::v1::VolumeMount)},
-  { 3308, 3315, -1, sizeof(::k8s::io::api::core::v1::VolumeNodeAffinity)},
-  { 3316, 3327, -1, sizeof(::k8s::io::api::core::v1::VolumeProjection)},
-  { 3332, 3340, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements_LimitsEntry_DoNotUse)},
-  { 3342, 3350, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements_RequestsEntry_DoNotUse)},
-  { 3352, -1, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements)},
-  { 3360, 3395, -1, sizeof(::k8s::io::api::core::v1::VolumeSource)},
-  { 3424, 3434, -1, sizeof(::k8s::io::api::core::v1::VsphereVirtualDiskVolumeSource)},
-  { 3438, 3446, -1, sizeof(::k8s::io::api::core::v1::WeightedPodAffinityTerm)},
-  { 3448, 3458, -1, sizeof(::k8s::io::api::core::v1::WindowsSecurityContextOptions)},
+  { 0, 8, -1, sizeof(::k8s::io::api::core::v1::PodOrNode)},
+  { 10, 20, -1, sizeof(::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource)},
+  { 24, 33, -1, sizeof(::k8s::io::api::core::v1::Affinity)},
+  { 36, 44, -1, sizeof(::k8s::io::api::core::v1::AttachedVolume)},
+  { 46, -1, -1, sizeof(::k8s::io::api::core::v1::AvoidPods)},
+  { 53, 65, -1, sizeof(::k8s::io::api::core::v1::AzureDiskVolumeSource)},
+  { 71, 81, -1, sizeof(::k8s::io::api::core::v1::AzureFilePersistentVolumeSource)},
+  { 85, 94, -1, sizeof(::k8s::io::api::core::v1::AzureFileVolumeSource)},
+  { 97, 105, -1, sizeof(::k8s::io::api::core::v1::Binding)},
+  { 107, 115, -1, sizeof(::k8s::io::api::core::v1::CSIPersistentVolumeSource_VolumeAttributesEntry_DoNotUse)},
+  { 117, 133, -1, sizeof(::k8s::io::api::core::v1::CSIPersistentVolumeSource)},
+  { 143, 151, -1, sizeof(::k8s::io::api::core::v1::CSIVolumeSource_VolumeAttributesEntry_DoNotUse)},
+  { 153, 164, -1, sizeof(::k8s::io::api::core::v1::CSIVolumeSource)},
+  { 169, -1, -1, sizeof(::k8s::io::api::core::v1::Capabilities)},
+  { 177, 189, -1, sizeof(::k8s::io::api::core::v1::CephFSPersistentVolumeSource)},
+  { 195, 207, -1, sizeof(::k8s::io::api::core::v1::CephFSVolumeSource)},
+  { 213, 223, -1, sizeof(::k8s::io::api::core::v1::CinderPersistentVolumeSource)},
+  { 227, 237, -1, sizeof(::k8s::io::api::core::v1::CinderVolumeSource)},
+  { 241, 249, -1, sizeof(::k8s::io::api::core::v1::ClaimSource)},
+  { 251, 258, -1, sizeof(::k8s::io::api::core::v1::ClientIPConfig)},
+  { 259, 270, -1, sizeof(::k8s::io::api::core::v1::ClusterTrustBundleProjection)},
+  { 275, 285, -1, sizeof(::k8s::io::api::core::v1::ComponentCondition)},
+  { 289, 297, -1, sizeof(::k8s::io::api::core::v1::ComponentStatus)},
+  { 299, 307, -1, sizeof(::k8s::io::api::core::v1::ComponentStatusList)},
+  { 309, 317, -1, sizeof(::k8s::io::api::core::v1::ConfigMap_DataEntry_DoNotUse)},
+  { 319, 327, -1, sizeof(::k8s::io::api::core::v1::ConfigMap_BinaryDataEntry_DoNotUse)},
+  { 329, 339, -1, sizeof(::k8s::io::api::core::v1::ConfigMap)},
+  { 343, 351, -1, sizeof(::k8s::io::api::core::v1::ConfigMapEnvSource)},
+  { 353, 362, -1, sizeof(::k8s::io::api::core::v1::ConfigMapKeySelector)},
+  { 365, 373, -1, sizeof(::k8s::io::api::core::v1::ConfigMapList)},
+  { 375, 386, -1, sizeof(::k8s::io::api::core::v1::ConfigMapNodeConfigSource)},
+  { 391, 400, -1, sizeof(::k8s::io::api::core::v1::ConfigMapProjection)},
+  { 403, 413, -1, sizeof(::k8s::io::api::core::v1::ConfigMapVolumeSource)},
+  { 417, 447, -1, sizeof(::k8s::io::api::core::v1::Container)},
+  { 471, 479, -1, sizeof(::k8s::io::api::core::v1::ContainerImage)},
+  { 481, 492, -1, sizeof(::k8s::io::api::core::v1::ContainerPort)},
+  { 497, 505, -1, sizeof(::k8s::io::api::core::v1::ContainerResizePolicy)},
+  { 507, 516, -1, sizeof(::k8s::io::api::core::v1::ContainerState)},
+  { 519, 526, -1, sizeof(::k8s::io::api::core::v1::ContainerStateRunning)},
+  { 527, 540, -1, sizeof(::k8s::io::api::core::v1::ContainerStateTerminated)},
+  { 547, 555, -1, sizeof(::k8s::io::api::core::v1::ContainerStateWaiting)},
+  { 557, 565, -1, sizeof(::k8s::io::api::core::v1::ContainerStatus_AllocatedResourcesEntry_DoNotUse)},
+  { 567, 584, -1, sizeof(::k8s::io::api::core::v1::ContainerStatus)},
+  { 595, 602, -1, sizeof(::k8s::io::api::core::v1::DaemonEndpoint)},
+  { 603, -1, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIProjection)},
+  { 610, 620, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIVolumeFile)},
+  { 624, 632, -1, sizeof(::k8s::io::api::core::v1::DownwardAPIVolumeSource)},
+  { 634, 642, -1, sizeof(::k8s::io::api::core::v1::EmptyDirVolumeSource)},
+  { 644, 654, -1, sizeof(::k8s::io::api::core::v1::EndpointAddress)},
+  { 658, 668, -1, sizeof(::k8s::io::api::core::v1::EndpointPort)},
+  { 672, -1, -1, sizeof(::k8s::io::api::core::v1::EndpointSubset)},
+  { 681, 689, -1, sizeof(::k8s::io::api::core::v1::Endpoints)},
+  { 691, 699, -1, sizeof(::k8s::io::api::core::v1::EndpointsList)},
+  { 701, 710, -1, sizeof(::k8s::io::api::core::v1::EnvFromSource)},
+  { 713, 722, -1, sizeof(::k8s::io::api::core::v1::EnvVar)},
+  { 725, 735, -1, sizeof(::k8s::io::api::core::v1::EnvVarSource)},
+  { 739, 747, -1, sizeof(::k8s::io::api::core::v1::EphemeralContainer)},
+  { 749, 779, -1, sizeof(::k8s::io::api::core::v1::EphemeralContainerCommon)},
+  { 803, 810, -1, sizeof(::k8s::io::api::core::v1::EphemeralVolumeSource)},
+  { 811, 832, -1, sizeof(::k8s::io::api::core::v1::Event)},
+  { 847, 855, -1, sizeof(::k8s::io::api::core::v1::EventList)},
+  { 857, 865, -1, sizeof(::k8s::io::api::core::v1::EventSeries)},
+  { 867, 875, -1, sizeof(::k8s::io::api::core::v1::EventSource)},
+  { 877, -1, -1, sizeof(::k8s::io::api::core::v1::ExecAction)},
+  { 884, 895, -1, sizeof(::k8s::io::api::core::v1::FCVolumeSource)},
+  { 900, 908, -1, sizeof(::k8s::io::api::core::v1::FlexPersistentVolumeSource_OptionsEntry_DoNotUse)},
+  { 910, 921, -1, sizeof(::k8s::io::api::core::v1::FlexPersistentVolumeSource)},
+  { 926, 934, -1, sizeof(::k8s::io::api::core::v1::FlexVolumeSource_OptionsEntry_DoNotUse)},
+  { 936, 947, -1, sizeof(::k8s::io::api::core::v1::FlexVolumeSource)},
+  { 952, 960, -1, sizeof(::k8s::io::api::core::v1::FlockerVolumeSource)},
+  { 962, 972, -1, sizeof(::k8s::io::api::core::v1::GCEPersistentDiskVolumeSource)},
+  { 976, 984, -1, sizeof(::k8s::io::api::core::v1::GRPCAction)},
+  { 986, 995, -1, sizeof(::k8s::io::api::core::v1::GitRepoVolumeSource)},
+  { 998, 1008, -1, sizeof(::k8s::io::api::core::v1::GlusterfsPersistentVolumeSource)},
+  { 1012, 1021, -1, sizeof(::k8s::io::api::core::v1::GlusterfsVolumeSource)},
+  { 1024, 1035, -1, sizeof(::k8s::io::api::core::v1::HTTPGetAction)},
+  { 1040, 1048, -1, sizeof(::k8s::io::api::core::v1::HTTPHeader)},
+  { 1050, 1058, -1, sizeof(::k8s::io::api::core::v1::HostAlias)},
+  { 1060, 1067, -1, sizeof(::k8s::io::api::core::v1::HostIP)},
+  { 1068, 1076, -1, sizeof(::k8s::io::api::core::v1::HostPathVolumeSource)},
+  { 1078, 1095, -1, sizeof(::k8s::io::api::core::v1::ISCSIPersistentVolumeSource)},
+  { 1106, 1123, -1, sizeof(::k8s::io::api::core::v1::ISCSIVolumeSource)},
+  { 1134, 1143, -1, sizeof(::k8s::io::api::core::v1::KeyToPath)},
+  { 1146, 1154, -1, sizeof(::k8s::io::api::core::v1::Lifecycle)},
+  { 1156, 1166, -1, sizeof(::k8s::io::api::core::v1::LifecycleHandler)},
+  { 1170, 1178, -1, sizeof(::k8s::io::api::core::v1::LimitRange)},
+  { 1180, 1188, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MaxEntry_DoNotUse)},
+  { 1190, 1198, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MinEntry_DoNotUse)},
+  { 1200, 1208, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_DefaultEntry_DoNotUse)},
+  { 1210, 1218, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_DefaultRequestEntry_DoNotUse)},
+  { 1220, 1228, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem_MaxLimitRequestRatioEntry_DoNotUse)},
+  { 1230, 1242, -1, sizeof(::k8s::io::api::core::v1::LimitRangeItem)},
+  { 1248, 1256, -1, sizeof(::k8s::io::api::core::v1::LimitRangeList)},
+  { 1258, -1, -1, sizeof(::k8s::io::api::core::v1::LimitRangeSpec)},
+  { 1265, 1273, -1, sizeof(::k8s::io::api::core::v1::List)},
+  { 1275, 1285, -1, sizeof(::k8s::io::api::core::v1::LoadBalancerIngress)},
+  { 1289, -1, -1, sizeof(::k8s::io::api::core::v1::LoadBalancerStatus)},
+  { 1296, 1303, -1, sizeof(::k8s::io::api::core::v1::LocalObjectReference)},
+  { 1304, 1312, -1, sizeof(::k8s::io::api::core::v1::LocalVolumeSource)},
+  { 1314, 1322, -1, sizeof(::k8s::io::api::core::v1::ModifyVolumeStatus)},
+  { 1324, 1333, -1, sizeof(::k8s::io::api::core::v1::NFSVolumeSource)},
+  { 1336, 1345, -1, sizeof(::k8s::io::api::core::v1::Namespace)},
+  { 1348, 1359, -1, sizeof(::k8s::io::api::core::v1::NamespaceCondition)},
+  { 1364, 1372, -1, sizeof(::k8s::io::api::core::v1::NamespaceList)},
+  { 1374, -1, -1, sizeof(::k8s::io::api::core::v1::NamespaceSpec)},
+  { 1381, 1389, -1, sizeof(::k8s::io::api::core::v1::NamespaceStatus)},
+  { 1391, 1400, -1, sizeof(::k8s::io::api::core::v1::Node)},
+  { 1403, 1411, -1, sizeof(::k8s::io::api::core::v1::NodeAddress)},
+  { 1413, 1421, -1, sizeof(::k8s::io::api::core::v1::NodeAffinity)},
+  { 1423, 1435, -1, sizeof(::k8s::io::api::core::v1::NodeCondition)},
+  { 1441, 1448, -1, sizeof(::k8s::io::api::core::v1::NodeConfigSource)},
+  { 1449, 1459, -1, sizeof(::k8s::io::api::core::v1::NodeConfigStatus)},
+  { 1463, 1470, -1, sizeof(::k8s::io::api::core::v1::NodeDaemonEndpoints)},
+  { 1471, 1479, -1, sizeof(::k8s::io::api::core::v1::NodeList)},
+  { 1481, 1488, -1, sizeof(::k8s::io::api::core::v1::NodeProxyOptions)},
+  { 1489, 1497, -1, sizeof(::k8s::io::api::core::v1::NodeResources_CapacityEntry_DoNotUse)},
+  { 1499, -1, -1, sizeof(::k8s::io::api::core::v1::NodeResources)},
+  { 1506, -1, -1, sizeof(::k8s::io::api::core::v1::NodeSelector)},
+  { 1513, 1522, -1, sizeof(::k8s::io::api::core::v1::NodeSelectorRequirement)},
+  { 1525, -1, -1, sizeof(::k8s::io::api::core::v1::NodeSelectorTerm)},
+  { 1533, 1546, -1, sizeof(::k8s::io::api::core::v1::NodeSpec)},
+  { 1553, 1561, -1, sizeof(::k8s::io::api::core::v1::NodeStatus_CapacityEntry_DoNotUse)},
+  { 1563, 1571, -1, sizeof(::k8s::io::api::core::v1::NodeStatus_AllocatableEntry_DoNotUse)},
+  { 1573, 1590, -1, sizeof(::k8s::io::api::core::v1::NodeStatus)},
+  { 1601, 1617, -1, sizeof(::k8s::io::api::core::v1::NodeSystemInfo)},
+  { 1627, 1635, -1, sizeof(::k8s::io::api::core::v1::ObjectFieldSelector)},
+  { 1637, 1650, -1, sizeof(::k8s::io::api::core::v1::ObjectReference)},
+  { 1657, 1666, -1, sizeof(::k8s::io::api::core::v1::PersistentVolume)},
+  { 1669, 1678, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaim)},
+  { 1681, 1693, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimCondition)},
+  { 1699, 1707, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimList)},
+  { 1709, 1724, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimSpec)},
+  { 1733, 1741, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_CapacityEntry_DoNotUse)},
+  { 1743, 1751, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_AllocatedResourcesEntry_DoNotUse)},
+  { 1753, 1761, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus_AllocatedResourceStatusesEntry_DoNotUse)},
+  { 1763, 1777, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimStatus)},
+  { 1785, 1793, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimTemplate)},
+  { 1795, 1803, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeClaimVolumeSource)},
+  { 1805, 1813, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeList)},
+  { 1815, 1843, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSource)},
+  { 1865, 1873, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSpec_CapacityEntry_DoNotUse)},
+  { 1875, 1891, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeSpec)},
+  { 1901, 1911, -1, sizeof(::k8s::io::api::core::v1::PersistentVolumeStatus)},
+  { 1915, 1923, -1, sizeof(::k8s::io::api::core::v1::PhotonPersistentDiskVolumeSource)},
+  { 1925, 1934, -1, sizeof(::k8s::io::api::core::v1::Pod)},
+  { 1937, -1, -1, sizeof(::k8s::io::api::core::v1::PodAffinity)},
+  { 1945, 1957, -1, sizeof(::k8s::io::api::core::v1::PodAffinityTerm)},
+  { 1963, -1, -1, sizeof(::k8s::io::api::core::v1::PodAntiAffinity)},
+  { 1971, 1982, -1, sizeof(::k8s::io::api::core::v1::PodAttachOptions)},
+  { 1987, 1999, -1, sizeof(::k8s::io::api::core::v1::PodCondition)},
+  { 2005, -1, -1, sizeof(::k8s::io::api::core::v1::PodDNSConfig)},
+  { 2014, 2022, -1, sizeof(::k8s::io::api::core::v1::PodDNSConfigOption)},
+  { 2024, 2036, -1, sizeof(::k8s::io::api::core::v1::PodExecOptions)},
+  { 2042, 2049, -1, sizeof(::k8s::io::api::core::v1::PodIP)},
+  { 2050, 2058, -1, sizeof(::k8s::io::api::core::v1::PodList)},
+  { 2060, 2075, -1, sizeof(::k8s::io::api::core::v1::PodLogOptions)},
+  { 2084, 2091, -1, sizeof(::k8s::io::api::core::v1::PodOS)},
+  { 2092, -1, -1, sizeof(::k8s::io::api::core::v1::PodPortForwardOptions)},
+  { 2099, 2106, -1, sizeof(::k8s::io::api::core::v1::PodProxyOptions)},
+  { 2107, 2114, -1, sizeof(::k8s::io::api::core::v1::PodReadinessGate)},
+  { 2115, 2123, -1, sizeof(::k8s::io::api::core::v1::PodResourceClaim)},
+  { 2125, 2133, -1, sizeof(::k8s::io::api::core::v1::PodResourceClaimStatus)},
+  { 2135, 2142, -1, sizeof(::k8s::io::api::core::v1::PodSchedulingGate)},
+  { 2143, 2159, -1, sizeof(::k8s::io::api::core::v1::PodSecurityContext)},
+  { 2169, 2176, -1, sizeof(::k8s::io::api::core::v1::PodSignature)},
+  { 2177, 2185, -1, sizeof(::k8s::io::api::core::v1::PodSpec_NodeSelectorEntry_DoNotUse)},
+  { 2187, 2195, -1, sizeof(::k8s::io::api::core::v1::PodSpec_OverheadEntry_DoNotUse)},
+  { 2197, 2242, -1, sizeof(::k8s::io::api::core::v1::PodSpec)},
+  { 2281, 2303, -1, sizeof(::k8s::io::api::core::v1::PodStatus)},
+  { 2319, 2327, -1, sizeof(::k8s::io::api::core::v1::PodStatusResult)},
+  { 2329, 2337, -1, sizeof(::k8s::io::api::core::v1::PodTemplate)},
+  { 2339, 2347, -1, sizeof(::k8s::io::api::core::v1::PodTemplateList)},
+  { 2349, 2357, -1, sizeof(::k8s::io::api::core::v1::PodTemplateSpec)},
+  { 2359, 2368, -1, sizeof(::k8s::io::api::core::v1::PortStatus)},
+  { 2371, 2380, -1, sizeof(::k8s::io::api::core::v1::PortworxVolumeSource)},
+  { 2383, 2390, -1, sizeof(::k8s::io::api::core::v1::Preconditions)},
+  { 2391, 2401, -1, sizeof(::k8s::io::api::core::v1::PreferAvoidPodsEntry)},
+  { 2405, 2413, -1, sizeof(::k8s::io::api::core::v1::PreferredSchedulingTerm)},
+  { 2415, 2428, -1, sizeof(::k8s::io::api::core::v1::Probe)},
+  { 2435, 2445, -1, sizeof(::k8s::io::api::core::v1::ProbeHandler)},
+  { 2449, 2457, -1, sizeof(::k8s::io::api::core::v1::ProjectedVolumeSource)},
+  { 2459, 2471, -1, sizeof(::k8s::io::api::core::v1::QuobyteVolumeSource)},
+  { 2477, 2491, -1, sizeof(::k8s::io::api::core::v1::RBDPersistentVolumeSource)},
+  { 2499, 2513, -1, sizeof(::k8s::io::api::core::v1::RBDVolumeSource)},
+  { 2521, 2530, -1, sizeof(::k8s::io::api::core::v1::RangeAllocation)},
+  { 2533, 2542, -1, sizeof(::k8s::io::api::core::v1::ReplicationController)},
+  { 2545, 2556, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerCondition)},
+  { 2561, 2569, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerList)},
+  { 2571, 2579, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerSpec_SelectorEntry_DoNotUse)},
+  { 2581, 2591, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerSpec)},
+  { 2595, 2607, -1, sizeof(::k8s::io::api::core::v1::ReplicationControllerStatus)},
+  { 2613, 2620, -1, sizeof(::k8s::io::api::core::v1::ResourceClaim)},
+  { 2621, 2630, -1, sizeof(::k8s::io::api::core::v1::ResourceFieldSelector)},
+  { 2633, 2642, -1, sizeof(::k8s::io::api::core::v1::ResourceQuota)},
+  { 2645, 2653, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaList)},
+  { 2655, 2663, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaSpec_HardEntry_DoNotUse)},
+  { 2665, 2674, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaSpec)},
+  { 2677, 2685, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus_HardEntry_DoNotUse)},
+  { 2687, 2695, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus_UsedEntry_DoNotUse)},
+  { 2697, -1, -1, sizeof(::k8s::io::api::core::v1::ResourceQuotaStatus)},
+  { 2705, 2713, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements_LimitsEntry_DoNotUse)},
+  { 2715, 2723, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements_RequestsEntry_DoNotUse)},
+  { 2725, -1, -1, sizeof(::k8s::io::api::core::v1::ResourceRequirements)},
+  { 2734, 2744, -1, sizeof(::k8s::io::api::core::v1::SELinuxOptions)},
+  { 2748, 2764, -1, sizeof(::k8s::io::api::core::v1::ScaleIOPersistentVolumeSource)},
+  { 2774, 2790, -1, sizeof(::k8s::io::api::core::v1::ScaleIOVolumeSource)},
+  { 2800, -1, -1, sizeof(::k8s::io::api::core::v1::ScopeSelector)},
+  { 2807, 2816, -1, sizeof(::k8s::io::api::core::v1::ScopedResourceSelectorRequirement)},
+  { 2819, 2827, -1, sizeof(::k8s::io::api::core::v1::SeccompProfile)},
+  { 2829, 2837, -1, sizeof(::k8s::io::api::core::v1::Secret_DataEntry_DoNotUse)},
+  { 2839, 2847, -1, sizeof(::k8s::io::api::core::v1::Secret_StringDataEntry_DoNotUse)},
+  { 2849, 2860, -1, sizeof(::k8s::io::api::core::v1::Secret)},
+  { 2865, 2873, -1, sizeof(::k8s::io::api::core::v1::SecretEnvSource)},
+  { 2875, 2884, -1, sizeof(::k8s::io::api::core::v1::SecretKeySelector)},
+  { 2887, 2895, -1, sizeof(::k8s::io::api::core::v1::SecretList)},
+  { 2897, 2906, -1, sizeof(::k8s::io::api::core::v1::SecretProjection)},
+  { 2909, 2917, -1, sizeof(::k8s::io::api::core::v1::SecretReference)},
+  { 2919, 2929, -1, sizeof(::k8s::io::api::core::v1::SecretVolumeSource)},
+  { 2933, 2950, -1, sizeof(::k8s::io::api::core::v1::SecurityContext)},
+  { 2961, 2968, -1, sizeof(::k8s::io::api::core::v1::SerializedReference)},
+  { 2969, 2978, -1, sizeof(::k8s::io::api::core::v1::Service)},
+  { 2981, 2991, -1, sizeof(::k8s::io::api::core::v1::ServiceAccount)},
+  { 2995, 3003, -1, sizeof(::k8s::io::api::core::v1::ServiceAccountList)},
+  { 3005, 3014, -1, sizeof(::k8s::io::api::core::v1::ServiceAccountTokenProjection)},
+  { 3017, 3025, -1, sizeof(::k8s::io::api::core::v1::ServiceList)},
+  { 3027, 3039, -1, sizeof(::k8s::io::api::core::v1::ServicePort)},
+  { 3045, 3052, -1, sizeof(::k8s::io::api::core::v1::ServiceProxyOptions)},
+  { 3053, 3061, -1, sizeof(::k8s::io::api::core::v1::ServiceSpec_SelectorEntry_DoNotUse)},
+  { 3063, 3088, -1, sizeof(::k8s::io::api::core::v1::ServiceSpec)},
+  { 3107, 3115, -1, sizeof(::k8s::io::api::core::v1::ServiceStatus)},
+  { 3117, 3124, -1, sizeof(::k8s::io::api::core::v1::SessionAffinityConfig)},
+  { 3125, 3132, -1, sizeof(::k8s::io::api::core::v1::SleepAction)},
+  { 3133, 3144, -1, sizeof(::k8s::io::api::core::v1::StorageOSPersistentVolumeSource)},
+  { 3149, 3160, -1, sizeof(::k8s::io::api::core::v1::StorageOSVolumeSource)},
+  { 3165, 3173, -1, sizeof(::k8s::io::api::core::v1::Sysctl)},
+  { 3175, 3183, -1, sizeof(::k8s::io::api::core::v1::TCPSocketAction)},
+  { 3185, 3195, -1, sizeof(::k8s::io::api::core::v1::Taint)},
+  { 3199, 3210, -1, sizeof(::k8s::io::api::core::v1::Toleration)},
+  { 3215, 3223, -1, sizeof(::k8s::io::api::core::v1::TopologySelectorLabelRequirement)},
+  { 3225, -1, -1, sizeof(::k8s::io::api::core::v1::TopologySelectorTerm)},
+  { 3232, 3246, -1, sizeof(::k8s::io::api::core::v1::TopologySpreadConstraint)},
+  { 3254, 3263, -1, sizeof(::k8s::io::api::core::v1::TypedLocalObjectReference)},
+  { 3266, 3276, -1, sizeof(::k8s::io::api::core::v1::TypedObjectReference)},
+  { 3280, 3288, -1, sizeof(::k8s::io::api::core::v1::Volume)},
+  { 3290, 3298, -1, sizeof(::k8s::io::api::core::v1::VolumeDevice)},
+  { 3300, 3312, -1, sizeof(::k8s::io::api::core::v1::VolumeMount)},
+  { 3318, 3325, -1, sizeof(::k8s::io::api::core::v1::VolumeNodeAffinity)},
+  { 3326, 3337, -1, sizeof(::k8s::io::api::core::v1::VolumeProjection)},
+  { 3342, 3350, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements_LimitsEntry_DoNotUse)},
+  { 3352, 3360, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements_RequestsEntry_DoNotUse)},
+  { 3362, -1, -1, sizeof(::k8s::io::api::core::v1::VolumeResourceRequirements)},
+  { 3370, 3405, -1, sizeof(::k8s::io::api::core::v1::VolumeSource)},
+  { 3434, 3444, -1, sizeof(::k8s::io::api::core::v1::VsphereVirtualDiskVolumeSource)},
+  { 3448, 3456, -1, sizeof(::k8s::io::api::core::v1::WeightedPodAffinityTerm)},
+  { 3458, 3468, -1, sizeof(::k8s::io::api::core::v1::WindowsSecurityContextOptions)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
+  &::k8s::io::api::core::v1::_PodOrNode_default_instance_._instance,
   &::k8s::io::api::core::v1::_AWSElasticBlockStoreVolumeSource_default_instance_._instance,
   &::k8s::io::api::core::v1::_Affinity_default_instance_._instance,
   &::k8s::io::api::core::v1::_AttachedVolume_default_instance_._instance,
@@ -8161,1042 +8188,1044 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "ntime_generated.proto\032Bstaging_src_k8s.i"
   "o_apimachinery_pkg_runtime_schema_genera"
   "ted.proto\032\?staging_src_k8s.io_apimachine"
-  "ry_pkg_util_intstr_generated.proto\"i\n AW"
-  "SElasticBlockStoreVolumeSource\022\020\n\010volume"
-  "ID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\021\n\tpartition\030\003 "
-  "\001(\005\022\020\n\010readOnly\030\004 \001(\010\"\266\001\n\010Affinity\0226\n\014no"
-  "deAffinity\030\001 \001(\0132 .k8s.io.api.core.v1.No"
-  "deAffinity\0224\n\013podAffinity\030\002 \001(\0132\037.k8s.io"
-  ".api.core.v1.PodAffinity\022<\n\017podAntiAffin"
-  "ity\030\003 \001(\0132#.k8s.io.api.core.v1.PodAntiAf"
-  "finity\"2\n\016AttachedVolume\022\014\n\004name\030\001 \001(\014\022\022"
-  "\n\ndevicePath\030\002 \001(\014\"N\n\tAvoidPods\022A\n\017prefe"
-  "rAvoidPods\030\001 \003(\0132(.k8s.io.api.core.v1.Pr"
-  "eferAvoidPodsEntry\"\177\n\025AzureDiskVolumeSou"
-  "rce\022\020\n\010diskName\030\001 \001(\014\022\017\n\007diskURI\030\002 \001(\014\022\023"
-  "\n\013cachingMode\030\003 \001(\014\022\016\n\006fsType\030\004 \001(\014\022\020\n\010r"
-  "eadOnly\030\005 \001(\010\022\014\n\004kind\030\006 \001(\014\"s\n\037AzureFile"
-  "PersistentVolumeSource\022\022\n\nsecretName\030\001 \001"
-  "(\014\022\021\n\tshareName\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\022"
-  "\027\n\017secretNamespace\030\004 \001(\014\"P\n\025AzureFileVol"
-  "umeSource\022\022\n\nsecretName\030\001 \001(\014\022\021\n\tshareNa"
-  "me\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\"\202\001\n\007Binding\022B"
-  "\n\010metadata\030\001 \001(\01320.k8s.io.apimachinery.p"
-  "kg.apis.meta.v1.ObjectMeta\0223\n\006target\030\002 \001"
-  "(\0132#.k8s.io.api.core.v1.ObjectReference\""
-  "\322\004\n\031CSIPersistentVolumeSource\022\016\n\006driver\030"
-  "\001 \001(\014\022\024\n\014volumeHandle\030\002 \001(\014\022\020\n\010readOnly\030"
-  "\003 \001(\010\022\016\n\006fsType\030\004 \001(\014\022]\n\020volumeAttribute"
-  "s\030\005 \003(\0132C.k8s.io.api.core.v1.CSIPersiste"
-  "ntVolumeSource.VolumeAttributesEntry\022G\n\032"
-  "controllerPublishSecretRef\030\006 \001(\0132#.k8s.i"
-  "o.api.core.v1.SecretReference\022\?\n\022nodeSta"
-  "geSecretRef\030\007 \001(\0132#.k8s.io.api.core.v1.S"
-  "ecretReference\022A\n\024nodePublishSecretRef\030\010"
-  " \001(\0132#.k8s.io.api.core.v1.SecretReferenc"
-  "e\022F\n\031controllerExpandSecretRef\030\t \001(\0132#.k"
-  "8s.io.api.core.v1.SecretReference\022@\n\023nod"
-  "eExpandSecretRef\030\n \001(\0132#.k8s.io.api.core"
-  ".v1.SecretReference\0327\n\025VolumeAttributesE"
-  "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\231\002\n"
-  "\017CSIVolumeSource\022\016\n\006driver\030\001 \001(\014\022\020\n\010read"
-  "Only\030\002 \001(\010\022\016\n\006fsType\030\003 \001(\014\022S\n\020volumeAttr"
-  "ibutes\030\004 \003(\01329.k8s.io.api.core.v1.CSIVol"
-  "umeSource.VolumeAttributesEntry\022F\n\024nodeP"
-  "ublishSecretRef\030\005 \001(\0132(.k8s.io.api.core."
-  "v1.LocalObjectReference\0327\n\025VolumeAttribu"
-  "tesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001"
-  "\")\n\014Capabilities\022\013\n\003add\030\001 \003(\t\022\014\n\004drop\030\002 "
-  "\003(\t\"\252\001\n\034CephFSPersistentVolumeSource\022\020\n\010"
-  "monitors\030\001 \003(\t\022\014\n\004path\030\002 \001(\014\022\014\n\004user\030\003 \001"
-  "(\014\022\022\n\nsecretFile\030\004 \001(\014\0226\n\tsecretRef\030\005 \001("
-  "\0132#.k8s.io.api.core.v1.SecretReference\022\020"
-  "\n\010readOnly\030\006 \001(\010\"\245\001\n\022CephFSVolumeSource\022"
-  "\020\n\010monitors\030\001 \003(\t\022\014\n\004path\030\002 \001(\014\022\014\n\004user\030"
-  "\003 \001(\014\022\022\n\nsecretFile\030\004 \001(\014\022;\n\tsecretRef\030\005"
-  " \001(\0132(.k8s.io.api.core.v1.LocalObjectRef"
-  "erence\022\020\n\010readOnly\030\006 \001(\010\"\212\001\n\034CinderPersi"
-  "stentVolumeSource\022\020\n\010volumeID\030\001 \001(\014\022\016\n\006f"
-  "sType\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\0226\n\tsecretR"
-  "ef\030\004 \001(\0132#.k8s.io.api.core.v1.SecretRefe"
-  "rence\"\205\001\n\022CinderVolumeSource\022\020\n\010volumeID"
+  "ry_pkg_util_intstr_generated.proto\"Y\n\tPo"
+  "dOrNode\022$\n\003pod\030\001 \002(\0132\027.k8s.io.api.core.v"
+  "1.Pod\022&\n\004node\030\002 \002(\0132\030.k8s.io.api.core.v1"
+  ".Node\"i\n AWSElasticBlockStoreVolumeSourc"
+  "e\022\020\n\010volumeID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\021\n\tp"
+  "artition\030\003 \001(\005\022\020\n\010readOnly\030\004 \001(\010\"\266\001\n\010Aff"
+  "inity\0226\n\014nodeAffinity\030\001 \001(\0132 .k8s.io.api"
+  ".core.v1.NodeAffinity\0224\n\013podAffinity\030\002 \001"
+  "(\0132\037.k8s.io.api.core.v1.PodAffinity\022<\n\017p"
+  "odAntiAffinity\030\003 \001(\0132#.k8s.io.api.core.v"
+  "1.PodAntiAffinity\"2\n\016AttachedVolume\022\014\n\004n"
+  "ame\030\001 \001(\014\022\022\n\ndevicePath\030\002 \001(\014\"N\n\tAvoidPo"
+  "ds\022A\n\017preferAvoidPods\030\001 \003(\0132(.k8s.io.api"
+  ".core.v1.PreferAvoidPodsEntry\"\177\n\025AzureDi"
+  "skVolumeSource\022\020\n\010diskName\030\001 \001(\014\022\017\n\007disk"
+  "URI\030\002 \001(\014\022\023\n\013cachingMode\030\003 \001(\014\022\016\n\006fsType"
+  "\030\004 \001(\014\022\020\n\010readOnly\030\005 \001(\010\022\014\n\004kind\030\006 \001(\014\"s"
+  "\n\037AzureFilePersistentVolumeSource\022\022\n\nsec"
+  "retName\030\001 \001(\014\022\021\n\tshareName\030\002 \001(\014\022\020\n\010read"
+  "Only\030\003 \001(\010\022\027\n\017secretNamespace\030\004 \001(\014\"P\n\025A"
+  "zureFileVolumeSource\022\022\n\nsecretName\030\001 \001(\014"
+  "\022\021\n\tshareName\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\"\202\001"
+  "\n\007Binding\022B\n\010metadata\030\001 \001(\01320.k8s.io.api"
+  "machinery.pkg.apis.meta.v1.ObjectMeta\0223\n"
+  "\006target\030\002 \001(\0132#.k8s.io.api.core.v1.Objec"
+  "tReference\"\322\004\n\031CSIPersistentVolumeSource"
+  "\022\016\n\006driver\030\001 \001(\014\022\024\n\014volumeHandle\030\002 \001(\014\022\020"
+  "\n\010readOnly\030\003 \001(\010\022\016\n\006fsType\030\004 \001(\014\022]\n\020volu"
+  "meAttributes\030\005 \003(\0132C.k8s.io.api.core.v1."
+  "CSIPersistentVolumeSource.VolumeAttribut"
+  "esEntry\022G\n\032controllerPublishSecretRef\030\006 "
+  "\001(\0132#.k8s.io.api.core.v1.SecretReference"
+  "\022\?\n\022nodeStageSecretRef\030\007 \001(\0132#.k8s.io.ap"
+  "i.core.v1.SecretReference\022A\n\024nodePublish"
+  "SecretRef\030\010 \001(\0132#.k8s.io.api.core.v1.Sec"
+  "retReference\022F\n\031controllerExpandSecretRe"
+  "f\030\t \001(\0132#.k8s.io.api.core.v1.SecretRefer"
+  "ence\022@\n\023nodeExpandSecretRef\030\n \001(\0132#.k8s."
+  "io.api.core.v1.SecretReference\0327\n\025Volume"
+  "AttributesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 "
+  "\001(\t:\0028\001\"\231\002\n\017CSIVolumeSource\022\016\n\006driver\030\001 "
+  "\001(\014\022\020\n\010readOnly\030\002 \001(\010\022\016\n\006fsType\030\003 \001(\014\022S\n"
+  "\020volumeAttributes\030\004 \003(\01329.k8s.io.api.cor"
+  "e.v1.CSIVolumeSource.VolumeAttributesEnt"
+  "ry\022F\n\024nodePublishSecretRef\030\005 \001(\0132(.k8s.i"
+  "o.api.core.v1.LocalObjectReference\0327\n\025Vo"
+  "lumeAttributesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu"
+  "e\030\002 \001(\t:\0028\001\")\n\014Capabilities\022\013\n\003add\030\001 \003(\t"
+  "\022\014\n\004drop\030\002 \003(\t\"\252\001\n\034CephFSPersistentVolum"
+  "eSource\022\020\n\010monitors\030\001 \003(\t\022\014\n\004path\030\002 \001(\014\022"
+  "\014\n\004user\030\003 \001(\014\022\022\n\nsecretFile\030\004 \001(\014\0226\n\tsec"
+  "retRef\030\005 \001(\0132#.k8s.io.api.core.v1.Secret"
+  "Reference\022\020\n\010readOnly\030\006 \001(\010\"\245\001\n\022CephFSVo"
+  "lumeSource\022\020\n\010monitors\030\001 \003(\t\022\014\n\004path\030\002 \001"
+  "(\014\022\014\n\004user\030\003 \001(\014\022\022\n\nsecretFile\030\004 \001(\014\022;\n\t"
+  "secretRef\030\005 \001(\0132(.k8s.io.api.core.v1.Loc"
+  "alObjectReference\022\020\n\010readOnly\030\006 \001(\010\"\212\001\n\034"
+  "CinderPersistentVolumeSource\022\020\n\010volumeID"
   "\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010"
-  "\022;\n\tsecretRef\030\004 \001(\0132(.k8s.io.api.core.v1"
-  ".LocalObjectReference\"K\n\013ClaimSource\022\031\n\021"
-  "resourceClaimName\030\001 \001(\014\022!\n\031resourceClaim"
-  "TemplateName\030\002 \001(\014\"(\n\016ClientIPConfig\022\026\n\016"
-  "timeoutSeconds\030\001 \001(\005\"\254\001\n\034ClusterTrustBun"
-  "dleProjection\022\014\n\004name\030\001 \001(\014\022\022\n\nsignerNam"
-  "e\030\002 \001(\014\022J\n\rlabelSelector\030\003 \001(\01323.k8s.io."
-  "apimachinery.pkg.apis.meta.v1.LabelSelec"
-  "tor\022\020\n\010optional\030\005 \001(\010\022\014\n\004path\030\004 \001(\014\"R\n\022C"
-  "omponentCondition\022\014\n\004type\030\001 \001(\014\022\016\n\006statu"
-  "s\030\002 \001(\014\022\017\n\007message\030\003 \001(\014\022\r\n\005error\030\004 \001(\014\""
-  "\221\001\n\017ComponentStatus\022B\n\010metadata\030\001 \001(\01320."
-  "k8s.io.apimachinery.pkg.apis.meta.v1.Obj"
-  "ectMeta\022:\n\nconditions\030\002 \003(\0132&.k8s.io.api"
-  ".core.v1.ComponentCondition\"\213\001\n\023Componen"
-  "tStatusList\022@\n\010metadata\030\001 \001(\0132..k8s.io.a"
-  "pimachinery.pkg.apis.meta.v1.ListMeta\0222\n"
-  "\005items\030\002 \003(\0132#.k8s.io.api.core.v1.Compon"
-  "entStatus\"\274\002\n\tConfigMap\022B\n\010metadata\030\001 \001("
-  "\01320.k8s.io.apimachinery.pkg.apis.meta.v1"
-  ".ObjectMeta\022\021\n\timmutable\030\004 \001(\010\0225\n\004data\030\002"
-  " \003(\0132\'.k8s.io.api.core.v1.ConfigMap.Data"
-  "Entry\022A\n\nbinaryData\030\003 \003(\0132-.k8s.io.api.c"
-  "ore.v1.ConfigMap.BinaryDataEntry\032+\n\tData"
-  "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n"
-  "\017BinaryDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002"
-  " \001(\014:\0028\001\"n\n\022ConfigMapEnvSource\022F\n\024localO"
-  "bjectReference\030\001 \001(\0132(.k8s.io.api.core.v"
-  "1.LocalObjectReference\022\020\n\010optional\030\002 \001(\010"
-  "\"}\n\024ConfigMapKeySelector\022F\n\024localObjectR"
-  "eference\030\001 \001(\0132(.k8s.io.api.core.v1.Loca"
-  "lObjectReference\022\013\n\003key\030\002 \001(\014\022\020\n\010optiona"
-  "l\030\003 \001(\010\"\177\n\rConfigMapList\022@\n\010metadata\030\001 \001"
-  "(\0132..k8s.io.apimachinery.pkg.apis.meta.v"
-  "1.ListMeta\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.c"
-  "ore.v1.ConfigMap\"|\n\031ConfigMapNodeConfigS"
-  "ource\022\021\n\tnamespace\030\001 \001(\014\022\014\n\004name\030\002 \001(\014\022\013"
-  "\n\003uid\030\003 \001(\014\022\027\n\017resourceVersion\030\004 \001(\014\022\030\n\020"
-  "kubeletConfigKey\030\005 \001(\014\"\235\001\n\023ConfigMapProj"
-  "ection\022F\n\024localObjectReference\030\001 \001(\0132(.k"
-  "8s.io.api.core.v1.LocalObjectReference\022,"
-  "\n\005items\030\002 \003(\0132\035.k8s.io.api.core.v1.KeyTo"
-  "Path\022\020\n\010optional\030\004 \001(\010\"\264\001\n\025ConfigMapVolu"
-  "meSource\022F\n\024localObjectReference\030\001 \001(\0132("
-  ".k8s.io.api.core.v1.LocalObjectReference"
-  "\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.core.v1.Key"
-  "ToPath\022\023\n\013defaultMode\030\003 \001(\005\022\020\n\010optional\030"
-  "\004 \001(\010\"\377\006\n\tContainer\022\014\n\004name\030\001 \001(\014\022\r\n\005ima"
-  "ge\030\002 \001(\014\022\017\n\007command\030\003 \003(\t\022\014\n\004args\030\004 \003(\t\022"
-  "\022\n\nworkingDir\030\005 \001(\014\0220\n\005ports\030\006 \003(\0132!.k8s"
-  ".io.api.core.v1.ContainerPort\0222\n\007envFrom"
-  "\030\023 \003(\0132!.k8s.io.api.core.v1.EnvFromSourc"
-  "e\022\'\n\003env\030\007 \003(\0132\032.k8s.io.api.core.v1.EnvV"
-  "ar\022;\n\tresources\030\010 \001(\0132(.k8s.io.api.core."
-  "v1.ResourceRequirements\022\?\n\014resizePolicy\030"
-  "\027 \003(\0132).k8s.io.api.core.v1.ContainerResi"
-  "zePolicy\022\025\n\rrestartPolicy\030\030 \001(\014\0225\n\014volum"
-  "eMounts\030\t \003(\0132\037.k8s.io.api.core.v1.Volum"
-  "eMount\0227\n\rvolumeDevices\030\025 \003(\0132 .k8s.io.a"
-  "pi.core.v1.VolumeDevice\0220\n\rlivenessProbe"
-  "\030\n \001(\0132\031.k8s.io.api.core.v1.Probe\0221\n\016rea"
-  "dinessProbe\030\013 \001(\0132\031.k8s.io.api.core.v1.P"
-  "robe\022/\n\014startupProbe\030\026 \001(\0132\031.k8s.io.api."
-  "core.v1.Probe\0220\n\tlifecycle\030\014 \001(\0132\035.k8s.i"
-  "o.api.core.v1.Lifecycle\022\036\n\026terminationMe"
-  "ssagePath\030\r \001(\014\022 \n\030terminationMessagePol"
-  "icy\030\024 \001(\014\022\027\n\017imagePullPolicy\030\016 \001(\014\022<\n\017se"
-  "curityContext\030\017 \001(\0132#.k8s.io.api.core.v1"
-  ".SecurityContext\022\r\n\005stdin\030\020 \001(\010\022\021\n\tstdin"
-  "Once\030\021 \001(\010\022\013\n\003tty\030\022 \001(\010\"2\n\016ContainerImag"
-  "e\022\r\n\005names\030\001 \003(\t\022\021\n\tsizeBytes\030\002 \001(\003\"h\n\rC"
-  "ontainerPort\022\014\n\004name\030\001 \001(\014\022\020\n\010hostPort\030\002"
-  " \001(\005\022\025\n\rcontainerPort\030\003 \001(\005\022\020\n\010protocol\030"
-  "\004 \001(\014\022\016\n\006hostIP\030\005 \001(\014\"D\n\025ContainerResize"
-  "Policy\022\024\n\014resourceName\030\001 \001(\014\022\025\n\rrestartP"
-  "olicy\030\002 \001(\014\"\312\001\n\016ContainerState\022:\n\007waitin"
-  "g\030\001 \001(\0132).k8s.io.api.core.v1.ContainerSt"
-  "ateWaiting\022:\n\007running\030\002 \001(\0132).k8s.io.api"
-  ".core.v1.ContainerStateRunning\022@\n\ntermin"
-  "ated\030\003 \001(\0132,.k8s.io.api.core.v1.Containe"
-  "rStateTerminated\"V\n\025ContainerStateRunnin"
-  "g\022=\n\tstartedAt\030\001 \001(\0132*.k8s.io.apimachine"
-  "ry.pkg.apis.meta.v1.Time\"\361\001\n\030ContainerSt"
-  "ateTerminated\022\020\n\010exitCode\030\001 \001(\005\022\016\n\006signa"
-  "l\030\002 \001(\005\022\016\n\006reason\030\003 \001(\014\022\017\n\007message\030\004 \001(\014"
-  "\022=\n\tstartedAt\030\005 \001(\0132*.k8s.io.apimachiner"
-  "y.pkg.apis.meta.v1.Time\022>\n\nfinishedAt\030\006 "
-  "\001(\0132*.k8s.io.apimachinery.pkg.apis.meta."
-  "v1.Time\022\023\n\013containerID\030\007 \001(\014\"8\n\025Containe"
-  "rStateWaiting\022\016\n\006reason\030\001 \001(\014\022\017\n\007message"
-  "\030\002 \001(\014\"\365\003\n\017ContainerStatus\022\014\n\004name\030\001 \001(\014"
-  "\0221\n\005state\030\002 \001(\0132\".k8s.io.api.core.v1.Con"
-  "tainerState\0225\n\tlastState\030\003 \001(\0132\".k8s.io."
-  "api.core.v1.ContainerState\022\r\n\005ready\030\004 \001("
-  "\010\022\024\n\014restartCount\030\005 \001(\005\022\r\n\005image\030\006 \001(\014\022\017"
-  "\n\007imageID\030\007 \001(\014\022\023\n\013containerID\030\010 \001(\014\022\017\n\007"
-  "started\030\t \001(\010\022W\n\022allocatedResources\030\n \003("
-  "\0132;.k8s.io.api.core.v1.ContainerStatus.A"
-  "llocatedResourcesEntry\022;\n\tresources\030\013 \001("
-  "\0132(.k8s.io.api.core.v1.ResourceRequireme"
-  "nts\032i\n\027AllocatedResourcesEntry\022\013\n\003key\030\001 "
-  "\001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachinery"
-  ".pkg.api.resource.Quantity:\0028\001\"\036\n\016Daemon"
-  "Endpoint\022\014\n\004Port\030\001 \001(\005\"Q\n\025DownwardAPIPro"
-  "jection\0228\n\005items\030\001 \003(\0132).k8s.io.api.core"
-  ".v1.DownwardAPIVolumeFile\"\263\001\n\025DownwardAP"
-  "IVolumeFile\022\014\n\004path\030\001 \001(\014\0229\n\010fieldRef\030\002 "
-  "\001(\0132\'.k8s.io.api.core.v1.ObjectFieldSele"
-  "ctor\022C\n\020resourceFieldRef\030\003 \001(\0132).k8s.io."
-  "api.core.v1.ResourceFieldSelector\022\014\n\004mod"
-  "e\030\004 \001(\005\"h\n\027DownwardAPIVolumeSource\0228\n\005it"
-  "ems\030\001 \003(\0132).k8s.io.api.core.v1.DownwardA"
-  "PIVolumeFile\022\023\n\013defaultMode\030\002 \001(\005\"i\n\024Emp"
-  "tyDirVolumeSource\022\016\n\006medium\030\001 \001(\014\022A\n\tsiz"
-  "eLimit\030\002 \001(\0132..k8s.io.apimachinery.pkg.a"
-  "pi.resource.Quantity\"y\n\017EndpointAddress\022"
-  "\n\n\002ip\030\001 \001(\014\022\020\n\010hostname\030\003 \001(\014\022\020\n\010nodeNam"
-  "e\030\004 \001(\014\0226\n\ttargetRef\030\002 \001(\0132#.k8s.io.api."
-  "core.v1.ObjectReference\"Q\n\014EndpointPort\022"
-  "\014\n\004name\030\001 \001(\014\022\014\n\004port\030\002 \001(\005\022\020\n\010protocol\030"
-  "\003 \001(\014\022\023\n\013appProtocol\030\004 \001(\014\"\271\001\n\016EndpointS"
-  "ubset\0226\n\taddresses\030\001 \003(\0132#.k8s.io.api.co"
-  "re.v1.EndpointAddress\022>\n\021notReadyAddress"
-  "es\030\002 \003(\0132#.k8s.io.api.core.v1.EndpointAd"
-  "dress\022/\n\005ports\030\003 \003(\0132 .k8s.io.api.core.v"
-  "1.EndpointPort\"\204\001\n\tEndpoints\022B\n\010metadata"
-  "\030\001 \001(\01320.k8s.io.apimachinery.pkg.apis.me"
-  "ta.v1.ObjectMeta\0223\n\007subsets\030\002 \003(\0132\".k8s."
-  "io.api.core.v1.EndpointSubset\"\177\n\rEndpoin"
-  "tsList\022@\n\010metadata\030\001 \001(\0132..k8s.io.apimac"
-  "hinery.pkg.apis.meta.v1.ListMeta\022,\n\005item"
-  "s\030\002 \003(\0132\035.k8s.io.api.core.v1.Endpoints\"\225"
-  "\001\n\rEnvFromSource\022\016\n\006prefix\030\001 \001(\014\022<\n\014conf"
-  "igMapRef\030\002 \001(\0132&.k8s.io.api.core.v1.Conf"
-  "igMapEnvSource\0226\n\tsecretRef\030\003 \001(\0132#.k8s."
-  "io.api.core.v1.SecretEnvSource\"Z\n\006EnvVar"
-  "\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\0223\n\tvalueFr"
-  "om\030\003 \001(\0132 .k8s.io.api.core.v1.EnvVarSour"
-  "ce\"\216\002\n\014EnvVarSource\0229\n\010fieldRef\030\001 \001(\0132\'."
-  "k8s.io.api.core.v1.ObjectFieldSelector\022C"
-  "\n\020resourceFieldRef\030\002 \001(\0132).k8s.io.api.co"
-  "re.v1.ResourceFieldSelector\022A\n\017configMap"
-  "KeyRef\030\003 \001(\0132(.k8s.io.api.core.v1.Config"
-  "MapKeySelector\022;\n\014secretKeyRef\030\004 \001(\0132%.k"
-  "8s.io.api.core.v1.SecretKeySelector\"\201\001\n\022"
-  "EphemeralContainer\022N\n\030ephemeralContainer"
-  "Common\030\001 \001(\0132,.k8s.io.api.core.v1.Epheme"
-  "ralContainerCommon\022\033\n\023targetContainerNam"
-  "e\030\002 \001(\014\"\216\007\n\030EphemeralContainerCommon\022\014\n\004"
-  "name\030\001 \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007command\030\003 \003"
-  "(\t\022\014\n\004args\030\004 \003(\t\022\022\n\nworkingDir\030\005 \001(\014\0220\n\005"
-  "ports\030\006 \003(\0132!.k8s.io.api.core.v1.Contain"
-  "erPort\0222\n\007envFrom\030\023 \003(\0132!.k8s.io.api.cor"
-  "e.v1.EnvFromSource\022\'\n\003env\030\007 \003(\0132\032.k8s.io"
-  ".api.core.v1.EnvVar\022;\n\tresources\030\010 \001(\0132("
-  ".k8s.io.api.core.v1.ResourceRequirements"
-  "\022\?\n\014resizePolicy\030\027 \003(\0132).k8s.io.api.core"
-  ".v1.ContainerResizePolicy\022\025\n\rrestartPoli"
-  "cy\030\030 \001(\014\0225\n\014volumeMounts\030\t \003(\0132\037.k8s.io."
-  "api.core.v1.VolumeMount\0227\n\rvolumeDevices"
-  "\030\025 \003(\0132 .k8s.io.api.core.v1.VolumeDevice"
-  "\0220\n\rlivenessProbe\030\n \001(\0132\031.k8s.io.api.cor"
-  "e.v1.Probe\0221\n\016readinessProbe\030\013 \001(\0132\031.k8s"
-  ".io.api.core.v1.Probe\022/\n\014startupProbe\030\026 "
-  "\001(\0132\031.k8s.io.api.core.v1.Probe\0220\n\tlifecy"
-  "cle\030\014 \001(\0132\035.k8s.io.api.core.v1.Lifecycle"
-  "\022\036\n\026terminationMessagePath\030\r \001(\014\022 \n\030term"
-  "inationMessagePolicy\030\024 \001(\014\022\027\n\017imagePullP"
-  "olicy\030\016 \001(\014\022<\n\017securityContext\030\017 \001(\0132#.k"
-  "8s.io.api.core.v1.SecurityContext\022\r\n\005std"
-  "in\030\020 \001(\010\022\021\n\tstdinOnce\030\021 \001(\010\022\013\n\003tty\030\022 \001(\010"
-  "\"g\n\025EphemeralVolumeSource\022N\n\023volumeClaim"
-  "Template\030\001 \001(\01321.k8s.io.api.core.v1.Pers"
-  "istentVolumeClaimTemplate\"\360\004\n\005Event\022B\n\010m"
-  "etadata\030\001 \001(\01320.k8s.io.apimachinery.pkg."
-  "apis.meta.v1.ObjectMeta\022;\n\016involvedObjec"
-  "t\030\002 \001(\0132#.k8s.io.api.core.v1.ObjectRefer"
-  "ence\022\016\n\006reason\030\003 \001(\014\022\017\n\007message\030\004 \001(\014\022/\n"
-  "\006source\030\005 \001(\0132\037.k8s.io.api.core.v1.Event"
-  "Source\022B\n\016firstTimestamp\030\006 \001(\0132*.k8s.io."
-  "apimachinery.pkg.apis.meta.v1.Time\022A\n\rla"
-  "stTimestamp\030\007 \001(\0132*.k8s.io.apimachinery."
-  "pkg.apis.meta.v1.Time\022\r\n\005count\030\010 \001(\005\022\014\n\004"
-  "type\030\t \001(\014\022B\n\teventTime\030\n \001(\0132/.k8s.io.a"
-  "pimachinery.pkg.apis.meta.v1.MicroTime\022/"
-  "\n\006series\030\013 \001(\0132\037.k8s.io.api.core.v1.Even"
-  "tSeries\022\016\n\006action\030\014 \001(\014\0224\n\007related\030\r \001(\013"
-  "2#.k8s.io.api.core.v1.ObjectReference\022\032\n"
-  "\022reportingComponent\030\016 \001(\014\022\031\n\021reportingIn"
-  "stance\030\017 \001(\014\"w\n\tEventList\022@\n\010metadata\030\001 "
-  "\001(\0132..k8s.io.apimachinery.pkg.apis.meta."
-  "v1.ListMeta\022(\n\005items\030\002 \003(\0132\031.k8s.io.api."
-  "core.v1.Event\"g\n\013EventSeries\022\r\n\005count\030\001 "
-  "\001(\005\022I\n\020lastObservedTime\030\002 \001(\0132/.k8s.io.a"
-  "pimachinery.pkg.apis.meta.v1.MicroTime\"."
-  "\n\013EventSource\022\021\n\tcomponent\030\001 \001(\014\022\014\n\004host"
-  "\030\002 \001(\014\"\035\n\nExecAction\022\017\n\007command\030\001 \003(\t\"b\n"
-  "\016FCVolumeSource\022\022\n\ntargetWWNs\030\001 \003(\t\022\013\n\003l"
-  "un\030\002 \001(\005\022\016\n\006fsType\030\003 \001(\014\022\020\n\010readOnly\030\004 \001"
-  "(\010\022\r\n\005wwids\030\005 \003(\t\"\204\002\n\032FlexPersistentVolu"
-  "meSource\022\016\n\006driver\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014"
-  "\0226\n\tsecretRef\030\003 \001(\0132#.k8s.io.api.core.v1"
-  ".SecretReference\022\020\n\010readOnly\030\004 \001(\010\022L\n\007op"
-  "tions\030\005 \003(\0132;.k8s.io.api.core.v1.FlexPer"
-  "sistentVolumeSource.OptionsEntry\032.\n\014Opti"
-  "onsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001"
-  "\"\365\001\n\020FlexVolumeSource\022\016\n\006driver\030\001 \001(\014\022\016\n"
-  "\006fsType\030\002 \001(\014\022;\n\tsecretRef\030\003 \001(\0132(.k8s.i"
-  "o.api.core.v1.LocalObjectReference\022\020\n\010re"
-  "adOnly\030\004 \001(\010\022B\n\007options\030\005 \003(\01321.k8s.io.a"
-  "pi.core.v1.FlexVolumeSource.OptionsEntry"
-  "\032.\n\014OptionsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002"
-  " \001(\t:\0028\001\"\?\n\023FlockerVolumeSource\022\023\n\013datas"
-  "etName\030\001 \001(\014\022\023\n\013datasetUUID\030\002 \001(\014\"d\n\035GCE"
-  "PersistentDiskVolumeSource\022\016\n\006pdName\030\001 \001"
-  "(\014\022\016\n\006fsType\030\002 \001(\014\022\021\n\tpartition\030\003 \001(\005\022\020\n"
-  "\010readOnly\030\004 \001(\010\"+\n\nGRPCAction\022\014\n\004port\030\001 "
-  "\001(\005\022\017\n\007service\030\002 \001(\014\"N\n\023GitRepoVolumeSou"
-  "rce\022\022\n\nrepository\030\001 \001(\014\022\020\n\010revision\030\002 \001("
-  "\014\022\021\n\tdirectory\030\003 \001(\014\"p\n\037GlusterfsPersist"
-  "entVolumeSource\022\021\n\tendpoints\030\001 \001(\014\022\014\n\004pa"
-  "th\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\022\032\n\022endpointsN"
-  "amespace\030\004 \001(\014\"J\n\025GlusterfsVolumeSource\022"
-  "\021\n\tendpoints\030\001 \001(\014\022\014\n\004path\030\002 \001(\014\022\020\n\010read"
-  "Only\030\003 \001(\010\"\260\001\n\rHTTPGetAction\022\014\n\004path\030\001 \001"
-  "(\014\022>\n\004port\030\002 \001(\01320.k8s.io.apimachinery.p"
-  "kg.util.intstr.IntOrString\022\014\n\004host\030\003 \001(\014"
-  "\022\016\n\006scheme\030\004 \001(\014\0223\n\013httpHeaders\030\005 \003(\0132\036."
-  "k8s.io.api.core.v1.HTTPHeader\")\n\nHTTPHea"
-  "der\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\"*\n\tHost"
-  "Alias\022\n\n\002ip\030\001 \001(\014\022\021\n\thostnames\030\002 \003(\t\"\024\n\006"
-  "HostIP\022\n\n\002ip\030\001 \001(\014\"2\n\024HostPathVolumeSour"
-  "ce\022\014\n\004path\030\001 \001(\014\022\014\n\004type\030\002 \001(\014\"\233\002\n\033ISCSI"
-  "PersistentVolumeSource\022\024\n\014targetPortal\030\001"
-  " \001(\014\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001(\005\022\026\n\016iscsiI"
-  "nterface\030\004 \001(\014\022\016\n\006fsType\030\005 \001(\014\022\020\n\010readOn"
-  "ly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021chapAuthDis"
-  "covery\030\010 \001(\010\022\027\n\017chapAuthSession\030\013 \001(\010\0226\n"
-  "\tsecretRef\030\n \001(\0132#.k8s.io.api.core.v1.Se"
-  "cretReference\022\025\n\rinitiatorName\030\014 \001(\014\"\226\002\n"
-  "\021ISCSIVolumeSource\022\024\n\014targetPortal\030\001 \001(\014"
-  "\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001(\005\022\026\n\016iscsiInter"
-  "face\030\004 \001(\014\022\016\n\006fsType\030\005 \001(\014\022\020\n\010readOnly\030\006"
-  " \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021chapAuthDiscove"
-  "ry\030\010 \001(\010\022\027\n\017chapAuthSession\030\013 \001(\010\022;\n\tsec"
-  "retRef\030\n \001(\0132(.k8s.io.api.core.v1.LocalO"
-  "bjectReference\022\025\n\rinitiatorName\030\014 \001(\014\"4\n"
-  "\tKeyToPath\022\013\n\003key\030\001 \001(\014\022\014\n\004path\030\002 \001(\014\022\014\n"
-  "\004mode\030\003 \001(\005\"{\n\tLifecycle\0227\n\tpostStart\030\001 "
-  "\001(\0132$.k8s.io.api.core.v1.LifecycleHandle"
-  "r\0225\n\007preStop\030\002 \001(\0132$.k8s.io.api.core.v1."
-  "LifecycleHandler\"\334\001\n\020LifecycleHandler\022,\n"
-  "\004exec\030\001 \001(\0132\036.k8s.io.api.core.v1.ExecAct"
-  "ion\0222\n\007httpGet\030\002 \001(\0132!.k8s.io.api.core.v"
-  "1.HTTPGetAction\0226\n\ttcpSocket\030\003 \001(\0132#.k8s"
-  ".io.api.core.v1.TCPSocketAction\022.\n\005sleep"
-  "\030\004 \001(\0132\037.k8s.io.api.core.v1.SleepAction\""
-  "\202\001\n\nLimitRange\022B\n\010metadata\030\001 \001(\01320.k8s.i"
-  "o.apimachinery.pkg.apis.meta.v1.ObjectMe"
-  "ta\0220\n\004spec\030\002 \001(\0132\".k8s.io.api.core.v1.Li"
-  "mitRangeSpec\"\354\006\n\016LimitRangeItem\022\014\n\004type\030"
-  "\001 \001(\014\0228\n\003max\030\002 \003(\0132+.k8s.io.api.core.v1."
-  "LimitRangeItem.MaxEntry\0228\n\003min\030\003 \003(\0132+.k"
-  "8s.io.api.core.v1.LimitRangeItem.MinEntr"
-  "y\022@\n\007default\030\004 \003(\0132/.k8s.io.api.core.v1."
-  "LimitRangeItem.DefaultEntry\022N\n\016defaultRe"
-  "quest\030\005 \003(\01326.k8s.io.api.core.v1.LimitRa"
-  "ngeItem.DefaultRequestEntry\022Z\n\024maxLimitR"
-  "equestRatio\030\006 \003(\0132<.k8s.io.api.core.v1.L"
-  "imitRangeItem.MaxLimitRequestRatioEntry\032"
-  "Z\n\010MaxEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132"
-  "..k8s.io.apimachinery.pkg.api.resource.Q"
-  "uantity:\0028\001\032Z\n\010MinEntry\022\013\n\003key\030\001 \001(\t\022=\n\005"
-  "value\030\002 \001(\0132..k8s.io.apimachinery.pkg.ap"
-  "i.resource.Quantity:\0028\001\032^\n\014DefaultEntry\022"
-  "\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.api"
-  "machinery.pkg.api.resource.Quantity:\0028\001\032"
-  "e\n\023DefaultRequestEntry\022\013\n\003key\030\001 \001(\t\022=\n\005v"
-  "alue\030\002 \001(\0132..k8s.io.apimachinery.pkg.api"
-  ".resource.Quantity:\0028\001\032k\n\031MaxLimitReques"
-  "tRatioEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132"
-  "..k8s.io.apimachinery.pkg.api.resource.Q"
-  "uantity:\0028\001\"\201\001\n\016LimitRangeList\022@\n\010metada"
-  "ta\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis."
-  "meta.v1.ListMeta\022-\n\005items\030\002 \003(\0132\036.k8s.io"
-  ".api.core.v1.LimitRange\"D\n\016LimitRangeSpe"
-  "c\0222\n\006limits\030\001 \003(\0132\".k8s.io.api.core.v1.L"
-  "imitRangeItem\"\206\001\n\004List\022@\n\010metadata\030\001 \001(\013"
+  "\0226\n\tsecretRef\030\004 \001(\0132#.k8s.io.api.core.v1"
+  ".SecretReference\"\205\001\n\022CinderVolumeSource\022"
+  "\020\n\010volumeID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\020\n\010rea"
+  "dOnly\030\003 \001(\010\022;\n\tsecretRef\030\004 \001(\0132(.k8s.io."
+  "api.core.v1.LocalObjectReference\"K\n\013Clai"
+  "mSource\022\031\n\021resourceClaimName\030\001 \001(\014\022!\n\031re"
+  "sourceClaimTemplateName\030\002 \001(\014\"(\n\016ClientI"
+  "PConfig\022\026\n\016timeoutSeconds\030\001 \001(\005\"\254\001\n\034Clus"
+  "terTrustBundleProjection\022\014\n\004name\030\001 \001(\014\022\022"
+  "\n\nsignerName\030\002 \001(\014\022J\n\rlabelSelector\030\003 \001("
+  "\01323.k8s.io.apimachinery.pkg.apis.meta.v1"
+  ".LabelSelector\022\020\n\010optional\030\005 \001(\010\022\014\n\004path"
+  "\030\004 \001(\014\"R\n\022ComponentCondition\022\014\n\004type\030\001 \001"
+  "(\014\022\016\n\006status\030\002 \001(\014\022\017\n\007message\030\003 \001(\014\022\r\n\005e"
+  "rror\030\004 \001(\014\"\221\001\n\017ComponentStatus\022B\n\010metada"
+  "ta\030\001 \001(\01320.k8s.io.apimachinery.pkg.apis."
+  "meta.v1.ObjectMeta\022:\n\nconditions\030\002 \003(\0132&"
+  ".k8s.io.api.core.v1.ComponentCondition\"\213"
+  "\001\n\023ComponentStatusList\022@\n\010metadata\030\001 \001(\013"
   "2..k8s.io.apimachinery.pkg.apis.meta.v1."
-  "ListMeta\022<\n\005items\030\002 \003(\0132-.k8s.io.apimach"
-  "inery.pkg.runtime.RawExtension\"r\n\023LoadBa"
-  "lancerIngress\022\n\n\002ip\030\001 \001(\014\022\020\n\010hostname\030\002 "
-  "\001(\014\022\016\n\006ipMode\030\003 \001(\014\022-\n\005ports\030\004 \003(\0132\036.k8s"
-  ".io.api.core.v1.PortStatus\"N\n\022LoadBalanc"
-  "erStatus\0228\n\007ingress\030\001 \003(\0132\'.k8s.io.api.c"
-  "ore.v1.LoadBalancerIngress\"$\n\024LocalObjec"
-  "tReference\022\014\n\004name\030\001 \001(\014\"1\n\021LocalVolumeS"
-  "ource\022\014\n\004path\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\"M\n\022M"
-  "odifyVolumeStatus\022\'\n\037targetVolumeAttribu"
-  "tesClassName\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\"A\n\017NF"
-  "SVolumeSource\022\016\n\006server\030\001 \001(\014\022\014\n\004path\030\002 "
-  "\001(\014\022\020\n\010readOnly\030\003 \001(\010\"\265\001\n\tNamespace\022B\n\010m"
-  "etadata\030\001 \001(\01320.k8s.io.apimachinery.pkg."
-  "apis.meta.v1.ObjectMeta\022/\n\004spec\030\002 \001(\0132!."
-  "k8s.io.api.core.v1.NamespaceSpec\0223\n\006stat"
-  "us\030\003 \001(\0132#.k8s.io.api.core.v1.NamespaceS"
-  "tatus\"\233\001\n\022NamespaceCondition\022\014\n\004type\030\001 \001"
-  "(\014\022\016\n\006status\030\002 \001(\014\022F\n\022lastTransitionTime"
-  "\030\004 \001(\0132*.k8s.io.apimachinery.pkg.apis.me"
-  "ta.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 "
-  "\001(\014\"\177\n\rNamespaceList\022@\n\010metadata\030\001 \001(\0132."
-  ".k8s.io.apimachinery.pkg.apis.meta.v1.Li"
-  "stMeta\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.core."
-  "v1.Namespace\"#\n\rNamespaceSpec\022\022\n\nfinaliz"
-  "ers\030\001 \003(\t\"\\\n\017NamespaceStatus\022\r\n\005phase\030\001 "
-  "\001(\014\022:\n\nconditions\030\002 \003(\0132&.k8s.io.api.cor"
-  "e.v1.NamespaceCondition\"\246\001\n\004Node\022B\n\010meta"
-  "data\030\001 \001(\01320.k8s.io.apimachinery.pkg.api"
-  "s.meta.v1.ObjectMeta\022*\n\004spec\030\002 \001(\0132\034.k8s"
-  ".io.api.core.v1.NodeSpec\022.\n\006status\030\003 \001(\013"
-  "2\036.k8s.io.api.core.v1.NodeStatus\",\n\013Node"
-  "Address\022\014\n\004type\030\001 \001(\014\022\017\n\007address\030\002 \001(\014\"\316"
-  "\001\n\014NodeAffinity\022X\n.requiredDuringSchedul"
-  "ingIgnoredDuringExecution\030\001 \001(\0132 .k8s.io"
-  ".api.core.v1.NodeSelector\022d\n/preferredDu"
-  "ringSchedulingIgnoredDuringExecution\030\002 \003"
-  "(\0132+.k8s.io.api.core.v1.PreferredSchedul"
-  "ingTerm\"\335\001\n\rNodeCondition\022\014\n\004type\030\001 \001(\014\022"
-  "\016\n\006status\030\002 \001(\014\022E\n\021lastHeartbeatTime\030\003 \001"
-  "(\0132*.k8s.io.apimachinery.pkg.apis.meta.v"
-  "1.Time\022F\n\022lastTransitionTime\030\004 \001(\0132*.k8s"
-  ".io.apimachinery.pkg.apis.meta.v1.Time\022\016"
-  "\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001(\014\"T\n\020NodeC"
-  "onfigSource\022@\n\tconfigMap\030\002 \001(\0132-.k8s.io."
-  "api.core.v1.ConfigMapNodeConfigSource\"\314\001"
-  "\n\020NodeConfigStatus\0226\n\010assigned\030\001 \001(\0132$.k"
-  "8s.io.api.core.v1.NodeConfigSource\0224\n\006ac"
-  "tive\030\002 \001(\0132$.k8s.io.api.core.v1.NodeConf"
-  "igSource\022;\n\rlastKnownGood\030\003 \001(\0132$.k8s.io"
-  ".api.core.v1.NodeConfigSource\022\r\n\005error\030\004"
-  " \001(\014\"R\n\023NodeDaemonEndpoints\022;\n\017kubeletEn"
-  "dpoint\030\001 \001(\0132\".k8s.io.api.core.v1.Daemon"
-  "Endpoint\"u\n\010NodeList\022@\n\010metadata\030\001 \001(\0132."
-  ".k8s.io.apimachinery.pkg.apis.meta.v1.Li"
-  "stMeta\022\'\n\005items\030\002 \003(\0132\030.k8s.io.api.core."
-  "v1.Node\" \n\020NodeProxyOptions\022\014\n\004path\030\001 \001("
-  "\014\"\263\001\n\rNodeResources\022A\n\010capacity\030\001 \003(\0132/."
-  "k8s.io.api.core.v1.NodeResources.Capacit"
-  "yEntry\032_\n\rCapacityEntry\022\013\n\003key\030\001 \001(\t\022=\n\005"
-  "value\030\002 \001(\0132..k8s.io.apimachinery.pkg.ap"
-  "i.resource.Quantity:\0028\001\"O\n\014NodeSelector\022"
-  "\?\n\021nodeSelectorTerms\030\001 \003(\0132$.k8s.io.api."
-  "core.v1.NodeSelectorTerm\"H\n\027NodeSelector"
-  "Requirement\022\013\n\003key\030\001 \001(\014\022\020\n\010operator\030\002 \001"
-  "(\014\022\016\n\006values\030\003 \003(\t\"\233\001\n\020NodeSelectorTerm\022"
-  "E\n\020matchExpressions\030\001 \003(\0132+.k8s.io.api.c"
-  "ore.v1.NodeSelectorRequirement\022@\n\013matchF"
-  "ields\030\002 \003(\0132+.k8s.io.api.core.v1.NodeSel"
-  "ectorRequirement\"\323\001\n\010NodeSpec\022\017\n\007podCIDR"
-  "\030\001 \001(\014\022\020\n\010podCIDRs\030\007 \003(\t\022\022\n\nproviderID\030\003"
-  " \001(\014\022\025\n\runschedulable\030\004 \001(\010\022)\n\006taints\030\005 "
-  "\003(\0132\031.k8s.io.api.core.v1.Taint\022:\n\014config"
-  "Source\030\006 \001(\0132$.k8s.io.api.core.v1.NodeCo"
-  "nfigSource\022\022\n\nexternalID\030\002 \001(\014\"\206\006\n\nNodeS"
-  "tatus\022>\n\010capacity\030\001 \003(\0132,.k8s.io.api.cor"
-  "e.v1.NodeStatus.CapacityEntry\022D\n\013allocat"
-  "able\030\002 \003(\0132/.k8s.io.api.core.v1.NodeStat"
-  "us.AllocatableEntry\022\r\n\005phase\030\003 \001(\014\0225\n\nco"
-  "nditions\030\004 \003(\0132!.k8s.io.api.core.v1.Node"
-  "Condition\0222\n\taddresses\030\005 \003(\0132\037.k8s.io.ap"
-  "i.core.v1.NodeAddress\022@\n\017daemonEndpoints"
-  "\030\006 \001(\0132\'.k8s.io.api.core.v1.NodeDaemonEn"
-  "dpoints\0224\n\010nodeInfo\030\007 \001(\0132\".k8s.io.api.c"
-  "ore.v1.NodeSystemInfo\0222\n\006images\030\010 \003(\0132\"."
-  "k8s.io.api.core.v1.ContainerImage\022\024\n\014vol"
-  "umesInUse\030\t \003(\t\022;\n\017volumesAttached\030\n \003(\013"
-  "2\".k8s.io.api.core.v1.AttachedVolume\0224\n\006"
-  "config\030\013 \001(\0132$.k8s.io.api.core.v1.NodeCo"
-  "nfigStatus\032_\n\rCapacityEntry\022\013\n\003key\030\001 \001(\t"
-  "\022=\n\005value\030\002 \001(\0132..k8s.io.apimachinery.pk"
-  "g.api.resource.Quantity:\0028\001\032b\n\020Allocatab"
-  "leEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8"
-  "s.io.apimachinery.pkg.api.resource.Quant"
-  "ity:\0028\001\"\361\001\n\016NodeSystemInfo\022\021\n\tmachineID\030"
-  "\001 \001(\014\022\022\n\nsystemUUID\030\002 \001(\014\022\016\n\006bootID\030\003 \001("
-  "\014\022\025\n\rkernelVersion\030\004 \001(\014\022\017\n\007osImage\030\005 \001("
-  "\014\022\037\n\027containerRuntimeVersion\030\006 \001(\014\022\026\n\016ku"
-  "beletVersion\030\007 \001(\014\022\030\n\020kubeProxyVersion\030\010"
-  " \001(\014\022\027\n\017operatingSystem\030\t \001(\014\022\024\n\014archite"
-  "cture\030\n \001(\014\"<\n\023ObjectFieldSelector\022\022\n\nap"
-  "iVersion\030\001 \001(\014\022\021\n\tfieldPath\030\002 \001(\014\"\215\001\n\017Ob"
-  "jectReference\022\014\n\004kind\030\001 \001(\014\022\021\n\tnamespace"
-  "\030\002 \001(\014\022\014\n\004name\030\003 \001(\014\022\013\n\003uid\030\004 \001(\014\022\022\n\napi"
-  "Version\030\005 \001(\014\022\027\n\017resourceVersion\030\006 \001(\014\022\021"
-  "\n\tfieldPath\030\007 \001(\014\"\312\001\n\020PersistentVolume\022B"
-  "\n\010metadata\030\001 \001(\01320.k8s.io.apimachinery.p"
-  "kg.apis.meta.v1.ObjectMeta\0226\n\004spec\030\002 \001(\013"
-  "2(.k8s.io.api.core.v1.PersistentVolumeSp"
-  "ec\022:\n\006status\030\003 \001(\0132*.k8s.io.api.core.v1."
-  "PersistentVolumeStatus\"\331\001\n\025PersistentVol"
-  "umeClaim\022B\n\010metadata\030\001 \001(\01320.k8s.io.apim"
-  "achinery.pkg.apis.meta.v1.ObjectMeta\022;\n\004"
-  "spec\030\002 \001(\0132-.k8s.io.api.core.v1.Persiste"
-  "ntVolumeClaimSpec\022\?\n\006status\030\003 \001(\0132/.k8s."
-  "io.api.core.v1.PersistentVolumeClaimStat"
-  "us\"\352\001\n\036PersistentVolumeClaimCondition\022\014\n"
-  "\004type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022A\n\rlastProbe"
-  "Time\030\003 \001(\0132*.k8s.io.apimachinery.pkg.api"
-  "s.meta.v1.Time\022F\n\022lastTransitionTime\030\004 \001"
-  "(\0132*.k8s.io.apimachinery.pkg.apis.meta.v"
-  "1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001(\014\""
-  "\227\001\n\031PersistentVolumeClaimList\022@\n\010metadat"
-  "a\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis.m"
-  "eta.v1.ListMeta\0228\n\005items\030\002 \003(\0132).k8s.io."
-  "api.core.v1.PersistentVolumeClaim\"\243\003\n\031Pe"
-  "rsistentVolumeClaimSpec\022\023\n\013accessModes\030\001"
-  " \003(\t\022E\n\010selector\030\004 \001(\01323.k8s.io.apimachi"
-  "nery.pkg.apis.meta.v1.LabelSelector\022A\n\tr"
-  "esources\030\002 \001(\0132..k8s.io.api.core.v1.Volu"
-  "meResourceRequirements\022\022\n\nvolumeName\030\003 \001"
-  "(\014\022\030\n\020storageClassName\030\005 \001(\014\022\022\n\nvolumeMo"
-  "de\030\006 \001(\014\022A\n\ndataSource\030\007 \001(\0132-.k8s.io.ap"
-  "i.core.v1.TypedLocalObjectReference\022\?\n\rd"
-  "ataSourceRef\030\010 \001(\0132(.k8s.io.api.core.v1."
-  "TypedObjectReference\022!\n\031volumeAttributes"
-  "ClassName\030\t \001(\014\"\256\006\n\033PersistentVolumeClai"
-  "mStatus\022\r\n\005phase\030\001 \001(\014\022\023\n\013accessModes\030\002 "
-  "\003(\t\022O\n\010capacity\030\003 \003(\0132=.k8s.io.api.core."
-  "v1.PersistentVolumeClaimStatus.CapacityE"
-  "ntry\022F\n\nconditions\030\004 \003(\01322.k8s.io.api.co"
-  "re.v1.PersistentVolumeClaimCondition\022c\n\022"
-  "allocatedResources\030\005 \003(\0132G.k8s.io.api.co"
-  "re.v1.PersistentVolumeClaimStatus.Alloca"
-  "tedResourcesEntry\022q\n\031allocatedResourceSt"
-  "atuses\030\007 \003(\0132N.k8s.io.api.core.v1.Persis"
-  "tentVolumeClaimStatus.AllocatedResourceS"
-  "tatusesEntry\022(\n currentVolumeAttributesC"
-  "lassName\030\010 \001(\014\022B\n\022modifyVolumeStatus\030\t \001"
-  "(\0132&.k8s.io.api.core.v1.ModifyVolumeStat"
-  "us\032_\n\rCapacityEntry\022\013\n\003key\030\001 \001(\t\022=\n\005valu"
-  "e\030\002 \001(\0132..k8s.io.apimachinery.pkg.api.re"
-  "source.Quantity:\0028\001\032i\n\027AllocatedResource"
-  "sEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s"
-  ".io.apimachinery.pkg.api.resource.Quanti"
-  "ty:\0028\001\032@\n\036AllocatedResourceStatusesEntry"
-  "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\240\001\n\035Per"
-  "sistentVolumeClaimTemplate\022B\n\010metadata\030\001"
-  " \001(\01320.k8s.io.apimachinery.pkg.apis.meta"
-  ".v1.ObjectMeta\022;\n\004spec\030\002 \001(\0132-.k8s.io.ap"
-  "i.core.v1.PersistentVolumeClaimSpec\"H\n!P"
-  "ersistentVolumeClaimVolumeSource\022\021\n\tclai"
-  "mName\030\001 \001(\014\022\020\n\010readOnly\030\002 \001(\010\"\215\001\n\024Persis"
-  "tentVolumeList\022@\n\010metadata\030\001 \001(\0132..k8s.i"
-  "o.apimachinery.pkg.apis.meta.v1.ListMeta"
-  "\0223\n\005items\030\002 \003(\0132$.k8s.io.api.core.v1.Per"
-  "sistentVolume\"\275\013\n\026PersistentVolumeSource"
-  "\022L\n\021gcePersistentDisk\030\001 \001(\01321.k8s.io.api"
-  ".core.v1.GCEPersistentDiskVolumeSource\022R"
-  "\n\024awsElasticBlockStore\030\002 \001(\01324.k8s.io.ap"
-  "i.core.v1.AWSElasticBlockStoreVolumeSour"
-  "ce\022:\n\010hostPath\030\003 \001(\0132(.k8s.io.api.core.v"
-  "1.HostPathVolumeSource\022F\n\tglusterfs\030\004 \001("
-  "\01323.k8s.io.api.core.v1.GlusterfsPersiste"
-  "ntVolumeSource\0220\n\003nfs\030\005 \001(\0132#.k8s.io.api"
-  ".core.v1.NFSVolumeSource\022:\n\003rbd\030\006 \001(\0132-."
-  "k8s.io.api.core.v1.RBDPersistentVolumeSo"
-  "urce\022>\n\005iscsi\030\007 \001(\0132/.k8s.io.api.core.v1"
-  ".ISCSIPersistentVolumeSource\022@\n\006cinder\030\010"
-  " \001(\01320.k8s.io.api.core.v1.CinderPersiste"
-  "ntVolumeSource\022@\n\006cephfs\030\t \001(\01320.k8s.io."
-  "api.core.v1.CephFSPersistentVolumeSource"
-  "\022.\n\002fc\030\n \001(\0132\".k8s.io.api.core.v1.FCVolu"
-  "meSource\0228\n\007flocker\030\013 \001(\0132\'.k8s.io.api.c"
-  "ore.v1.FlockerVolumeSource\022B\n\nflexVolume"
-  "\030\014 \001(\0132..k8s.io.api.core.v1.FlexPersiste"
-  "ntVolumeSource\022F\n\tazureFile\030\r \001(\01323.k8s."
-  "io.api.core.v1.AzureFilePersistentVolume"
-  "Source\022I\n\rvsphereVolume\030\016 \001(\01322.k8s.io.a"
-  "pi.core.v1.VsphereVirtualDiskVolumeSourc"
-  "e\0228\n\007quobyte\030\017 \001(\0132\'.k8s.io.api.core.v1."
-  "QuobyteVolumeSource\022<\n\tazureDisk\030\020 \001(\0132)"
-  ".k8s.io.api.core.v1.AzureDiskVolumeSourc"
-  "e\022R\n\024photonPersistentDisk\030\021 \001(\01324.k8s.io"
-  ".api.core.v1.PhotonPersistentDiskVolumeS"
-  "ource\022@\n\016portworxVolume\030\022 \001(\0132(.k8s.io.a"
-  "pi.core.v1.PortworxVolumeSource\022B\n\007scale"
-  "IO\030\023 \001(\01321.k8s.io.api.core.v1.ScaleIOPer"
-  "sistentVolumeSource\0224\n\005local\030\024 \001(\0132%.k8s"
-  ".io.api.core.v1.LocalVolumeSource\022F\n\tsto"
-  "rageos\030\025 \001(\01323.k8s.io.api.core.v1.Storag"
-  "eOSPersistentVolumeSource\022:\n\003csi\030\026 \001(\0132-"
-  ".k8s.io.api.core.v1.CSIPersistentVolumeS"
-  "ource\"\245\004\n\024PersistentVolumeSpec\022H\n\010capaci"
-  "ty\030\001 \003(\01326.k8s.io.api.core.v1.Persistent"
-  "VolumeSpec.CapacityEntry\022J\n\026persistentVo"
-  "lumeSource\030\002 \001(\0132*.k8s.io.api.core.v1.Pe"
-  "rsistentVolumeSource\022\023\n\013accessModes\030\003 \003("
-  "\t\0225\n\010claimRef\030\004 \001(\0132#.k8s.io.api.core.v1"
-  ".ObjectReference\022%\n\035persistentVolumeRecl"
-  "aimPolicy\030\005 \001(\014\022\030\n\020storageClassName\030\006 \001("
-  "\014\022\024\n\014mountOptions\030\007 \003(\t\022\022\n\nvolumeMode\030\010 "
-  "\001(\014\022<\n\014nodeAffinity\030\t \001(\0132&.k8s.io.api.c"
-  "ore.v1.VolumeNodeAffinity\022!\n\031volumeAttri"
-  "butesClassName\030\n \001(\014\032_\n\rCapacityEntry\022\013\n"
-  "\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apima"
-  "chinery.pkg.api.resource.Quantity:\0028\001\"\225\001"
-  "\n\026PersistentVolumeStatus\022\r\n\005phase\030\001 \001(\014\022"
-  "\017\n\007message\030\002 \001(\014\022\016\n\006reason\030\003 \001(\014\022K\n\027last"
-  "PhaseTransitionTime\030\004 \001(\0132*.k8s.io.apima"
-  "chinery.pkg.apis.meta.v1.Time\"@\n PhotonP"
-  "ersistentDiskVolumeSource\022\014\n\004pdID\030\001 \001(\014\022"
-  "\016\n\006fsType\030\002 \001(\014\"\243\001\n\003Pod\022B\n\010metadata\030\001 \001("
-  "\01320.k8s.io.apimachinery.pkg.apis.meta.v1"
-  ".ObjectMeta\022)\n\004spec\030\002 \001(\0132\033.k8s.io.api.c"
-  "ore.v1.PodSpec\022-\n\006status\030\003 \001(\0132\035.k8s.io."
-  "api.core.v1.PodStatus\"\320\001\n\013PodAffinity\022[\n"
-  ".requiredDuringSchedulingIgnoredDuringEx"
-  "ecution\030\001 \003(\0132#.k8s.io.api.core.v1.PodAf"
-  "finityTerm\022d\n/preferredDuringSchedulingI"
-  "gnoredDuringExecution\030\002 \003(\0132+.k8s.io.api"
-  ".core.v1.WeightedPodAffinityTerm\"\211\002\n\017Pod"
-  "AffinityTerm\022J\n\rlabelSelector\030\001 \001(\01323.k8"
-  "s.io.apimachinery.pkg.apis.meta.v1.Label"
-  "Selector\022\022\n\nnamespaces\030\002 \003(\t\022\023\n\013topology"
-  "Key\030\003 \001(\014\022N\n\021namespaceSelector\030\004 \001(\01323.k"
-  "8s.io.apimachinery.pkg.apis.meta.v1.Labe"
-  "lSelector\022\026\n\016matchLabelKeys\030\005 \003(\t\022\031\n\021mis"
-  "matchLabelKeys\030\006 \003(\t\"\324\001\n\017PodAntiAffinity"
-  "\022[\n.requiredDuringSchedulingIgnoredDurin"
-  "gExecution\030\001 \003(\0132#.k8s.io.api.core.v1.Po"
-  "dAffinityTerm\022d\n/preferredDuringScheduli"
-  "ngIgnoredDuringExecution\030\002 \003(\0132+.k8s.io."
-  "api.core.v1.WeightedPodAffinityTerm\"a\n\020P"
-  "odAttachOptions\022\r\n\005stdin\030\001 \001(\010\022\016\n\006stdout"
-  "\030\002 \001(\010\022\016\n\006stderr\030\003 \001(\010\022\013\n\003tty\030\004 \001(\010\022\021\n\tc"
-  "ontainer\030\005 \001(\014\"\330\001\n\014PodCondition\022\014\n\004type\030"
-  "\001 \001(\014\022\016\n\006status\030\002 \001(\014\022A\n\rlastProbeTime\030\003"
-  " \001(\0132*.k8s.io.apimachinery.pkg.apis.meta"
-  ".v1.Time\022F\n\022lastTransitionTime\030\004 \001(\0132*.k"
-  "8s.io.apimachinery.pkg.apis.meta.v1.Time"
-  "\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001(\014\"n\n\014Pod"
-  "DNSConfig\022\023\n\013nameservers\030\001 \003(\t\022\020\n\010search"
-  "es\030\002 \003(\t\0227\n\007options\030\003 \003(\0132&.k8s.io.api.c"
-  "ore.v1.PodDNSConfigOption\"1\n\022PodDNSConfi"
-  "gOption\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\"p\n\016"
-  "PodExecOptions\022\r\n\005stdin\030\001 \001(\010\022\016\n\006stdout\030"
-  "\002 \001(\010\022\016\n\006stderr\030\003 \001(\010\022\013\n\003tty\030\004 \001(\010\022\021\n\tco"
-  "ntainer\030\005 \001(\014\022\017\n\007command\030\006 \003(\t\"\023\n\005PodIP\022"
-  "\n\n\002ip\030\001 \001(\014\"s\n\007PodList\022@\n\010metadata\030\001 \001(\013"
-  "2..k8s.io.apimachinery.pkg.apis.meta.v1."
-  "ListMeta\022&\n\005items\030\002 \003(\0132\027.k8s.io.api.cor"
-  "e.v1.Pod\"\372\001\n\rPodLogOptions\022\021\n\tcontainer\030"
-  "\001 \001(\014\022\016\n\006follow\030\002 \001(\010\022\020\n\010previous\030\003 \001(\010\022"
-  "\024\n\014sinceSeconds\030\004 \001(\003\022=\n\tsinceTime\030\005 \001(\013"
-  "2*.k8s.io.apimachinery.pkg.apis.meta.v1."
-  "Time\022\022\n\ntimestamps\030\006 \001(\010\022\021\n\ttailLines\030\007 "
-  "\001(\003\022\022\n\nlimitBytes\030\010 \001(\003\022$\n\034insecureSkipT"
-  "LSVerifyBackend\030\t \001(\010\"\025\n\005PodOS\022\014\n\004name\030\001"
-  " \001(\014\"&\n\025PodPortForwardOptions\022\r\n\005ports\030\001"
-  " \003(\005\"\037\n\017PodProxyOptions\022\014\n\004path\030\001 \001(\014\")\n"
-  "\020PodReadinessGate\022\025\n\rconditionType\030\001 \001(\014"
-  "\"Q\n\020PodResourceClaim\022\014\n\004name\030\001 \001(\014\022/\n\006so"
-  "urce\030\002 \001(\0132\037.k8s.io.api.core.v1.ClaimSou"
-  "rce\"A\n\026PodResourceClaimStatus\022\014\n\004name\030\001 "
-  "\001(\014\022\031\n\021resourceClaimName\030\002 \001(\014\"!\n\021PodSch"
-  "edulingGate\022\014\n\004name\030\001 \001(\014\"\213\003\n\022PodSecurit"
-  "yContext\022:\n\016seLinuxOptions\030\001 \001(\0132\".k8s.i"
-  "o.api.core.v1.SELinuxOptions\022I\n\016windowsO"
-  "ptions\030\010 \001(\01321.k8s.io.api.core.v1.Window"
-  "sSecurityContextOptions\022\021\n\trunAsUser\030\002 \001"
-  "(\003\022\022\n\nrunAsGroup\030\006 \001(\003\022\024\n\014runAsNonRoot\030\003"
-  " \001(\010\022\032\n\022supplementalGroups\030\004 \003(\003\022\017\n\007fsGr"
-  "oup\030\005 \001(\003\022+\n\007sysctls\030\007 \003(\0132\032.k8s.io.api."
-  "core.v1.Sysctl\022\033\n\023fsGroupChangePolicy\030\t "
-  "\001(\014\022:\n\016seccompProfile\030\n \001(\0132\".k8s.io.api"
-  ".core.v1.SeccompProfile\"[\n\014PodSignature\022"
-  "K\n\rpodController\030\001 \001(\01324.k8s.io.apimachi"
-  "nery.pkg.apis.meta.v1.OwnerReference\"\235\r\n"
-  "\007PodSpec\022+\n\007volumes\030\001 \003(\0132\032.k8s.io.api.c"
-  "ore.v1.Volume\0225\n\016initContainers\030\024 \003(\0132\035."
-  "k8s.io.api.core.v1.Container\0221\n\ncontaine"
-  "rs\030\002 \003(\0132\035.k8s.io.api.core.v1.Container\022"
-  "C\n\023ephemeralContainers\030\" \003(\0132&.k8s.io.ap"
-  "i.core.v1.EphemeralContainer\022\025\n\rrestartP"
-  "olicy\030\003 \001(\014\022%\n\035terminationGracePeriodSec"
-  "onds\030\004 \001(\003\022\035\n\025activeDeadlineSeconds\030\005 \001("
-  "\003\022\021\n\tdnsPolicy\030\006 \001(\014\022C\n\014nodeSelector\030\007 \003"
-  "(\0132-.k8s.io.api.core.v1.PodSpec.NodeSele"
-  "ctorEntry\022\032\n\022serviceAccountName\030\010 \001(\014\022\026\n"
-  "\016serviceAccount\030\t \001(\014\022$\n\034automountServic"
-  "eAccountToken\030\025 \001(\010\022\020\n\010nodeName\030\n \001(\014\022\023\n"
-  "\013hostNetwork\030\013 \001(\010\022\017\n\007hostPID\030\014 \001(\010\022\017\n\007h"
-  "ostIPC\030\r \001(\010\022\035\n\025shareProcessNamespace\030\033 "
-  "\001(\010\022\?\n\017securityContext\030\016 \001(\0132&.k8s.io.ap"
-  "i.core.v1.PodSecurityContext\022B\n\020imagePul"
-  "lSecrets\030\017 \003(\0132(.k8s.io.api.core.v1.Loca"
-  "lObjectReference\022\020\n\010hostname\030\020 \001(\014\022\021\n\tsu"
-  "bdomain\030\021 \001(\014\022.\n\010affinity\030\022 \001(\0132\034.k8s.io"
-  ".api.core.v1.Affinity\022\025\n\rschedulerName\030\023"
-  " \001(\014\0223\n\013tolerations\030\026 \003(\0132\036.k8s.io.api.c"
-  "ore.v1.Toleration\0222\n\013hostAliases\030\027 \003(\0132\035"
-  ".k8s.io.api.core.v1.HostAlias\022\031\n\021priorit"
-  "yClassName\030\030 \001(\014\022\020\n\010priority\030\031 \001(\005\0223\n\tdn"
-  "sConfig\030\032 \001(\0132 .k8s.io.api.core.v1.PodDN"
-  "SConfig\022<\n\016readinessGates\030\034 \003(\0132$.k8s.io"
-  ".api.core.v1.PodReadinessGate\022\030\n\020runtime"
-  "ClassName\030\035 \001(\014\022\032\n\022enableServiceLinks\030\036 "
-  "\001(\010\022\030\n\020preemptionPolicy\030\037 \001(\014\022;\n\010overhea"
-  "d\030  \003(\0132).k8s.io.api.core.v1.PodSpec.Ove"
-  "rheadEntry\022O\n\031topologySpreadConstraints\030"
-  "! \003(\0132,.k8s.io.api.core.v1.TopologySprea"
-  "dConstraint\022\031\n\021setHostnameAsFQDN\030# \001(\010\022%"
-  "\n\002os\030$ \001(\0132\031.k8s.io.api.core.v1.PodOS\022\021\n"
-  "\thostUsers\030% \001(\010\022>\n\017schedulingGates\030& \003("
-  "\0132%.k8s.io.api.core.v1.PodSchedulingGate"
-  "\022<\n\016resourceClaims\030\' \003(\0132$.k8s.io.api.co"
-  "re.v1.PodResourceClaim\0323\n\021NodeSelectorEn"
-  "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032_\n\rO"
-  "verheadEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\013"
-  "2..k8s.io.apimachinery.pkg.api.resource."
-  "Quantity:\0028\001\"\374\004\n\tPodStatus\022\r\n\005phase\030\001 \001("
-  "\014\0224\n\nconditions\030\002 \003(\0132 .k8s.io.api.core."
-  "v1.PodCondition\022\017\n\007message\030\003 \001(\014\022\016\n\006reas"
-  "on\030\004 \001(\014\022\031\n\021nominatedNodeName\030\013 \001(\014\022\016\n\006h"
-  "ostIP\030\005 \001(\014\022+\n\007hostIPs\030\020 \003(\0132\032.k8s.io.ap"
-  "i.core.v1.HostIP\022\r\n\005podIP\030\006 \001(\014\022)\n\006podIP"
-  "s\030\014 \003(\0132\031.k8s.io.api.core.v1.PodIP\022=\n\tst"
-  "artTime\030\007 \001(\0132*.k8s.io.apimachinery.pkg."
-  "apis.meta.v1.Time\022B\n\025initContainerStatus"
-  "es\030\n \003(\0132#.k8s.io.api.core.v1.ContainerS"
-  "tatus\022>\n\021containerStatuses\030\010 \003(\0132#.k8s.i"
-  "o.api.core.v1.ContainerStatus\022\020\n\010qosClas"
-  "s\030\t \001(\014\022G\n\032ephemeralContainerStatuses\030\r "
-  "\003(\0132#.k8s.io.api.core.v1.ContainerStatus"
-  "\022\016\n\006resize\030\016 \001(\014\022I\n\025resourceClaimStatuse"
-  "s\030\017 \003(\0132*.k8s.io.api.core.v1.PodResource"
-  "ClaimStatus\"\204\001\n\017PodStatusResult\022B\n\010metad"
-  "ata\030\001 \001(\01320.k8s.io.apimachinery.pkg.apis"
-  ".meta.v1.ObjectMeta\022-\n\006status\030\002 \001(\0132\035.k8"
-  "s.io.api.core.v1.PodStatus\"\210\001\n\013PodTempla"
-  "te\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimachine"
-  "ry.pkg.apis.meta.v1.ObjectMeta\0225\n\010templa"
-  "te\030\002 \001(\0132#.k8s.io.api.core.v1.PodTemplat"
-  "eSpec\"\203\001\n\017PodTemplateList\022@\n\010metadata\030\001 "
-  "\001(\0132..k8s.io.apimachinery.pkg.apis.meta."
-  "v1.ListMeta\022.\n\005items\030\002 \003(\0132\037.k8s.io.api."
-  "core.v1.PodTemplate\"\200\001\n\017PodTemplateSpec\022"
-  "B\n\010metadata\030\001 \001(\01320.k8s.io.apimachinery."
-  "pkg.apis.meta.v1.ObjectMeta\022)\n\004spec\030\002 \001("
-  "\0132\033.k8s.io.api.core.v1.PodSpec\";\n\nPortSt"
-  "atus\022\014\n\004port\030\001 \001(\005\022\020\n\010protocol\030\002 \001(\014\022\r\n\005"
-  "error\030\003 \001(\014\"J\n\024PortworxVolumeSource\022\020\n\010v"
-  "olumeID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\020\n\010readOnl"
-  "y\030\003 \001(\010\"\034\n\rPreconditions\022\013\n\003uid\030\001 \001(\014\"\261\001"
-  "\n\024PreferAvoidPodsEntry\0226\n\014podSignature\030\001"
-  " \001(\0132 .k8s.io.api.core.v1.PodSignature\022@"
-  "\n\014evictionTime\030\002 \001(\0132*.k8s.io.apimachine"
-  "ry.pkg.apis.meta.v1.Time\022\016\n\006reason\030\003 \001(\014"
-  "\022\017\n\007message\030\004 \001(\014\"c\n\027PreferredScheduling"
-  "Term\022\016\n\006weight\030\001 \001(\005\0228\n\npreference\030\002 \001(\013"
-  "2$.k8s.io.api.core.v1.NodeSelectorTerm\"\341"
-  "\001\n\005Probe\0221\n\007handler\030\001 \001(\0132 .k8s.io.api.c"
-  "ore.v1.ProbeHandler\022\033\n\023initialDelaySecon"
-  "ds\030\002 \001(\005\022\026\n\016timeoutSeconds\030\003 \001(\005\022\025\n\rperi"
-  "odSeconds\030\004 \001(\005\022\030\n\020successThreshold\030\005 \001("
-  "\005\022\030\n\020failureThreshold\030\006 \001(\005\022%\n\035terminati"
-  "onGracePeriodSeconds\030\007 \001(\003\"\326\001\n\014ProbeHand"
-  "ler\022,\n\004exec\030\001 \001(\0132\036.k8s.io.api.core.v1.E"
-  "xecAction\0222\n\007httpGet\030\002 \001(\0132!.k8s.io.api."
-  "core.v1.HTTPGetAction\0226\n\ttcpSocket\030\003 \001(\013"
-  "2#.k8s.io.api.core.v1.TCPSocketAction\022,\n"
-  "\004grpc\030\004 \001(\0132\036.k8s.io.api.core.v1.GRPCAct"
-  "ion\"c\n\025ProjectedVolumeSource\0225\n\007sources\030"
-  "\001 \003(\0132$.k8s.io.api.core.v1.VolumeProject"
-  "ion\022\023\n\013defaultMode\030\002 \001(\005\"v\n\023QuobyteVolum"
-  "eSource\022\020\n\010registry\030\001 \001(\014\022\016\n\006volume\030\002 \001("
-  "\014\022\020\n\010readOnly\030\003 \001(\010\022\014\n\004user\030\004 \001(\014\022\r\n\005gro"
-  "up\030\005 \001(\014\022\016\n\006tenant\030\006 \001(\014\"\303\001\n\031RBDPersiste"
-  "ntVolumeSource\022\020\n\010monitors\030\001 \003(\t\022\r\n\005imag"
-  "e\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004pool\030\004 \001(\014\022\014\n"
-  "\004user\030\005 \001(\014\022\017\n\007keyring\030\006 \001(\014\0226\n\tsecretRe"
-  "f\030\007 \001(\0132#.k8s.io.api.core.v1.SecretRefer"
-  "ence\022\020\n\010readOnly\030\010 \001(\010\"\276\001\n\017RBDVolumeSour"
-  "ce\022\020\n\010monitors\030\001 \003(\t\022\r\n\005image\030\002 \001(\014\022\016\n\006f"
-  "sType\030\003 \001(\014\022\014\n\004pool\030\004 \001(\014\022\014\n\004user\030\005 \001(\014\022"
-  "\017\n\007keyring\030\006 \001(\014\022;\n\tsecretRef\030\007 \001(\0132(.k8"
-  "s.io.api.core.v1.LocalObjectReference\022\020\n"
-  "\010readOnly\030\010 \001(\010\"r\n\017RangeAllocation\022B\n\010me"
+  "ListMeta\0222\n\005items\030\002 \003(\0132#.k8s.io.api.cor"
+  "e.v1.ComponentStatus\"\274\002\n\tConfigMap\022B\n\010me"
   "tadata\030\001 \001(\01320.k8s.io.apimachinery.pkg.a"
-  "pis.meta.v1.ObjectMeta\022\r\n\005range\030\002 \001(\014\022\014\n"
-  "\004data\030\003 \001(\014\"\331\001\n\025ReplicationController\022B\n"
+  "pis.meta.v1.ObjectMeta\022\021\n\timmutable\030\004 \001("
+  "\010\0225\n\004data\030\002 \003(\0132\'.k8s.io.api.core.v1.Con"
+  "figMap.DataEntry\022A\n\nbinaryData\030\003 \003(\0132-.k"
+  "8s.io.api.core.v1.ConfigMap.BinaryDataEn"
+  "try\032+\n\tDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002"
+  " \001(\t:\0028\001\0321\n\017BinaryDataEntry\022\013\n\003key\030\001 \001(\t"
+  "\022\r\n\005value\030\002 \001(\014:\0028\001\"n\n\022ConfigMapEnvSourc"
+  "e\022F\n\024localObjectReference\030\001 \001(\0132(.k8s.io"
+  ".api.core.v1.LocalObjectReference\022\020\n\010opt"
+  "ional\030\002 \001(\010\"}\n\024ConfigMapKeySelector\022F\n\024l"
+  "ocalObjectReference\030\001 \001(\0132(.k8s.io.api.c"
+  "ore.v1.LocalObjectReference\022\013\n\003key\030\002 \001(\014"
+  "\022\020\n\010optional\030\003 \001(\010\"\177\n\rConfigMapList\022@\n\010m"
+  "etadata\030\001 \001(\0132..k8s.io.apimachinery.pkg."
+  "apis.meta.v1.ListMeta\022,\n\005items\030\002 \003(\0132\035.k"
+  "8s.io.api.core.v1.ConfigMap\"|\n\031ConfigMap"
+  "NodeConfigSource\022\021\n\tnamespace\030\001 \001(\014\022\014\n\004n"
+  "ame\030\002 \001(\014\022\013\n\003uid\030\003 \001(\014\022\027\n\017resourceVersio"
+  "n\030\004 \001(\014\022\030\n\020kubeletConfigKey\030\005 \001(\014\"\235\001\n\023Co"
+  "nfigMapProjection\022F\n\024localObjectReferenc"
+  "e\030\001 \001(\0132(.k8s.io.api.core.v1.LocalObject"
+  "Reference\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.co"
+  "re.v1.KeyToPath\022\020\n\010optional\030\004 \001(\010\"\264\001\n\025Co"
+  "nfigMapVolumeSource\022F\n\024localObjectRefere"
+  "nce\030\001 \001(\0132(.k8s.io.api.core.v1.LocalObje"
+  "ctReference\022,\n\005items\030\002 \003(\0132\035.k8s.io.api."
+  "core.v1.KeyToPath\022\023\n\013defaultMode\030\003 \001(\005\022\020"
+  "\n\010optional\030\004 \001(\010\"\377\006\n\tContainer\022\014\n\004name\030\001"
+  " \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007command\030\003 \003(\t\022\014\n\004"
+  "args\030\004 \003(\t\022\022\n\nworkingDir\030\005 \001(\014\0220\n\005ports\030"
+  "\006 \003(\0132!.k8s.io.api.core.v1.ContainerPort"
+  "\0222\n\007envFrom\030\023 \003(\0132!.k8s.io.api.core.v1.E"
+  "nvFromSource\022\'\n\003env\030\007 \003(\0132\032.k8s.io.api.c"
+  "ore.v1.EnvVar\022;\n\tresources\030\010 \001(\0132(.k8s.i"
+  "o.api.core.v1.ResourceRequirements\022\?\n\014re"
+  "sizePolicy\030\027 \003(\0132).k8s.io.api.core.v1.Co"
+  "ntainerResizePolicy\022\025\n\rrestartPolicy\030\030 \001"
+  "(\014\0225\n\014volumeMounts\030\t \003(\0132\037.k8s.io.api.co"
+  "re.v1.VolumeMount\0227\n\rvolumeDevices\030\025 \003(\013"
+  "2 .k8s.io.api.core.v1.VolumeDevice\0220\n\rli"
+  "venessProbe\030\n \001(\0132\031.k8s.io.api.core.v1.P"
+  "robe\0221\n\016readinessProbe\030\013 \001(\0132\031.k8s.io.ap"
+  "i.core.v1.Probe\022/\n\014startupProbe\030\026 \001(\0132\031."
+  "k8s.io.api.core.v1.Probe\0220\n\tlifecycle\030\014 "
+  "\001(\0132\035.k8s.io.api.core.v1.Lifecycle\022\036\n\026te"
+  "rminationMessagePath\030\r \001(\014\022 \n\030terminatio"
+  "nMessagePolicy\030\024 \001(\014\022\027\n\017imagePullPolicy\030"
+  "\016 \001(\014\022<\n\017securityContext\030\017 \001(\0132#.k8s.io."
+  "api.core.v1.SecurityContext\022\r\n\005stdin\030\020 \001"
+  "(\010\022\021\n\tstdinOnce\030\021 \001(\010\022\013\n\003tty\030\022 \001(\010\"2\n\016Co"
+  "ntainerImage\022\r\n\005names\030\001 \003(\t\022\021\n\tsizeBytes"
+  "\030\002 \001(\003\"h\n\rContainerPort\022\014\n\004name\030\001 \001(\014\022\020\n"
+  "\010hostPort\030\002 \001(\005\022\025\n\rcontainerPort\030\003 \001(\005\022\020"
+  "\n\010protocol\030\004 \001(\014\022\016\n\006hostIP\030\005 \001(\014\"D\n\025Cont"
+  "ainerResizePolicy\022\024\n\014resourceName\030\001 \001(\014\022"
+  "\025\n\rrestartPolicy\030\002 \001(\014\"\312\001\n\016ContainerStat"
+  "e\022:\n\007waiting\030\001 \001(\0132).k8s.io.api.core.v1."
+  "ContainerStateWaiting\022:\n\007running\030\002 \001(\0132)"
+  ".k8s.io.api.core.v1.ContainerStateRunnin"
+  "g\022@\n\nterminated\030\003 \001(\0132,.k8s.io.api.core."
+  "v1.ContainerStateTerminated\"V\n\025Container"
+  "StateRunning\022=\n\tstartedAt\030\001 \001(\0132*.k8s.io"
+  ".apimachinery.pkg.apis.meta.v1.Time\"\361\001\n\030"
+  "ContainerStateTerminated\022\020\n\010exitCode\030\001 \001"
+  "(\005\022\016\n\006signal\030\002 \001(\005\022\016\n\006reason\030\003 \001(\014\022\017\n\007me"
+  "ssage\030\004 \001(\014\022=\n\tstartedAt\030\005 \001(\0132*.k8s.io."
+  "apimachinery.pkg.apis.meta.v1.Time\022>\n\nfi"
+  "nishedAt\030\006 \001(\0132*.k8s.io.apimachinery.pkg"
+  ".apis.meta.v1.Time\022\023\n\013containerID\030\007 \001(\014\""
+  "8\n\025ContainerStateWaiting\022\016\n\006reason\030\001 \001(\014"
+  "\022\017\n\007message\030\002 \001(\014\"\365\003\n\017ContainerStatus\022\014\n"
+  "\004name\030\001 \001(\014\0221\n\005state\030\002 \001(\0132\".k8s.io.api."
+  "core.v1.ContainerState\0225\n\tlastState\030\003 \001("
+  "\0132\".k8s.io.api.core.v1.ContainerState\022\r\n"
+  "\005ready\030\004 \001(\010\022\024\n\014restartCount\030\005 \001(\005\022\r\n\005im"
+  "age\030\006 \001(\014\022\017\n\007imageID\030\007 \001(\014\022\023\n\013containerI"
+  "D\030\010 \001(\014\022\017\n\007started\030\t \001(\010\022W\n\022allocatedRes"
+  "ources\030\n \003(\0132;.k8s.io.api.core.v1.Contai"
+  "nerStatus.AllocatedResourcesEntry\022;\n\tres"
+  "ources\030\013 \001(\0132(.k8s.io.api.core.v1.Resour"
+  "ceRequirements\032i\n\027AllocatedResourcesEntr"
+  "y\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.a"
+  "pimachinery.pkg.api.resource.Quantity:\0028"
+  "\001\"\036\n\016DaemonEndpoint\022\014\n\004Port\030\001 \001(\005\"Q\n\025Dow"
+  "nwardAPIProjection\0228\n\005items\030\001 \003(\0132).k8s."
+  "io.api.core.v1.DownwardAPIVolumeFile\"\263\001\n"
+  "\025DownwardAPIVolumeFile\022\014\n\004path\030\001 \001(\014\0229\n\010"
+  "fieldRef\030\002 \001(\0132\'.k8s.io.api.core.v1.Obje"
+  "ctFieldSelector\022C\n\020resourceFieldRef\030\003 \001("
+  "\0132).k8s.io.api.core.v1.ResourceFieldSele"
+  "ctor\022\014\n\004mode\030\004 \001(\005\"h\n\027DownwardAPIVolumeS"
+  "ource\0228\n\005items\030\001 \003(\0132).k8s.io.api.core.v"
+  "1.DownwardAPIVolumeFile\022\023\n\013defaultMode\030\002"
+  " \001(\005\"i\n\024EmptyDirVolumeSource\022\016\n\006medium\030\001"
+  " \001(\014\022A\n\tsizeLimit\030\002 \001(\0132..k8s.io.apimach"
+  "inery.pkg.api.resource.Quantity\"y\n\017Endpo"
+  "intAddress\022\n\n\002ip\030\001 \001(\014\022\020\n\010hostname\030\003 \001(\014"
+  "\022\020\n\010nodeName\030\004 \001(\014\0226\n\ttargetRef\030\002 \001(\0132#."
+  "k8s.io.api.core.v1.ObjectReference\"Q\n\014En"
+  "dpointPort\022\014\n\004name\030\001 \001(\014\022\014\n\004port\030\002 \001(\005\022\020"
+  "\n\010protocol\030\003 \001(\014\022\023\n\013appProtocol\030\004 \001(\014\"\271\001"
+  "\n\016EndpointSubset\0226\n\taddresses\030\001 \003(\0132#.k8"
+  "s.io.api.core.v1.EndpointAddress\022>\n\021notR"
+  "eadyAddresses\030\002 \003(\0132#.k8s.io.api.core.v1"
+  ".EndpointAddress\022/\n\005ports\030\003 \003(\0132 .k8s.io"
+  ".api.core.v1.EndpointPort\"\204\001\n\tEndpoints\022"
+  "B\n\010metadata\030\001 \001(\01320.k8s.io.apimachinery."
+  "pkg.apis.meta.v1.ObjectMeta\0223\n\007subsets\030\002"
+  " \003(\0132\".k8s.io.api.core.v1.EndpointSubset"
+  "\"\177\n\rEndpointsList\022@\n\010metadata\030\001 \001(\0132..k8"
+  "s.io.apimachinery.pkg.apis.meta.v1.ListM"
+  "eta\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.core.v1."
+  "Endpoints\"\225\001\n\rEnvFromSource\022\016\n\006prefix\030\001 "
+  "\001(\014\022<\n\014configMapRef\030\002 \001(\0132&.k8s.io.api.c"
+  "ore.v1.ConfigMapEnvSource\0226\n\tsecretRef\030\003"
+  " \001(\0132#.k8s.io.api.core.v1.SecretEnvSourc"
+  "e\"Z\n\006EnvVar\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 \001(\014"
+  "\0223\n\tvalueFrom\030\003 \001(\0132 .k8s.io.api.core.v1"
+  ".EnvVarSource\"\216\002\n\014EnvVarSource\0229\n\010fieldR"
+  "ef\030\001 \001(\0132\'.k8s.io.api.core.v1.ObjectFiel"
+  "dSelector\022C\n\020resourceFieldRef\030\002 \001(\0132).k8"
+  "s.io.api.core.v1.ResourceFieldSelector\022A"
+  "\n\017configMapKeyRef\030\003 \001(\0132(.k8s.io.api.cor"
+  "e.v1.ConfigMapKeySelector\022;\n\014secretKeyRe"
+  "f\030\004 \001(\0132%.k8s.io.api.core.v1.SecretKeySe"
+  "lector\"\201\001\n\022EphemeralContainer\022N\n\030ephemer"
+  "alContainerCommon\030\001 \001(\0132,.k8s.io.api.cor"
+  "e.v1.EphemeralContainerCommon\022\033\n\023targetC"
+  "ontainerName\030\002 \001(\014\"\216\007\n\030EphemeralContaine"
+  "rCommon\022\014\n\004name\030\001 \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007"
+  "command\030\003 \003(\t\022\014\n\004args\030\004 \003(\t\022\022\n\nworkingDi"
+  "r\030\005 \001(\014\0220\n\005ports\030\006 \003(\0132!.k8s.io.api.core"
+  ".v1.ContainerPort\0222\n\007envFrom\030\023 \003(\0132!.k8s"
+  ".io.api.core.v1.EnvFromSource\022\'\n\003env\030\007 \003"
+  "(\0132\032.k8s.io.api.core.v1.EnvVar\022;\n\tresour"
+  "ces\030\010 \001(\0132(.k8s.io.api.core.v1.ResourceR"
+  "equirements\022\?\n\014resizePolicy\030\027 \003(\0132).k8s."
+  "io.api.core.v1.ContainerResizePolicy\022\025\n\r"
+  "restartPolicy\030\030 \001(\014\0225\n\014volumeMounts\030\t \003("
+  "\0132\037.k8s.io.api.core.v1.VolumeMount\0227\n\rvo"
+  "lumeDevices\030\025 \003(\0132 .k8s.io.api.core.v1.V"
+  "olumeDevice\0220\n\rlivenessProbe\030\n \001(\0132\031.k8s"
+  ".io.api.core.v1.Probe\0221\n\016readinessProbe\030"
+  "\013 \001(\0132\031.k8s.io.api.core.v1.Probe\022/\n\014star"
+  "tupProbe\030\026 \001(\0132\031.k8s.io.api.core.v1.Prob"
+  "e\0220\n\tlifecycle\030\014 \001(\0132\035.k8s.io.api.core.v"
+  "1.Lifecycle\022\036\n\026terminationMessagePath\030\r "
+  "\001(\014\022 \n\030terminationMessagePolicy\030\024 \001(\014\022\027\n"
+  "\017imagePullPolicy\030\016 \001(\014\022<\n\017securityContex"
+  "t\030\017 \001(\0132#.k8s.io.api.core.v1.SecurityCon"
+  "text\022\r\n\005stdin\030\020 \001(\010\022\021\n\tstdinOnce\030\021 \001(\010\022\013"
+  "\n\003tty\030\022 \001(\010\"g\n\025EphemeralVolumeSource\022N\n\023"
+  "volumeClaimTemplate\030\001 \001(\01321.k8s.io.api.c"
+  "ore.v1.PersistentVolumeClaimTemplate\"\360\004\n"
+  "\005Event\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimac"
+  "hinery.pkg.apis.meta.v1.ObjectMeta\022;\n\016in"
+  "volvedObject\030\002 \001(\0132#.k8s.io.api.core.v1."
+  "ObjectReference\022\016\n\006reason\030\003 \001(\014\022\017\n\007messa"
+  "ge\030\004 \001(\014\022/\n\006source\030\005 \001(\0132\037.k8s.io.api.co"
+  "re.v1.EventSource\022B\n\016firstTimestamp\030\006 \001("
+  "\0132*.k8s.io.apimachinery.pkg.apis.meta.v1"
+  ".Time\022A\n\rlastTimestamp\030\007 \001(\0132*.k8s.io.ap"
+  "imachinery.pkg.apis.meta.v1.Time\022\r\n\005coun"
+  "t\030\010 \001(\005\022\014\n\004type\030\t \001(\014\022B\n\teventTime\030\n \001(\013"
+  "2/.k8s.io.apimachinery.pkg.apis.meta.v1."
+  "MicroTime\022/\n\006series\030\013 \001(\0132\037.k8s.io.api.c"
+  "ore.v1.EventSeries\022\016\n\006action\030\014 \001(\014\0224\n\007re"
+  "lated\030\r \001(\0132#.k8s.io.api.core.v1.ObjectR"
+  "eference\022\032\n\022reportingComponent\030\016 \001(\014\022\031\n\021"
+  "reportingInstance\030\017 \001(\014\"w\n\tEventList\022@\n\010"
+  "metadata\030\001 \001(\0132..k8s.io.apimachinery.pkg"
+  ".apis.meta.v1.ListMeta\022(\n\005items\030\002 \003(\0132\031."
+  "k8s.io.api.core.v1.Event\"g\n\013EventSeries\022"
+  "\r\n\005count\030\001 \001(\005\022I\n\020lastObservedTime\030\002 \001(\013"
+  "2/.k8s.io.apimachinery.pkg.apis.meta.v1."
+  "MicroTime\".\n\013EventSource\022\021\n\tcomponent\030\001 "
+  "\001(\014\022\014\n\004host\030\002 \001(\014\"\035\n\nExecAction\022\017\n\007comma"
+  "nd\030\001 \003(\t\"b\n\016FCVolumeSource\022\022\n\ntargetWWNs"
+  "\030\001 \003(\t\022\013\n\003lun\030\002 \001(\005\022\016\n\006fsType\030\003 \001(\014\022\020\n\010r"
+  "eadOnly\030\004 \001(\010\022\r\n\005wwids\030\005 \003(\t\"\204\002\n\032FlexPer"
+  "sistentVolumeSource\022\016\n\006driver\030\001 \001(\014\022\016\n\006f"
+  "sType\030\002 \001(\014\0226\n\tsecretRef\030\003 \001(\0132#.k8s.io."
+  "api.core.v1.SecretReference\022\020\n\010readOnly\030"
+  "\004 \001(\010\022L\n\007options\030\005 \003(\0132;.k8s.io.api.core"
+  ".v1.FlexPersistentVolumeSource.OptionsEn"
+  "try\032.\n\014OptionsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu"
+  "e\030\002 \001(\t:\0028\001\"\365\001\n\020FlexVolumeSource\022\016\n\006driv"
+  "er\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022;\n\tsecretRef\030\003 "
+  "\001(\0132(.k8s.io.api.core.v1.LocalObjectRefe"
+  "rence\022\020\n\010readOnly\030\004 \001(\010\022B\n\007options\030\005 \003(\013"
+  "21.k8s.io.api.core.v1.FlexVolumeSource.O"
+  "ptionsEntry\032.\n\014OptionsEntry\022\013\n\003key\030\001 \001(\t"
+  "\022\r\n\005value\030\002 \001(\t:\0028\001\"\?\n\023FlockerVolumeSour"
+  "ce\022\023\n\013datasetName\030\001 \001(\014\022\023\n\013datasetUUID\030\002"
+  " \001(\014\"d\n\035GCEPersistentDiskVolumeSource\022\016\n"
+  "\006pdName\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\021\n\tpartiti"
+  "on\030\003 \001(\005\022\020\n\010readOnly\030\004 \001(\010\"+\n\nGRPCAction"
+  "\022\014\n\004port\030\001 \001(\005\022\017\n\007service\030\002 \001(\014\"N\n\023GitRe"
+  "poVolumeSource\022\022\n\nrepository\030\001 \001(\014\022\020\n\010re"
+  "vision\030\002 \001(\014\022\021\n\tdirectory\030\003 \001(\014\"p\n\037Glust"
+  "erfsPersistentVolumeSource\022\021\n\tendpoints\030"
+  "\001 \001(\014\022\014\n\004path\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\022\032\n"
+  "\022endpointsNamespace\030\004 \001(\014\"J\n\025GlusterfsVo"
+  "lumeSource\022\021\n\tendpoints\030\001 \001(\014\022\014\n\004path\030\002 "
+  "\001(\014\022\020\n\010readOnly\030\003 \001(\010\"\260\001\n\rHTTPGetAction\022"
+  "\014\n\004path\030\001 \001(\014\022>\n\004port\030\002 \001(\01320.k8s.io.api"
+  "machinery.pkg.util.intstr.IntOrString\022\014\n"
+  "\004host\030\003 \001(\014\022\016\n\006scheme\030\004 \001(\014\0223\n\013httpHeade"
+  "rs\030\005 \003(\0132\036.k8s.io.api.core.v1.HTTPHeader"
+  "\")\n\nHTTPHeader\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 "
+  "\001(\014\"*\n\tHostAlias\022\n\n\002ip\030\001 \001(\014\022\021\n\thostname"
+  "s\030\002 \003(\t\"\024\n\006HostIP\022\n\n\002ip\030\001 \001(\014\"2\n\024HostPat"
+  "hVolumeSource\022\014\n\004path\030\001 \001(\014\022\014\n\004type\030\002 \001("
+  "\014\"\233\002\n\033ISCSIPersistentVolumeSource\022\024\n\014tar"
+  "getPortal\030\001 \001(\014\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001("
+  "\005\022\026\n\016iscsiInterface\030\004 \001(\014\022\016\n\006fsType\030\005 \001("
+  "\014\022\020\n\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021"
+  "chapAuthDiscovery\030\010 \001(\010\022\027\n\017chapAuthSessi"
+  "on\030\013 \001(\010\0226\n\tsecretRef\030\n \001(\0132#.k8s.io.api"
+  ".core.v1.SecretReference\022\025\n\rinitiatorNam"
+  "e\030\014 \001(\014\"\226\002\n\021ISCSIVolumeSource\022\024\n\014targetP"
+  "ortal\030\001 \001(\014\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001(\005\022\026\n"
+  "\016iscsiInterface\030\004 \001(\014\022\016\n\006fsType\030\005 \001(\014\022\020\n"
+  "\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021chap"
+  "AuthDiscovery\030\010 \001(\010\022\027\n\017chapAuthSession\030\013"
+  " \001(\010\022;\n\tsecretRef\030\n \001(\0132(.k8s.io.api.cor"
+  "e.v1.LocalObjectReference\022\025\n\rinitiatorNa"
+  "me\030\014 \001(\014\"4\n\tKeyToPath\022\013\n\003key\030\001 \001(\014\022\014\n\004pa"
+  "th\030\002 \001(\014\022\014\n\004mode\030\003 \001(\005\"{\n\tLifecycle\0227\n\tp"
+  "ostStart\030\001 \001(\0132$.k8s.io.api.core.v1.Life"
+  "cycleHandler\0225\n\007preStop\030\002 \001(\0132$.k8s.io.a"
+  "pi.core.v1.LifecycleHandler\"\334\001\n\020Lifecycl"
+  "eHandler\022,\n\004exec\030\001 \001(\0132\036.k8s.io.api.core"
+  ".v1.ExecAction\0222\n\007httpGet\030\002 \001(\0132!.k8s.io"
+  ".api.core.v1.HTTPGetAction\0226\n\ttcpSocket\030"
+  "\003 \001(\0132#.k8s.io.api.core.v1.TCPSocketActi"
+  "on\022.\n\005sleep\030\004 \001(\0132\037.k8s.io.api.core.v1.S"
+  "leepAction\"\202\001\n\nLimitRange\022B\n\010metadata\030\001 "
+  "\001(\01320.k8s.io.apimachinery.pkg.apis.meta."
+  "v1.ObjectMeta\0220\n\004spec\030\002 \001(\0132\".k8s.io.api"
+  ".core.v1.LimitRangeSpec\"\354\006\n\016LimitRangeIt"
+  "em\022\014\n\004type\030\001 \001(\014\0228\n\003max\030\002 \003(\0132+.k8s.io.a"
+  "pi.core.v1.LimitRangeItem.MaxEntry\0228\n\003mi"
+  "n\030\003 \003(\0132+.k8s.io.api.core.v1.LimitRangeI"
+  "tem.MinEntry\022@\n\007default\030\004 \003(\0132/.k8s.io.a"
+  "pi.core.v1.LimitRangeItem.DefaultEntry\022N"
+  "\n\016defaultRequest\030\005 \003(\01326.k8s.io.api.core"
+  ".v1.LimitRangeItem.DefaultRequestEntry\022Z"
+  "\n\024maxLimitRequestRatio\030\006 \003(\0132<.k8s.io.ap"
+  "i.core.v1.LimitRangeItem.MaxLimitRequest"
+  "RatioEntry\032Z\n\010MaxEntry\022\013\n\003key\030\001 \001(\t\022=\n\005v"
+  "alue\030\002 \001(\0132..k8s.io.apimachinery.pkg.api"
+  ".resource.Quantity:\0028\001\032Z\n\010MinEntry\022\013\n\003ke"
+  "y\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachi"
+  "nery.pkg.api.resource.Quantity:\0028\001\032^\n\014De"
+  "faultEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132."
+  ".k8s.io.apimachinery.pkg.api.resource.Qu"
+  "antity:\0028\001\032e\n\023DefaultRequestEntry\022\013\n\003key"
+  "\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachin"
+  "ery.pkg.api.resource.Quantity:\0028\001\032k\n\031Max"
+  "LimitRequestRatioEntry\022\013\n\003key\030\001 \001(\t\022=\n\005v"
+  "alue\030\002 \001(\0132..k8s.io.apimachinery.pkg.api"
+  ".resource.Quantity:\0028\001\"\201\001\n\016LimitRangeLis"
+  "t\022@\n\010metadata\030\001 \001(\0132..k8s.io.apimachiner"
+  "y.pkg.apis.meta.v1.ListMeta\022-\n\005items\030\002 \003"
+  "(\0132\036.k8s.io.api.core.v1.LimitRange\"D\n\016Li"
+  "mitRangeSpec\0222\n\006limits\030\001 \003(\0132\".k8s.io.ap"
+  "i.core.v1.LimitRangeItem\"\206\001\n\004List\022@\n\010met"
+  "adata\030\001 \001(\0132..k8s.io.apimachinery.pkg.ap"
+  "is.meta.v1.ListMeta\022<\n\005items\030\002 \003(\0132-.k8s"
+  ".io.apimachinery.pkg.runtime.RawExtensio"
+  "n\"r\n\023LoadBalancerIngress\022\n\n\002ip\030\001 \001(\014\022\020\n\010"
+  "hostname\030\002 \001(\014\022\016\n\006ipMode\030\003 \001(\014\022-\n\005ports\030"
+  "\004 \003(\0132\036.k8s.io.api.core.v1.PortStatus\"N\n"
+  "\022LoadBalancerStatus\0228\n\007ingress\030\001 \003(\0132\'.k"
+  "8s.io.api.core.v1.LoadBalancerIngress\"$\n"
+  "\024LocalObjectReference\022\014\n\004name\030\001 \001(\014\"1\n\021L"
+  "ocalVolumeSource\022\014\n\004path\030\001 \001(\014\022\016\n\006fsType"
+  "\030\002 \001(\014\"M\n\022ModifyVolumeStatus\022\'\n\037targetVo"
+  "lumeAttributesClassName\030\001 \001(\014\022\016\n\006status\030"
+  "\002 \001(\014\"A\n\017NFSVolumeSource\022\016\n\006server\030\001 \001(\014"
+  "\022\014\n\004path\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\"\265\001\n\tNam"
+  "espace\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimac"
+  "hinery.pkg.apis.meta.v1.ObjectMeta\022/\n\004sp"
+  "ec\030\002 \001(\0132!.k8s.io.api.core.v1.NamespaceS"
+  "pec\0223\n\006status\030\003 \001(\0132#.k8s.io.api.core.v1"
+  ".NamespaceStatus\"\233\001\n\022NamespaceCondition\022"
+  "\014\n\004type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022F\n\022lastTra"
+  "nsitionTime\030\004 \001(\0132*.k8s.io.apimachinery."
+  "pkg.apis.meta.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n"
+  "\007message\030\006 \001(\014\"\177\n\rNamespaceList\022@\n\010metad"
+  "ata\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis"
+  ".meta.v1.ListMeta\022,\n\005items\030\002 \003(\0132\035.k8s.i"
+  "o.api.core.v1.Namespace\"#\n\rNamespaceSpec"
+  "\022\022\n\nfinalizers\030\001 \003(\t\"\\\n\017NamespaceStatus\022"
+  "\r\n\005phase\030\001 \001(\014\022:\n\nconditions\030\002 \003(\0132&.k8s"
+  ".io.api.core.v1.NamespaceCondition\"\246\001\n\004N"
+  "ode\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimachin"
+  "ery.pkg.apis.meta.v1.ObjectMeta\022*\n\004spec\030"
+  "\002 \001(\0132\034.k8s.io.api.core.v1.NodeSpec\022.\n\006s"
+  "tatus\030\003 \001(\0132\036.k8s.io.api.core.v1.NodeSta"
+  "tus\",\n\013NodeAddress\022\014\n\004type\030\001 \001(\014\022\017\n\007addr"
+  "ess\030\002 \001(\014\"\316\001\n\014NodeAffinity\022X\n.requiredDu"
+  "ringSchedulingIgnoredDuringExecution\030\001 \001"
+  "(\0132 .k8s.io.api.core.v1.NodeSelector\022d\n/"
+  "preferredDuringSchedulingIgnoredDuringEx"
+  "ecution\030\002 \003(\0132+.k8s.io.api.core.v1.Prefe"
+  "rredSchedulingTerm\"\335\001\n\rNodeCondition\022\014\n\004"
+  "type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022E\n\021lastHeartb"
+  "eatTime\030\003 \001(\0132*.k8s.io.apimachinery.pkg."
+  "apis.meta.v1.Time\022F\n\022lastTransitionTime\030"
+  "\004 \001(\0132*.k8s.io.apimachinery.pkg.apis.met"
+  "a.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006 \001"
+  "(\014\"T\n\020NodeConfigSource\022@\n\tconfigMap\030\002 \001("
+  "\0132-.k8s.io.api.core.v1.ConfigMapNodeConf"
+  "igSource\"\314\001\n\020NodeConfigStatus\0226\n\010assigne"
+  "d\030\001 \001(\0132$.k8s.io.api.core.v1.NodeConfigS"
+  "ource\0224\n\006active\030\002 \001(\0132$.k8s.io.api.core."
+  "v1.NodeConfigSource\022;\n\rlastKnownGood\030\003 \001"
+  "(\0132$.k8s.io.api.core.v1.NodeConfigSource"
+  "\022\r\n\005error\030\004 \001(\014\"R\n\023NodeDaemonEndpoints\022;"
+  "\n\017kubeletEndpoint\030\001 \001(\0132\".k8s.io.api.cor"
+  "e.v1.DaemonEndpoint\"u\n\010NodeList\022@\n\010metad"
+  "ata\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis"
+  ".meta.v1.ListMeta\022\'\n\005items\030\002 \003(\0132\030.k8s.i"
+  "o.api.core.v1.Node\" \n\020NodeProxyOptions\022\014"
+  "\n\004path\030\001 \001(\014\"\263\001\n\rNodeResources\022A\n\010capaci"
+  "ty\030\001 \003(\0132/.k8s.io.api.core.v1.NodeResour"
+  "ces.CapacityEntry\032_\n\rCapacityEntry\022\013\n\003ke"
+  "y\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachi"
+  "nery.pkg.api.resource.Quantity:\0028\001\"O\n\014No"
+  "deSelector\022\?\n\021nodeSelectorTerms\030\001 \003(\0132$."
+  "k8s.io.api.core.v1.NodeSelectorTerm\"H\n\027N"
+  "odeSelectorRequirement\022\013\n\003key\030\001 \001(\014\022\020\n\010o"
+  "perator\030\002 \001(\014\022\016\n\006values\030\003 \003(\t\"\233\001\n\020NodeSe"
+  "lectorTerm\022E\n\020matchExpressions\030\001 \003(\0132+.k"
+  "8s.io.api.core.v1.NodeSelectorRequiremen"
+  "t\022@\n\013matchFields\030\002 \003(\0132+.k8s.io.api.core"
+  ".v1.NodeSelectorRequirement\"\323\001\n\010NodeSpec"
+  "\022\017\n\007podCIDR\030\001 \001(\014\022\020\n\010podCIDRs\030\007 \003(\t\022\022\n\np"
+  "roviderID\030\003 \001(\014\022\025\n\runschedulable\030\004 \001(\010\022)"
+  "\n\006taints\030\005 \003(\0132\031.k8s.io.api.core.v1.Tain"
+  "t\022:\n\014configSource\030\006 \001(\0132$.k8s.io.api.cor"
+  "e.v1.NodeConfigSource\022\022\n\nexternalID\030\002 \001("
+  "\014\"\206\006\n\nNodeStatus\022>\n\010capacity\030\001 \003(\0132,.k8s"
+  ".io.api.core.v1.NodeStatus.CapacityEntry"
+  "\022D\n\013allocatable\030\002 \003(\0132/.k8s.io.api.core."
+  "v1.NodeStatus.AllocatableEntry\022\r\n\005phase\030"
+  "\003 \001(\014\0225\n\nconditions\030\004 \003(\0132!.k8s.io.api.c"
+  "ore.v1.NodeCondition\0222\n\taddresses\030\005 \003(\0132"
+  "\037.k8s.io.api.core.v1.NodeAddress\022@\n\017daem"
+  "onEndpoints\030\006 \001(\0132\'.k8s.io.api.core.v1.N"
+  "odeDaemonEndpoints\0224\n\010nodeInfo\030\007 \001(\0132\".k"
+  "8s.io.api.core.v1.NodeSystemInfo\0222\n\006imag"
+  "es\030\010 \003(\0132\".k8s.io.api.core.v1.ContainerI"
+  "mage\022\024\n\014volumesInUse\030\t \003(\t\022;\n\017volumesAtt"
+  "ached\030\n \003(\0132\".k8s.io.api.core.v1.Attache"
+  "dVolume\0224\n\006config\030\013 \001(\0132$.k8s.io.api.cor"
+  "e.v1.NodeConfigStatus\032_\n\rCapacityEntry\022\013"
+  "\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apim"
+  "achinery.pkg.api.resource.Quantity:\0028\001\032b"
+  "\n\020AllocatableEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value"
+  "\030\002 \001(\0132..k8s.io.apimachinery.pkg.api.res"
+  "ource.Quantity:\0028\001\"\361\001\n\016NodeSystemInfo\022\021\n"
+  "\tmachineID\030\001 \001(\014\022\022\n\nsystemUUID\030\002 \001(\014\022\016\n\006"
+  "bootID\030\003 \001(\014\022\025\n\rkernelVersion\030\004 \001(\014\022\017\n\007o"
+  "sImage\030\005 \001(\014\022\037\n\027containerRuntimeVersion\030"
+  "\006 \001(\014\022\026\n\016kubeletVersion\030\007 \001(\014\022\030\n\020kubePro"
+  "xyVersion\030\010 \001(\014\022\027\n\017operatingSystem\030\t \001(\014"
+  "\022\024\n\014architecture\030\n \001(\014\"<\n\023ObjectFieldSel"
+  "ector\022\022\n\napiVersion\030\001 \001(\014\022\021\n\tfieldPath\030\002"
+  " \001(\014\"\215\001\n\017ObjectReference\022\014\n\004kind\030\001 \001(\014\022\021"
+  "\n\tnamespace\030\002 \001(\014\022\014\n\004name\030\003 \001(\014\022\013\n\003uid\030\004"
+  " \001(\014\022\022\n\napiVersion\030\005 \001(\014\022\027\n\017resourceVers"
+  "ion\030\006 \001(\014\022\021\n\tfieldPath\030\007 \001(\014\"\312\001\n\020Persist"
+  "entVolume\022B\n\010metadata\030\001 \001(\01320.k8s.io.api"
+  "machinery.pkg.apis.meta.v1.ObjectMeta\0226\n"
+  "\004spec\030\002 \001(\0132(.k8s.io.api.core.v1.Persist"
+  "entVolumeSpec\022:\n\006status\030\003 \001(\0132*.k8s.io.a"
+  "pi.core.v1.PersistentVolumeStatus\"\331\001\n\025Pe"
+  "rsistentVolumeClaim\022B\n\010metadata\030\001 \001(\01320."
+  "k8s.io.apimachinery.pkg.apis.meta.v1.Obj"
+  "ectMeta\022;\n\004spec\030\002 \001(\0132-.k8s.io.api.core."
+  "v1.PersistentVolumeClaimSpec\022\?\n\006status\030\003"
+  " \001(\0132/.k8s.io.api.core.v1.PersistentVolu"
+  "meClaimStatus\"\352\001\n\036PersistentVolumeClaimC"
+  "ondition\022\014\n\004type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022A"
+  "\n\rlastProbeTime\030\003 \001(\0132*.k8s.io.apimachin"
+  "ery.pkg.apis.meta.v1.Time\022F\n\022lastTransit"
+  "ionTime\030\004 \001(\0132*.k8s.io.apimachinery.pkg."
+  "apis.meta.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007mes"
+  "sage\030\006 \001(\014\"\227\001\n\031PersistentVolumeClaimList"
+  "\022@\n\010metadata\030\001 \001(\0132..k8s.io.apimachinery"
+  ".pkg.apis.meta.v1.ListMeta\0228\n\005items\030\002 \003("
+  "\0132).k8s.io.api.core.v1.PersistentVolumeC"
+  "laim\"\243\003\n\031PersistentVolumeClaimSpec\022\023\n\013ac"
+  "cessModes\030\001 \003(\t\022E\n\010selector\030\004 \001(\01323.k8s."
+  "io.apimachinery.pkg.apis.meta.v1.LabelSe"
+  "lector\022A\n\tresources\030\002 \001(\0132..k8s.io.api.c"
+  "ore.v1.VolumeResourceRequirements\022\022\n\nvol"
+  "umeName\030\003 \001(\014\022\030\n\020storageClassName\030\005 \001(\014\022"
+  "\022\n\nvolumeMode\030\006 \001(\014\022A\n\ndataSource\030\007 \001(\0132"
+  "-.k8s.io.api.core.v1.TypedLocalObjectRef"
+  "erence\022\?\n\rdataSourceRef\030\010 \001(\0132(.k8s.io.a"
+  "pi.core.v1.TypedObjectReference\022!\n\031volum"
+  "eAttributesClassName\030\t \001(\014\"\256\006\n\033Persisten"
+  "tVolumeClaimStatus\022\r\n\005phase\030\001 \001(\014\022\023\n\013acc"
+  "essModes\030\002 \003(\t\022O\n\010capacity\030\003 \003(\0132=.k8s.i"
+  "o.api.core.v1.PersistentVolumeClaimStatu"
+  "s.CapacityEntry\022F\n\nconditions\030\004 \003(\01322.k8"
+  "s.io.api.core.v1.PersistentVolumeClaimCo"
+  "ndition\022c\n\022allocatedResources\030\005 \003(\0132G.k8"
+  "s.io.api.core.v1.PersistentVolumeClaimSt"
+  "atus.AllocatedResourcesEntry\022q\n\031allocate"
+  "dResourceStatuses\030\007 \003(\0132N.k8s.io.api.cor"
+  "e.v1.PersistentVolumeClaimStatus.Allocat"
+  "edResourceStatusesEntry\022(\n currentVolume"
+  "AttributesClassName\030\010 \001(\014\022B\n\022modifyVolum"
+  "eStatus\030\t \001(\0132&.k8s.io.api.core.v1.Modif"
+  "yVolumeStatus\032_\n\rCapacityEntry\022\013\n\003key\030\001 "
+  "\001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachinery"
+  ".pkg.api.resource.Quantity:\0028\001\032i\n\027Alloca"
+  "tedResourcesEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030"
+  "\002 \001(\0132..k8s.io.apimachinery.pkg.api.reso"
+  "urce.Quantity:\0028\001\032@\n\036AllocatedResourceSt"
+  "atusesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:"
+  "\0028\001\"\240\001\n\035PersistentVolumeClaimTemplate\022B\n"
   "\010metadata\030\001 \001(\01320.k8s.io.apimachinery.pk"
   "g.apis.meta.v1.ObjectMeta\022;\n\004spec\030\002 \001(\0132"
-  "-.k8s.io.api.core.v1.ReplicationControll"
-  "erSpec\022\?\n\006status\030\003 \001(\0132/.k8s.io.api.core"
-  ".v1.ReplicationControllerStatus\"\247\001\n\036Repl"
-  "icationControllerCondition\022\014\n\004type\030\001 \001(\014"
-  "\022\016\n\006status\030\002 \001(\014\022F\n\022lastTransitionTime\030\003"
-  " \001(\0132*.k8s.io.apimachinery.pkg.apis.meta"
-  ".v1.Time\022\016\n\006reason\030\004 \001(\014\022\017\n\007message\030\005 \001("
-  "\014\"\227\001\n\031ReplicationControllerList\022@\n\010metad"
-  "ata\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis"
-  ".meta.v1.ListMeta\0228\n\005items\030\002 \003(\0132).k8s.i"
-  "o.api.core.v1.ReplicationController\"\375\001\n\031"
-  "ReplicationControllerSpec\022\020\n\010replicas\030\001 "
-  "\001(\005\022\027\n\017minReadySeconds\030\004 \001(\005\022M\n\010selector"
-  "\030\002 \003(\0132;.k8s.io.api.core.v1.ReplicationC"
-  "ontrollerSpec.SelectorEntry\0225\n\010template\030"
-  "\003 \001(\0132#.k8s.io.api.core.v1.PodTemplateSp"
-  "ec\032/\n\rSelectorEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu"
-  "e\030\002 \001(\t:\0028\001\"\343\001\n\033ReplicationControllerSta"
-  "tus\022\020\n\010replicas\030\001 \001(\005\022\034\n\024fullyLabeledRep"
-  "licas\030\002 \001(\005\022\025\n\rreadyReplicas\030\004 \001(\005\022\031\n\021av"
-  "ailableReplicas\030\005 \001(\005\022\032\n\022observedGenerat"
-  "ion\030\003 \001(\003\022F\n\nconditions\030\006 \003(\01322.k8s.io.a"
-  "pi.core.v1.ReplicationControllerConditio"
-  "n\"\035\n\rResourceClaim\022\014\n\004name\030\001 \001(\014\"\201\001\n\025Res"
-  "ourceFieldSelector\022\025\n\rcontainerName\030\001 \001("
-  "\014\022\020\n\010resource\030\002 \001(\014\022\?\n\007divisor\030\003 \001(\0132..k"
+  "-.k8s.io.api.core.v1.PersistentVolumeCla"
+  "imSpec\"H\n!PersistentVolumeClaimVolumeSou"
+  "rce\022\021\n\tclaimName\030\001 \001(\014\022\020\n\010readOnly\030\002 \001(\010"
+  "\"\215\001\n\024PersistentVolumeList\022@\n\010metadata\030\001 "
+  "\001(\0132..k8s.io.apimachinery.pkg.apis.meta."
+  "v1.ListMeta\0223\n\005items\030\002 \003(\0132$.k8s.io.api."
+  "core.v1.PersistentVolume\"\275\013\n\026PersistentV"
+  "olumeSource\022L\n\021gcePersistentDisk\030\001 \001(\01321"
+  ".k8s.io.api.core.v1.GCEPersistentDiskVol"
+  "umeSource\022R\n\024awsElasticBlockStore\030\002 \001(\0132"
+  "4.k8s.io.api.core.v1.AWSElasticBlockStor"
+  "eVolumeSource\022:\n\010hostPath\030\003 \001(\0132(.k8s.io"
+  ".api.core.v1.HostPathVolumeSource\022F\n\tglu"
+  "sterfs\030\004 \001(\01323.k8s.io.api.core.v1.Gluste"
+  "rfsPersistentVolumeSource\0220\n\003nfs\030\005 \001(\0132#"
+  ".k8s.io.api.core.v1.NFSVolumeSource\022:\n\003r"
+  "bd\030\006 \001(\0132-.k8s.io.api.core.v1.RBDPersist"
+  "entVolumeSource\022>\n\005iscsi\030\007 \001(\0132/.k8s.io."
+  "api.core.v1.ISCSIPersistentVolumeSource\022"
+  "@\n\006cinder\030\010 \001(\01320.k8s.io.api.core.v1.Cin"
+  "derPersistentVolumeSource\022@\n\006cephfs\030\t \001("
+  "\01320.k8s.io.api.core.v1.CephFSPersistentV"
+  "olumeSource\022.\n\002fc\030\n \001(\0132\".k8s.io.api.cor"
+  "e.v1.FCVolumeSource\0228\n\007flocker\030\013 \001(\0132\'.k"
+  "8s.io.api.core.v1.FlockerVolumeSource\022B\n"
+  "\nflexVolume\030\014 \001(\0132..k8s.io.api.core.v1.F"
+  "lexPersistentVolumeSource\022F\n\tazureFile\030\r"
+  " \001(\01323.k8s.io.api.core.v1.AzureFilePersi"
+  "stentVolumeSource\022I\n\rvsphereVolume\030\016 \001(\013"
+  "22.k8s.io.api.core.v1.VsphereVirtualDisk"
+  "VolumeSource\0228\n\007quobyte\030\017 \001(\0132\'.k8s.io.a"
+  "pi.core.v1.QuobyteVolumeSource\022<\n\tazureD"
+  "isk\030\020 \001(\0132).k8s.io.api.core.v1.AzureDisk"
+  "VolumeSource\022R\n\024photonPersistentDisk\030\021 \001"
+  "(\01324.k8s.io.api.core.v1.PhotonPersistent"
+  "DiskVolumeSource\022@\n\016portworxVolume\030\022 \001(\013"
+  "2(.k8s.io.api.core.v1.PortworxVolumeSour"
+  "ce\022B\n\007scaleIO\030\023 \001(\01321.k8s.io.api.core.v1"
+  ".ScaleIOPersistentVolumeSource\0224\n\005local\030"
+  "\024 \001(\0132%.k8s.io.api.core.v1.LocalVolumeSo"
+  "urce\022F\n\tstorageos\030\025 \001(\01323.k8s.io.api.cor"
+  "e.v1.StorageOSPersistentVolumeSource\022:\n\003"
+  "csi\030\026 \001(\0132-.k8s.io.api.core.v1.CSIPersis"
+  "tentVolumeSource\"\245\004\n\024PersistentVolumeSpe"
+  "c\022H\n\010capacity\030\001 \003(\01326.k8s.io.api.core.v1"
+  ".PersistentVolumeSpec.CapacityEntry\022J\n\026p"
+  "ersistentVolumeSource\030\002 \001(\0132*.k8s.io.api"
+  ".core.v1.PersistentVolumeSource\022\023\n\013acces"
+  "sModes\030\003 \003(\t\0225\n\010claimRef\030\004 \001(\0132#.k8s.io."
+  "api.core.v1.ObjectReference\022%\n\035persisten"
+  "tVolumeReclaimPolicy\030\005 \001(\014\022\030\n\020storageCla"
+  "ssName\030\006 \001(\014\022\024\n\014mountOptions\030\007 \003(\t\022\022\n\nvo"
+  "lumeMode\030\010 \001(\014\022<\n\014nodeAffinity\030\t \001(\0132&.k"
+  "8s.io.api.core.v1.VolumeNodeAffinity\022!\n\031"
+  "volumeAttributesClassName\030\n \001(\014\032_\n\rCapac"
+  "ityEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k"
   "8s.io.apimachinery.pkg.api.resource.Quan"
-  "tity\"\301\001\n\rResourceQuota\022B\n\010metadata\030\001 \001(\013"
-  "20.k8s.io.apimachinery.pkg.apis.meta.v1."
-  "ObjectMeta\0223\n\004spec\030\002 \001(\0132%.k8s.io.api.co"
-  "re.v1.ResourceQuotaSpec\0227\n\006status\030\003 \001(\0132"
-  "\'.k8s.io.api.core.v1.ResourceQuotaStatus"
-  "\"\207\001\n\021ResourceQuotaList\022@\n\010metadata\030\001 \001(\013"
-  "2..k8s.io.apimachinery.pkg.apis.meta.v1."
-  "ListMeta\0220\n\005items\030\002 \003(\0132!.k8s.io.api.cor"
-  "e.v1.ResourceQuota\"\371\001\n\021ResourceQuotaSpec"
-  "\022=\n\004hard\030\001 \003(\0132/.k8s.io.api.core.v1.Reso"
-  "urceQuotaSpec.HardEntry\022\016\n\006scopes\030\002 \003(\t\022"
-  "8\n\rscopeSelector\030\003 \001(\0132!.k8s.io.api.core"
-  ".v1.ScopeSelector\032[\n\tHardEntry\022\013\n\003key\030\001 "
-  "\001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachinery"
-  ".pkg.api.resource.Quantity:\0028\001\"\321\002\n\023Resou"
-  "rceQuotaStatus\022\?\n\004hard\030\001 \003(\01321.k8s.io.ap"
-  "i.core.v1.ResourceQuotaStatus.HardEntry\022"
-  "\?\n\004used\030\002 \003(\01321.k8s.io.api.core.v1.Resou"
-  "rceQuotaStatus.UsedEntry\032[\n\tHardEntry\022\013\n"
-  "\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apima"
-  "chinery.pkg.api.resource.Quantity:\0028\001\032[\n"
-  "\tUsedEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132."
-  ".k8s.io.apimachinery.pkg.api.resource.Qu"
-  "antity:\0028\001\"\231\003\n\024ResourceRequirements\022D\n\006l"
-  "imits\030\001 \003(\01324.k8s.io.api.core.v1.Resourc"
-  "eRequirements.LimitsEntry\022H\n\010requests\030\002 "
-  "\003(\01326.k8s.io.api.core.v1.ResourceRequire"
-  "ments.RequestsEntry\0221\n\006claims\030\003 \003(\0132!.k8"
-  "s.io.api.core.v1.ResourceClaim\032]\n\013Limits"
-  "Entry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s."
-  "io.apimachinery.pkg.api.resource.Quantit"
-  "y:\0028\001\032_\n\rRequestsEntry\022\013\n\003key\030\001 \001(\t\022=\n\005v"
-  "alue\030\002 \001(\0132..k8s.io.apimachinery.pkg.api"
-  ".resource.Quantity:\0028\001\"I\n\016SELinuxOptions"
-  "\022\014\n\004user\030\001 \001(\014\022\014\n\004role\030\002 \001(\014\022\014\n\004type\030\003 \001"
-  "(\014\022\r\n\005level\030\004 \001(\014\"\206\002\n\035ScaleIOPersistentV"
-  "olumeSource\022\017\n\007gateway\030\001 \001(\014\022\016\n\006system\030\002"
-  " \001(\014\0226\n\tsecretRef\030\003 \001(\0132#.k8s.io.api.cor"
-  "e.v1.SecretReference\022\022\n\nsslEnabled\030\004 \001(\010"
-  "\022\030\n\020protectionDomain\030\005 \001(\014\022\023\n\013storagePoo"
-  "l\030\006 \001(\014\022\023\n\013storageMode\030\007 \001(\014\022\022\n\nvolumeNa"
-  "me\030\010 \001(\014\022\016\n\006fsType\030\t \001(\014\022\020\n\010readOnly\030\n \001"
-  "(\010\"\201\002\n\023ScaleIOVolumeSource\022\017\n\007gateway\030\001 "
-  "\001(\014\022\016\n\006system\030\002 \001(\014\022;\n\tsecretRef\030\003 \001(\0132("
-  ".k8s.io.api.core.v1.LocalObjectReference"
-  "\022\022\n\nsslEnabled\030\004 \001(\010\022\030\n\020protectionDomain"
-  "\030\005 \001(\014\022\023\n\013storagePool\030\006 \001(\014\022\023\n\013storageMo"
-  "de\030\007 \001(\014\022\022\n\nvolumeName\030\010 \001(\014\022\016\n\006fsType\030\t"
-  " \001(\014\022\020\n\010readOnly\030\n \001(\010\"`\n\rScopeSelector\022"
-  "O\n\020matchExpressions\030\001 \003(\01325.k8s.io.api.c"
-  "ore.v1.ScopedResourceSelectorRequirement"
-  "\"X\n!ScopedResourceSelectorRequirement\022\021\n"
-  "\tscopeName\030\001 \001(\014\022\020\n\010operator\030\002 \001(\014\022\016\n\006va"
-  "lues\030\003 \003(\t\"8\n\016SeccompProfile\022\014\n\004type\030\001 \001"
-  "(\014\022\030\n\020localhostProfile\030\002 \001(\014\"\301\002\n\006Secret\022"
-  "B\n\010metadata\030\001 \001(\01320.k8s.io.apimachinery."
-  "pkg.apis.meta.v1.ObjectMeta\022\021\n\timmutable"
-  "\030\005 \001(\010\0222\n\004data\030\002 \003(\0132$.k8s.io.api.core.v"
-  "1.Secret.DataEntry\022>\n\nstringData\030\004 \003(\0132*"
-  ".k8s.io.api.core.v1.Secret.StringDataEnt"
-  "ry\022\014\n\004type\030\003 \001(\014\032+\n\tDataEntry\022\013\n\003key\030\001 \001"
-  "(\t\022\r\n\005value\030\002 \001(\014:\0028\001\0321\n\017StringDataEntry"
-  "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"k\n\017Secr"
-  "etEnvSource\022F\n\024localObjectReference\030\001 \001("
-  "\0132(.k8s.io.api.core.v1.LocalObjectRefere"
-  "nce\022\020\n\010optional\030\002 \001(\010\"z\n\021SecretKeySelect"
-  "or\022F\n\024localObjectReference\030\001 \001(\0132(.k8s.i"
-  "o.api.core.v1.LocalObjectReference\022\013\n\003ke"
-  "y\030\002 \001(\014\022\020\n\010optional\030\003 \001(\010\"y\n\nSecretList\022"
-  "@\n\010metadata\030\001 \001(\0132..k8s.io.apimachinery."
-  "pkg.apis.meta.v1.ListMeta\022)\n\005items\030\002 \003(\013"
-  "2\032.k8s.io.api.core.v1.Secret\"\232\001\n\020SecretP"
-  "rojection\022F\n\024localObjectReference\030\001 \001(\0132"
-  "(.k8s.io.api.core.v1.LocalObjectReferenc"
-  "e\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.core.v1.Ke"
-  "yToPath\022\020\n\010optional\030\004 \001(\010\"2\n\017SecretRefer"
-  "ence\022\014\n\004name\030\001 \001(\014\022\021\n\tnamespace\030\002 \001(\014\"}\n"
-  "\022SecretVolumeSource\022\022\n\nsecretName\030\001 \001(\014\022"
-  ",\n\005items\030\002 \003(\0132\035.k8s.io.api.core.v1.KeyT"
-  "oPath\022\023\n\013defaultMode\030\003 \001(\005\022\020\n\010optional\030\004"
-  " \001(\010\"\262\003\n\017SecurityContext\0226\n\014capabilities"
-  "\030\001 \001(\0132 .k8s.io.api.core.v1.Capabilities"
-  "\022\022\n\nprivileged\030\002 \001(\010\022:\n\016seLinuxOptions\030\003"
-  " \001(\0132\".k8s.io.api.core.v1.SELinuxOptions"
-  "\022I\n\016windowsOptions\030\n \001(\01321.k8s.io.api.co"
-  "re.v1.WindowsSecurityContextOptions\022\021\n\tr"
-  "unAsUser\030\004 \001(\003\022\022\n\nrunAsGroup\030\010 \001(\003\022\024\n\014ru"
-  "nAsNonRoot\030\005 \001(\010\022\036\n\026readOnlyRootFilesyst"
-  "em\030\006 \001(\010\022 \n\030allowPrivilegeEscalation\030\007 \001"
-  "(\010\022\021\n\tprocMount\030\t \001(\014\022:\n\016seccompProfile\030"
-  "\013 \001(\0132\".k8s.io.api.core.v1.SeccompProfil"
-  "e\"M\n\023SerializedReference\0226\n\treference\030\001 "
-  "\001(\0132#.k8s.io.api.core.v1.ObjectReference"
-  "\"\257\001\n\007Service\022B\n\010metadata\030\001 \001(\01320.k8s.io."
-  "apimachinery.pkg.apis.meta.v1.ObjectMeta"
-  "\022-\n\004spec\030\002 \001(\0132\037.k8s.io.api.core.v1.Serv"
-  "iceSpec\0221\n\006status\030\003 \001(\0132!.k8s.io.api.cor"
-  "e.v1.ServiceStatus\"\364\001\n\016ServiceAccount\022B\n"
-  "\010metadata\030\001 \001(\01320.k8s.io.apimachinery.pk"
-  "g.apis.meta.v1.ObjectMeta\0224\n\007secrets\030\002 \003"
-  "(\0132#.k8s.io.api.core.v1.ObjectReference\022"
-  "B\n\020imagePullSecrets\030\003 \003(\0132(.k8s.io.api.c"
-  "ore.v1.LocalObjectReference\022$\n\034automount"
-  "ServiceAccountToken\030\004 \001(\010\"\211\001\n\022ServiceAcc"
-  "ountList\022@\n\010metadata\030\001 \001(\0132..k8s.io.apim"
-  "achinery.pkg.apis.meta.v1.ListMeta\0221\n\005it"
-  "ems\030\002 \003(\0132\".k8s.io.api.core.v1.ServiceAc"
-  "count\"Z\n\035ServiceAccountTokenProjection\022\020"
-  "\n\010audience\030\001 \001(\014\022\031\n\021expirationSeconds\030\002 "
-  "\001(\003\022\014\n\004path\030\003 \001(\014\"{\n\013ServiceList\022@\n\010meta"
-  "data\030\001 \001(\0132..k8s.io.apimachinery.pkg.api"
-  "s.meta.v1.ListMeta\022*\n\005items\030\002 \003(\0132\033.k8s."
-  "io.api.core.v1.Service\"\250\001\n\013ServicePort\022\014"
-  "\n\004name\030\001 \001(\014\022\020\n\010protocol\030\002 \001(\014\022\023\n\013appPro"
-  "tocol\030\006 \001(\014\022\014\n\004port\030\003 \001(\005\022D\n\ntargetPort\030"
-  "\004 \001(\01320.k8s.io.apimachinery.pkg.util.int"
-  "str.IntOrString\022\020\n\010nodePort\030\005 \001(\005\"#\n\023Ser"
-  "viceProxyOptions\022\014\n\004path\030\001 \001(\014\"\227\005\n\013Servi"
-  "ceSpec\022.\n\005ports\030\001 \003(\0132\037.k8s.io.api.core."
-  "v1.ServicePort\022\?\n\010selector\030\002 \003(\0132-.k8s.i"
-  "o.api.core.v1.ServiceSpec.SelectorEntry\022"
-  "\021\n\tclusterIP\030\003 \001(\014\022\022\n\nclusterIPs\030\022 \003(\t\022\014"
-  "\n\004type\030\004 \001(\014\022\023\n\013externalIPs\030\005 \003(\t\022\027\n\017ses"
-  "sionAffinity\030\007 \001(\014\022\026\n\016loadBalancerIP\030\010 \001"
-  "(\014\022 \n\030loadBalancerSourceRanges\030\t \003(\t\022\024\n\014"
-  "externalName\030\n \001(\014\022\035\n\025externalTrafficPol"
-  "icy\030\013 \001(\014\022\033\n\023healthCheckNodePort\030\014 \001(\005\022 "
-  "\n\030publishNotReadyAddresses\030\r \001(\010\022H\n\025sess"
-  "ionAffinityConfig\030\016 \001(\0132).k8s.io.api.cor"
-  "e.v1.SessionAffinityConfig\022\022\n\nipFamilies"
-  "\030\023 \003(\t\022\026\n\016ipFamilyPolicy\030\021 \001(\014\022%\n\035alloca"
-  "teLoadBalancerNodePorts\030\024 \001(\010\022\031\n\021loadBal"
-  "ancerClass\030\025 \001(\014\022\035\n\025internalTrafficPolic"
-  "y\030\026 \001(\014\032/\n\rSelectorEntry\022\013\n\003key\030\001 \001(\t\022\r\n"
-  "\005value\030\002 \001(\t:\0028\001\"\222\001\n\rServiceStatus\022<\n\014lo"
-  "adBalancer\030\001 \001(\0132&.k8s.io.api.core.v1.Lo"
-  "adBalancerStatus\022C\n\nconditions\030\002 \003(\0132/.k"
-  "8s.io.apimachinery.pkg.apis.meta.v1.Cond"
-  "ition\"M\n\025SessionAffinityConfig\0224\n\010client"
-  "IP\030\001 \001(\0132\".k8s.io.api.core.v1.ClientIPCo"
-  "nfig\"\036\n\013SleepAction\022\017\n\007seconds\030\001 \001(\003\"\250\001\n"
-  "\037StorageOSPersistentVolumeSource\022\022\n\nvolu"
-  "meName\030\001 \001(\014\022\027\n\017volumeNamespace\030\002 \001(\014\022\016\n"
-  "\006fsType\030\003 \001(\014\022\020\n\010readOnly\030\004 \001(\010\0226\n\tsecre"
-  "tRef\030\005 \001(\0132#.k8s.io.api.core.v1.ObjectRe"
-  "ference\"\243\001\n\025StorageOSVolumeSource\022\022\n\nvol"
-  "umeName\030\001 \001(\014\022\027\n\017volumeNamespace\030\002 \001(\014\022\016"
-  "\n\006fsType\030\003 \001(\014\022\020\n\010readOnly\030\004 \001(\010\022;\n\tsecr"
-  "etRef\030\005 \001(\0132(.k8s.io.api.core.v1.LocalOb"
-  "jectReference\"%\n\006Sysctl\022\014\n\004name\030\001 \001(\014\022\r\n"
-  "\005value\030\002 \001(\014\"_\n\017TCPSocketAction\022>\n\004port\030"
-  "\001 \001(\01320.k8s.io.apimachinery.pkg.util.int"
-  "str.IntOrString\022\014\n\004host\030\002 \001(\014\"r\n\005Taint\022\013"
-  "\n\003key\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\022\016\n\006effect\030\003 \001"
-  "(\014\022=\n\ttimeAdded\030\004 \001(\0132*.k8s.io.apimachin"
-  "ery.pkg.apis.meta.v1.Time\"e\n\nToleration\022"
-  "\013\n\003key\030\001 \001(\014\022\020\n\010operator\030\002 \001(\014\022\r\n\005value\030"
-  "\003 \001(\014\022\016\n\006effect\030\004 \001(\014\022\031\n\021tolerationSecon"
-  "ds\030\005 \001(\003\"\?\n TopologySelectorLabelRequire"
-  "ment\022\013\n\003key\030\001 \001(\014\022\016\n\006values\030\002 \003(\t\"k\n\024Top"
-  "ologySelectorTerm\022S\n\025matchLabelExpressio"
-  "ns\030\001 \003(\01324.k8s.io.api.core.v1.TopologySe"
-  "lectorLabelRequirement\"\211\002\n\030TopologySprea"
-  "dConstraint\022\017\n\007maxSkew\030\001 \001(\005\022\023\n\013topology"
-  "Key\030\002 \001(\014\022\031\n\021whenUnsatisfiable\030\003 \001(\014\022J\n\r"
-  "labelSelector\030\004 \001(\01323.k8s.io.apimachiner"
-  "y.pkg.apis.meta.v1.LabelSelector\022\022\n\nminD"
-  "omains\030\005 \001(\005\022\032\n\022nodeAffinityPolicy\030\006 \001(\014"
-  "\022\030\n\020nodeTaintsPolicy\030\007 \001(\014\022\026\n\016matchLabel"
-  "Keys\030\010 \003(\t\"I\n\031TypedLocalObjectReference\022"
-  "\020\n\010apiGroup\030\001 \001(\014\022\014\n\004kind\030\002 \001(\014\022\014\n\004name\030"
-  "\003 \001(\014\"W\n\024TypedObjectReference\022\020\n\010apiGrou"
-  "p\030\001 \001(\014\022\014\n\004kind\030\002 \001(\014\022\014\n\004name\030\003 \001(\014\022\021\n\tn"
-  "amespace\030\004 \001(\014\"N\n\006Volume\022\014\n\004name\030\001 \001(\014\0226"
-  "\n\014volumeSource\030\002 \001(\0132 .k8s.io.api.core.v"
-  "1.VolumeSource\"0\n\014VolumeDevice\022\014\n\004name\030\001"
-  " \001(\014\022\022\n\ndevicePath\030\002 \001(\014\"\200\001\n\013VolumeMount"
-  "\022\014\n\004name\030\001 \001(\014\022\020\n\010readOnly\030\002 \001(\010\022\021\n\tmoun"
-  "tPath\030\003 \001(\014\022\017\n\007subPath\030\004 \001(\014\022\030\n\020mountPro"
-  "pagation\030\005 \001(\014\022\023\n\013subPathExpr\030\006 \001(\014\"H\n\022V"
-  "olumeNodeAffinity\0222\n\010required\030\001 \001(\0132 .k8"
-  "s.io.api.core.v1.NodeSelector\"\342\002\n\020Volume"
-  "Projection\0224\n\006secret\030\001 \001(\0132$.k8s.io.api."
-  "core.v1.SecretProjection\022>\n\013downwardAPI\030"
-  "\002 \001(\0132).k8s.io.api.core.v1.DownwardAPIPr"
-  "ojection\022:\n\tconfigMap\030\003 \001(\0132\'.k8s.io.api"
-  ".core.v1.ConfigMapProjection\022N\n\023serviceA"
-  "ccountToken\030\004 \001(\01321.k8s.io.api.core.v1.S"
-  "erviceAccountTokenProjection\022L\n\022clusterT"
-  "rustBundle\030\005 \001(\01320.k8s.io.api.core.v1.Cl"
-  "usterTrustBundleProjection\"\370\002\n\032VolumeRes"
-  "ourceRequirements\022J\n\006limits\030\001 \003(\0132:.k8s."
-  "io.api.core.v1.VolumeResourceRequirement"
-  "s.LimitsEntry\022N\n\010requests\030\002 \003(\0132<.k8s.io"
-  ".api.core.v1.VolumeResourceRequirements."
-  "RequestsEntry\032]\n\013LimitsEntry\022\013\n\003key\030\001 \001("
-  "\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachinery.p"
-  "kg.api.resource.Quantity:\0028\001\032_\n\rRequests"
-  "Entry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s."
-  "io.apimachinery.pkg.api.resource.Quantit"
-  "y:\0028\001\"\231\016\n\014VolumeSource\022:\n\010hostPath\030\001 \001(\013"
-  "2(.k8s.io.api.core.v1.HostPathVolumeSour"
-  "ce\022:\n\010emptyDir\030\002 \001(\0132(.k8s.io.api.core.v"
-  "1.EmptyDirVolumeSource\022L\n\021gcePersistentD"
-  "isk\030\003 \001(\01321.k8s.io.api.core.v1.GCEPersis"
-  "tentDiskVolumeSource\022R\n\024awsElasticBlockS"
-  "tore\030\004 \001(\01324.k8s.io.api.core.v1.AWSElast"
-  "icBlockStoreVolumeSource\0228\n\007gitRepo\030\005 \001("
-  "\0132\'.k8s.io.api.core.v1.GitRepoVolumeSour"
-  "ce\0226\n\006secret\030\006 \001(\0132&.k8s.io.api.core.v1."
-  "SecretVolumeSource\0220\n\003nfs\030\007 \001(\0132#.k8s.io"
-  ".api.core.v1.NFSVolumeSource\0224\n\005iscsi\030\010 "
-  "\001(\0132%.k8s.io.api.core.v1.ISCSIVolumeSour"
-  "ce\022<\n\tglusterfs\030\t \001(\0132).k8s.io.api.core."
-  "v1.GlusterfsVolumeSource\022T\n\025persistentVo"
-  "lumeClaim\030\n \001(\01325.k8s.io.api.core.v1.Per"
-  "sistentVolumeClaimVolumeSource\0220\n\003rbd\030\013 "
-  "\001(\0132#.k8s.io.api.core.v1.RBDVolumeSource"
-  "\0228\n\nflexVolume\030\014 \001(\0132$.k8s.io.api.core.v"
-  "1.FlexVolumeSource\0226\n\006cinder\030\r \001(\0132&.k8s"
-  ".io.api.core.v1.CinderVolumeSource\0226\n\006ce"
-  "phfs\030\016 \001(\0132&.k8s.io.api.core.v1.CephFSVo"
-  "lumeSource\0228\n\007flocker\030\017 \001(\0132\'.k8s.io.api"
-  ".core.v1.FlockerVolumeSource\022@\n\013downward"
-  "API\030\020 \001(\0132+.k8s.io.api.core.v1.DownwardA"
-  "PIVolumeSource\022.\n\002fc\030\021 \001(\0132\".k8s.io.api."
-  "core.v1.FCVolumeSource\022<\n\tazureFile\030\022 \001("
-  "\0132).k8s.io.api.core.v1.AzureFileVolumeSo"
-  "urce\022<\n\tconfigMap\030\023 \001(\0132).k8s.io.api.cor"
-  "e.v1.ConfigMapVolumeSource\022I\n\rvsphereVol"
-  "ume\030\024 \001(\01322.k8s.io.api.core.v1.VsphereVi"
-  "rtualDiskVolumeSource\0228\n\007quobyte\030\025 \001(\0132\'"
-  ".k8s.io.api.core.v1.QuobyteVolumeSource\022"
-  "<\n\tazureDisk\030\026 \001(\0132).k8s.io.api.core.v1."
-  "AzureDiskVolumeSource\022R\n\024photonPersisten"
-  "tDisk\030\027 \001(\01324.k8s.io.api.core.v1.PhotonP"
-  "ersistentDiskVolumeSource\022<\n\tprojected\030\032"
-  " \001(\0132).k8s.io.api.core.v1.ProjectedVolum"
-  "eSource\022@\n\016portworxVolume\030\030 \001(\0132(.k8s.io"
-  ".api.core.v1.PortworxVolumeSource\0228\n\007sca"
-  "leIO\030\031 \001(\0132\'.k8s.io.api.core.v1.ScaleIOV"
-  "olumeSource\022<\n\tstorageos\030\033 \001(\0132).k8s.io."
-  "api.core.v1.StorageOSVolumeSource\0220\n\003csi"
-  "\030\034 \001(\0132#.k8s.io.api.core.v1.CSIVolumeSou"
-  "rce\022<\n\tephemeral\030\035 \001(\0132).k8s.io.api.core"
-  ".v1.EphemeralVolumeSource\"x\n\036VsphereVirt"
-  "ualDiskVolumeSource\022\022\n\nvolumePath\030\001 \001(\014\022"
-  "\016\n\006fsType\030\002 \001(\014\022\031\n\021storagePolicyName\030\003 \001"
-  "(\014\022\027\n\017storagePolicyID\030\004 \001(\014\"g\n\027WeightedP"
-  "odAffinityTerm\022\016\n\006weight\030\001 \001(\005\022<\n\017podAff"
-  "inityTerm\030\002 \001(\0132#.k8s.io.api.core.v1.Pod"
-  "AffinityTerm\"\207\001\n\035WindowsSecurityContextO"
-  "ptions\022\036\n\026gmsaCredentialSpecName\030\001 \001(\014\022\032"
-  "\n\022gmsaCredentialSpec\030\002 \001(\014\022\025\n\rrunAsUserN"
-  "ame\030\003 \001(\014\022\023\n\013hostProcess\030\004 \001(\010B\024Z\022k8s.io"
-  "/api/core/v1"
+  "tity:\0028\001\"\225\001\n\026PersistentVolumeStatus\022\r\n\005p"
+  "hase\030\001 \001(\014\022\017\n\007message\030\002 \001(\014\022\016\n\006reason\030\003 "
+  "\001(\014\022K\n\027lastPhaseTransitionTime\030\004 \001(\0132*.k"
+  "8s.io.apimachinery.pkg.apis.meta.v1.Time"
+  "\"@\n PhotonPersistentDiskVolumeSource\022\014\n\004"
+  "pdID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\"\243\001\n\003Pod\022B\n\010me"
+  "tadata\030\001 \001(\01320.k8s.io.apimachinery.pkg.a"
+  "pis.meta.v1.ObjectMeta\022)\n\004spec\030\002 \001(\0132\033.k"
+  "8s.io.api.core.v1.PodSpec\022-\n\006status\030\003 \001("
+  "\0132\035.k8s.io.api.core.v1.PodStatus\"\320\001\n\013Pod"
+  "Affinity\022[\n.requiredDuringSchedulingIgno"
+  "redDuringExecution\030\001 \003(\0132#.k8s.io.api.co"
+  "re.v1.PodAffinityTerm\022d\n/preferredDuring"
+  "SchedulingIgnoredDuringExecution\030\002 \003(\0132+"
+  ".k8s.io.api.core.v1.WeightedPodAffinityT"
+  "erm\"\211\002\n\017PodAffinityTerm\022J\n\rlabelSelector"
+  "\030\001 \001(\01323.k8s.io.apimachinery.pkg.apis.me"
+  "ta.v1.LabelSelector\022\022\n\nnamespaces\030\002 \003(\t\022"
+  "\023\n\013topologyKey\030\003 \001(\014\022N\n\021namespaceSelecto"
+  "r\030\004 \001(\01323.k8s.io.apimachinery.pkg.apis.m"
+  "eta.v1.LabelSelector\022\026\n\016matchLabelKeys\030\005"
+  " \003(\t\022\031\n\021mismatchLabelKeys\030\006 \003(\t\"\324\001\n\017PodA"
+  "ntiAffinity\022[\n.requiredDuringSchedulingI"
+  "gnoredDuringExecution\030\001 \003(\0132#.k8s.io.api"
+  ".core.v1.PodAffinityTerm\022d\n/preferredDur"
+  "ingSchedulingIgnoredDuringExecution\030\002 \003("
+  "\0132+.k8s.io.api.core.v1.WeightedPodAffini"
+  "tyTerm\"a\n\020PodAttachOptions\022\r\n\005stdin\030\001 \001("
+  "\010\022\016\n\006stdout\030\002 \001(\010\022\016\n\006stderr\030\003 \001(\010\022\013\n\003tty"
+  "\030\004 \001(\010\022\021\n\tcontainer\030\005 \001(\014\"\330\001\n\014PodConditi"
+  "on\022\014\n\004type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022A\n\rlast"
+  "ProbeTime\030\003 \001(\0132*.k8s.io.apimachinery.pk"
+  "g.apis.meta.v1.Time\022F\n\022lastTransitionTim"
+  "e\030\004 \001(\0132*.k8s.io.apimachinery.pkg.apis.m"
+  "eta.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006"
+  " \001(\014\"n\n\014PodDNSConfig\022\023\n\013nameservers\030\001 \003("
+  "\t\022\020\n\010searches\030\002 \003(\t\0227\n\007options\030\003 \003(\0132&.k"
+  "8s.io.api.core.v1.PodDNSConfigOption\"1\n\022"
+  "PodDNSConfigOption\022\014\n\004name\030\001 \001(\014\022\r\n\005valu"
+  "e\030\002 \001(\014\"p\n\016PodExecOptions\022\r\n\005stdin\030\001 \001(\010"
+  "\022\016\n\006stdout\030\002 \001(\010\022\016\n\006stderr\030\003 \001(\010\022\013\n\003tty\030"
+  "\004 \001(\010\022\021\n\tcontainer\030\005 \001(\014\022\017\n\007command\030\006 \003("
+  "\t\"\023\n\005PodIP\022\n\n\002ip\030\001 \001(\014\"s\n\007PodList\022@\n\010met"
+  "adata\030\001 \001(\0132..k8s.io.apimachinery.pkg.ap"
+  "is.meta.v1.ListMeta\022&\n\005items\030\002 \003(\0132\027.k8s"
+  ".io.api.core.v1.Pod\"\372\001\n\rPodLogOptions\022\021\n"
+  "\tcontainer\030\001 \001(\014\022\016\n\006follow\030\002 \001(\010\022\020\n\010prev"
+  "ious\030\003 \001(\010\022\024\n\014sinceSeconds\030\004 \001(\003\022=\n\tsinc"
+  "eTime\030\005 \001(\0132*.k8s.io.apimachinery.pkg.ap"
+  "is.meta.v1.Time\022\022\n\ntimestamps\030\006 \001(\010\022\021\n\tt"
+  "ailLines\030\007 \001(\003\022\022\n\nlimitBytes\030\010 \001(\003\022$\n\034in"
+  "secureSkipTLSVerifyBackend\030\t \001(\010\"\025\n\005PodO"
+  "S\022\014\n\004name\030\001 \001(\014\"&\n\025PodPortForwardOptions"
+  "\022\r\n\005ports\030\001 \003(\005\"\037\n\017PodProxyOptions\022\014\n\004pa"
+  "th\030\001 \001(\014\")\n\020PodReadinessGate\022\025\n\rconditio"
+  "nType\030\001 \001(\014\"Q\n\020PodResourceClaim\022\014\n\004name\030"
+  "\001 \001(\014\022/\n\006source\030\002 \001(\0132\037.k8s.io.api.core."
+  "v1.ClaimSource\"A\n\026PodResourceClaimStatus"
+  "\022\014\n\004name\030\001 \001(\014\022\031\n\021resourceClaimName\030\002 \001("
+  "\014\"!\n\021PodSchedulingGate\022\014\n\004name\030\001 \001(\014\"\213\003\n"
+  "\022PodSecurityContext\022:\n\016seLinuxOptions\030\001 "
+  "\001(\0132\".k8s.io.api.core.v1.SELinuxOptions\022"
+  "I\n\016windowsOptions\030\010 \001(\01321.k8s.io.api.cor"
+  "e.v1.WindowsSecurityContextOptions\022\021\n\tru"
+  "nAsUser\030\002 \001(\003\022\022\n\nrunAsGroup\030\006 \001(\003\022\024\n\014run"
+  "AsNonRoot\030\003 \001(\010\022\032\n\022supplementalGroups\030\004 "
+  "\003(\003\022\017\n\007fsGroup\030\005 \001(\003\022+\n\007sysctls\030\007 \003(\0132\032."
+  "k8s.io.api.core.v1.Sysctl\022\033\n\023fsGroupChan"
+  "gePolicy\030\t \001(\014\022:\n\016seccompProfile\030\n \001(\0132\""
+  ".k8s.io.api.core.v1.SeccompProfile\"[\n\014Po"
+  "dSignature\022K\n\rpodController\030\001 \001(\01324.k8s."
+  "io.apimachinery.pkg.apis.meta.v1.OwnerRe"
+  "ference\"\235\r\n\007PodSpec\022+\n\007volumes\030\001 \003(\0132\032.k"
+  "8s.io.api.core.v1.Volume\0225\n\016initContaine"
+  "rs\030\024 \003(\0132\035.k8s.io.api.core.v1.Container\022"
+  "1\n\ncontainers\030\002 \003(\0132\035.k8s.io.api.core.v1"
+  ".Container\022C\n\023ephemeralContainers\030\" \003(\0132"
+  "&.k8s.io.api.core.v1.EphemeralContainer\022"
+  "\025\n\rrestartPolicy\030\003 \001(\014\022%\n\035terminationGra"
+  "cePeriodSeconds\030\004 \001(\003\022\035\n\025activeDeadlineS"
+  "econds\030\005 \001(\003\022\021\n\tdnsPolicy\030\006 \001(\014\022C\n\014nodeS"
+  "elector\030\007 \003(\0132-.k8s.io.api.core.v1.PodSp"
+  "ec.NodeSelectorEntry\022\032\n\022serviceAccountNa"
+  "me\030\010 \001(\014\022\026\n\016serviceAccount\030\t \001(\014\022$\n\034auto"
+  "mountServiceAccountToken\030\025 \001(\010\022\020\n\010nodeNa"
+  "me\030\n \001(\014\022\023\n\013hostNetwork\030\013 \001(\010\022\017\n\007hostPID"
+  "\030\014 \001(\010\022\017\n\007hostIPC\030\r \001(\010\022\035\n\025shareProcessN"
+  "amespace\030\033 \001(\010\022\?\n\017securityContext\030\016 \001(\0132"
+  "&.k8s.io.api.core.v1.PodSecurityContext\022"
+  "B\n\020imagePullSecrets\030\017 \003(\0132(.k8s.io.api.c"
+  "ore.v1.LocalObjectReference\022\020\n\010hostname\030"
+  "\020 \001(\014\022\021\n\tsubdomain\030\021 \001(\014\022.\n\010affinity\030\022 \001"
+  "(\0132\034.k8s.io.api.core.v1.Affinity\022\025\n\rsche"
+  "dulerName\030\023 \001(\014\0223\n\013tolerations\030\026 \003(\0132\036.k"
+  "8s.io.api.core.v1.Toleration\0222\n\013hostAlia"
+  "ses\030\027 \003(\0132\035.k8s.io.api.core.v1.HostAlias"
+  "\022\031\n\021priorityClassName\030\030 \001(\014\022\020\n\010priority\030"
+  "\031 \001(\005\0223\n\tdnsConfig\030\032 \001(\0132 .k8s.io.api.co"
+  "re.v1.PodDNSConfig\022<\n\016readinessGates\030\034 \003"
+  "(\0132$.k8s.io.api.core.v1.PodReadinessGate"
+  "\022\030\n\020runtimeClassName\030\035 \001(\014\022\032\n\022enableServ"
+  "iceLinks\030\036 \001(\010\022\030\n\020preemptionPolicy\030\037 \001(\014"
+  "\022;\n\010overhead\030  \003(\0132).k8s.io.api.core.v1."
+  "PodSpec.OverheadEntry\022O\n\031topologySpreadC"
+  "onstraints\030! \003(\0132,.k8s.io.api.core.v1.To"
+  "pologySpreadConstraint\022\031\n\021setHostnameAsF"
+  "QDN\030# \001(\010\022%\n\002os\030$ \001(\0132\031.k8s.io.api.core."
+  "v1.PodOS\022\021\n\thostUsers\030% \001(\010\022>\n\017schedulin"
+  "gGates\030& \003(\0132%.k8s.io.api.core.v1.PodSch"
+  "edulingGate\022<\n\016resourceClaims\030\' \003(\0132$.k8"
+  "s.io.api.core.v1.PodResourceClaim\0323\n\021Nod"
+  "eSelectorEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001"
+  "(\t:\0028\001\032_\n\rOverheadEntry\022\013\n\003key\030\001 \001(\t\022=\n\005"
+  "value\030\002 \001(\0132..k8s.io.apimachinery.pkg.ap"
+  "i.resource.Quantity:\0028\001\"\374\004\n\tPodStatus\022\r\n"
+  "\005phase\030\001 \001(\014\0224\n\nconditions\030\002 \003(\0132 .k8s.i"
+  "o.api.core.v1.PodCondition\022\017\n\007message\030\003 "
+  "\001(\014\022\016\n\006reason\030\004 \001(\014\022\031\n\021nominatedNodeName"
+  "\030\013 \001(\014\022\016\n\006hostIP\030\005 \001(\014\022+\n\007hostIPs\030\020 \003(\0132"
+  "\032.k8s.io.api.core.v1.HostIP\022\r\n\005podIP\030\006 \001"
+  "(\014\022)\n\006podIPs\030\014 \003(\0132\031.k8s.io.api.core.v1."
+  "PodIP\022=\n\tstartTime\030\007 \001(\0132*.k8s.io.apimac"
+  "hinery.pkg.apis.meta.v1.Time\022B\n\025initCont"
+  "ainerStatuses\030\n \003(\0132#.k8s.io.api.core.v1"
+  ".ContainerStatus\022>\n\021containerStatuses\030\010 "
+  "\003(\0132#.k8s.io.api.core.v1.ContainerStatus"
+  "\022\020\n\010qosClass\030\t \001(\014\022G\n\032ephemeralContainer"
+  "Statuses\030\r \003(\0132#.k8s.io.api.core.v1.Cont"
+  "ainerStatus\022\016\n\006resize\030\016 \001(\014\022I\n\025resourceC"
+  "laimStatuses\030\017 \003(\0132*.k8s.io.api.core.v1."
+  "PodResourceClaimStatus\"\204\001\n\017PodStatusResu"
+  "lt\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimachine"
+  "ry.pkg.apis.meta.v1.ObjectMeta\022-\n\006status"
+  "\030\002 \001(\0132\035.k8s.io.api.core.v1.PodStatus\"\210\001"
+  "\n\013PodTemplate\022B\n\010metadata\030\001 \001(\01320.k8s.io"
+  ".apimachinery.pkg.apis.meta.v1.ObjectMet"
+  "a\0225\n\010template\030\002 \001(\0132#.k8s.io.api.core.v1"
+  ".PodTemplateSpec\"\203\001\n\017PodTemplateList\022@\n\010"
+  "metadata\030\001 \001(\0132..k8s.io.apimachinery.pkg"
+  ".apis.meta.v1.ListMeta\022.\n\005items\030\002 \003(\0132\037."
+  "k8s.io.api.core.v1.PodTemplate\"\200\001\n\017PodTe"
+  "mplateSpec\022B\n\010metadata\030\001 \001(\01320.k8s.io.ap"
+  "imachinery.pkg.apis.meta.v1.ObjectMeta\022)"
+  "\n\004spec\030\002 \001(\0132\033.k8s.io.api.core.v1.PodSpe"
+  "c\";\n\nPortStatus\022\014\n\004port\030\001 \001(\005\022\020\n\010protoco"
+  "l\030\002 \001(\014\022\r\n\005error\030\003 \001(\014\"J\n\024PortworxVolume"
+  "Source\022\020\n\010volumeID\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014"
+  "\022\020\n\010readOnly\030\003 \001(\010\"\034\n\rPreconditions\022\013\n\003u"
+  "id\030\001 \001(\014\"\261\001\n\024PreferAvoidPodsEntry\0226\n\014pod"
+  "Signature\030\001 \001(\0132 .k8s.io.api.core.v1.Pod"
+  "Signature\022@\n\014evictionTime\030\002 \001(\0132*.k8s.io"
+  ".apimachinery.pkg.apis.meta.v1.Time\022\016\n\006r"
+  "eason\030\003 \001(\014\022\017\n\007message\030\004 \001(\014\"c\n\027Preferre"
+  "dSchedulingTerm\022\016\n\006weight\030\001 \001(\005\0228\n\nprefe"
+  "rence\030\002 \001(\0132$.k8s.io.api.core.v1.NodeSel"
+  "ectorTerm\"\341\001\n\005Probe\0221\n\007handler\030\001 \001(\0132 .k"
+  "8s.io.api.core.v1.ProbeHandler\022\033\n\023initia"
+  "lDelaySeconds\030\002 \001(\005\022\026\n\016timeoutSeconds\030\003 "
+  "\001(\005\022\025\n\rperiodSeconds\030\004 \001(\005\022\030\n\020successThr"
+  "eshold\030\005 \001(\005\022\030\n\020failureThreshold\030\006 \001(\005\022%"
+  "\n\035terminationGracePeriodSeconds\030\007 \001(\003\"\326\001"
+  "\n\014ProbeHandler\022,\n\004exec\030\001 \001(\0132\036.k8s.io.ap"
+  "i.core.v1.ExecAction\0222\n\007httpGet\030\002 \001(\0132!."
+  "k8s.io.api.core.v1.HTTPGetAction\0226\n\ttcpS"
+  "ocket\030\003 \001(\0132#.k8s.io.api.core.v1.TCPSock"
+  "etAction\022,\n\004grpc\030\004 \001(\0132\036.k8s.io.api.core"
+  ".v1.GRPCAction\"c\n\025ProjectedVolumeSource\022"
+  "5\n\007sources\030\001 \003(\0132$.k8s.io.api.core.v1.Vo"
+  "lumeProjection\022\023\n\013defaultMode\030\002 \001(\005\"v\n\023Q"
+  "uobyteVolumeSource\022\020\n\010registry\030\001 \001(\014\022\016\n\006"
+  "volume\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\022\014\n\004user\030\004"
+  " \001(\014\022\r\n\005group\030\005 \001(\014\022\016\n\006tenant\030\006 \001(\014\"\303\001\n\031"
+  "RBDPersistentVolumeSource\022\020\n\010monitors\030\001 "
+  "\003(\t\022\r\n\005image\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004po"
+  "ol\030\004 \001(\014\022\014\n\004user\030\005 \001(\014\022\017\n\007keyring\030\006 \001(\014\022"
+  "6\n\tsecretRef\030\007 \001(\0132#.k8s.io.api.core.v1."
+  "SecretReference\022\020\n\010readOnly\030\010 \001(\010\"\276\001\n\017RB"
+  "DVolumeSource\022\020\n\010monitors\030\001 \003(\t\022\r\n\005image"
+  "\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004pool\030\004 \001(\014\022\014\n\004"
+  "user\030\005 \001(\014\022\017\n\007keyring\030\006 \001(\014\022;\n\tsecretRef"
+  "\030\007 \001(\0132(.k8s.io.api.core.v1.LocalObjectR"
+  "eference\022\020\n\010readOnly\030\010 \001(\010\"r\n\017RangeAlloc"
+  "ation\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimach"
+  "inery.pkg.apis.meta.v1.ObjectMeta\022\r\n\005ran"
+  "ge\030\002 \001(\014\022\014\n\004data\030\003 \001(\014\"\331\001\n\025ReplicationCo"
+  "ntroller\022B\n\010metadata\030\001 \001(\01320.k8s.io.apim"
+  "achinery.pkg.apis.meta.v1.ObjectMeta\022;\n\004"
+  "spec\030\002 \001(\0132-.k8s.io.api.core.v1.Replicat"
+  "ionControllerSpec\022\?\n\006status\030\003 \001(\0132/.k8s."
+  "io.api.core.v1.ReplicationControllerStat"
+  "us\"\247\001\n\036ReplicationControllerCondition\022\014\n"
+  "\004type\030\001 \001(\014\022\016\n\006status\030\002 \001(\014\022F\n\022lastTrans"
+  "itionTime\030\003 \001(\0132*.k8s.io.apimachinery.pk"
+  "g.apis.meta.v1.Time\022\016\n\006reason\030\004 \001(\014\022\017\n\007m"
+  "essage\030\005 \001(\014\"\227\001\n\031ReplicationControllerLi"
+  "st\022@\n\010metadata\030\001 \001(\0132..k8s.io.apimachine"
+  "ry.pkg.apis.meta.v1.ListMeta\0228\n\005items\030\002 "
+  "\003(\0132).k8s.io.api.core.v1.ReplicationCont"
+  "roller\"\375\001\n\031ReplicationControllerSpec\022\020\n\010"
+  "replicas\030\001 \001(\005\022\027\n\017minReadySeconds\030\004 \001(\005\022"
+  "M\n\010selector\030\002 \003(\0132;.k8s.io.api.core.v1.R"
+  "eplicationControllerSpec.SelectorEntry\0225"
+  "\n\010template\030\003 \001(\0132#.k8s.io.api.core.v1.Po"
+  "dTemplateSpec\032/\n\rSelectorEntry\022\013\n\003key\030\001 "
+  "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\343\001\n\033ReplicationCo"
+  "ntrollerStatus\022\020\n\010replicas\030\001 \001(\005\022\034\n\024full"
+  "yLabeledReplicas\030\002 \001(\005\022\025\n\rreadyReplicas\030"
+  "\004 \001(\005\022\031\n\021availableReplicas\030\005 \001(\005\022\032\n\022obse"
+  "rvedGeneration\030\003 \001(\003\022F\n\nconditions\030\006 \003(\013"
+  "22.k8s.io.api.core.v1.ReplicationControl"
+  "lerCondition\"\035\n\rResourceClaim\022\014\n\004name\030\001 "
+  "\001(\014\"\201\001\n\025ResourceFieldSelector\022\025\n\rcontain"
+  "erName\030\001 \001(\014\022\020\n\010resource\030\002 \001(\014\022\?\n\007diviso"
+  "r\030\003 \001(\0132..k8s.io.apimachinery.pkg.api.re"
+  "source.Quantity\"\301\001\n\rResourceQuota\022B\n\010met"
+  "adata\030\001 \001(\01320.k8s.io.apimachinery.pkg.ap"
+  "is.meta.v1.ObjectMeta\0223\n\004spec\030\002 \001(\0132%.k8"
+  "s.io.api.core.v1.ResourceQuotaSpec\0227\n\006st"
+  "atus\030\003 \001(\0132\'.k8s.io.api.core.v1.Resource"
+  "QuotaStatus\"\207\001\n\021ResourceQuotaList\022@\n\010met"
+  "adata\030\001 \001(\0132..k8s.io.apimachinery.pkg.ap"
+  "is.meta.v1.ListMeta\0220\n\005items\030\002 \003(\0132!.k8s"
+  ".io.api.core.v1.ResourceQuota\"\371\001\n\021Resour"
+  "ceQuotaSpec\022=\n\004hard\030\001 \003(\0132/.k8s.io.api.c"
+  "ore.v1.ResourceQuotaSpec.HardEntry\022\016\n\006sc"
+  "opes\030\002 \003(\t\0228\n\rscopeSelector\030\003 \001(\0132!.k8s."
+  "io.api.core.v1.ScopeSelector\032[\n\tHardEntr"
+  "y\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.a"
+  "pimachinery.pkg.api.resource.Quantity:\0028"
+  "\001\"\321\002\n\023ResourceQuotaStatus\022\?\n\004hard\030\001 \003(\0132"
+  "1.k8s.io.api.core.v1.ResourceQuotaStatus"
+  ".HardEntry\022\?\n\004used\030\002 \003(\01321.k8s.io.api.co"
+  "re.v1.ResourceQuotaStatus.UsedEntry\032[\n\tH"
+  "ardEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k"
+  "8s.io.apimachinery.pkg.api.resource.Quan"
+  "tity:\0028\001\032[\n\tUsedEntry\022\013\n\003key\030\001 \001(\t\022=\n\005va"
+  "lue\030\002 \001(\0132..k8s.io.apimachinery.pkg.api."
+  "resource.Quantity:\0028\001\"\231\003\n\024ResourceRequir"
+  "ements\022D\n\006limits\030\001 \003(\01324.k8s.io.api.core"
+  ".v1.ResourceRequirements.LimitsEntry\022H\n\010"
+  "requests\030\002 \003(\01326.k8s.io.api.core.v1.Reso"
+  "urceRequirements.RequestsEntry\0221\n\006claims"
+  "\030\003 \003(\0132!.k8s.io.api.core.v1.ResourceClai"
+  "m\032]\n\013LimitsEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002"
+  " \001(\0132..k8s.io.apimachinery.pkg.api.resou"
+  "rce.Quantity:\0028\001\032_\n\rRequestsEntry\022\013\n\003key"
+  "\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.apimachin"
+  "ery.pkg.api.resource.Quantity:\0028\001\"I\n\016SEL"
+  "inuxOptions\022\014\n\004user\030\001 \001(\014\022\014\n\004role\030\002 \001(\014\022"
+  "\014\n\004type\030\003 \001(\014\022\r\n\005level\030\004 \001(\014\"\206\002\n\035ScaleIO"
+  "PersistentVolumeSource\022\017\n\007gateway\030\001 \001(\014\022"
+  "\016\n\006system\030\002 \001(\014\0226\n\tsecretRef\030\003 \001(\0132#.k8s"
+  ".io.api.core.v1.SecretReference\022\022\n\nsslEn"
+  "abled\030\004 \001(\010\022\030\n\020protectionDomain\030\005 \001(\014\022\023\n"
+  "\013storagePool\030\006 \001(\014\022\023\n\013storageMode\030\007 \001(\014\022"
+  "\022\n\nvolumeName\030\010 \001(\014\022\016\n\006fsType\030\t \001(\014\022\020\n\010r"
+  "eadOnly\030\n \001(\010\"\201\002\n\023ScaleIOVolumeSource\022\017\n"
+  "\007gateway\030\001 \001(\014\022\016\n\006system\030\002 \001(\014\022;\n\tsecret"
+  "Ref\030\003 \001(\0132(.k8s.io.api.core.v1.LocalObje"
+  "ctReference\022\022\n\nsslEnabled\030\004 \001(\010\022\030\n\020prote"
+  "ctionDomain\030\005 \001(\014\022\023\n\013storagePool\030\006 \001(\014\022\023"
+  "\n\013storageMode\030\007 \001(\014\022\022\n\nvolumeName\030\010 \001(\014\022"
+  "\016\n\006fsType\030\t \001(\014\022\020\n\010readOnly\030\n \001(\010\"`\n\rSco"
+  "peSelector\022O\n\020matchExpressions\030\001 \003(\01325.k"
+  "8s.io.api.core.v1.ScopedResourceSelector"
+  "Requirement\"X\n!ScopedResourceSelectorReq"
+  "uirement\022\021\n\tscopeName\030\001 \001(\014\022\020\n\010operator\030"
+  "\002 \001(\014\022\016\n\006values\030\003 \003(\t\"8\n\016SeccompProfile\022"
+  "\014\n\004type\030\001 \001(\014\022\030\n\020localhostProfile\030\002 \001(\014\""
+  "\301\002\n\006Secret\022B\n\010metadata\030\001 \001(\01320.k8s.io.ap"
+  "imachinery.pkg.apis.meta.v1.ObjectMeta\022\021"
+  "\n\timmutable\030\005 \001(\010\0222\n\004data\030\002 \003(\0132$.k8s.io"
+  ".api.core.v1.Secret.DataEntry\022>\n\nstringD"
+  "ata\030\004 \003(\0132*.k8s.io.api.core.v1.Secret.St"
+  "ringDataEntry\022\014\n\004type\030\003 \001(\014\032+\n\tDataEntry"
+  "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\0321\n\017Stri"
+  "ngDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:"
+  "\0028\001\"k\n\017SecretEnvSource\022F\n\024localObjectRef"
+  "erence\030\001 \001(\0132(.k8s.io.api.core.v1.LocalO"
+  "bjectReference\022\020\n\010optional\030\002 \001(\010\"z\n\021Secr"
+  "etKeySelector\022F\n\024localObjectReference\030\001 "
+  "\001(\0132(.k8s.io.api.core.v1.LocalObjectRefe"
+  "rence\022\013\n\003key\030\002 \001(\014\022\020\n\010optional\030\003 \001(\010\"y\n\n"
+  "SecretList\022@\n\010metadata\030\001 \001(\0132..k8s.io.ap"
+  "imachinery.pkg.apis.meta.v1.ListMeta\022)\n\005"
+  "items\030\002 \003(\0132\032.k8s.io.api.core.v1.Secret\""
+  "\232\001\n\020SecretProjection\022F\n\024localObjectRefer"
+  "ence\030\001 \001(\0132(.k8s.io.api.core.v1.LocalObj"
+  "ectReference\022,\n\005items\030\002 \003(\0132\035.k8s.io.api"
+  ".core.v1.KeyToPath\022\020\n\010optional\030\004 \001(\010\"2\n\017"
+  "SecretReference\022\014\n\004name\030\001 \001(\014\022\021\n\tnamespa"
+  "ce\030\002 \001(\014\"}\n\022SecretVolumeSource\022\022\n\nsecret"
+  "Name\030\001 \001(\014\022,\n\005items\030\002 \003(\0132\035.k8s.io.api.c"
+  "ore.v1.KeyToPath\022\023\n\013defaultMode\030\003 \001(\005\022\020\n"
+  "\010optional\030\004 \001(\010\"\262\003\n\017SecurityContext\0226\n\014c"
+  "apabilities\030\001 \001(\0132 .k8s.io.api.core.v1.C"
+  "apabilities\022\022\n\nprivileged\030\002 \001(\010\022:\n\016seLin"
+  "uxOptions\030\003 \001(\0132\".k8s.io.api.core.v1.SEL"
+  "inuxOptions\022I\n\016windowsOptions\030\n \001(\01321.k8"
+  "s.io.api.core.v1.WindowsSecurityContextO"
+  "ptions\022\021\n\trunAsUser\030\004 \001(\003\022\022\n\nrunAsGroup\030"
+  "\010 \001(\003\022\024\n\014runAsNonRoot\030\005 \001(\010\022\036\n\026readOnlyR"
+  "ootFilesystem\030\006 \001(\010\022 \n\030allowPrivilegeEsc"
+  "alation\030\007 \001(\010\022\021\n\tprocMount\030\t \001(\014\022:\n\016secc"
+  "ompProfile\030\013 \001(\0132\".k8s.io.api.core.v1.Se"
+  "ccompProfile\"M\n\023SerializedReference\0226\n\tr"
+  "eference\030\001 \001(\0132#.k8s.io.api.core.v1.Obje"
+  "ctReference\"\257\001\n\007Service\022B\n\010metadata\030\001 \001("
+  "\01320.k8s.io.apimachinery.pkg.apis.meta.v1"
+  ".ObjectMeta\022-\n\004spec\030\002 \001(\0132\037.k8s.io.api.c"
+  "ore.v1.ServiceSpec\0221\n\006status\030\003 \001(\0132!.k8s"
+  ".io.api.core.v1.ServiceStatus\"\364\001\n\016Servic"
+  "eAccount\022B\n\010metadata\030\001 \001(\01320.k8s.io.apim"
+  "achinery.pkg.apis.meta.v1.ObjectMeta\0224\n\007"
+  "secrets\030\002 \003(\0132#.k8s.io.api.core.v1.Objec"
+  "tReference\022B\n\020imagePullSecrets\030\003 \003(\0132(.k"
+  "8s.io.api.core.v1.LocalObjectReference\022$"
+  "\n\034automountServiceAccountToken\030\004 \001(\010\"\211\001\n"
+  "\022ServiceAccountList\022@\n\010metadata\030\001 \001(\0132.."
+  "k8s.io.apimachinery.pkg.apis.meta.v1.Lis"
+  "tMeta\0221\n\005items\030\002 \003(\0132\".k8s.io.api.core.v"
+  "1.ServiceAccount\"Z\n\035ServiceAccountTokenP"
+  "rojection\022\020\n\010audience\030\001 \001(\014\022\031\n\021expiratio"
+  "nSeconds\030\002 \001(\003\022\014\n\004path\030\003 \001(\014\"{\n\013ServiceL"
+  "ist\022@\n\010metadata\030\001 \001(\0132..k8s.io.apimachin"
+  "ery.pkg.apis.meta.v1.ListMeta\022*\n\005items\030\002"
+  " \003(\0132\033.k8s.io.api.core.v1.Service\"\250\001\n\013Se"
+  "rvicePort\022\014\n\004name\030\001 \001(\014\022\020\n\010protocol\030\002 \001("
+  "\014\022\023\n\013appProtocol\030\006 \001(\014\022\014\n\004port\030\003 \001(\005\022D\n\n"
+  "targetPort\030\004 \001(\01320.k8s.io.apimachinery.p"
+  "kg.util.intstr.IntOrString\022\020\n\010nodePort\030\005"
+  " \001(\005\"#\n\023ServiceProxyOptions\022\014\n\004path\030\001 \001("
+  "\014\"\227\005\n\013ServiceSpec\022.\n\005ports\030\001 \003(\0132\037.k8s.i"
+  "o.api.core.v1.ServicePort\022\?\n\010selector\030\002 "
+  "\003(\0132-.k8s.io.api.core.v1.ServiceSpec.Sel"
+  "ectorEntry\022\021\n\tclusterIP\030\003 \001(\014\022\022\n\ncluster"
+  "IPs\030\022 \003(\t\022\014\n\004type\030\004 \001(\014\022\023\n\013externalIPs\030\005"
+  " \003(\t\022\027\n\017sessionAffinity\030\007 \001(\014\022\026\n\016loadBal"
+  "ancerIP\030\010 \001(\014\022 \n\030loadBalancerSourceRange"
+  "s\030\t \003(\t\022\024\n\014externalName\030\n \001(\014\022\035\n\025externa"
+  "lTrafficPolicy\030\013 \001(\014\022\033\n\023healthCheckNodeP"
+  "ort\030\014 \001(\005\022 \n\030publishNotReadyAddresses\030\r "
+  "\001(\010\022H\n\025sessionAffinityConfig\030\016 \001(\0132).k8s"
+  ".io.api.core.v1.SessionAffinityConfig\022\022\n"
+  "\nipFamilies\030\023 \003(\t\022\026\n\016ipFamilyPolicy\030\021 \001("
+  "\014\022%\n\035allocateLoadBalancerNodePorts\030\024 \001(\010"
+  "\022\031\n\021loadBalancerClass\030\025 \001(\014\022\035\n\025internalT"
+  "rafficPolicy\030\026 \001(\014\032/\n\rSelectorEntry\022\013\n\003k"
+  "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\222\001\n\rServiceS"
+  "tatus\022<\n\014loadBalancer\030\001 \001(\0132&.k8s.io.api"
+  ".core.v1.LoadBalancerStatus\022C\n\ncondition"
+  "s\030\002 \003(\0132/.k8s.io.apimachinery.pkg.apis.m"
+  "eta.v1.Condition\"M\n\025SessionAffinityConfi"
+  "g\0224\n\010clientIP\030\001 \001(\0132\".k8s.io.api.core.v1"
+  ".ClientIPConfig\"\036\n\013SleepAction\022\017\n\007second"
+  "s\030\001 \001(\003\"\250\001\n\037StorageOSPersistentVolumeSou"
+  "rce\022\022\n\nvolumeName\030\001 \001(\014\022\027\n\017volumeNamespa"
+  "ce\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\020\n\010readOnly\030\004 \001"
+  "(\010\0226\n\tsecretRef\030\005 \001(\0132#.k8s.io.api.core."
+  "v1.ObjectReference\"\243\001\n\025StorageOSVolumeSo"
+  "urce\022\022\n\nvolumeName\030\001 \001(\014\022\027\n\017volumeNamesp"
+  "ace\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\020\n\010readOnly\030\004 "
+  "\001(\010\022;\n\tsecretRef\030\005 \001(\0132(.k8s.io.api.core"
+  ".v1.LocalObjectReference\"%\n\006Sysctl\022\014\n\004na"
+  "me\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\"_\n\017TCPSocketActi"
+  "on\022>\n\004port\030\001 \001(\01320.k8s.io.apimachinery.p"
+  "kg.util.intstr.IntOrString\022\014\n\004host\030\002 \001(\014"
+  "\"r\n\005Taint\022\013\n\003key\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\022\016\n"
+  "\006effect\030\003 \001(\014\022=\n\ttimeAdded\030\004 \001(\0132*.k8s.i"
+  "o.apimachinery.pkg.apis.meta.v1.Time\"e\n\n"
+  "Toleration\022\013\n\003key\030\001 \001(\014\022\020\n\010operator\030\002 \001("
+  "\014\022\r\n\005value\030\003 \001(\014\022\016\n\006effect\030\004 \001(\014\022\031\n\021tole"
+  "rationSeconds\030\005 \001(\003\"\?\n TopologySelectorL"
+  "abelRequirement\022\013\n\003key\030\001 \001(\014\022\016\n\006values\030\002"
+  " \003(\t\"k\n\024TopologySelectorTerm\022S\n\025matchLab"
+  "elExpressions\030\001 \003(\01324.k8s.io.api.core.v1"
+  ".TopologySelectorLabelRequirement\"\211\002\n\030To"
+  "pologySpreadConstraint\022\017\n\007maxSkew\030\001 \001(\005\022"
+  "\023\n\013topologyKey\030\002 \001(\014\022\031\n\021whenUnsatisfiabl"
+  "e\030\003 \001(\014\022J\n\rlabelSelector\030\004 \001(\01323.k8s.io."
+  "apimachinery.pkg.apis.meta.v1.LabelSelec"
+  "tor\022\022\n\nminDomains\030\005 \001(\005\022\032\n\022nodeAffinityP"
+  "olicy\030\006 \001(\014\022\030\n\020nodeTaintsPolicy\030\007 \001(\014\022\026\n"
+  "\016matchLabelKeys\030\010 \003(\t\"I\n\031TypedLocalObjec"
+  "tReference\022\020\n\010apiGroup\030\001 \001(\014\022\014\n\004kind\030\002 \001"
+  "(\014\022\014\n\004name\030\003 \001(\014\"W\n\024TypedObjectReference"
+  "\022\020\n\010apiGroup\030\001 \001(\014\022\014\n\004kind\030\002 \001(\014\022\014\n\004name"
+  "\030\003 \001(\014\022\021\n\tnamespace\030\004 \001(\014\"N\n\006Volume\022\014\n\004n"
+  "ame\030\001 \001(\014\0226\n\014volumeSource\030\002 \001(\0132 .k8s.io"
+  ".api.core.v1.VolumeSource\"0\n\014VolumeDevic"
+  "e\022\014\n\004name\030\001 \001(\014\022\022\n\ndevicePath\030\002 \001(\014\"\200\001\n\013"
+  "VolumeMount\022\014\n\004name\030\001 \001(\014\022\020\n\010readOnly\030\002 "
+  "\001(\010\022\021\n\tmountPath\030\003 \001(\014\022\017\n\007subPath\030\004 \001(\014\022"
+  "\030\n\020mountPropagation\030\005 \001(\014\022\023\n\013subPathExpr"
+  "\030\006 \001(\014\"H\n\022VolumeNodeAffinity\0222\n\010required"
+  "\030\001 \001(\0132 .k8s.io.api.core.v1.NodeSelector"
+  "\"\342\002\n\020VolumeProjection\0224\n\006secret\030\001 \001(\0132$."
+  "k8s.io.api.core.v1.SecretProjection\022>\n\013d"
+  "ownwardAPI\030\002 \001(\0132).k8s.io.api.core.v1.Do"
+  "wnwardAPIProjection\022:\n\tconfigMap\030\003 \001(\0132\'"
+  ".k8s.io.api.core.v1.ConfigMapProjection\022"
+  "N\n\023serviceAccountToken\030\004 \001(\01321.k8s.io.ap"
+  "i.core.v1.ServiceAccountTokenProjection\022"
+  "L\n\022clusterTrustBundle\030\005 \001(\01320.k8s.io.api"
+  ".core.v1.ClusterTrustBundleProjection\"\370\002"
+  "\n\032VolumeResourceRequirements\022J\n\006limits\030\001"
+  " \003(\0132:.k8s.io.api.core.v1.VolumeResource"
+  "Requirements.LimitsEntry\022N\n\010requests\030\002 \003"
+  "(\0132<.k8s.io.api.core.v1.VolumeResourceRe"
+  "quirements.RequestsEntry\032]\n\013LimitsEntry\022"
+  "\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.api"
+  "machinery.pkg.api.resource.Quantity:\0028\001\032"
+  "_\n\rRequestsEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002"
+  " \001(\0132..k8s.io.apimachinery.pkg.api.resou"
+  "rce.Quantity:\0028\001\"\231\016\n\014VolumeSource\022:\n\010hos"
+  "tPath\030\001 \001(\0132(.k8s.io.api.core.v1.HostPat"
+  "hVolumeSource\022:\n\010emptyDir\030\002 \001(\0132(.k8s.io"
+  ".api.core.v1.EmptyDirVolumeSource\022L\n\021gce"
+  "PersistentDisk\030\003 \001(\01321.k8s.io.api.core.v"
+  "1.GCEPersistentDiskVolumeSource\022R\n\024awsEl"
+  "asticBlockStore\030\004 \001(\01324.k8s.io.api.core."
+  "v1.AWSElasticBlockStoreVolumeSource\0228\n\007g"
+  "itRepo\030\005 \001(\0132\'.k8s.io.api.core.v1.GitRep"
+  "oVolumeSource\0226\n\006secret\030\006 \001(\0132&.k8s.io.a"
+  "pi.core.v1.SecretVolumeSource\0220\n\003nfs\030\007 \001"
+  "(\0132#.k8s.io.api.core.v1.NFSVolumeSource\022"
+  "4\n\005iscsi\030\010 \001(\0132%.k8s.io.api.core.v1.ISCS"
+  "IVolumeSource\022<\n\tglusterfs\030\t \001(\0132).k8s.i"
+  "o.api.core.v1.GlusterfsVolumeSource\022T\n\025p"
+  "ersistentVolumeClaim\030\n \001(\01325.k8s.io.api."
+  "core.v1.PersistentVolumeClaimVolumeSourc"
+  "e\0220\n\003rbd\030\013 \001(\0132#.k8s.io.api.core.v1.RBDV"
+  "olumeSource\0228\n\nflexVolume\030\014 \001(\0132$.k8s.io"
+  ".api.core.v1.FlexVolumeSource\0226\n\006cinder\030"
+  "\r \001(\0132&.k8s.io.api.core.v1.CinderVolumeS"
+  "ource\0226\n\006cephfs\030\016 \001(\0132&.k8s.io.api.core."
+  "v1.CephFSVolumeSource\0228\n\007flocker\030\017 \001(\0132\'"
+  ".k8s.io.api.core.v1.FlockerVolumeSource\022"
+  "@\n\013downwardAPI\030\020 \001(\0132+.k8s.io.api.core.v"
+  "1.DownwardAPIVolumeSource\022.\n\002fc\030\021 \001(\0132\"."
+  "k8s.io.api.core.v1.FCVolumeSource\022<\n\tazu"
+  "reFile\030\022 \001(\0132).k8s.io.api.core.v1.AzureF"
+  "ileVolumeSource\022<\n\tconfigMap\030\023 \001(\0132).k8s"
+  ".io.api.core.v1.ConfigMapVolumeSource\022I\n"
+  "\rvsphereVolume\030\024 \001(\01322.k8s.io.api.core.v"
+  "1.VsphereVirtualDiskVolumeSource\0228\n\007quob"
+  "yte\030\025 \001(\0132\'.k8s.io.api.core.v1.QuobyteVo"
+  "lumeSource\022<\n\tazureDisk\030\026 \001(\0132).k8s.io.a"
+  "pi.core.v1.AzureDiskVolumeSource\022R\n\024phot"
+  "onPersistentDisk\030\027 \001(\01324.k8s.io.api.core"
+  ".v1.PhotonPersistentDiskVolumeSource\022<\n\t"
+  "projected\030\032 \001(\0132).k8s.io.api.core.v1.Pro"
+  "jectedVolumeSource\022@\n\016portworxVolume\030\030 \001"
+  "(\0132(.k8s.io.api.core.v1.PortworxVolumeSo"
+  "urce\0228\n\007scaleIO\030\031 \001(\0132\'.k8s.io.api.core."
+  "v1.ScaleIOVolumeSource\022<\n\tstorageos\030\033 \001("
+  "\0132).k8s.io.api.core.v1.StorageOSVolumeSo"
+  "urce\0220\n\003csi\030\034 \001(\0132#.k8s.io.api.core.v1.C"
+  "SIVolumeSource\022<\n\tephemeral\030\035 \001(\0132).k8s."
+  "io.api.core.v1.EphemeralVolumeSource\"x\n\036"
+  "VsphereVirtualDiskVolumeSource\022\022\n\nvolume"
+  "Path\030\001 \001(\014\022\016\n\006fsType\030\002 \001(\014\022\031\n\021storagePol"
+  "icyName\030\003 \001(\014\022\027\n\017storagePolicyID\030\004 \001(\014\"g"
+  "\n\027WeightedPodAffinityTerm\022\016\n\006weight\030\001 \001("
+  "\005\022<\n\017podAffinityTerm\030\002 \001(\0132#.k8s.io.api."
+  "core.v1.PodAffinityTerm\"\207\001\n\035WindowsSecur"
+  "ityContextOptions\022\036\n\026gmsaCredentialSpecN"
+  "ame\030\001 \001(\014\022\032\n\022gmsaCredentialSpec\030\002 \001(\014\022\025\n"
+  "\rrunAsUserName\030\003 \001(\014\022\023\n\013hostProcess\030\004 \001("
+  "\010B\024Z\022k8s.io/api/core/v1"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_deps[5] = {
   &::descriptor_table_staging_5fsrc_5fk8s_2eio_5fapimachinery_5fpkg_5fapi_5fresource_5fgenerated_2eproto,
@@ -9207,9 +9236,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_staging_5fsrc_5fk8s
 };
 static ::_pbi::once_flag descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto = {
-    false, false, 41772, descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto,
+    false, false, 41863, descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto,
     "staging_src_k8s.io_api_core_v1_generated.proto",
-    &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once, descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_deps, 5, 254,
+    &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once, descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_deps, 5, 255,
     schemas, file_default_instances, TableStruct_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto::offsets,
     file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto, file_level_enum_descriptors_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto,
     file_level_service_descriptors_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto,
@@ -9225,6 +9254,289 @@ namespace io {
 namespace api {
 namespace core {
 namespace v1 {
+
+// ===================================================================
+
+class PodOrNode::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PodOrNode>()._impl_._has_bits_);
+  static const ::k8s::io::api::core::v1::Pod& pod(const PodOrNode* msg);
+  static void set_has_pod(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::k8s::io::api::core::v1::Node& node(const PodOrNode* msg);
+  static void set_has_node(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
+};
+
+const ::k8s::io::api::core::v1::Pod&
+PodOrNode::_Internal::pod(const PodOrNode* msg) {
+  return *msg->_impl_.pod_;
+}
+const ::k8s::io::api::core::v1::Node&
+PodOrNode::_Internal::node(const PodOrNode* msg) {
+  return *msg->_impl_.node_;
+}
+PodOrNode::PodOrNode(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:k8s.io.api.core.v1.PodOrNode)
+}
+PodOrNode::PodOrNode(const PodOrNode& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PodOrNode* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.pod_){nullptr}
+    , decltype(_impl_.node_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_pod()) {
+    _this->_impl_.pod_ = new ::k8s::io::api::core::v1::Pod(*from._impl_.pod_);
+  }
+  if (from._internal_has_node()) {
+    _this->_impl_.node_ = new ::k8s::io::api::core::v1::Node(*from._impl_.node_);
+  }
+  // @@protoc_insertion_point(copy_constructor:k8s.io.api.core.v1.PodOrNode)
+}
+
+inline void PodOrNode::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.pod_){nullptr}
+    , decltype(_impl_.node_){nullptr}
+  };
+}
+
+PodOrNode::~PodOrNode() {
+  // @@protoc_insertion_point(destructor:k8s.io.api.core.v1.PodOrNode)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PodOrNode::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.pod_;
+  if (this != internal_default_instance()) delete _impl_.node_;
+}
+
+void PodOrNode::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PodOrNode::Clear() {
+// @@protoc_insertion_point(message_clear_start:k8s.io.api.core.v1.PodOrNode)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.pod_ != nullptr);
+      _impl_.pod_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.node_ != nullptr);
+      _impl_.node_->Clear();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PodOrNode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .k8s.io.api.core.v1.Pod pod = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pod(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .k8s.io.api.core.v1.Node node = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_node(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PodOrNode::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:k8s.io.api.core.v1.PodOrNode)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .k8s.io.api.core.v1.Pod pod = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::pod(this),
+        _Internal::pod(this).GetCachedSize(), target, stream);
+  }
+
+  // required .k8s.io.api.core.v1.Node node = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::node(this),
+        _Internal::node(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:k8s.io.api.core.v1.PodOrNode)
+  return target;
+}
+
+size_t PodOrNode::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:k8s.io.api.core.v1.PodOrNode)
+  size_t total_size = 0;
+
+  if (_internal_has_pod()) {
+    // required .k8s.io.api.core.v1.Pod pod = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pod_);
+  }
+
+  if (_internal_has_node()) {
+    // required .k8s.io.api.core.v1.Node node = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.node_);
+  }
+
+  return total_size;
+}
+size_t PodOrNode::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:k8s.io.api.core.v1.PodOrNode)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .k8s.io.api.core.v1.Pod pod = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pod_);
+
+    // required .k8s.io.api.core.v1.Node node = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.node_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PodOrNode::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PodOrNode::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PodOrNode::GetClassData() const { return &_class_data_; }
+
+
+void PodOrNode::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PodOrNode*>(&to_msg);
+  auto& from = static_cast<const PodOrNode&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:k8s.io.api.core.v1.PodOrNode)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_pod()->::k8s::io::api::core::v1::Pod::MergeFrom(
+          from._internal_pod());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_node()->::k8s::io::api::core::v1::Node::MergeFrom(
+          from._internal_node());
+    }
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PodOrNode::CopyFrom(const PodOrNode& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:k8s.io.api.core.v1.PodOrNode)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PodOrNode::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void PodOrNode::InternalSwap(PodOrNode* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PodOrNode, _impl_.node_)
+      + sizeof(PodOrNode::_impl_.node_)
+      - PROTOBUF_FIELD_OFFSET(PodOrNode, _impl_.pod_)>(
+          reinterpret_cast<char*>(&_impl_.pod_),
+          reinterpret_cast<char*>(&other->_impl_.pod_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PodOrNode::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[0]);
+}
 
 // ===================================================================
 
@@ -9564,7 +9876,7 @@ void AWSElasticBlockStoreVolumeSource::InternalSwap(AWSElasticBlockStoreVolumeSo
 ::PROTOBUF_NAMESPACE_ID::Metadata AWSElasticBlockStoreVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[0]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[1]);
 }
 
 // ===================================================================
@@ -9870,7 +10182,7 @@ void Affinity::InternalSwap(Affinity* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Affinity::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[1]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[2]);
 }
 
 // ===================================================================
@@ -10140,7 +10452,7 @@ void AttachedVolume::InternalSwap(AttachedVolume* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AttachedVolume::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[2]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[3]);
 }
 
 // ===================================================================
@@ -10325,7 +10637,7 @@ void AvoidPods::InternalSwap(AvoidPods* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AvoidPods::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[3]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[4]);
 }
 
 // ===================================================================
@@ -10777,7 +11089,7 @@ void AzureDiskVolumeSource::InternalSwap(AzureDiskVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AzureDiskVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[4]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[5]);
 }
 
 // ===================================================================
@@ -11129,7 +11441,7 @@ void AzureFilePersistentVolumeSource::InternalSwap(AzureFilePersistentVolumeSour
 ::PROTOBUF_NAMESPACE_ID::Metadata AzureFilePersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[5]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[6]);
 }
 
 // ===================================================================
@@ -11431,7 +11743,7 @@ void AzureFileVolumeSource::InternalSwap(AzureFileVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AzureFileVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[6]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[7]);
 }
 
 // ===================================================================
@@ -11697,7 +12009,7 @@ void Binding::InternalSwap(Binding* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Binding::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[7]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[8]);
 }
 
 // ===================================================================
@@ -11711,7 +12023,7 @@ void CSIPersistentVolumeSource_VolumeAttributesEntry_DoNotUse::MergeFrom(const C
 ::PROTOBUF_NAMESPACE_ID::Metadata CSIPersistentVolumeSource_VolumeAttributesEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[8]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[9]);
 }
 
 // ===================================================================
@@ -12355,7 +12667,7 @@ void CSIPersistentVolumeSource::InternalSwap(CSIPersistentVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSIPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[9]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[10]);
 }
 
 // ===================================================================
@@ -12369,7 +12681,7 @@ void CSIVolumeSource_VolumeAttributesEntry_DoNotUse::MergeFrom(const CSIVolumeSo
 ::PROTOBUF_NAMESPACE_ID::Metadata CSIVolumeSource_VolumeAttributesEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[10]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[11]);
 }
 
 // ===================================================================
@@ -12788,7 +13100,7 @@ void CSIVolumeSource::InternalSwap(CSIVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CSIVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[11]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[12]);
 }
 
 // ===================================================================
@@ -13021,7 +13333,7 @@ void Capabilities::InternalSwap(Capabilities* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Capabilities::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[12]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[13]);
 }
 
 // ===================================================================
@@ -13463,7 +13775,7 @@ void CephFSPersistentVolumeSource::InternalSwap(CephFSPersistentVolumeSource* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CephFSPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[13]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[14]);
 }
 
 // ===================================================================
@@ -13905,7 +14217,7 @@ void CephFSVolumeSource::InternalSwap(CephFSVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CephFSVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[14]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[15]);
 }
 
 // ===================================================================
@@ -14256,7 +14568,7 @@ void CinderPersistentVolumeSource::InternalSwap(CinderPersistentVolumeSource* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CinderPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[15]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[16]);
 }
 
 // ===================================================================
@@ -14607,7 +14919,7 @@ void CinderVolumeSource::InternalSwap(CinderVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CinderVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[16]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[17]);
 }
 
 // ===================================================================
@@ -14877,7 +15189,7 @@ void ClaimSource::InternalSwap(ClaimSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ClaimSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[17]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[18]);
 }
 
 // ===================================================================
@@ -15068,7 +15380,7 @@ void ClientIPConfig::InternalSwap(ClientIPConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ClientIPConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[18]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[19]);
 }
 
 // ===================================================================
@@ -15473,7 +15785,7 @@ void ClusterTrustBundleProjection::InternalSwap(ClusterTrustBundleProjection* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata ClusterTrustBundleProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[19]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[20]);
 }
 
 // ===================================================================
@@ -15843,7 +16155,7 @@ void ComponentCondition::InternalSwap(ComponentCondition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ComponentCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[20]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[21]);
 }
 
 // ===================================================================
@@ -16087,7 +16399,7 @@ void ComponentStatus::InternalSwap(ComponentStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ComponentStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[21]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[22]);
 }
 
 // ===================================================================
@@ -16331,7 +16643,7 @@ void ComponentStatusList::InternalSwap(ComponentStatusList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ComponentStatusList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[22]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[23]);
 }
 
 // ===================================================================
@@ -16345,7 +16657,7 @@ void ConfigMap_DataEntry_DoNotUse::MergeFrom(const ConfigMap_DataEntry_DoNotUse&
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMap_DataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[23]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[24]);
 }
 
 // ===================================================================
@@ -16359,7 +16671,7 @@ void ConfigMap_BinaryDataEntry_DoNotUse::MergeFrom(const ConfigMap_BinaryDataEnt
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMap_BinaryDataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[24]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[25]);
 }
 
 // ===================================================================
@@ -16735,7 +17047,7 @@ void ConfigMap::InternalSwap(ConfigMap* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMap::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[25]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[26]);
 }
 
 // ===================================================================
@@ -16982,7 +17294,7 @@ void ConfigMapEnvSource::InternalSwap(ConfigMapEnvSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapEnvSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[26]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[27]);
 }
 
 // ===================================================================
@@ -17283,7 +17595,7 @@ void ConfigMapKeySelector::InternalSwap(ConfigMapKeySelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapKeySelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[27]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[28]);
 }
 
 // ===================================================================
@@ -17527,7 +17839,7 @@ void ConfigMapList::InternalSwap(ConfigMapList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[28]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[29]);
 }
 
 // ===================================================================
@@ -17947,7 +18259,7 @@ void ConfigMapNodeConfigSource::InternalSwap(ConfigMapNodeConfigSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapNodeConfigSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[29]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[30]);
 }
 
 // ===================================================================
@@ -18228,7 +18540,7 @@ void ConfigMapProjection::InternalSwap(ConfigMapProjection* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[30]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[31]);
 }
 
 // ===================================================================
@@ -18543,7 +18855,7 @@ void ConfigMapVolumeSource::InternalSwap(ConfigMapVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigMapVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[31]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[32]);
 }
 
 // ===================================================================
@@ -19716,7 +20028,7 @@ void Container::InternalSwap(Container* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Container::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[32]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[33]);
 }
 
 // ===================================================================
@@ -19948,7 +20260,7 @@ void ContainerImage::InternalSwap(ContainerImage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerImage::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[33]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[34]);
 }
 
 // ===================================================================
@@ -20339,7 +20651,7 @@ void ContainerPort::InternalSwap(ContainerPort* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerPort::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[34]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[35]);
 }
 
 // ===================================================================
@@ -20609,7 +20921,7 @@ void ContainerResizePolicy::InternalSwap(ContainerResizePolicy* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerResizePolicy::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[35]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[36]);
 }
 
 // ===================================================================
@@ -20915,7 +21227,7 @@ void ContainerState::InternalSwap(ContainerState* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerState::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[36]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[37]);
 }
 
 // ===================================================================
@@ -21125,7 +21437,7 @@ void ContainerStateRunning::InternalSwap(ContainerStateRunning* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerStateRunning::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[37]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[38]);
 }
 
 // ===================================================================
@@ -21612,7 +21924,7 @@ void ContainerStateTerminated::InternalSwap(ContainerStateTerminated* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerStateTerminated::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[38]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[39]);
 }
 
 // ===================================================================
@@ -21882,7 +22194,7 @@ void ContainerStateWaiting::InternalSwap(ContainerStateWaiting* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerStateWaiting::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[39]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[40]);
 }
 
 // ===================================================================
@@ -21896,7 +22208,7 @@ void ContainerStatus_AllocatedResourcesEntry_DoNotUse::MergeFrom(const Container
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerStatus_AllocatedResourcesEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[40]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[41]);
 }
 
 // ===================================================================
@@ -22570,7 +22882,7 @@ void ContainerStatus::InternalSwap(ContainerStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ContainerStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[41]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[42]);
 }
 
 // ===================================================================
@@ -22761,7 +23073,7 @@ void DaemonEndpoint::InternalSwap(DaemonEndpoint* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DaemonEndpoint::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[42]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[43]);
 }
 
 // ===================================================================
@@ -22946,7 +23258,7 @@ void DownwardAPIProjection::InternalSwap(DownwardAPIProjection* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DownwardAPIProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[43]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[44]);
 }
 
 // ===================================================================
@@ -23291,7 +23603,7 @@ void DownwardAPIVolumeFile::InternalSwap(DownwardAPIVolumeFile* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DownwardAPIVolumeFile::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[44]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[45]);
 }
 
 // ===================================================================
@@ -23516,7 +23828,7 @@ void DownwardAPIVolumeSource::InternalSwap(DownwardAPIVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DownwardAPIVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[45]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[46]);
 }
 
 // ===================================================================
@@ -23785,7 +24097,7 @@ void EmptyDirVolumeSource::InternalSwap(EmptyDirVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EmptyDirVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[46]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[47]);
 }
 
 // ===================================================================
@@ -24150,7 +24462,7 @@ void EndpointAddress::InternalSwap(EndpointAddress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EndpointAddress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[47]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[48]);
 }
 
 // ===================================================================
@@ -24502,7 +24814,7 @@ void EndpointPort::InternalSwap(EndpointPort* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EndpointPort::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[48]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[49]);
 }
 
 // ===================================================================
@@ -24755,7 +25067,7 @@ void EndpointSubset::InternalSwap(EndpointSubset* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EndpointSubset::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[49]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[50]);
 }
 
 // ===================================================================
@@ -24999,7 +25311,7 @@ void Endpoints::InternalSwap(Endpoints* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Endpoints::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[50]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[51]);
 }
 
 // ===================================================================
@@ -25243,7 +25555,7 @@ void EndpointsList::InternalSwap(EndpointsList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EndpointsList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[51]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[52]);
 }
 
 // ===================================================================
@@ -25557,7 +25869,7 @@ void EnvFromSource::InternalSwap(EnvFromSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EnvFromSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[52]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[53]);
 }
 
 // ===================================================================
@@ -25872,7 +26184,7 @@ void EnvVar::InternalSwap(EnvVar* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EnvVar::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[53]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[54]);
 }
 
 // ===================================================================
@@ -26222,7 +26534,7 @@ void EnvVarSource::InternalSwap(EnvVarSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EnvVarSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[54]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[55]);
 }
 
 // ===================================================================
@@ -26487,7 +26799,7 @@ void EphemeralContainer::InternalSwap(EphemeralContainer* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EphemeralContainer::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[55]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[56]);
 }
 
 // ===================================================================
@@ -27660,7 +27972,7 @@ void EphemeralContainerCommon::InternalSwap(EphemeralContainerCommon* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EphemeralContainerCommon::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[56]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[57]);
 }
 
 // ===================================================================
@@ -27866,7 +28178,7 @@ void EphemeralVolumeSource::InternalSwap(EphemeralVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EphemeralVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[57]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[58]);
 }
 
 // ===================================================================
@@ -28747,7 +29059,7 @@ void Event::InternalSwap(Event* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Event::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[58]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[59]);
 }
 
 // ===================================================================
@@ -28991,7 +29303,7 @@ void EventList::InternalSwap(EventList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EventList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[59]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[60]);
 }
 
 // ===================================================================
@@ -29242,7 +29554,7 @@ void EventSeries::InternalSwap(EventSeries* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EventSeries::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[60]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[61]);
 }
 
 // ===================================================================
@@ -29512,7 +29824,7 @@ void EventSource::InternalSwap(EventSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EventSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[61]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[62]);
 }
 
 // ===================================================================
@@ -29704,7 +30016,7 @@ void ExecAction::InternalSwap(ExecAction* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ExecAction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[62]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[63]);
 }
 
 // ===================================================================
@@ -30075,7 +30387,7 @@ void FCVolumeSource::InternalSwap(FCVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FCVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[63]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[64]);
 }
 
 // ===================================================================
@@ -30089,7 +30401,7 @@ void FlexPersistentVolumeSource_OptionsEntry_DoNotUse::MergeFrom(const FlexPersi
 ::PROTOBUF_NAMESPACE_ID::Metadata FlexPersistentVolumeSource_OptionsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[64]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[65]);
 }
 
 // ===================================================================
@@ -30508,7 +30820,7 @@ void FlexPersistentVolumeSource::InternalSwap(FlexPersistentVolumeSource* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata FlexPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[65]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[66]);
 }
 
 // ===================================================================
@@ -30522,7 +30834,7 @@ void FlexVolumeSource_OptionsEntry_DoNotUse::MergeFrom(const FlexVolumeSource_Op
 ::PROTOBUF_NAMESPACE_ID::Metadata FlexVolumeSource_OptionsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[66]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[67]);
 }
 
 // ===================================================================
@@ -30941,7 +31253,7 @@ void FlexVolumeSource::InternalSwap(FlexVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FlexVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[67]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[68]);
 }
 
 // ===================================================================
@@ -31211,7 +31523,7 @@ void FlockerVolumeSource::InternalSwap(FlockerVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FlockerVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[68]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[69]);
 }
 
 // ===================================================================
@@ -31552,7 +31864,7 @@ void GCEPersistentDiskVolumeSource::InternalSwap(GCEPersistentDiskVolumeSource* 
 ::PROTOBUF_NAMESPACE_ID::Metadata GCEPersistentDiskVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[69]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[70]);
 }
 
 // ===================================================================
@@ -31802,7 +32114,7 @@ void GRPCAction::InternalSwap(GRPCAction* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GRPCAction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[70]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[71]);
 }
 
 // ===================================================================
@@ -32122,7 +32434,7 @@ void GitRepoVolumeSource::InternalSwap(GitRepoVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GitRepoVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[71]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[72]);
 }
 
 // ===================================================================
@@ -32474,7 +32786,7 @@ void GlusterfsPersistentVolumeSource::InternalSwap(GlusterfsPersistentVolumeSour
 ::PROTOBUF_NAMESPACE_ID::Metadata GlusterfsPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[72]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[73]);
 }
 
 // ===================================================================
@@ -32776,7 +33088,7 @@ void GlusterfsVolumeSource::InternalSwap(GlusterfsVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GlusterfsVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[73]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[74]);
 }
 
 // ===================================================================
@@ -33179,7 +33491,7 @@ void HTTPGetAction::InternalSwap(HTTPGetAction* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HTTPGetAction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[74]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[75]);
 }
 
 // ===================================================================
@@ -33449,7 +33761,7 @@ void HTTPHeader::InternalSwap(HTTPHeader* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HTTPHeader::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[75]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[76]);
 }
 
 // ===================================================================
@@ -33703,7 +34015,7 @@ void HostAlias::InternalSwap(HostAlias* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HostAlias::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[76]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[77]);
 }
 
 // ===================================================================
@@ -33916,7 +34228,7 @@ void HostIP::InternalSwap(HostIP* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HostIP::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[77]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[78]);
 }
 
 // ===================================================================
@@ -34186,7 +34498,7 @@ void HostPathVolumeSource::InternalSwap(HostPathVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HostPathVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[78]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[79]);
 }
 
 // ===================================================================
@@ -34828,7 +35140,7 @@ void ISCSIPersistentVolumeSource::InternalSwap(ISCSIPersistentVolumeSource* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata ISCSIPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[79]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[80]);
 }
 
 // ===================================================================
@@ -35470,7 +35782,7 @@ void ISCSIVolumeSource::InternalSwap(ISCSIVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ISCSIVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[80]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[81]);
 }
 
 // ===================================================================
@@ -35772,7 +36084,7 @@ void KeyToPath::InternalSwap(KeyToPath* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata KeyToPath::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[81]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[82]);
 }
 
 // ===================================================================
@@ -36034,7 +36346,7 @@ void Lifecycle::InternalSwap(Lifecycle* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Lifecycle::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[82]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[83]);
 }
 
 // ===================================================================
@@ -36384,7 +36696,7 @@ void LifecycleHandler::InternalSwap(LifecycleHandler* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LifecycleHandler::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[83]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[84]);
 }
 
 // ===================================================================
@@ -36650,7 +36962,7 @@ void LimitRange::InternalSwap(LimitRange* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRange::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[84]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[85]);
 }
 
 // ===================================================================
@@ -36664,7 +36976,7 @@ void LimitRangeItem_MaxEntry_DoNotUse::MergeFrom(const LimitRangeItem_MaxEntry_D
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem_MaxEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[85]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[86]);
 }
 
 // ===================================================================
@@ -36678,7 +36990,7 @@ void LimitRangeItem_MinEntry_DoNotUse::MergeFrom(const LimitRangeItem_MinEntry_D
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem_MinEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[86]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[87]);
 }
 
 // ===================================================================
@@ -36692,7 +37004,7 @@ void LimitRangeItem_DefaultEntry_DoNotUse::MergeFrom(const LimitRangeItem_Defaul
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem_DefaultEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[87]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[88]);
 }
 
 // ===================================================================
@@ -36706,7 +37018,7 @@ void LimitRangeItem_DefaultRequestEntry_DoNotUse::MergeFrom(const LimitRangeItem
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem_DefaultRequestEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[88]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[89]);
 }
 
 // ===================================================================
@@ -36720,7 +37032,7 @@ void LimitRangeItem_MaxLimitRequestRatioEntry_DoNotUse::MergeFrom(const LimitRan
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem_MaxLimitRequestRatioEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[89]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[90]);
 }
 
 // ===================================================================
@@ -37240,7 +37552,7 @@ void LimitRangeItem::InternalSwap(LimitRangeItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[90]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[91]);
 }
 
 // ===================================================================
@@ -37484,7 +37796,7 @@ void LimitRangeList::InternalSwap(LimitRangeList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[91]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[92]);
 }
 
 // ===================================================================
@@ -37669,7 +37981,7 @@ void LimitRangeSpec::InternalSwap(LimitRangeSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LimitRangeSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[92]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[93]);
 }
 
 // ===================================================================
@@ -37916,7 +38228,7 @@ void List::InternalSwap(List* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata List::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[93]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[94]);
 }
 
 // ===================================================================
@@ -38270,7 +38582,7 @@ void LoadBalancerIngress::InternalSwap(LoadBalancerIngress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadBalancerIngress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[94]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[95]);
 }
 
 // ===================================================================
@@ -38455,7 +38767,7 @@ void LoadBalancerStatus::InternalSwap(LoadBalancerStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadBalancerStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[95]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[96]);
 }
 
 // ===================================================================
@@ -38668,7 +38980,7 @@ void LocalObjectReference::InternalSwap(LocalObjectReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LocalObjectReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[96]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[97]);
 }
 
 // ===================================================================
@@ -38938,7 +39250,7 @@ void LocalVolumeSource::InternalSwap(LocalVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LocalVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[97]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[98]);
 }
 
 // ===================================================================
@@ -39208,7 +39520,7 @@ void ModifyVolumeStatus::InternalSwap(ModifyVolumeStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ModifyVolumeStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[98]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[99]);
 }
 
 // ===================================================================
@@ -39510,7 +39822,7 @@ void NFSVolumeSource::InternalSwap(NFSVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NFSVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[99]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[100]);
 }
 
 // ===================================================================
@@ -39820,7 +40132,7 @@ void Namespace::InternalSwap(Namespace* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Namespace::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[100]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[101]);
 }
 
 // ===================================================================
@@ -40239,7 +40551,7 @@ void NamespaceCondition::InternalSwap(NamespaceCondition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NamespaceCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[101]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[102]);
 }
 
 // ===================================================================
@@ -40483,7 +40795,7 @@ void NamespaceList::InternalSwap(NamespaceList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NamespaceList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[102]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[103]);
 }
 
 // ===================================================================
@@ -40675,7 +40987,7 @@ void NamespaceSpec::InternalSwap(NamespaceSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NamespaceSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[103]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[104]);
 }
 
 // ===================================================================
@@ -40922,7 +41234,7 @@ void NamespaceStatus::InternalSwap(NamespaceStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NamespaceStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[104]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[105]);
 }
 
 // ===================================================================
@@ -41232,7 +41544,7 @@ void Node::InternalSwap(Node* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Node::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[105]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[106]);
 }
 
 // ===================================================================
@@ -41502,7 +41814,7 @@ void NodeAddress::InternalSwap(NodeAddress* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeAddress::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[106]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[107]);
 }
 
 // ===================================================================
@@ -41742,7 +42054,7 @@ void NodeAffinity::InternalSwap(NodeAffinity* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeAffinity::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[107]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[108]);
 }
 
 // ===================================================================
@@ -42214,7 +42526,7 @@ void NodeCondition::InternalSwap(NodeCondition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[108]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[109]);
 }
 
 // ===================================================================
@@ -42420,7 +42732,7 @@ void NodeConfigSource::InternalSwap(NodeConfigSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeConfigSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[109]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[110]);
 }
 
 // ===================================================================
@@ -42778,7 +43090,7 @@ void NodeConfigStatus::InternalSwap(NodeConfigStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeConfigStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[110]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[111]);
 }
 
 // ===================================================================
@@ -42984,7 +43296,7 @@ void NodeDaemonEndpoints::InternalSwap(NodeDaemonEndpoints* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeDaemonEndpoints::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[111]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[112]);
 }
 
 // ===================================================================
@@ -43228,7 +43540,7 @@ void NodeList::InternalSwap(NodeList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[112]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[113]);
 }
 
 // ===================================================================
@@ -43441,7 +43753,7 @@ void NodeProxyOptions::InternalSwap(NodeProxyOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeProxyOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[113]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[114]);
 }
 
 // ===================================================================
@@ -43455,7 +43767,7 @@ void NodeResources_CapacityEntry_DoNotUse::MergeFrom(const NodeResources_Capacit
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeResources_CapacityEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[114]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[115]);
 }
 
 // ===================================================================
@@ -43673,7 +43985,7 @@ void NodeResources::InternalSwap(NodeResources* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeResources::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[115]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[116]);
 }
 
 // ===================================================================
@@ -43858,7 +44170,7 @@ void NodeSelector::InternalSwap(NodeSelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeSelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[116]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[117]);
 }
 
 // ===================================================================
@@ -44169,7 +44481,7 @@ void NodeSelectorRequirement::InternalSwap(NodeSelectorRequirement* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeSelectorRequirement::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[117]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[118]);
 }
 
 // ===================================================================
@@ -44388,7 +44700,7 @@ void NodeSelectorTerm::InternalSwap(NodeSelectorTerm* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeSelectorTerm::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[118]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[119]);
 }
 
 // ===================================================================
@@ -44864,7 +45176,7 @@ void NodeSpec::InternalSwap(NodeSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[119]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[120]);
 }
 
 // ===================================================================
@@ -44878,7 +45190,7 @@ void NodeStatus_CapacityEntry_DoNotUse::MergeFrom(const NodeStatus_CapacityEntry
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeStatus_CapacityEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[120]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[121]);
 }
 
 // ===================================================================
@@ -44892,7 +45204,7 @@ void NodeStatus_AllocatableEntry_DoNotUse::MergeFrom(const NodeStatus_Allocatabl
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeStatus_AllocatableEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[121]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[122]);
 }
 
 // ===================================================================
@@ -45554,7 +45866,7 @@ void NodeStatus::InternalSwap(NodeStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[122]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[123]);
 }
 
 // ===================================================================
@@ -46230,7 +46542,7 @@ void NodeSystemInfo::InternalSwap(NodeSystemInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NodeSystemInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[123]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[124]);
 }
 
 // ===================================================================
@@ -46500,7 +46812,7 @@ void ObjectFieldSelector::InternalSwap(ObjectFieldSelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ObjectFieldSelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[124]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[125]);
 }
 
 // ===================================================================
@@ -47020,7 +47332,7 @@ void ObjectReference::InternalSwap(ObjectReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ObjectReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[125]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[126]);
 }
 
 // ===================================================================
@@ -47330,7 +47642,7 @@ void PersistentVolume::InternalSwap(PersistentVolume* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolume::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[126]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[127]);
 }
 
 // ===================================================================
@@ -47640,7 +47952,7 @@ void PersistentVolumeClaim::InternalSwap(PersistentVolumeClaim* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaim::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[127]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[128]);
 }
 
 // ===================================================================
@@ -48112,7 +48424,7 @@ void PersistentVolumeClaimCondition::InternalSwap(PersistentVolumeClaimCondition
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[128]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[129]);
 }
 
 // ===================================================================
@@ -48356,7 +48668,7 @@ void PersistentVolumeClaimList::InternalSwap(PersistentVolumeClaimList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[129]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[130]);
 }
 
 // ===================================================================
@@ -48953,7 +49265,7 @@ void PersistentVolumeClaimSpec::InternalSwap(PersistentVolumeClaimSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[130]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[131]);
 }
 
 // ===================================================================
@@ -48967,7 +49279,7 @@ void PersistentVolumeClaimStatus_CapacityEntry_DoNotUse::MergeFrom(const Persist
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimStatus_CapacityEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[131]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[132]);
 }
 
 // ===================================================================
@@ -48981,7 +49293,7 @@ void PersistentVolumeClaimStatus_AllocatedResourcesEntry_DoNotUse::MergeFrom(con
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimStatus_AllocatedResourcesEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[132]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[133]);
 }
 
 // ===================================================================
@@ -48995,7 +49307,7 @@ void PersistentVolumeClaimStatus_AllocatedResourceStatusesEntry_DoNotUse::MergeF
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimStatus_AllocatedResourceStatusesEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[133]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[134]);
 }
 
 // ===================================================================
@@ -49573,7 +49885,7 @@ void PersistentVolumeClaimStatus::InternalSwap(PersistentVolumeClaimStatus* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[134]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[135]);
 }
 
 // ===================================================================
@@ -49839,7 +50151,7 @@ void PersistentVolumeClaimTemplate::InternalSwap(PersistentVolumeClaimTemplate* 
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimTemplate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[135]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[136]);
 }
 
 // ===================================================================
@@ -50089,7 +50401,7 @@ void PersistentVolumeClaimVolumeSource::InternalSwap(PersistentVolumeClaimVolume
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeClaimVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[136]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[137]);
 }
 
 // ===================================================================
@@ -50333,7 +50645,7 @@ void PersistentVolumeList::InternalSwap(PersistentVolumeList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[137]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[138]);
 }
 
 // ===================================================================
@@ -51487,7 +51799,7 @@ void PersistentVolumeSource::InternalSwap(PersistentVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[138]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[139]);
 }
 
 // ===================================================================
@@ -51501,7 +51813,7 @@ void PersistentVolumeSpec_CapacityEntry_DoNotUse::MergeFrom(const PersistentVolu
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeSpec_CapacityEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[139]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[140]);
 }
 
 // ===================================================================
@@ -52158,7 +52470,7 @@ void PersistentVolumeSpec::InternalSwap(PersistentVolumeSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[140]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[141]);
 }
 
 // ===================================================================
@@ -52527,7 +52839,7 @@ void PersistentVolumeStatus::InternalSwap(PersistentVolumeStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PersistentVolumeStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[141]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[142]);
 }
 
 // ===================================================================
@@ -52797,7 +53109,7 @@ void PhotonPersistentDiskVolumeSource::InternalSwap(PhotonPersistentDiskVolumeSo
 ::PROTOBUF_NAMESPACE_ID::Metadata PhotonPersistentDiskVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[142]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[143]);
 }
 
 // ===================================================================
@@ -53107,7 +53419,7 @@ void Pod::InternalSwap(Pod* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Pod::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[143]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[144]);
 }
 
 // ===================================================================
@@ -53326,7 +53638,7 @@ void PodAffinity::InternalSwap(PodAffinity* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodAffinity::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[144]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[145]);
 }
 
 // ===================================================================
@@ -53771,7 +54083,7 @@ void PodAffinityTerm::InternalSwap(PodAffinityTerm* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodAffinityTerm::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[145]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[146]);
 }
 
 // ===================================================================
@@ -53990,7 +54302,7 @@ void PodAntiAffinity::InternalSwap(PodAntiAffinity* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodAntiAffinity::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[146]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[147]);
 }
 
 // ===================================================================
@@ -54333,7 +54645,7 @@ void PodAttachOptions::InternalSwap(PodAttachOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodAttachOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[147]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[148]);
 }
 
 // ===================================================================
@@ -54805,7 +55117,7 @@ void PodCondition::InternalSwap(PodCondition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[148]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[149]);
 }
 
 // ===================================================================
@@ -55072,7 +55384,7 @@ void PodDNSConfig::InternalSwap(PodDNSConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodDNSConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[149]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[150]);
 }
 
 // ===================================================================
@@ -55342,7 +55654,7 @@ void PodDNSConfigOption::InternalSwap(PodDNSConfigOption* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodDNSConfigOption::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[150]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[151]);
 }
 
 // ===================================================================
@@ -55726,7 +56038,7 @@ void PodExecOptions::InternalSwap(PodExecOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodExecOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[151]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[152]);
 }
 
 // ===================================================================
@@ -55939,7 +56251,7 @@ void PodIP::InternalSwap(PodIP* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodIP::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[152]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[153]);
 }
 
 // ===================================================================
@@ -56183,7 +56495,7 @@ void PodList::InternalSwap(PodList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[153]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[154]);
 }
 
 // ===================================================================
@@ -56663,7 +56975,7 @@ void PodLogOptions::InternalSwap(PodLogOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodLogOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[154]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[155]);
 }
 
 // ===================================================================
@@ -56876,7 +57188,7 @@ void PodOS::InternalSwap(PodOS* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodOS::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[155]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[156]);
 }
 
 // ===================================================================
@@ -57064,7 +57376,7 @@ void PodPortForwardOptions::InternalSwap(PodPortForwardOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodPortForwardOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[156]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[157]);
 }
 
 // ===================================================================
@@ -57277,7 +57589,7 @@ void PodProxyOptions::InternalSwap(PodProxyOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodProxyOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[157]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[158]);
 }
 
 // ===================================================================
@@ -57490,7 +57802,7 @@ void PodReadinessGate::InternalSwap(PodReadinessGate* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodReadinessGate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[158]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[159]);
 }
 
 // ===================================================================
@@ -57755,7 +58067,7 @@ void PodResourceClaim::InternalSwap(PodResourceClaim* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodResourceClaim::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[159]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[160]);
 }
 
 // ===================================================================
@@ -58025,7 +58337,7 @@ void PodResourceClaimStatus::InternalSwap(PodResourceClaimStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodResourceClaimStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[160]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[161]);
 }
 
 // ===================================================================
@@ -58238,7 +58550,7 @@ void PodSchedulingGate::InternalSwap(PodSchedulingGate* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSchedulingGate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[161]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[162]);
 }
 
 // ===================================================================
@@ -58788,7 +59100,7 @@ void PodSecurityContext::InternalSwap(PodSecurityContext* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSecurityContext::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[162]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[163]);
 }
 
 // ===================================================================
@@ -58998,7 +59310,7 @@ void PodSignature::InternalSwap(PodSignature* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSignature::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[163]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[164]);
 }
 
 // ===================================================================
@@ -59012,7 +59324,7 @@ void PodSpec_NodeSelectorEntry_DoNotUse::MergeFrom(const PodSpec_NodeSelectorEnt
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSpec_NodeSelectorEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[164]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[165]);
 }
 
 // ===================================================================
@@ -59026,7 +59338,7 @@ void PodSpec_OverheadEntry_DoNotUse::MergeFrom(const PodSpec_OverheadEntry_DoNot
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSpec_OverheadEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[165]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[166]);
 }
 
 // ===================================================================
@@ -60771,7 +61083,7 @@ void PodSpec::InternalSwap(PodSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[166]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[167]);
 }
 
 // ===================================================================
@@ -61628,7 +61940,7 @@ void PodStatus::InternalSwap(PodStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[167]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[168]);
 }
 
 // ===================================================================
@@ -61894,7 +62206,7 @@ void PodStatusResult::InternalSwap(PodStatusResult* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodStatusResult::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[168]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[169]);
 }
 
 // ===================================================================
@@ -62160,7 +62472,7 @@ void PodTemplate::InternalSwap(PodTemplate* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodTemplate::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[169]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[170]);
 }
 
 // ===================================================================
@@ -62404,7 +62716,7 @@ void PodTemplateList::InternalSwap(PodTemplateList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodTemplateList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[170]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[171]);
 }
 
 // ===================================================================
@@ -62670,7 +62982,7 @@ void PodTemplateSpec::InternalSwap(PodTemplateSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PodTemplateSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[171]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[172]);
 }
 
 // ===================================================================
@@ -62972,7 +63284,7 @@ void PortStatus::InternalSwap(PortStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PortStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[172]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[173]);
 }
 
 // ===================================================================
@@ -63274,7 +63586,7 @@ void PortworxVolumeSource::InternalSwap(PortworxVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PortworxVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[173]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[174]);
 }
 
 // ===================================================================
@@ -63487,7 +63799,7 @@ void Preconditions::InternalSwap(Preconditions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Preconditions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[174]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[175]);
 }
 
 // ===================================================================
@@ -63855,7 +64167,7 @@ void PreferAvoidPodsEntry::InternalSwap(PreferAvoidPodsEntry* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PreferAvoidPodsEntry::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[175]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[176]);
 }
 
 // ===================================================================
@@ -64102,7 +64414,7 @@ void PreferredSchedulingTerm::InternalSwap(PreferredSchedulingTerm* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PreferredSchedulingTerm::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[176]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[177]);
 }
 
 // ===================================================================
@@ -64495,7 +64807,7 @@ void Probe::InternalSwap(Probe* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Probe::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[177]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[178]);
 }
 
 // ===================================================================
@@ -64845,7 +65157,7 @@ void ProbeHandler::InternalSwap(ProbeHandler* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ProbeHandler::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[178]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[179]);
 }
 
 // ===================================================================
@@ -65070,7 +65382,7 @@ void ProjectedVolumeSource::InternalSwap(ProjectedVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ProjectedVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[179]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[180]);
 }
 
 // ===================================================================
@@ -65522,7 +65834,7 @@ void QuobyteVolumeSource::InternalSwap(QuobyteVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata QuobyteVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[180]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[181]);
 }
 
 // ===================================================================
@@ -66064,7 +66376,7 @@ void RBDPersistentVolumeSource::InternalSwap(RBDPersistentVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RBDPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[181]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[182]);
 }
 
 // ===================================================================
@@ -66606,7 +66918,7 @@ void RBDVolumeSource::InternalSwap(RBDVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RBDVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[182]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[183]);
 }
 
 // ===================================================================
@@ -66925,7 +67237,7 @@ void RangeAllocation::InternalSwap(RangeAllocation* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RangeAllocation::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[183]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[184]);
 }
 
 // ===================================================================
@@ -67235,7 +67547,7 @@ void ReplicationController::InternalSwap(ReplicationController* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationController::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[184]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[185]);
 }
 
 // ===================================================================
@@ -67654,7 +67966,7 @@ void ReplicationControllerCondition::InternalSwap(ReplicationControllerCondition
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationControllerCondition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[185]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[186]);
 }
 
 // ===================================================================
@@ -67898,7 +68210,7 @@ void ReplicationControllerList::InternalSwap(ReplicationControllerList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationControllerList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[186]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[187]);
 }
 
 // ===================================================================
@@ -67912,7 +68224,7 @@ void ReplicationControllerSpec_SelectorEntry_DoNotUse::MergeFrom(const Replicati
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationControllerSpec_SelectorEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[187]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[188]);
 }
 
 // ===================================================================
@@ -68261,7 +68573,7 @@ void ReplicationControllerSpec::InternalSwap(ReplicationControllerSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationControllerSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[188]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[189]);
 }
 
 // ===================================================================
@@ -68616,7 +68928,7 @@ void ReplicationControllerStatus::InternalSwap(ReplicationControllerStatus* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata ReplicationControllerStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[189]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[190]);
 }
 
 // ===================================================================
@@ -68829,7 +69141,7 @@ void ResourceClaim::InternalSwap(ResourceClaim* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceClaim::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[190]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[191]);
 }
 
 // ===================================================================
@@ -69148,7 +69460,7 @@ void ResourceFieldSelector::InternalSwap(ResourceFieldSelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceFieldSelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[191]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[192]);
 }
 
 // ===================================================================
@@ -69458,7 +69770,7 @@ void ResourceQuota::InternalSwap(ResourceQuota* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuota::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[192]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[193]);
 }
 
 // ===================================================================
@@ -69702,7 +70014,7 @@ void ResourceQuotaList::InternalSwap(ResourceQuotaList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[193]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[194]);
 }
 
 // ===================================================================
@@ -69716,7 +70028,7 @@ void ResourceQuotaSpec_HardEntry_DoNotUse::MergeFrom(const ResourceQuotaSpec_Har
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaSpec_HardEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[194]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[195]);
 }
 
 // ===================================================================
@@ -70030,7 +70342,7 @@ void ResourceQuotaSpec::InternalSwap(ResourceQuotaSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[195]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[196]);
 }
 
 // ===================================================================
@@ -70044,7 +70356,7 @@ void ResourceQuotaStatus_HardEntry_DoNotUse::MergeFrom(const ResourceQuotaStatus
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaStatus_HardEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[196]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[197]);
 }
 
 // ===================================================================
@@ -70058,7 +70370,7 @@ void ResourceQuotaStatus_UsedEntry_DoNotUse::MergeFrom(const ResourceQuotaStatus
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaStatus_UsedEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[197]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[198]);
 }
 
 // ===================================================================
@@ -70336,7 +70648,7 @@ void ResourceQuotaStatus::InternalSwap(ResourceQuotaStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceQuotaStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[198]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[199]);
 }
 
 // ===================================================================
@@ -70350,7 +70662,7 @@ void ResourceRequirements_LimitsEntry_DoNotUse::MergeFrom(const ResourceRequirem
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceRequirements_LimitsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[199]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[200]);
 }
 
 // ===================================================================
@@ -70364,7 +70676,7 @@ void ResourceRequirements_RequestsEntry_DoNotUse::MergeFrom(const ResourceRequir
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceRequirements_RequestsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[200]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[201]);
 }
 
 // ===================================================================
@@ -70676,7 +70988,7 @@ void ResourceRequirements::InternalSwap(ResourceRequirements* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceRequirements::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[201]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[202]);
 }
 
 // ===================================================================
@@ -71046,7 +71358,7 @@ void SELinuxOptions::InternalSwap(SELinuxOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SELinuxOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[202]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[203]);
 }
 
 // ===================================================================
@@ -71683,7 +71995,7 @@ void ScaleIOPersistentVolumeSource::InternalSwap(ScaleIOPersistentVolumeSource* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ScaleIOPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[203]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[204]);
 }
 
 // ===================================================================
@@ -72320,7 +72632,7 @@ void ScaleIOVolumeSource::InternalSwap(ScaleIOVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ScaleIOVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[204]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[205]);
 }
 
 // ===================================================================
@@ -72505,7 +72817,7 @@ void ScopeSelector::InternalSwap(ScopeSelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ScopeSelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[205]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[206]);
 }
 
 // ===================================================================
@@ -72816,7 +73128,7 @@ void ScopedResourceSelectorRequirement::InternalSwap(ScopedResourceSelectorRequi
 ::PROTOBUF_NAMESPACE_ID::Metadata ScopedResourceSelectorRequirement::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[206]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[207]);
 }
 
 // ===================================================================
@@ -73086,7 +73398,7 @@ void SeccompProfile::InternalSwap(SeccompProfile* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SeccompProfile::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[207]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[208]);
 }
 
 // ===================================================================
@@ -73100,7 +73412,7 @@ void Secret_DataEntry_DoNotUse::MergeFrom(const Secret_DataEntry_DoNotUse& other
 ::PROTOBUF_NAMESPACE_ID::Metadata Secret_DataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[208]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[209]);
 }
 
 // ===================================================================
@@ -73114,7 +73426,7 @@ void Secret_StringDataEntry_DoNotUse::MergeFrom(const Secret_StringDataEntry_DoN
 ::PROTOBUF_NAMESPACE_ID::Metadata Secret_StringDataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[209]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[210]);
 }
 
 // ===================================================================
@@ -73544,7 +73856,7 @@ void Secret::InternalSwap(Secret* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Secret::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[210]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[211]);
 }
 
 // ===================================================================
@@ -73791,7 +74103,7 @@ void SecretEnvSource::InternalSwap(SecretEnvSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretEnvSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[211]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[212]);
 }
 
 // ===================================================================
@@ -74092,7 +74404,7 @@ void SecretKeySelector::InternalSwap(SecretKeySelector* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretKeySelector::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[212]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[213]);
 }
 
 // ===================================================================
@@ -74336,7 +74648,7 @@ void SecretList::InternalSwap(SecretList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[213]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[214]);
 }
 
 // ===================================================================
@@ -74617,7 +74929,7 @@ void SecretProjection::InternalSwap(SecretProjection* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[214]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[215]);
 }
 
 // ===================================================================
@@ -74887,7 +75199,7 @@ void SecretReference::InternalSwap(SecretReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[215]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[216]);
 }
 
 // ===================================================================
@@ -75210,7 +75522,7 @@ void SecretVolumeSource::InternalSwap(SecretVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecretVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[216]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[217]);
 }
 
 // ===================================================================
@@ -75799,7 +76111,7 @@ void SecurityContext::InternalSwap(SecurityContext* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SecurityContext::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[217]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[218]);
 }
 
 // ===================================================================
@@ -76005,7 +76317,7 @@ void SerializedReference::InternalSwap(SerializedReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SerializedReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[218]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[219]);
 }
 
 // ===================================================================
@@ -76315,7 +76627,7 @@ void Service::InternalSwap(Service* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Service::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[219]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[220]);
 }
 
 // ===================================================================
@@ -76634,7 +76946,7 @@ void ServiceAccount::InternalSwap(ServiceAccount* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceAccount::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[220]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[221]);
 }
 
 // ===================================================================
@@ -76878,7 +77190,7 @@ void ServiceAccountList::InternalSwap(ServiceAccountList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceAccountList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[221]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[222]);
 }
 
 // ===================================================================
@@ -77180,7 +77492,7 @@ void ServiceAccountTokenProjection::InternalSwap(ServiceAccountTokenProjection* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceAccountTokenProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[222]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[223]);
 }
 
 // ===================================================================
@@ -77424,7 +77736,7 @@ void ServiceList::InternalSwap(ServiceList* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[223]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[224]);
 }
 
 // ===================================================================
@@ -77863,7 +78175,7 @@ void ServicePort::InternalSwap(ServicePort* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServicePort::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[224]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[225]);
 }
 
 // ===================================================================
@@ -78076,7 +78388,7 @@ void ServiceProxyOptions::InternalSwap(ServiceProxyOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceProxyOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[225]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[226]);
 }
 
 // ===================================================================
@@ -78090,7 +78402,7 @@ void ServiceSpec_SelectorEntry_DoNotUse::MergeFrom(const ServiceSpec_SelectorEnt
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceSpec_SelectorEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[226]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[227]);
 }
 
 // ===================================================================
@@ -79125,7 +79437,7 @@ void ServiceSpec::InternalSwap(ServiceSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[227]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[228]);
 }
 
 // ===================================================================
@@ -79368,7 +79680,7 @@ void ServiceStatus::InternalSwap(ServiceStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ServiceStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[228]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[229]);
 }
 
 // ===================================================================
@@ -79574,7 +79886,7 @@ void SessionAffinityConfig::InternalSwap(SessionAffinityConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SessionAffinityConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[229]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[230]);
 }
 
 // ===================================================================
@@ -79765,7 +80077,7 @@ void SleepAction::InternalSwap(SleepAction* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SleepAction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[230]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[231]);
 }
 
 // ===================================================================
@@ -80166,7 +80478,7 @@ void StorageOSPersistentVolumeSource::InternalSwap(StorageOSPersistentVolumeSour
 ::PROTOBUF_NAMESPACE_ID::Metadata StorageOSPersistentVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[231]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[232]);
 }
 
 // ===================================================================
@@ -80567,7 +80879,7 @@ void StorageOSVolumeSource::InternalSwap(StorageOSVolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata StorageOSVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[232]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[233]);
 }
 
 // ===================================================================
@@ -80837,7 +81149,7 @@ void Sysctl::InternalSwap(Sysctl* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Sysctl::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[233]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[234]);
 }
 
 // ===================================================================
@@ -81106,7 +81418,7 @@ void TCPSocketAction::InternalSwap(TCPSocketAction* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TCPSocketAction::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[234]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[235]);
 }
 
 // ===================================================================
@@ -81475,7 +81787,7 @@ void Taint::InternalSwap(Taint* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Taint::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[235]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[236]);
 }
 
 // ===================================================================
@@ -81877,7 +82189,7 @@ void Toleration::InternalSwap(Toleration* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Toleration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[236]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[237]);
 }
 
 // ===================================================================
@@ -82131,7 +82443,7 @@ void TopologySelectorLabelRequirement::InternalSwap(TopologySelectorLabelRequire
 ::PROTOBUF_NAMESPACE_ID::Metadata TopologySelectorLabelRequirement::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[237]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[238]);
 }
 
 // ===================================================================
@@ -82316,7 +82628,7 @@ void TopologySelectorTerm::InternalSwap(TopologySelectorTerm* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TopologySelectorTerm::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[238]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[239]);
 }
 
 // ===================================================================
@@ -82846,7 +83158,7 @@ void TopologySpreadConstraint::InternalSwap(TopologySpreadConstraint* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TopologySpreadConstraint::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[239]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[240]);
 }
 
 // ===================================================================
@@ -83166,7 +83478,7 @@ void TypedLocalObjectReference::InternalSwap(TypedLocalObjectReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TypedLocalObjectReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[240]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[241]);
 }
 
 // ===================================================================
@@ -83536,7 +83848,7 @@ void TypedObjectReference::InternalSwap(TypedObjectReference* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TypedObjectReference::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[241]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[242]);
 }
 
 // ===================================================================
@@ -83801,7 +84113,7 @@ void Volume::InternalSwap(Volume* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Volume::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[242]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[243]);
 }
 
 // ===================================================================
@@ -84071,7 +84383,7 @@ void VolumeDevice::InternalSwap(VolumeDevice* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeDevice::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[243]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[244]);
 }
 
 // ===================================================================
@@ -84523,7 +84835,7 @@ void VolumeMount::InternalSwap(VolumeMount* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeMount::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[244]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[245]);
 }
 
 // ===================================================================
@@ -84729,7 +85041,7 @@ void VolumeNodeAffinity::InternalSwap(VolumeNodeAffinity* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeNodeAffinity::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[245]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[246]);
 }
 
 // ===================================================================
@@ -85123,7 +85435,7 @@ void VolumeProjection::InternalSwap(VolumeProjection* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeProjection::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[246]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[247]);
 }
 
 // ===================================================================
@@ -85137,7 +85449,7 @@ void VolumeResourceRequirements_LimitsEntry_DoNotUse::MergeFrom(const VolumeReso
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeResourceRequirements_LimitsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[247]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[248]);
 }
 
 // ===================================================================
@@ -85151,7 +85463,7 @@ void VolumeResourceRequirements_RequestsEntry_DoNotUse::MergeFrom(const VolumeRe
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeResourceRequirements_RequestsEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[248]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[249]);
 }
 
 // ===================================================================
@@ -85429,7 +85741,7 @@ void VolumeResourceRequirements::InternalSwap(VolumeResourceRequirements* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeResourceRequirements::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[249]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[250]);
 }
 
 // ===================================================================
@@ -86897,7 +87209,7 @@ void VolumeSource::InternalSwap(VolumeSource* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata VolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[250]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[251]);
 }
 
 // ===================================================================
@@ -87267,7 +87579,7 @@ void VsphereVirtualDiskVolumeSource::InternalSwap(VsphereVirtualDiskVolumeSource
 ::PROTOBUF_NAMESPACE_ID::Metadata VsphereVirtualDiskVolumeSource::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[251]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[252]);
 }
 
 // ===================================================================
@@ -87514,7 +87826,7 @@ void WeightedPodAffinityTerm::InternalSwap(WeightedPodAffinityTerm* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WeightedPodAffinityTerm::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[252]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[253]);
 }
 
 // ===================================================================
@@ -87866,7 +88178,7 @@ void WindowsSecurityContextOptions::InternalSwap(WindowsSecurityContextOptions* 
 ::PROTOBUF_NAMESPACE_ID::Metadata WindowsSecurityContextOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_getter, &descriptor_table_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto_once,
-      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[253]);
+      file_level_metadata_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_5fgenerated_2eproto[254]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -87876,6 +88188,10 @@ void WindowsSecurityContextOptions::InternalSwap(WindowsSecurityContextOptions* 
 }  // namespace io
 }  // namespace k8s
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::k8s::io::api::core::v1::PodOrNode*
+Arena::CreateMaybeMessage< ::k8s::io::api::core::v1::PodOrNode >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::k8s::io::api::core::v1::PodOrNode >(arena);
+}
 template<> PROTOBUF_NOINLINE ::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource*
 Arena::CreateMaybeMessage< ::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource >(Arena* arena) {
   return Arena::CreateMessageInternal< ::k8s::io::api::core::v1::AWSElasticBlockStoreVolumeSource >(arena);

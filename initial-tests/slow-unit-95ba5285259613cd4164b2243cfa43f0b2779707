@@ -1,0 +1,37 @@
+metadata {
+  resourceVersion: "\207"
+  deletionGracePeriodSeconds: 0
+  annotations {
+    key: ""
+    value: "\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253\253"
+  }
+}
+spec {
+  nodeSelector {
+    key: "^^^^^^^^^^^^^^^^"
+    value: ""
+  }
+  hostNetwork: true
+  hostPID: true
+  imagePullSecrets {
+  }
+  hostname: "\310"
+  initContainers {
+    stdinOnce: true
+    volumeDevices {
+      name: ""
+      devicePath: "\207"
+    }
+  }
+  shareProcessNamespace: true
+  os {
+    name: "\207"
+  }
+  resourceClaims {
+    source {
+      resourceClaimTemplateName: "topologyKey"
+    }
+  }
+}
+status {
+}

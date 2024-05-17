@@ -77,6 +77,11 @@ extern "C" {
 extern void DoesNotDeletePodDirsIfContainerIsRunning(void* dataPtr, size_t dataSize);
 extern void SyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtr, size_t dataSize);
 extern void SyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(void* dataPtr, size_t dataSize);
+extern void TestSyncPodsStartPod(void* dataPtr, size_t dataSize);
+extern void TestDispatchWorkOfCompletedPod(void* dataPtr, size_t dataSize);
+extern void TestDispatchWorkOfActivePod(void* dataPtr, size_t dataSize);
+extern void TestHandlePodRemovesWhenSourcesAreReady(void* dataPtr, size_t dataSize);
+extern void TestHandlePortConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 
 #ifdef __cplusplus
 }

@@ -17,10 +17,6 @@ public:
     {
         return protobuf_mutator::Mutator::MutateString(value, size_increase_hint);
     }
-    // std::int32_t MutateInt32(const std::int &value) override
-    // {
-    //     return protobuf_mutator::Mutator::MutateInt32(value);
-    // }
 };
 
 void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod *pod)
@@ -37,7 +33,6 @@ void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod *pod)
         mutable_container_status.set_name(container_name);
     }
 }
-
 
 void MutatePodMetadataNameAndNamespace(k8s::io::api::core::v1::Pod *pod, unsigned int seed)
 {
@@ -77,27 +72,84 @@ void MutatePodMetadataNameAndNamespace(k8s::io::api::core::v1::Pod *pod, unsigne
     (*metadata->mutable_annotations())["new_key"] = "new_value";
 }
 
-DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::Pod &test_proto_input)
+void MutateNodeMetadataNameAndNamespace(k8s::io::api::core::v1::Node *node, unsigned int seed)
+{
+    if (!node->has_metadata())
+    {
+        node->mutable_metadata();
+    }
+
+    MyProtobufMutator mutator;
+    auto *metadata = node->mutable_metadata();
+
+    mutator.Seed(seed);
+
+    if (metadata->name().empty())
+    {
+        metadata->set_name("node-123456");
+        auto mutated_name = mutator.MutateString(metadata->name(), 200);
+        metadata->set_name(mutated_name);
+    }
+
+    if (metadata->namespace_().empty())
+    {
+        metadata->set_namespace_("node-test");
+        auto mutated_namespace = mutator.MutateString(metadata->namespace_(), 1000);
+        if (mutated_namespace.empty())
+        {
+            mutated_namespace = "node-initial-namespace"; // Fallback value
+        }
+        metadata->set_namespace_(mutated_namespace);
+    }
+    if (metadata->uid().empty())
+    {
+        metadata->set_uid("node-12344");
+        auto mutated_uid = mutator.MutateString(metadata->uid(), 200);
+        metadata->set_uid(mutated_uid);
+    }
+    (*metadata->mutable_annotations())["node_new_key"] = "node_new_value";
+}
+
+DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
 {
     try
     {
-        k8s::io::api::core::v1::Pod test_proto = test_proto_input;
-        // Check if all required fields are present
-        if (test_proto.has_metadata() &&
-            test_proto.has_spec() &&
-            test_proto.has_status())
+        if (test_proto_input.has_pod())
         {
-            MutatePodMetadataNameAndNamespace(&test_proto, 123);
-             EnsureConsistentContainerNames(&test_proto);
+            k8s::io::api::core::v1::Pod test_proto = test_proto_input.pod();
+            
+            if (test_proto.has_metadata() &&
+                test_proto.has_spec() &&
+                test_proto.has_status())
+            {
+                size_t size = test_proto.ByteSizeLong();
+                std::vector<uint8_t> data(size);
+                test_proto.SerializeToArray(data.data(), size);
+                std::cout << "Mutated name: " << test_proto.metadata().name()
+                          << "Mutated uid: " << test_proto.metadata().uid()
+                          << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
+                DoesNotDeletePodDirsIfContainerIsRunning(data.data(), size);
+                std::cout << "Fuzzing Pod with mutated metadata." << std::endl;
+            }
+        }
+        else if (test_proto_input.has_node())
+        {
+            k8s::io::api::core::v1::Node test_proto = test_proto_input.node();
 
-            size_t size = test_proto.ByteSizeLong();
-            std::vector<uint8_t> data(size);
-            test_proto.SerializeToArray(data.data(), size);
-            std::cout << "Mutated name: " << test_proto.metadata().name()
-                      << "Mutated uid: " << test_proto.metadata().uid()
-                      << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
-            SyncPodsSetStatusToFailedForPodsThatRunTooLong(data.data(), size);
-            std::cout << "Fuzzing Pod with mutated metadata." << std::endl;
+            if (test_proto.has_metadata())
+            {
+                size_t size = test_proto.ByteSizeLong();
+                std::vector<uint8_t> data(size);
+                test_proto.SerializeToArray(data.data(), size);
+                std::cout << "Mutated name: " << test_proto.metadata().name()
+                          << "Mutated uid: " << test_proto.metadata().uid()
+                          << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
+                std::cout << "Fuzzing Node with mutated metadata." << std::endl;
+            }
+        }
+        else
+        {
+            std::cerr << "Unsupported protobuf type: " << test_proto_input.GetTypeName() << std::endl;
         }
     }
     catch (const std::exception &e)

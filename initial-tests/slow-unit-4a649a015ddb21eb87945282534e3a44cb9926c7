@@ -1,0 +1,34 @@
+metadata {
+}
+spec {
+  containers {
+    livenessProbe {
+      initialDelaySeconds: 0
+    }
+    volumeDevices {
+      devicePath: "\377\377\377\013"
+    }
+  }
+  containers {
+    resources {
+      claims {
+        name: ""
+      }
+    }
+    lifecycle {
+    }
+    tty: true
+  }
+  hostNetwork: true
+  hostIPC: true
+  securityContext {
+  }
+  subdomain: ":\000\000\000"
+  tolerations {
+  }
+  dnsConfig {
+  }
+}
+status {
+  qosClass: ":\000\000\000"
+}
