@@ -87,16 +87,16 @@ message APIResourceDiscovery {
   // but is not limited to get, list, watch, create, update, patch,
   // delete, deletecollection, and proxy).
   // +listType=set
-  repeated string verbs = 5;
+  repeated bytes verbs = 5;
 
   // shortNames is a list of suggested short names of the resource.
   // +listType=set
-  repeated string shortNames = 6;
+  repeated bytes shortNames = 6;
 
   // categories is a list of the grouped resources this resource belongs to (e.g. 'all').
   // Clients may use this to simplify acting on multiple resource types at once.
   // +listType=set
-  repeated string categories = 7;
+  repeated bytes categories = 7;
 
   // subresources is a list of subresources provided by this resource. Subresources are located at /apis/<APIGroupDiscovery.objectMeta.name>/<APIVersionDiscovery.version>/<APIResourceDiscovery.Resource>/name-of-instance/<APIResourceDiscovery.subresources[i].subresource>
   // +listType=map
@@ -131,7 +131,7 @@ message APISubresourceDiscovery {
   // should expect the behavior of standard verbs to align with
   // Kubernetes interaction conventions.
   // +listType=set
-  repeated string verbs = 4;
+  repeated bytes verbs = 4;
 }
 
 // APIVersionDiscovery holds a list of APIResourceDiscovery types that are served for a particular version within an API Group.

@@ -172,7 +172,7 @@ message CertificateSigningRequestSpec {
   //  "ipsec end system", "ipsec tunnel", "ipsec user",
   //  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
   // +listType=atomic
-  repeated string usages = 5;
+  repeated bytes usages = 5;
 
   // username contains the name of the user that created the CertificateSigningRequest.
   // Populated by the API server on creation and immutable.
@@ -188,7 +188,7 @@ message CertificateSigningRequestSpec {
   // Populated by the API server on creation and immutable.
   // +listType=atomic
   // +optional
-  repeated string groups = 4;
+  repeated bytes groups = 4;
 
   // extra contains extra attributes of the user that created the CertificateSigningRequest.
   // Populated by the API server on creation and immutable.
@@ -243,6 +243,6 @@ message CertificateSigningRequestStatus {
 message ExtraValue {
   // items, if empty, will result in an empty slice
 
-  repeated string items = 1;
+  repeated bytes items = 1;
 }
 

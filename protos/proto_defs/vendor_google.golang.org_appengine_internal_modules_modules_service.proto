@@ -18,7 +18,7 @@ message GetModulesRequest {
 }
 
 message GetModulesResponse {
-  repeated string module = 1;
+  repeated bytes module = 1;
 }
 
 message GetVersionsRequest {
@@ -26,7 +26,7 @@ message GetVersionsRequest {
 }
 
 message GetVersionsResponse {
-  repeated string version = 1;
+  repeated bytes version = 1;
 }
 
 message GetDefaultVersionRequest {

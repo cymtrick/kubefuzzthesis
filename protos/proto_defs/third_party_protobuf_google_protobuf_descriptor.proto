@@ -62,7 +62,7 @@ message FileDescriptorProto {
   optional bytes package = 2;    // e.g. "foo", "foo.bar", etc.
 
   // Names of files imported by this file.
-  repeated string dependency = 3;
+  repeated bytes dependency = 3;
   // Indexes of the public imported files in the dependency list above.
   repeated int32 public_dependency = 10;
   // Indexes of the weak imported files in the dependency list.
@@ -118,7 +118,7 @@ message DescriptorProto {
   repeated ReservedRange reserved_range = 9;
   // Reserved field names, which may not be used by fields in the same message.
   // A given name may only be reserved once.
-  repeated string reserved_name = 10;
+  repeated bytes reserved_name = 10;
 }
 
 // Describes a field within a message.
@@ -774,6 +774,6 @@ message SourceCodeInfo {
     //   // ignored detached comments.
     optional bytes leading_comments = 3;
     optional bytes trailing_comments = 4;
-    repeated string leading_detached_comments = 6;
+    repeated bytes leading_detached_comments = 6;
   }
 }

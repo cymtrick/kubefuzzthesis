@@ -334,7 +334,7 @@ message MutatingWebhook {
   // Default to `['v1beta1']`.
   // +optional
   // +listType=atomic
-  repeated string admissionReviewVersions = 8;
+  repeated bytes admissionReviewVersions = 8;
 
   // reinvocationPolicy indicates whether this webhook should be called multiple times as part of a single admission evaluation.
   // Allowed values are "Never" and "IfNeeded".
@@ -410,7 +410,7 @@ message NamedRuleWithOperations {
   // ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
   // +listType=atomic
   // +optional
-  repeated string resourceNames = 1;
+  repeated bytes resourceNames = 1;
 
   // RuleWithOperations is a tuple of Operations and Resources.
   optional k8s.io.api.admissionregistration.v1.RuleWithOperations ruleWithOperations = 2;
@@ -632,7 +632,7 @@ message ValidatingAdmissionPolicyBindingSpec {
   //
   // Required.
   // +listType=set
-  repeated string validationActions = 4;
+  repeated bytes validationActions = 4;
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -882,7 +882,7 @@ message ValidatingWebhook {
   // Default to `['v1beta1']`.
   // +optional
   // +listType=atomic
-  repeated string admissionReviewVersions = 8;
+  repeated bytes admissionReviewVersions = 8;
 
   // MatchConditions is a list of conditions that must be met for a request to be sent to this
   // webhook. Match conditions filter requests that have already been matched by the rules,

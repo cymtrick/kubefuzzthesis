@@ -275,7 +275,7 @@ message VolumeSpec {
 // ReplicaSet set of machine IDs (nodes) to which part of this volume is erasure 
 // coded - for clustered storage arrays
 message ReplicaSet {
-  repeated string nodes = 1;
+  repeated bytes nodes = 1;
 }
 
 // RuntimeStateMap is a list of name value mapping of driver specific runtime 
@@ -320,7 +320,7 @@ message Volume {
   // SecureDevicePath is the device path for an encrypted volume.
   string secure_device_path = 16;
   // AttachPath is the mounted path in the host namespace.
-  repeated string attach_path = 17;
+  repeated bytes attach_path = 17;
   // AttachInfo is a list of name value mappings that provides attach information.
   map<string, string> attach_info = 18;
   // ReplicatSets storage for this volumefor clustered storage arrays.

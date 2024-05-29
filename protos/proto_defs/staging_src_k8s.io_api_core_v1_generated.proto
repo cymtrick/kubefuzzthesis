@@ -275,12 +275,12 @@ message Capabilities {
   // Added capabilities
   // +optional
   // +listType=atomic
-  repeated string add = 1;
+  repeated bytes add = 1;
 
   // Removed capabilities
   // +optional
   // +listType=atomic
-  repeated string drop = 2;
+  repeated bytes drop = 2;
 }
 
 // Represents a Ceph Filesystem mount that lasts the lifetime of a pod
@@ -289,7 +289,7 @@ message CephFSPersistentVolumeSource {
   // monitors is Required: Monitors is a collection of Ceph monitors
   // More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
   // +listType=atomic
-  repeated string monitors = 1;
+  repeated bytes monitors = 1;
 
   // path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
   // +optional
@@ -323,7 +323,7 @@ message CephFSVolumeSource {
   // monitors is Required: Monitors is a collection of Ceph monitors
   // More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
   // +listType=atomic
-  repeated string monitors = 1;
+  repeated bytes monitors = 1;
 
   // path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
   // +optional
@@ -706,7 +706,7 @@ message Container {
   // More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   // +optional
   // +listType=atomic
-  repeated string command = 3;
+  repeated bytes command = 3;
 
   // Arguments to the entrypoint.
   // The container image's CMD is used if this is not provided.
@@ -718,7 +718,7 @@ message Container {
   // More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   // +optional
   // +listType=atomic
-  repeated string args = 4;
+  repeated bytes args = 4;
 
   // Container's working directory.
   // If not specified, the container runtime's default will be used, which
@@ -900,7 +900,7 @@ message ContainerImage {
   // e.g. ["kubernetes.example/hyperkube:v1.0.7", "cloud-vendor.registry.example/cloud-vendor/hyperkube:v1.0.7"]
   // +optional
   // +listType=atomic
-  repeated string names = 1;
+  repeated bytes names = 1;
 
   // The size of the image in bytes.
   // +optional
@@ -1407,7 +1407,7 @@ message EphemeralContainerCommon {
   // More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   // +optional
   // +listType=atomic
-  repeated string command = 3;
+  repeated bytes command = 3;
 
   // Arguments to the entrypoint.
   // The image's CMD is used if this is not provided.
@@ -1419,7 +1419,7 @@ message EphemeralContainerCommon {
   // More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   // +optional
   // +listType=atomic
-  repeated string args = 4;
+  repeated bytes args = 4;
 
   // Container's working directory.
   // If not specified, the container runtime's default will be used, which
@@ -1700,7 +1700,7 @@ message ExecAction {
   // Exit status of 0 is treated as live/healthy and non-zero is unhealthy.
   // +optional
   // +listType=atomic
-  repeated string command = 1;
+  repeated bytes command = 1;
 }
 
 // Represents a Fibre Channel volume.
@@ -1710,7 +1710,7 @@ message FCVolumeSource {
   // targetWWNs is Optional: FC target worldwide names (WWNs)
   // +optional
   // +listType=atomic
-  repeated string targetWWNs = 1;
+  repeated bytes targetWWNs = 1;
 
   // lun is Optional: FC target lun number
   // +optional
@@ -1732,7 +1732,7 @@ message FCVolumeSource {
   // Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
   // +optional
   // +listType=atomic
-  repeated string wwids = 5;
+  repeated bytes wwids = 5;
 }
 
 // FlexPersistentVolumeSource represents a generic persistent volume resource that is
@@ -1966,7 +1966,7 @@ message HostAlias {
 
   // Hostnames for the above IP address.
   // +listType=atomic
-  repeated string hostnames = 2;
+  repeated bytes hostnames = 2;
 }
 
 // HostIP represents a single IP address allocated to the host.
@@ -2026,7 +2026,7 @@ message ISCSIPersistentVolumeSource {
   // is other than default (typically TCP ports 860 and 3260).
   // +optional
   // +listType=atomic
-  repeated string portals = 7;
+  repeated bytes portals = 7;
 
   // chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
   // +optional
@@ -2083,7 +2083,7 @@ message ISCSIVolumeSource {
   // is other than default (typically TCP ports 860 and 3260).
   // +optional
   // +listType=atomic
-  repeated string portals = 7;
+  repeated bytes portals = 7;
 
   // chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
   // +optional
@@ -2395,7 +2395,7 @@ message NamespaceSpec {
   // More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
   // +optional
   // +listType=atomic
-  repeated string finalizers = 1;
+  repeated bytes finalizers = 1;
 }
 
 // NamespaceStatus is information about the current status of a Namespace.
@@ -2609,7 +2609,7 @@ message NodeSelectorRequirement {
   // This array is replaced during a strategic merge patch.
   // +optional
   // +listType=atomic
-  repeated string values = 3;
+  repeated bytes values = 3;
 }
 
 // A null or empty node selector term matches no objects. The requirements of
@@ -2640,7 +2640,7 @@ message NodeSpec {
   // +optional
   // +patchStrategy=merge
   // +listType=set
-  repeated string podCIDRs = 7;
+  repeated bytes podCIDRs = 7;
 
   // ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
   // +optional
@@ -2727,7 +2727,7 @@ message NodeStatus {
   // List of attachable volumes in use (mounted) by the node.
   // +optional
   // +listType=atomic
-  repeated string volumesInUse = 9;
+  repeated bytes volumesInUse = 9;
 
   // List of volumes that are attached to the node.
   // +optional
@@ -2933,7 +2933,7 @@ message PersistentVolumeClaimSpec {
   // More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
   // +optional
   // +listType=atomic
-  repeated string accessModes = 1;
+  repeated bytes accessModes = 1;
 
   // selector is a label query over volumes to consider for binding.
   // +optional
@@ -3025,7 +3025,7 @@ message PersistentVolumeClaimStatus {
   // More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
   // +optional
   // +listType=atomic
-  repeated string accessModes = 2;
+  repeated bytes accessModes = 2;
 
   // capacity represents the actual resources of the underlying volume.
   // +optional
@@ -3286,7 +3286,7 @@ message PersistentVolumeSpec {
   // More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
   // +optional
   // +listType=atomic
-  repeated string accessModes = 3;
+  repeated bytes accessModes = 3;
 
   // claimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim.
   // Expected to be non-nil when bound.
@@ -3314,7 +3314,7 @@ message PersistentVolumeSpec {
   // More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
   // +optional
   // +listType=atomic
-  repeated string mountOptions = 7;
+  repeated bytes mountOptions = 7;
 
   // volumeMode defines if a volume is intended to be used with a formatted filesystem
   // or to remain in raw block state. Value of Filesystem is implied when not included in spec.
@@ -3440,7 +3440,7 @@ message PodAffinityTerm {
   // null or empty namespaces list and null namespaceSelector means "this pod's namespace".
   // +optional
   // +listType=atomic
-  repeated string namespaces = 2;
+  repeated bytes namespaces = 2;
 
   // This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching
   // the labelSelector in the specified namespaces, where co-located is defined as running on a node
@@ -3468,7 +3468,7 @@ message PodAffinityTerm {
   // This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
   // +listType=atomic
   // +optional
-  repeated string matchLabelKeys = 5;
+  repeated bytes matchLabelKeys = 5;
 
   // MismatchLabelKeys is a set of pod label keys to select which pods will
   // be taken into consideration. The keys are used to lookup values from the
@@ -3481,7 +3481,7 @@ message PodAffinityTerm {
   // This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
   // +listType=atomic
   // +optional
-  repeated string mismatchLabelKeys = 6;
+  repeated bytes mismatchLabelKeys = 6;
 }
 
 // Pod anti affinity is a group of inter pod anti affinity scheduling rules.
@@ -3580,14 +3580,14 @@ message PodDNSConfig {
   // Duplicated nameservers will be removed.
   // +optional
   // +listType=atomic
-  repeated string nameservers = 1;
+  repeated bytes nameservers = 1;
 
   // A list of DNS search domains for host-name lookup.
   // This will be appended to the base search paths generated from DNSPolicy.
   // Duplicated search paths will be removed.
   // +optional
   // +listType=atomic
-  repeated string searches = 2;
+  repeated bytes searches = 2;
 
   // A list of DNS resolver options.
   // This will be merged with the base options generated from DNSPolicy.
@@ -3637,7 +3637,7 @@ message PodExecOptions {
 
   // Command is the remote command to execute. argv array. Not executed within a shell.
   // +listType=atomic
-  repeated string command = 6;
+  repeated bytes command = 6;
 }
 
 // PodIP represents a single IP address allocated to the pod.
@@ -4613,7 +4613,7 @@ message RBDPersistentVolumeSource {
   // monitors is a collection of Ceph monitors.
   // More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
   // +listType=atomic
-  repeated string monitors = 1;
+  repeated bytes monitors = 1;
 
   // image is the rados image name.
   // More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
@@ -4665,7 +4665,7 @@ message RBDVolumeSource {
   // monitors is a collection of Ceph monitors.
   // More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
   // +listType=atomic
-  repeated string monitors = 1;
+  repeated bytes monitors = 1;
 
   // image is the rados image name.
   // More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
@@ -4908,7 +4908,7 @@ message ResourceQuotaSpec {
   // If not specified, the quota matches all objects.
   // +optional
   // +listType=atomic
-  repeated string scopes = 2;
+  repeated bytes scopes = 2;
 
   // scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota
   // but expressed using ScopeSelectorOperator in combination with possible values.
@@ -5095,7 +5095,7 @@ message ScopedResourceSelectorRequirement {
   // This array is replaced during a strategic merge patch.
   // +optional
   // +listType=atomic
-  repeated string values = 3;
+  repeated bytes values = 3;
 }
 
 // SeccompProfile defines a pod/container's seccomp profile settings.
@@ -5609,7 +5609,7 @@ message ServiceSpec {
   // More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
   // +listType=atomic
   // +optional
-  repeated string clusterIPs = 18;
+  repeated bytes clusterIPs = 18;
 
   // type determines how the Service is exposed. Defaults to ClusterIP. Valid
   // options are ExternalName, ClusterIP, NodePort, and LoadBalancer.
@@ -5637,7 +5637,7 @@ message ServiceSpec {
   // that are not part of the Kubernetes system.
   // +optional
   // +listType=atomic
-  repeated string externalIPs = 5;
+  repeated bytes externalIPs = 5;
 
   // Supports "ClientIP" and "None". Used to maintain session affinity.
   // Enable client IP based session affinity.
@@ -5663,7 +5663,7 @@ message ServiceSpec {
   // More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
   // +optional
   // +listType=atomic
-  repeated string loadBalancerSourceRanges = 9;
+  repeated bytes loadBalancerSourceRanges = 9;
 
   // externalName is the external reference that discovery mechanisms will
   // return as an alias for this service (e.g. a DNS CNAME record). No
@@ -5734,7 +5734,7 @@ message ServiceSpec {
   // governed by the ipFamilyPolicy field.
   // +listType=atomic
   // +optional
-  repeated string ipFamilies = 19;
+  repeated bytes ipFamilies = 19;
 
   // IPFamilyPolicy represents the dual-stack-ness requested or required by
   // this Service. If there is no value provided, then this field will be set
@@ -5957,7 +5957,7 @@ message TopologySelectorLabelRequirement {
   // An array of string values. One value must match the label to be selected.
   // Each entry in Values is ORed.
   // +listType=atomic
-  repeated string values = 2;
+  repeated bytes values = 2;
 }
 
 // A topology selector term represents the result of label queries.
@@ -6098,7 +6098,7 @@ message TopologySpreadConstraint {
   // This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default).
   // +listType=atomic
   // +optional
-  repeated string matchLabelKeys = 8;
+  repeated bytes matchLabelKeys = 8;
 }
 
 // TypedLocalObjectReference contains enough information to let you locate the

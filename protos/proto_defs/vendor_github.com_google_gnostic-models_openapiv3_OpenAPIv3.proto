@@ -410,7 +410,7 @@ message Object {
 
 // Describes a single API operation on a path.
 message Operation {
-  repeated string tags = 1;
+  repeated bytes tags = 1;
   string summary = 2;
   string description = 3;
   ExternalDocs external_docs = 4;
@@ -559,7 +559,7 @@ message Schema {
   bool unique_items = 20;
   int64 max_properties = 21;
   int64 min_properties = 22;
-  repeated string required = 23;
+  repeated bytes required = 23;
   repeated Any enum = 24;
   string type = 25;
   repeated SchemaOrReference all_of = 26;
@@ -625,7 +625,7 @@ message Server {
 
 // An object representing a Server Variable for server URL template substitution.
 message ServerVariable {
-  repeated string enum = 1;
+  repeated bytes enum = 1;
   string default = 2;
   string description = 3;
   repeated NamedAny specification_extension = 4;
@@ -645,7 +645,7 @@ message SpecificationExtension {
 }
 
 message StringArray {
-  repeated string value = 1;
+  repeated bytes value = 1;
 }
 
 message Strings {

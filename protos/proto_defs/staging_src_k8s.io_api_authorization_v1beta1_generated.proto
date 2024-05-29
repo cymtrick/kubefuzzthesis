@@ -34,7 +34,7 @@ option go_package = "k8s.io/api/authorization/v1beta1";
 message ExtraValue {
   // items, if empty, will result in an empty slice
 
-  repeated string items = 1;
+  repeated bytes items = 1;
 }
 
 // LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace.
@@ -70,13 +70,13 @@ message NonResourceAttributes {
 message NonResourceRule {
   // Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
   // +listType=atomic
-  repeated string verbs = 1;
+  repeated bytes verbs = 1;
 
   // NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full,
   // final step in the path.  "*" means all.
   // +optional
   // +listType=atomic
-  repeated string nonResourceURLs = 2;
+  repeated bytes nonResourceURLs = 2;
 }
 
 // ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
@@ -118,24 +118,24 @@ message ResourceAttributes {
 message ResourceRule {
   // Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.
   // +listType=atomic
-  repeated string verbs = 1;
+  repeated bytes verbs = 1;
 
   // APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of
   // the enumerated resources in any API group will be allowed.  "*" means all.
   // +optional
   // +listType=atomic
-  repeated string apiGroups = 2;
+  repeated bytes apiGroups = 2;
 
   // Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
   //  "*/foo" represents the subresource 'foo' for all resources in the specified apiGroups.
   // +optional
   // +listType=atomic
-  repeated string resources = 3;
+  repeated bytes resources = 3;
 
   // ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.  "*" means all.
   // +optional
   // +listType=atomic
-  repeated string resourceNames = 4;
+  repeated bytes resourceNames = 4;
 }
 
 // SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a
@@ -227,7 +227,7 @@ message SubjectAccessReviewSpec {
   // Groups is the groups you're testing for.
   // +optional
   // +listType=atomic
-  repeated string group = 4;
+  repeated bytes group = 4;
 
   // Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer
   // it needs a reflection here.

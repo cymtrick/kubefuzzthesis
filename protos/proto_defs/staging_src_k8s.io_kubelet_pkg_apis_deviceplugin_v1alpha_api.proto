@@ -79,7 +79,7 @@ message Device {
 // - Allocate allows Device Plugin to run device specific operations on
 //   the Devices requested
 message AllocateRequest {
-	repeated string devicesIDs = 1;
+	repeated bytes devicesIDs = 1;
 }
 
 // AllocateResponse includes the artifacts that needs to be injected into

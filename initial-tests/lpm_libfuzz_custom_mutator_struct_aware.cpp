@@ -19,19 +19,29 @@ public:
     }
 };
 
-void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod *pod)
+void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod pod)
 {
-    if (!pod->has_spec() || !pod->has_status()) {
-        return; 
+    auto* spec = pod.mutable_spec();
+    auto* status = pod.mutable_status();
+    if (spec->containers().empty()) {
+        auto* new_container = spec->mutable_containers()->Add();
+        new_container->set_name("DefaultContainer");
     }
+    if (status->containerstatuses().empty()) {
+        auto* new_status = status->mutable_containerstatuses()->Add();
+        new_status->set_name(spec->containers(0).name());
+    }
+    MyProtobufMutator mutator;
+    mutator.Seed(13435);
 
-    auto* spec = pod->mutable_spec();
-    auto* status = pod->mutable_status();
-    if (!spec->containers().empty() && !status->containerstatuses().empty()) {
-        auto& mutable_container_status = *status->mutable_containerstatuses()->Mutable(0);
-        const auto& container_name = spec->containers(0).name();
-        mutable_container_status.set_name(container_name);
-    }
+    std::cout << "Original name: " << status->containerstatuses(0).name() << std::endl;
+    auto mutated_name = mutator.MutateString(status->containerstatuses(0).name(), 24923);
+    std::cout << "Mutated name: " << status->containerstatuses(0).name() << std::endl;
+    status->mutable_containerstatuses(0)->set_name(mutated_name);
+    std::cout << "Updated name in status: " << status->containerstatuses(0).name() << std::endl;
+    
+    
+
 }
 
 void MutatePodMetadataNameAndNamespace(k8s::io::api::core::v1::Pod *pod, unsigned int seed)
@@ -63,12 +73,12 @@ void MutatePodMetadataNameAndNamespace(k8s::io::api::core::v1::Pod *pod, unsigne
         }
         metadata->set_namespace_(mutated_namespace);
     }
-    if (metadata->uid().empty())
-    {
-        metadata->set_uid("12344");
-        auto mutated_uid = mutator.MutateString(metadata->uid(), 200);
-        metadata->set_uid(mutated_uid);
-    }
+    // if (metadata->uid().empty())
+    // {
+    //     metadata->set_uid("12344");
+    //     auto mutated_uid = mutator.MutateString(metadata->uid(), 2000);
+    //     metadata->set_uid(mutated_uid);
+    // }
     (*metadata->mutable_annotations())["new_key"] = "new_value";
 }
 
@@ -114,39 +124,55 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
 {
     try
     {
+        // if (test_proto_input.has_pod())
+        // {
+        //     k8s::io::api::core::v1::Pod test_proto = test_proto_input.pod();
+            
+        //     if (test_proto.has_metadata() &&
+        //         test_proto.has_spec() &&
+        //         test_proto.has_status())
+        //     {
+        //         size_t size = test_proto.ByteSizeLong();
+        //         std::vector<uint8_t> data(size);
+        //         test_proto.SerializeToArray(data.data(), size);
+        //         TestValidateContainerLogStatus(data.data(), size);
+        //     }
+        // }
+        
         if (test_proto_input.has_pod())
         {
+            
             k8s::io::api::core::v1::Pod test_proto = test_proto_input.pod();
             
             if (test_proto.has_metadata() &&
                 test_proto.has_spec() &&
                 test_proto.has_status())
             {
-                size_t size = test_proto.ByteSizeLong();
-                std::vector<uint8_t> data(size);
-                test_proto.SerializeToArray(data.data(), size);
-                std::cout << "Mutated name: " << test_proto.metadata().name()
-                          << "Mutated uid: " << test_proto.metadata().uid()
-                          << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
-                DoesNotDeletePodDirsIfContainerIsRunning(data.data(), size);
-                std::cout << "Fuzzing Pod with mutated metadata." << std::endl;
-            }
-        }
-        else if (test_proto_input.has_node())
-        {
-            k8s::io::api::core::v1::Node test_proto = test_proto_input.node();
+                EnsureConsistentContainerNames(test_proto);
 
-            if (test_proto.has_metadata())
-            {
                 size_t size = test_proto.ByteSizeLong();
                 std::vector<uint8_t> data(size);
+                
                 test_proto.SerializeToArray(data.data(), size);
-                std::cout << "Mutated name: " << test_proto.metadata().name()
-                          << "Mutated uid: " << test_proto.metadata().uid()
-                          << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
-                std::cout << "Fuzzing Node with mutated metadata." << std::endl;
+                TestValidateContainerLogStatus(data.data(), size);
             }
         }
+        // if (test_proto_input.has_pod() && test_proto_input.has_node())
+        // {
+        //     k8s::io::api::core::v1::Pod test_proto_pod = test_proto_input.pod();
+        //     k8s::io::api::core::v1::Node test_proto_node = test_proto_input.node();
+
+        //     if (test_proto_pod.has_metadata() && test_proto_node.has_metadata())
+        //     {
+        //         size_t sizePod = test_proto_pod.ByteSizeLong();
+        //         std::vector<uint8_t> podData(sizePod);
+        //         test_proto_pod.SerializeToArray(podData.data(), sizePod);
+        //         size_t sizeNode = test_proto_node.ByteSizeLong();
+        //         std::vector<uint8_t> nodeData(sizeNode);
+        //         test_proto_node.SerializeToArray(nodeData.data(), sizeNode);
+        //         TestPurgingObsoleteStatusMapEntries(podData.data(),sizePod,nodeData.data(),sizeNode);
+        //     }
+        // }
         else
         {
             std::cerr << "Unsupported protobuf type: " << test_proto_input.GetTypeName() << std::endl;

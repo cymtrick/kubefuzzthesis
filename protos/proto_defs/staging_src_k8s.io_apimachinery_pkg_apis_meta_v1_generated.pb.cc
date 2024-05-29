@@ -2405,7 +2405,7 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // repeated string shortNames = 5;
+      // repeated bytes shortNames = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -2431,7 +2431,7 @@ const char* APIResource::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // repeated string categories = 7;
+      // repeated bytes categories = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -2531,7 +2531,7 @@ uint8_t* APIResource::_InternalSerialize(
         _Internal::verbs(this).GetCachedSize(), target, stream);
   }
 
-  // repeated string shortNames = 5;
+  // repeated bytes shortNames = 5;
   for (int i = 0, n = this->_internal_shortnames_size(); i < n; i++) {
     const auto& s = this->_internal_shortnames(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -2547,7 +2547,7 @@ uint8_t* APIResource::_InternalSerialize(
         6, this->_internal_singularname(), target);
   }
 
-  // repeated string categories = 7;
+  // repeated bytes categories = 7;
   for (int i = 0, n = this->_internal_categories_size(); i < n; i++) {
     const auto& s = this->_internal_categories(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -2591,7 +2591,7 @@ size_t APIResource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string shortNames = 5;
+  // repeated bytes shortNames = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.shortnames_.size());
   for (int i = 0, n = _impl_.shortnames_.size(); i < n; i++) {
@@ -2599,7 +2599,7 @@ size_t APIResource::ByteSizeLong() const {
       _impl_.shortnames_.Get(i));
   }
 
-  // repeated string categories = 7;
+  // repeated bytes categories = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.categories_.size());
   for (int i = 0, n = _impl_.categories_.size(); i < n; i++) {
@@ -3091,7 +3091,7 @@ const char* APIVersions::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string versions = 1;
+      // repeated bytes versions = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -3150,7 +3150,7 @@ uint8_t* APIVersions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string versions = 1;
+  // repeated bytes versions = 1;
   for (int i = 0, n = this->_internal_versions_size(); i < n; i++) {
     const auto& s = this->_internal_versions(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -3184,7 +3184,7 @@ size_t APIVersions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string versions = 1;
+  // repeated bytes versions = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.versions_.size());
   for (int i = 0, n = _impl_.versions_.size(); i < n; i++) {
@@ -3347,7 +3347,7 @@ const char* ApplyOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string dryRun = 1;
+      // repeated bytes dryRun = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -3412,7 +3412,7 @@ uint8_t* ApplyOptions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   for (int i = 0, n = this->_internal_dryrun_size(); i < n; i++) {
     const auto& s = this->_internal_dryrun(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -3451,7 +3451,7 @@ size_t ApplyOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dryrun_.size());
   for (int i = 0, n = _impl_.dryrun_.size(); i < n; i++) {
@@ -4105,7 +4105,7 @@ const char* CreateOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string dryRun = 1;
+      // repeated bytes dryRun = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -4170,7 +4170,7 @@ uint8_t* CreateOptions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   for (int i = 0, n = this->_internal_dryrun_size(); i < n; i++) {
     const auto& s = this->_internal_dryrun(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -4209,7 +4209,7 @@ size_t CreateOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dryrun_.size());
   for (int i = 0, n = _impl_.dryrun_.size(); i < n; i++) {
@@ -4466,7 +4466,7 @@ const char* DeleteOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated string dryRun = 5;
+      // repeated bytes dryRun = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -4539,7 +4539,7 @@ uint8_t* DeleteOptions::_InternalSerialize(
         4, this->_internal_propagationpolicy(), target);
   }
 
-  // repeated string dryRun = 5;
+  // repeated bytes dryRun = 5;
   for (int i = 0, n = this->_internal_dryrun_size(); i < n; i++) {
     const auto& s = this->_internal_dryrun(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -4565,7 +4565,7 @@ size_t DeleteOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dryRun = 5;
+  // repeated bytes dryRun = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dryrun_.size());
   for (int i = 0, n = _impl_.dryrun_.size(); i < n; i++) {
@@ -7414,7 +7414,7 @@ const char* LabelSelectorRequirement::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // repeated string values = 3;
+      // repeated bytes values = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -7474,7 +7474,7 @@ uint8_t* LabelSelectorRequirement::_InternalSerialize(
         2, this->_internal_operator_(), target);
   }
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   for (int i = 0, n = this->_internal_values_size(); i < n; i++) {
     const auto& s = this->_internal_values(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -7500,7 +7500,7 @@ size_t LabelSelectorRequirement::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.values_.size());
   for (int i = 0, n = _impl_.values_.size(); i < n; i++) {
@@ -9960,7 +9960,7 @@ const char* ObjectMeta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // repeated string finalizers = 14;
+      // repeated bytes finalizers = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           ptr -= 1;
@@ -10151,7 +10151,7 @@ uint8_t* ObjectMeta::_InternalSerialize(
         InternalWriteMessage(13, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated string finalizers = 14;
+  // repeated bytes finalizers = 14;
   for (int i = 0, n = this->_internal_finalizers_size(); i < n; i++) {
     const auto& s = this->_internal_finalizers(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -10210,7 +10210,7 @@ size_t ObjectMeta::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated string finalizers = 14;
+  // repeated bytes finalizers = 14;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.finalizers_.size());
   for (int i = 0, n = _impl_.finalizers_.size(); i < n; i++) {
@@ -11469,7 +11469,7 @@ const char* PatchOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string dryRun = 1;
+      // repeated bytes dryRun = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -11543,7 +11543,7 @@ uint8_t* PatchOptions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   for (int i = 0, n = this->_internal_dryrun_size(); i < n; i++) {
     const auto& s = this->_internal_dryrun(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -11588,7 +11588,7 @@ size_t PatchOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dryrun_.size());
   for (int i = 0, n = _impl_.dryrun_.size(); i < n; i++) {
@@ -12025,7 +12025,7 @@ const char* RootPaths::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string paths = 1;
+      // repeated bytes paths = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -12071,7 +12071,7 @@ uint8_t* RootPaths::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string paths = 1;
+  // repeated bytes paths = 1;
   for (int i = 0, n = this->_internal_paths_size(); i < n; i++) {
     const auto& s = this->_internal_paths(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -12097,7 +12097,7 @@ size_t RootPaths::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string paths = 1;
+  // repeated bytes paths = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.paths_.size());
   for (int i = 0, n = _impl_.paths_.size(); i < n; i++) {
@@ -14695,7 +14695,7 @@ const char* UpdateOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string dryRun = 1;
+      // repeated bytes dryRun = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -14760,7 +14760,7 @@ uint8_t* UpdateOptions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   for (int i = 0, n = this->_internal_dryrun_size(); i < n; i++) {
     const auto& s = this->_internal_dryrun(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -14799,7 +14799,7 @@ size_t UpdateOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dryrun_.size());
   for (int i = 0, n = _impl_.dryrun_.size(); i < n; i++) {
@@ -14956,7 +14956,7 @@ const char* Verbs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string items = 1;
+      // repeated bytes items = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -15002,7 +15002,7 @@ uint8_t* Verbs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string items = 1;
+  // repeated bytes items = 1;
   for (int i = 0, n = this->_internal_items_size(); i < n; i++) {
     const auto& s = this->_internal_items(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -15028,7 +15028,7 @@ size_t Verbs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string items = 1;
+  // repeated bytes items = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.items_.size());
   for (int i = 0, n = _impl_.items_.size(); i < n; i++) {

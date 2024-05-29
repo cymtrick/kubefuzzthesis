@@ -17,7 +17,7 @@ message UserAddOptions {
 message User {
   bytes name = 1;
   bytes password = 2;
-  repeated string roles = 3;
+  repeated bytes roles = 3;
   UserAddOptions options = 4;
 }
 

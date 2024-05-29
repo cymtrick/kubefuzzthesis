@@ -340,7 +340,7 @@ message IngressTLS {
   // Ingress, if left unspecified.
   // +optional
   // +listType=atomic
-  repeated string hosts = 1;
+  repeated bytes hosts = 1;
 
   // secretName is the name of the secret used to terminate TLS traffic on
   // port 443. Field is left optional to allow TLS routing based on SNI

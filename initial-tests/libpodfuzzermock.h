@@ -82,6 +82,12 @@ extern void TestDispatchWorkOfCompletedPod(void* dataPtr, size_t dataSize);
 extern void TestDispatchWorkOfActivePod(void* dataPtr, size_t dataSize);
 extern void TestHandlePodRemovesWhenSourcesAreReady(void* dataPtr, size_t dataSize);
 extern void TestHandlePortConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleHostNameConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleNodeSelectorBasedOnOS(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleMemExceeded(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandlePluginResources(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestPurgingObsoleteStatusMapEntries(void* dataPtrPod, size_t dataSizePod);
+extern void TestValidateContainerLogStatus(void* dataPtrPod, size_t dataSizePod);
 
 #ifdef __cplusplus
 }

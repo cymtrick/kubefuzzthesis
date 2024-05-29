@@ -41,12 +41,12 @@ message ServerStorageVersion {
   // The API server can decode objects encoded in these versions.
   // The encodingVersion must be included in the decodableVersions.
   // +listType=set
-  repeated string decodableVersions = 3;
+  repeated bytes decodableVersions = 3;
 
   // The API server can serve these versions.
   // DecodableVersions must include all ServedVersions.
   // +listType=set
-  repeated string servedVersions = 4;
+  repeated bytes servedVersions = 4;
 }
 
 // Storage version of a specific resource.

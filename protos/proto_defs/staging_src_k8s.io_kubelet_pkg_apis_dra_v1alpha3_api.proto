@@ -64,7 +64,7 @@ message NodePrepareResourceResponse {
     // These are the additional devices that kubelet must
     // make available via the container runtime. A resource
     // may have zero or more devices.
-    repeated string cdi_devices = 1 [(gogoproto.customname) = "CDIDevices"];
+    repeated bytes cdi_devices = 1 [(gogoproto.customname) = "CDIDevices"];
     // If non-empty, preparing the ResourceClaim failed.
     // cdi_devices is ignored in that case.
     string error = 2;

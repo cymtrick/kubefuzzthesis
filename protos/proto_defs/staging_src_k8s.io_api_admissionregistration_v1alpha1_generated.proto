@@ -208,7 +208,7 @@ message NamedRuleWithOperations {
   // ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
   // +listType=atomic
   // +optional
-  repeated string resourceNames = 1;
+  repeated bytes resourceNames = 1;
 
   // RuleWithOperations is a tuple of Operations and Resources.
   optional k8s.io.api.admissionregistration.v1.RuleWithOperations ruleWithOperations = 2;
@@ -401,7 +401,7 @@ message ValidatingAdmissionPolicyBindingSpec {
   //
   // Required.
   // +listType=set
-  repeated string validationActions = 4;
+  repeated bytes validationActions = 4;
 }
 
 // ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.

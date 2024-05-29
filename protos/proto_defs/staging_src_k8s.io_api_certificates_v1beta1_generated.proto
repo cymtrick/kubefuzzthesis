@@ -153,7 +153,7 @@ message CertificateSigningRequestSpec {
   //  "microsoft sgc",
   //  "netscape sgc"
   // +listType=atomic
-  repeated string usages = 5;
+  repeated bytes usages = 5;
 
   // Information about the requesting user.
   // See user.Info interface for details.
@@ -169,7 +169,7 @@ message CertificateSigningRequestSpec {
   // See user.Info interface for details.
   // +listType=atomic
   // +optional
-  repeated string groups = 4;
+  repeated bytes groups = 4;
 
   // Extra information about the requesting user.
   // See user.Info interface for details.
@@ -196,6 +196,6 @@ message CertificateSigningRequestStatus {
 message ExtraValue {
   // items, if empty, will result in an empty slice
 
-  repeated string items = 1;
+  repeated bytes items = 1;
 }
 

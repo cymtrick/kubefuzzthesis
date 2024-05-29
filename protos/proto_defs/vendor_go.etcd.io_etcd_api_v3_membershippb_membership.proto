@@ -11,7 +11,7 @@ option (gogoproto.goproto_getters_all) = false;
 // RaftAttributes represents the raft related attributes of an etcd member.
 message RaftAttributes {
   // peerURLs is the list of peers in the raft cluster.
-  repeated string peer_urls = 1;
+  repeated bytes peer_urls = 1;
   // isLearner indicates if the member is raft learner.
   bool is_learner = 2;
 }
@@ -19,7 +19,7 @@ message RaftAttributes {
 // Attributes represents all the non-raft related attributes of an etcd member.
 message Attributes {
   string name = 1;
-  repeated string client_urls = 2;
+  repeated bytes client_urls = 2;
 }
 
 message Member {

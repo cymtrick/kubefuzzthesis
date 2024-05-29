@@ -58,7 +58,7 @@ message CodeGeneratorRequest {
   // The .proto files that were explicitly listed on the command-line.  The
   // code generator should generate code only for these files.  Each file's
   // descriptor will be included in proto_file, below.
-  repeated string file_to_generate = 1;
+  repeated bytes file_to_generate = 1;
 
   // The generator parameter passed on the command-line.
   optional bytes parameter = 2;

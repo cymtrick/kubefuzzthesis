@@ -46,7 +46,7 @@ message GetServiceAccountNameResponse {
 }
 
 message GetAccessTokenRequest {
-  repeated string scope = 1;
+  repeated bytes scope = 1;
   optional int64 service_account_id = 2;
   optional bytes service_account_name = 3;
 }

@@ -112,11 +112,11 @@ message Document {
   // The base path to the API. Example: '/api'.
   string base_path = 4;
   // The transfer protocol of the API.
-  repeated string schemes = 5;
+  repeated bytes schemes = 5;
   // A list of MIME types accepted by the API.
-  repeated string consumes = 6;
+  repeated bytes consumes = 6;
   // A list of MIME types the API can produce.
-  repeated string produces = 7;
+  repeated bytes produces = 7;
   Paths paths = 8;
   Definitions definitions = 9;
   ParameterDefinitions parameters = 10;
@@ -145,7 +145,7 @@ message FileSchema {
   string title = 2;
   string description = 3;
   Any default = 4;
-  repeated string required = 5;
+  repeated bytes required = 5;
   string type = 6;
   bool read_only = 7;
   ExternalDocs external_docs = 8;
@@ -402,7 +402,7 @@ message Oauth2Scopes {
 }
 
 message Operation {
-  repeated string tags = 1;
+  repeated bytes tags = 1;
   // A brief summary of the operation.
   string summary = 2;
   // A longer description of the operation, GitHub Flavored Markdown is allowed.
@@ -411,14 +411,14 @@ message Operation {
   // A unique identifier of the operation.
   string operation_id = 5;
   // A list of MIME types the API can produce.
-  repeated string produces = 6;
+  repeated bytes produces = 6;
   // A list of MIME types the API can consume.
-  repeated string consumes = 7;
+  repeated bytes consumes = 7;
   // The parameters needed to send a valid API call.
   repeated ParametersItem parameters = 8;
   Responses responses = 9;
   // The transfer protocol of the API.
-  repeated string schemes = 10;
+  repeated bytes schemes = 10;
   bool deprecated = 11;
   repeated SecurityRequirement security = 12;
   repeated NamedAny vendor_extension = 13;
@@ -594,7 +594,7 @@ message Schema {
   bool unique_items = 16;
   int64 max_properties = 17;
   int64 min_properties = 18;
-  repeated string required = 19;
+  repeated bytes required = 19;
   repeated Any enum = 20;
   AdditionalPropertiesItem additional_properties = 21;
   TypeItem type = 22;
@@ -636,7 +636,7 @@ message SecurityRequirement {
 }
 
 message StringArray {
-  repeated string value = 1;
+  repeated bytes value = 1;
 }
 
 message Tag {
@@ -647,7 +647,7 @@ message Tag {
 }
 
 message TypeItem {
-  repeated string value = 1;
+  repeated bytes value = 1;
 }
 
 // Any property starting with x- is valid.

@@ -151,7 +151,7 @@ message AdmissionResponse {
   // Limit warnings to 120 characters if possible.
   // Warnings over 256 characters and large numbers of warnings may be truncated.
   // +optional
-  repeated string warnings = 7;
+  repeated bytes warnings = 7;
 }
 
 // AdmissionReview describes an admission review request/response.

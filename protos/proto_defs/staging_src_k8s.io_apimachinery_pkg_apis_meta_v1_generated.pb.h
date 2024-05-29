@@ -792,7 +792,7 @@ class APIResource final :
     kVerbsFieldNumber = 4,
     kNamespacedFieldNumber = 2,
   };
-  // repeated string shortNames = 5;
+  // repeated bytes shortNames = 5;
   int shortnames_size() const;
   private:
   int _internal_shortnames_size() const;
@@ -816,7 +816,7 @@ class APIResource final :
   std::string* _internal_add_shortnames();
   public:
 
-  // repeated string categories = 7;
+  // repeated bytes categories = 7;
   int categories_size() const;
   private:
   int _internal_categories_size() const;
@@ -1321,7 +1321,7 @@ class APIVersions final :
     kVersionsFieldNumber = 1,
     kServerAddressByClientCIDRsFieldNumber = 2,
   };
-  // repeated string versions = 1;
+  // repeated bytes versions = 1;
   int versions_size() const;
   private:
   int _internal_versions_size() const;
@@ -1512,7 +1512,7 @@ class ApplyOptions final :
     kFieldManagerFieldNumber = 3,
     kForceFieldNumber = 2,
   };
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   int dryrun_size() const;
   private:
   int _internal_dryrun_size() const;
@@ -1978,7 +1978,7 @@ class CreateOptions final :
     kFieldManagerFieldNumber = 3,
     kFieldValidationFieldNumber = 4,
   };
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   int dryrun_size() const;
   private:
   int _internal_dryrun_size() const;
@@ -2191,7 +2191,7 @@ class DeleteOptions final :
     kGracePeriodSecondsFieldNumber = 1,
     kOrphanDependentsFieldNumber = 3,
   };
-  // repeated string dryRun = 5;
+  // repeated bytes dryRun = 5;
   int dryrun_size() const;
   private:
   int _internal_dryrun_size() const;
@@ -4300,7 +4300,7 @@ class LabelSelectorRequirement final :
     kKeyFieldNumber = 1,
     kOperatorFieldNumber = 2,
   };
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   int values_size() const;
   private:
   int _internal_values_size() const;
@@ -5843,7 +5843,7 @@ class ObjectMeta final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::k8s::io::apimachinery::pkg::apis::meta::v1::OwnerReference >&
       ownerreferences() const;
 
-  // repeated string finalizers = 14;
+  // repeated bytes finalizers = 14;
   int finalizers_size() const;
   private:
   int _internal_finalizers_size() const;
@@ -6957,7 +6957,7 @@ class PatchOptions final :
     kFieldValidationFieldNumber = 4,
     kForceFieldNumber = 2,
   };
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   int dryrun_size() const;
   private:
   int _internal_dryrun_size() const;
@@ -7365,7 +7365,7 @@ class RootPaths final :
   enum : int {
     kPathsFieldNumber = 1,
   };
-  // repeated string paths = 1;
+  // repeated bytes paths = 1;
   int paths_size() const;
   private:
   int _internal_paths_size() const;
@@ -9147,7 +9147,7 @@ class UpdateOptions final :
     kFieldManagerFieldNumber = 2,
     kFieldValidationFieldNumber = 3,
   };
-  // repeated string dryRun = 1;
+  // repeated bytes dryRun = 1;
   int dryrun_size() const;
   private:
   int _internal_dryrun_size() const;
@@ -9356,7 +9356,7 @@ class Verbs final :
   enum : int {
     kItemsFieldNumber = 1,
   };
-  // repeated string items = 1;
+  // repeated bytes items = 1;
   int items_size() const;
   private:
   int _internal_items_size() const;
@@ -10334,7 +10334,7 @@ inline void APIResource::set_allocated_verbs(::k8s::io::apimachinery::pkg::apis:
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.APIResource.verbs)
 }
 
-// repeated string shortNames = 5;
+// repeated bytes shortNames = 5;
 inline int APIResource::_internal_shortnames_size() const {
   return _impl_.shortnames_.size();
 }
@@ -10409,7 +10409,7 @@ APIResource::mutable_shortnames() {
   return &_impl_.shortnames_;
 }
 
-// repeated string categories = 7;
+// repeated bytes categories = 7;
 inline int APIResource::_internal_categories_size() const {
   return _impl_.categories_.size();
 }
@@ -10668,7 +10668,7 @@ APIResourceList::resources() const {
 
 // APIVersions
 
-// repeated string versions = 1;
+// repeated bytes versions = 1;
 inline int APIVersions::_internal_versions_size() const {
   return _impl_.versions_.size();
 }
@@ -10787,7 +10787,7 @@ APIVersions::serveraddressbyclientcidrs() const {
 
 // ApplyOptions
 
-// repeated string dryRun = 1;
+// repeated bytes dryRun = 1;
 inline int ApplyOptions::_internal_dryrun_size() const {
   return _impl_.dryrun_.size();
 }
@@ -11356,7 +11356,7 @@ inline void Condition::set_allocated_message(std::string* message) {
 
 // CreateOptions
 
-// repeated string dryRun = 1;
+// repeated bytes dryRun = 1;
 inline int CreateOptions::_internal_dryrun_size() const {
   return _impl_.dryrun_.size();
 }
@@ -11785,7 +11785,7 @@ inline void DeleteOptions::set_allocated_propagationpolicy(std::string* propagat
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.DeleteOptions.propagationPolicy)
 }
 
-// repeated string dryRun = 5;
+// repeated bytes dryRun = 5;
 inline int DeleteOptions::_internal_dryrun_size() const {
   return _impl_.dryrun_.size();
 }
@@ -13227,7 +13227,7 @@ inline void LabelSelectorRequirement::set_allocated_operator_(std::string* opera
   // @@protoc_insertion_point(field_set_allocated:k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement.operator)
 }
 
-// repeated string values = 3;
+// repeated bytes values = 3;
 inline int LabelSelectorRequirement::_internal_values_size() const {
   return _impl_.values_.size();
 }
@@ -15487,7 +15487,7 @@ ObjectMeta::ownerreferences() const {
   return _impl_.ownerreferences_;
 }
 
-// repeated string finalizers = 14;
+// repeated bytes finalizers = 14;
 inline int ObjectMeta::_internal_finalizers_size() const {
   return _impl_.finalizers_.size();
 }
@@ -16170,7 +16170,7 @@ PartialObjectMetadataList::items() const {
 
 // PatchOptions
 
-// repeated string dryRun = 1;
+// repeated bytes dryRun = 1;
 inline int PatchOptions::_internal_dryrun_size() const {
   return _impl_.dryrun_.size();
 }
@@ -16553,7 +16553,7 @@ inline void Preconditions::set_allocated_resourceversion(std::string* resourceve
 
 // RootPaths
 
-// repeated string paths = 1;
+// repeated bytes paths = 1;
 inline int RootPaths::_internal_paths_size() const {
   return _impl_.paths_.size();
 }
@@ -18072,7 +18072,7 @@ inline void TypeMeta::set_allocated_apiversion(std::string* apiversion) {
 
 // UpdateOptions
 
-// repeated string dryRun = 1;
+// repeated bytes dryRun = 1;
 inline int UpdateOptions::_internal_dryrun_size() const {
   return _impl_.dryrun_.size();
 }
@@ -18287,7 +18287,7 @@ inline void UpdateOptions::set_allocated_fieldvalidation(std::string* fieldvalid
 
 // Verbs
 
-// repeated string items = 1;
+// repeated bytes items = 1;
 inline int Verbs::_internal_items_size() const {
   return _impl_.items_.size();
 }

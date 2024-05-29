@@ -94,7 +94,7 @@ message LogModuleVersion {
 
 message LogReadRequest {
   require bytes app_id = 1;
-  repeated string version_id = 2;
+  repeated bytes version_id = 2;
   repeated LogModuleVersion module_version = 19;
 
   optional int64 start_time = 3;
@@ -135,7 +135,7 @@ message LogUsageRecord {
 
 message LogUsageRequest {
   require bytes app_id = 1;
-  repeated string version_id = 2;
+  repeated bytes version_id = 2;
   optional int32 start_time = 3;
   optional int32 end_time = 4;
   optional uint32 resolution_hours = 5 [default = 1];

@@ -35,7 +35,7 @@ message PluginInfo {
 	// The Kubelet component communicating with the plugin should be able
 	// to choose any preferred version from this list, or returns an error
 	// if none of the listed versions is supported.
-	repeated string supported_versions = 4;
+	repeated bytes supported_versions = 4;
 }
 
 // RegistrationStatus is the message sent from Kubelet pluginwatcher to the plugin for notification on registration status

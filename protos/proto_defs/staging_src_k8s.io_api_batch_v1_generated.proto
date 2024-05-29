@@ -539,11 +539,11 @@ message UncountedTerminatedPods {
   // succeeded holds UIDs of succeeded Pods.
   // +listType=set
   // +optional
-  repeated string succeeded = 1;
+  repeated bytes succeeded = 1;
 
   // failed holds UIDs of failed Pods.
   // +listType=set
   // +optional
-  repeated string failed = 2;
+  repeated bytes failed = 2;
 }
 

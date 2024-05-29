@@ -115,7 +115,7 @@ message Device {
 // - PreStartContainer allows Device Plugin to run device specific operations on
 //   the Devices requested
 message PreStartContainerRequest {
-	repeated string devices_ids = 1 [(gogoproto.customname) = "DevicesIDs"];
+	repeated bytes devices_ids = 1 [(gogoproto.customname) = "DevicesIDs"];
 }
 
 // PreStartContainerResponse will be send by plugin in response to PreStartContainerRequest
@@ -133,9 +133,9 @@ message PreferredAllocationRequest {
 
 message ContainerPreferredAllocationRequest {
 	// List of available deviceIDs from which to choose a preferred allocation
-	repeated string available_deviceIDs = 1;
+	repeated bytes available_deviceIDs = 1;
 	// List of deviceIDs that must be included in the preferred allocation
-	repeated string must_include_deviceIDs = 2;
+	repeated bytes must_include_deviceIDs = 2;
 	// Number of devices to include in the preferred allocation
 	int32 allocation_size = 3;
 }
@@ -147,7 +147,7 @@ message PreferredAllocationResponse {
 }
 
 message ContainerPreferredAllocationResponse {
-	repeated string deviceIDs = 1;
+	repeated bytes deviceIDs = 1;
 }
 
 // - Allocate is expected to be called during pod creation since allocation
@@ -161,7 +161,7 @@ message AllocateRequest {
 }
 
 message ContainerAllocateRequest {
-	repeated string devices_ids = 1 [(gogoproto.customname) = "DevicesIDs"];
+	repeated bytes devices_ids = 1 [(gogoproto.customname) = "DevicesIDs"];
 }
 
 // CDIDevice specifies a CDI device information.

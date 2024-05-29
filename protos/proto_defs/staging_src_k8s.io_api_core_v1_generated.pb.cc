@@ -8235,13 +8235,13 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "ry\022F\n\024nodePublishSecretRef\030\005 \001(\0132(.k8s.i"
   "o.api.core.v1.LocalObjectReference\0327\n\025Vo"
   "lumeAttributesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu"
-  "e\030\002 \001(\t:\0028\001\")\n\014Capabilities\022\013\n\003add\030\001 \003(\t"
-  "\022\014\n\004drop\030\002 \003(\t\"\252\001\n\034CephFSPersistentVolum"
-  "eSource\022\020\n\010monitors\030\001 \003(\t\022\014\n\004path\030\002 \001(\014\022"
+  "e\030\002 \001(\t:\0028\001\")\n\014Capabilities\022\013\n\003add\030\001 \003(\014"
+  "\022\014\n\004drop\030\002 \003(\014\"\252\001\n\034CephFSPersistentVolum"
+  "eSource\022\020\n\010monitors\030\001 \003(\014\022\014\n\004path\030\002 \001(\014\022"
   "\014\n\004user\030\003 \001(\014\022\022\n\nsecretFile\030\004 \001(\014\0226\n\tsec"
   "retRef\030\005 \001(\0132#.k8s.io.api.core.v1.Secret"
   "Reference\022\020\n\010readOnly\030\006 \001(\010\"\245\001\n\022CephFSVo"
-  "lumeSource\022\020\n\010monitors\030\001 \003(\t\022\014\n\004path\030\002 \001"
+  "lumeSource\022\020\n\010monitors\030\001 \003(\014\022\014\n\004path\030\002 \001"
   "(\014\022\014\n\004user\030\003 \001(\014\022\022\n\nsecretFile\030\004 \001(\014\022;\n\t"
   "secretRef\030\005 \001(\0132(.k8s.io.api.core.v1.Loc"
   "alObjectReference\022\020\n\010readOnly\030\006 \001(\010\"\212\001\n\034"
@@ -8298,8 +8298,8 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "ctReference\022,\n\005items\030\002 \003(\0132\035.k8s.io.api."
   "core.v1.KeyToPath\022\023\n\013defaultMode\030\003 \001(\005\022\020"
   "\n\010optional\030\004 \001(\010\"\377\006\n\tContainer\022\014\n\004name\030\001"
-  " \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007command\030\003 \003(\t\022\014\n\004"
-  "args\030\004 \003(\t\022\022\n\nworkingDir\030\005 \001(\014\0220\n\005ports\030"
+  " \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007command\030\003 \003(\014\022\014\n\004"
+  "args\030\004 \003(\014\022\022\n\nworkingDir\030\005 \001(\014\0220\n\005ports\030"
   "\006 \003(\0132!.k8s.io.api.core.v1.ContainerPort"
   "\0222\n\007envFrom\030\023 \003(\0132!.k8s.io.api.core.v1.E"
   "nvFromSource\022\'\n\003env\030\007 \003(\0132\032.k8s.io.api.c"
@@ -8320,7 +8320,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "\016 \001(\014\022<\n\017securityContext\030\017 \001(\0132#.k8s.io."
   "api.core.v1.SecurityContext\022\r\n\005stdin\030\020 \001"
   "(\010\022\021\n\tstdinOnce\030\021 \001(\010\022\013\n\003tty\030\022 \001(\010\"2\n\016Co"
-  "ntainerImage\022\r\n\005names\030\001 \003(\t\022\021\n\tsizeBytes"
+  "ntainerImage\022\r\n\005names\030\001 \003(\014\022\021\n\tsizeBytes"
   "\030\002 \001(\003\"h\n\rContainerPort\022\014\n\004name\030\001 \001(\014\022\020\n"
   "\010hostPort\030\002 \001(\005\022\025\n\rcontainerPort\030\003 \001(\005\022\020"
   "\n\010protocol\030\004 \001(\014\022\016\n\006hostIP\030\005 \001(\014\"D\n\025Cont"
@@ -8400,7 +8400,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "e.v1.EphemeralContainerCommon\022\033\n\023targetC"
   "ontainerName\030\002 \001(\014\"\216\007\n\030EphemeralContaine"
   "rCommon\022\014\n\004name\030\001 \001(\014\022\r\n\005image\030\002 \001(\014\022\017\n\007"
-  "command\030\003 \003(\t\022\014\n\004args\030\004 \003(\t\022\022\n\nworkingDi"
+  "command\030\003 \003(\014\022\014\n\004args\030\004 \003(\014\022\022\n\nworkingDi"
   "r\030\005 \001(\014\0220\n\005ports\030\006 \003(\0132!.k8s.io.api.core"
   ".v1.ContainerPort\0222\n\007envFrom\030\023 \003(\0132!.k8s"
   ".io.api.core.v1.EnvFromSource\022\'\n\003env\030\007 \003"
@@ -8447,9 +8447,9 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "2/.k8s.io.apimachinery.pkg.apis.meta.v1."
   "MicroTime\".\n\013EventSource\022\021\n\tcomponent\030\001 "
   "\001(\014\022\014\n\004host\030\002 \001(\014\"\035\n\nExecAction\022\017\n\007comma"
-  "nd\030\001 \003(\t\"b\n\016FCVolumeSource\022\022\n\ntargetWWNs"
-  "\030\001 \003(\t\022\013\n\003lun\030\002 \001(\005\022\016\n\006fsType\030\003 \001(\014\022\020\n\010r"
-  "eadOnly\030\004 \001(\010\022\r\n\005wwids\030\005 \003(\t\"\204\002\n\032FlexPer"
+  "nd\030\001 \003(\014\"b\n\016FCVolumeSource\022\022\n\ntargetWWNs"
+  "\030\001 \003(\014\022\013\n\003lun\030\002 \001(\005\022\016\n\006fsType\030\003 \001(\014\022\020\n\010r"
+  "eadOnly\030\004 \001(\010\022\r\n\005wwids\030\005 \003(\014\"\204\002\n\032FlexPer"
   "sistentVolumeSource\022\016\n\006driver\030\001 \001(\014\022\016\n\006f"
   "sType\030\002 \001(\014\0226\n\tsecretRef\030\003 \001(\0132#.k8s.io."
   "api.core.v1.SecretReference\022\020\n\010readOnly\030"
@@ -8481,19 +8481,19 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "rs\030\005 \003(\0132\036.k8s.io.api.core.v1.HTTPHeader"
   "\")\n\nHTTPHeader\022\014\n\004name\030\001 \001(\014\022\r\n\005value\030\002 "
   "\001(\014\"*\n\tHostAlias\022\n\n\002ip\030\001 \001(\014\022\021\n\thostname"
-  "s\030\002 \003(\t\"\024\n\006HostIP\022\n\n\002ip\030\001 \001(\014\"2\n\024HostPat"
+  "s\030\002 \003(\014\"\024\n\006HostIP\022\n\n\002ip\030\001 \001(\014\"2\n\024HostPat"
   "hVolumeSource\022\014\n\004path\030\001 \001(\014\022\014\n\004type\030\002 \001("
   "\014\"\233\002\n\033ISCSIPersistentVolumeSource\022\024\n\014tar"
   "getPortal\030\001 \001(\014\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001("
   "\005\022\026\n\016iscsiInterface\030\004 \001(\014\022\016\n\006fsType\030\005 \001("
-  "\014\022\020\n\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021"
+  "\014\022\020\n\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\014\022\031\n\021"
   "chapAuthDiscovery\030\010 \001(\010\022\027\n\017chapAuthSessi"
   "on\030\013 \001(\010\0226\n\tsecretRef\030\n \001(\0132#.k8s.io.api"
   ".core.v1.SecretReference\022\025\n\rinitiatorNam"
   "e\030\014 \001(\014\"\226\002\n\021ISCSIVolumeSource\022\024\n\014targetP"
   "ortal\030\001 \001(\014\022\013\n\003iqn\030\002 \001(\014\022\013\n\003lun\030\003 \001(\005\022\026\n"
   "\016iscsiInterface\030\004 \001(\014\022\016\n\006fsType\030\005 \001(\014\022\020\n"
-  "\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\t\022\031\n\021chap"
+  "\010readOnly\030\006 \001(\010\022\017\n\007portals\030\007 \003(\014\022\031\n\021chap"
   "AuthDiscovery\030\010 \001(\010\022\027\n\017chapAuthSession\030\013"
   " \001(\010\022;\n\tsecretRef\030\n \001(\0132(.k8s.io.api.cor"
   "e.v1.LocalObjectReference\022\025\n\rinitiatorNa"
@@ -8564,7 +8564,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "ata\030\001 \001(\0132..k8s.io.apimachinery.pkg.apis"
   ".meta.v1.ListMeta\022,\n\005items\030\002 \003(\0132\035.k8s.i"
   "o.api.core.v1.Namespace\"#\n\rNamespaceSpec"
-  "\022\022\n\nfinalizers\030\001 \003(\t\"\\\n\017NamespaceStatus\022"
+  "\022\022\n\nfinalizers\030\001 \003(\014\"\\\n\017NamespaceStatus\022"
   "\r\n\005phase\030\001 \001(\014\022:\n\nconditions\030\002 \003(\0132&.k8s"
   ".io.api.core.v1.NamespaceCondition\"\246\001\n\004N"
   "ode\022B\n\010metadata\030\001 \001(\01320.k8s.io.apimachin"
@@ -8604,12 +8604,12 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "deSelector\022\?\n\021nodeSelectorTerms\030\001 \003(\0132$."
   "k8s.io.api.core.v1.NodeSelectorTerm\"H\n\027N"
   "odeSelectorRequirement\022\013\n\003key\030\001 \001(\014\022\020\n\010o"
-  "perator\030\002 \001(\014\022\016\n\006values\030\003 \003(\t\"\233\001\n\020NodeSe"
+  "perator\030\002 \001(\014\022\016\n\006values\030\003 \003(\014\"\233\001\n\020NodeSe"
   "lectorTerm\022E\n\020matchExpressions\030\001 \003(\0132+.k"
   "8s.io.api.core.v1.NodeSelectorRequiremen"
   "t\022@\n\013matchFields\030\002 \003(\0132+.k8s.io.api.core"
   ".v1.NodeSelectorRequirement\"\323\001\n\010NodeSpec"
-  "\022\017\n\007podCIDR\030\001 \001(\014\022\020\n\010podCIDRs\030\007 \003(\t\022\022\n\np"
+  "\022\017\n\007podCIDR\030\001 \001(\014\022\020\n\010podCIDRs\030\007 \003(\014\022\022\n\np"
   "roviderID\030\003 \001(\014\022\025\n\runschedulable\030\004 \001(\010\022)"
   "\n\006taints\030\005 \003(\0132\031.k8s.io.api.core.v1.Tain"
   "t\022:\n\014configSource\030\006 \001(\0132$.k8s.io.api.cor"
@@ -8625,7 +8625,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "odeDaemonEndpoints\0224\n\010nodeInfo\030\007 \001(\0132\".k"
   "8s.io.api.core.v1.NodeSystemInfo\0222\n\006imag"
   "es\030\010 \003(\0132\".k8s.io.api.core.v1.ContainerI"
-  "mage\022\024\n\014volumesInUse\030\t \003(\t\022;\n\017volumesAtt"
+  "mage\022\024\n\014volumesInUse\030\t \003(\014\022;\n\017volumesAtt"
   "ached\030\n \003(\0132\".k8s.io.api.core.v1.Attache"
   "dVolume\0224\n\006config\030\013 \001(\0132$.k8s.io.api.cor"
   "e.v1.NodeConfigStatus\032_\n\rCapacityEntry\022\013"
@@ -8666,7 +8666,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   ".pkg.apis.meta.v1.ListMeta\0228\n\005items\030\002 \003("
   "\0132).k8s.io.api.core.v1.PersistentVolumeC"
   "laim\"\243\003\n\031PersistentVolumeClaimSpec\022\023\n\013ac"
-  "cessModes\030\001 \003(\t\022E\n\010selector\030\004 \001(\01323.k8s."
+  "cessModes\030\001 \003(\014\022E\n\010selector\030\004 \001(\01323.k8s."
   "io.apimachinery.pkg.apis.meta.v1.LabelSe"
   "lector\022A\n\tresources\030\002 \001(\0132..k8s.io.api.c"
   "ore.v1.VolumeResourceRequirements\022\022\n\nvol"
@@ -8677,7 +8677,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "pi.core.v1.TypedObjectReference\022!\n\031volum"
   "eAttributesClassName\030\t \001(\014\"\256\006\n\033Persisten"
   "tVolumeClaimStatus\022\r\n\005phase\030\001 \001(\014\022\023\n\013acc"
-  "essModes\030\002 \003(\t\022O\n\010capacity\030\003 \003(\0132=.k8s.i"
+  "essModes\030\002 \003(\014\022O\n\010capacity\030\003 \003(\0132=.k8s.i"
   "o.api.core.v1.PersistentVolumeClaimStatu"
   "s.CapacityEntry\022F\n\nconditions\030\004 \003(\01322.k8"
   "s.io.api.core.v1.PersistentVolumeClaimCo"
@@ -8747,10 +8747,10 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   ".PersistentVolumeSpec.CapacityEntry\022J\n\026p"
   "ersistentVolumeSource\030\002 \001(\0132*.k8s.io.api"
   ".core.v1.PersistentVolumeSource\022\023\n\013acces"
-  "sModes\030\003 \003(\t\0225\n\010claimRef\030\004 \001(\0132#.k8s.io."
+  "sModes\030\003 \003(\014\0225\n\010claimRef\030\004 \001(\0132#.k8s.io."
   "api.core.v1.ObjectReference\022%\n\035persisten"
   "tVolumeReclaimPolicy\030\005 \001(\014\022\030\n\020storageCla"
-  "ssName\030\006 \001(\014\022\024\n\014mountOptions\030\007 \003(\t\022\022\n\nvo"
+  "ssName\030\006 \001(\014\022\024\n\014mountOptions\030\007 \003(\014\022\022\n\nvo"
   "lumeMode\030\010 \001(\014\022<\n\014nodeAffinity\030\t \001(\0132&.k"
   "8s.io.api.core.v1.VolumeNodeAffinity\022!\n\031"
   "volumeAttributesClassName\030\n \001(\014\032_\n\rCapac"
@@ -8773,11 +8773,11 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   ".k8s.io.api.core.v1.WeightedPodAffinityT"
   "erm\"\211\002\n\017PodAffinityTerm\022J\n\rlabelSelector"
   "\030\001 \001(\01323.k8s.io.apimachinery.pkg.apis.me"
-  "ta.v1.LabelSelector\022\022\n\nnamespaces\030\002 \003(\t\022"
+  "ta.v1.LabelSelector\022\022\n\nnamespaces\030\002 \003(\014\022"
   "\023\n\013topologyKey\030\003 \001(\014\022N\n\021namespaceSelecto"
   "r\030\004 \001(\01323.k8s.io.apimachinery.pkg.apis.m"
   "eta.v1.LabelSelector\022\026\n\016matchLabelKeys\030\005"
-  " \003(\t\022\031\n\021mismatchLabelKeys\030\006 \003(\t\"\324\001\n\017PodA"
+  " \003(\014\022\031\n\021mismatchLabelKeys\030\006 \003(\014\"\324\001\n\017PodA"
   "ntiAffinity\022[\n.requiredDuringSchedulingI"
   "gnoredDuringExecution\030\001 \003(\0132#.k8s.io.api"
   ".core.v1.PodAffinityTerm\022d\n/preferredDur"
@@ -8792,13 +8792,13 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "e\030\004 \001(\0132*.k8s.io.apimachinery.pkg.apis.m"
   "eta.v1.Time\022\016\n\006reason\030\005 \001(\014\022\017\n\007message\030\006"
   " \001(\014\"n\n\014PodDNSConfig\022\023\n\013nameservers\030\001 \003("
-  "\t\022\020\n\010searches\030\002 \003(\t\0227\n\007options\030\003 \003(\0132&.k"
+  "\014\022\020\n\010searches\030\002 \003(\014\0227\n\007options\030\003 \003(\0132&.k"
   "8s.io.api.core.v1.PodDNSConfigOption\"1\n\022"
   "PodDNSConfigOption\022\014\n\004name\030\001 \001(\014\022\r\n\005valu"
   "e\030\002 \001(\014\"p\n\016PodExecOptions\022\r\n\005stdin\030\001 \001(\010"
   "\022\016\n\006stdout\030\002 \001(\010\022\016\n\006stderr\030\003 \001(\010\022\013\n\003tty\030"
   "\004 \001(\010\022\021\n\tcontainer\030\005 \001(\014\022\017\n\007command\030\006 \003("
-  "\t\"\023\n\005PodIP\022\n\n\002ip\030\001 \001(\014\"s\n\007PodList\022@\n\010met"
+  "\014\"\023\n\005PodIP\022\n\n\002ip\030\001 \001(\014\"s\n\007PodList\022@\n\010met"
   "adata\030\001 \001(\0132..k8s.io.apimachinery.pkg.ap"
   "is.meta.v1.ListMeta\022&\n\005items\030\002 \003(\0132\027.k8s"
   ".io.api.core.v1.Pod\"\372\001\n\rPodLogOptions\022\021\n"
@@ -8929,11 +8929,11 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "volume\030\002 \001(\014\022\020\n\010readOnly\030\003 \001(\010\022\014\n\004user\030\004"
   " \001(\014\022\r\n\005group\030\005 \001(\014\022\016\n\006tenant\030\006 \001(\014\"\303\001\n\031"
   "RBDPersistentVolumeSource\022\020\n\010monitors\030\001 "
-  "\003(\t\022\r\n\005image\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004po"
+  "\003(\014\022\r\n\005image\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004po"
   "ol\030\004 \001(\014\022\014\n\004user\030\005 \001(\014\022\017\n\007keyring\030\006 \001(\014\022"
   "6\n\tsecretRef\030\007 \001(\0132#.k8s.io.api.core.v1."
   "SecretReference\022\020\n\010readOnly\030\010 \001(\010\"\276\001\n\017RB"
-  "DVolumeSource\022\020\n\010monitors\030\001 \003(\t\022\r\n\005image"
+  "DVolumeSource\022\020\n\010monitors\030\001 \003(\014\022\r\n\005image"
   "\030\002 \001(\014\022\016\n\006fsType\030\003 \001(\014\022\014\n\004pool\030\004 \001(\014\022\014\n\004"
   "user\030\005 \001(\014\022\017\n\007keyring\030\006 \001(\014\022;\n\tsecretRef"
   "\030\007 \001(\0132(.k8s.io.api.core.v1.LocalObjectR"
@@ -8981,7 +8981,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   ".io.api.core.v1.ResourceQuota\"\371\001\n\021Resour"
   "ceQuotaSpec\022=\n\004hard\030\001 \003(\0132/.k8s.io.api.c"
   "ore.v1.ResourceQuotaSpec.HardEntry\022\016\n\006sc"
-  "opes\030\002 \003(\t\0228\n\rscopeSelector\030\003 \001(\0132!.k8s."
+  "opes\030\002 \003(\014\0228\n\rscopeSelector\030\003 \001(\0132!.k8s."
   "io.api.core.v1.ScopeSelector\032[\n\tHardEntr"
   "y\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132..k8s.io.a"
   "pimachinery.pkg.api.resource.Quantity:\0028"
@@ -9023,7 +9023,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "8s.io.api.core.v1.ScopedResourceSelector"
   "Requirement\"X\n!ScopedResourceSelectorReq"
   "uirement\022\021\n\tscopeName\030\001 \001(\014\022\020\n\010operator\030"
-  "\002 \001(\014\022\016\n\006values\030\003 \003(\t\"8\n\016SeccompProfile\022"
+  "\002 \001(\014\022\016\n\006values\030\003 \003(\014\"8\n\016SeccompProfile\022"
   "\014\n\004type\030\001 \001(\014\022\030\n\020localhostProfile\030\002 \001(\014\""
   "\301\002\n\006Secret\022B\n\010metadata\030\001 \001(\01320.k8s.io.ap"
   "imachinery.pkg.apis.meta.v1.ObjectMeta\022\021"
@@ -9092,15 +9092,15 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "o.api.core.v1.ServicePort\022\?\n\010selector\030\002 "
   "\003(\0132-.k8s.io.api.core.v1.ServiceSpec.Sel"
   "ectorEntry\022\021\n\tclusterIP\030\003 \001(\014\022\022\n\ncluster"
-  "IPs\030\022 \003(\t\022\014\n\004type\030\004 \001(\014\022\023\n\013externalIPs\030\005"
-  " \003(\t\022\027\n\017sessionAffinity\030\007 \001(\014\022\026\n\016loadBal"
+  "IPs\030\022 \003(\014\022\014\n\004type\030\004 \001(\014\022\023\n\013externalIPs\030\005"
+  " \003(\014\022\027\n\017sessionAffinity\030\007 \001(\014\022\026\n\016loadBal"
   "ancerIP\030\010 \001(\014\022 \n\030loadBalancerSourceRange"
-  "s\030\t \003(\t\022\024\n\014externalName\030\n \001(\014\022\035\n\025externa"
+  "s\030\t \003(\014\022\024\n\014externalName\030\n \001(\014\022\035\n\025externa"
   "lTrafficPolicy\030\013 \001(\014\022\033\n\023healthCheckNodeP"
   "ort\030\014 \001(\005\022 \n\030publishNotReadyAddresses\030\r "
   "\001(\010\022H\n\025sessionAffinityConfig\030\016 \001(\0132).k8s"
   ".io.api.core.v1.SessionAffinityConfig\022\022\n"
-  "\nipFamilies\030\023 \003(\t\022\026\n\016ipFamilyPolicy\030\021 \001("
+  "\nipFamilies\030\023 \003(\014\022\026\n\016ipFamilyPolicy\030\021 \001("
   "\014\022%\n\035allocateLoadBalancerNodePorts\030\024 \001(\010"
   "\022\031\n\021loadBalancerClass\030\025 \001(\014\022\035\n\025internalT"
   "rafficPolicy\030\026 \001(\014\032/\n\rSelectorEntry\022\013\n\003k"
@@ -9130,7 +9130,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "\014\022\r\n\005value\030\003 \001(\014\022\016\n\006effect\030\004 \001(\014\022\031\n\021tole"
   "rationSeconds\030\005 \001(\003\"\?\n TopologySelectorL"
   "abelRequirement\022\013\n\003key\030\001 \001(\014\022\016\n\006values\030\002"
-  " \003(\t\"k\n\024TopologySelectorTerm\022S\n\025matchLab"
+  " \003(\014\"k\n\024TopologySelectorTerm\022S\n\025matchLab"
   "elExpressions\030\001 \003(\01324.k8s.io.api.core.v1"
   ".TopologySelectorLabelRequirement\"\211\002\n\030To"
   "pologySpreadConstraint\022\017\n\007maxSkew\030\001 \001(\005\022"
@@ -9139,7 +9139,7 @@ const char descriptor_table_protodef_staging_5fsrc_5fk8s_2eio_5fapi_5fcore_5fv1_
   "apimachinery.pkg.apis.meta.v1.LabelSelec"
   "tor\022\022\n\nminDomains\030\005 \001(\005\022\032\n\022nodeAffinityP"
   "olicy\030\006 \001(\014\022\030\n\020nodeTaintsPolicy\030\007 \001(\014\022\026\n"
-  "\016matchLabelKeys\030\010 \003(\t\"I\n\031TypedLocalObjec"
+  "\016matchLabelKeys\030\010 \003(\014\"I\n\031TypedLocalObjec"
   "tReference\022\020\n\010apiGroup\030\001 \001(\014\022\014\n\004kind\030\002 \001"
   "(\014\022\014\n\004name\030\003 \001(\014\"W\n\024TypedObjectReference"
   "\022\020\n\010apiGroup\030\001 \001(\014\022\014\n\004kind\030\002 \001(\014\022\014\n\004name"
@@ -13174,7 +13174,7 @@ const char* Capabilities::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string add = 1;
+      // repeated bytes add = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -13183,15 +13183,12 @@ const char* Capabilities::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
             auto str = _internal_add_add();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.Capabilities.add");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string drop = 2;
+      // repeated bytes drop = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -13200,9 +13197,6 @@ const char* Capabilities::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
             auto str = _internal_add_drop();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.Capabilities.drop");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -13237,24 +13231,16 @@ uint8_t* Capabilities::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string add = 1;
+  // repeated bytes add = 1;
   for (int i = 0, n = this->_internal_add_size(); i < n; i++) {
     const auto& s = this->_internal_add(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.Capabilities.add");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
-  // repeated string drop = 2;
+  // repeated bytes drop = 2;
   for (int i = 0, n = this->_internal_drop_size(); i < n; i++) {
     const auto& s = this->_internal_drop(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.Capabilities.drop");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -13273,19 +13259,19 @@ size_t Capabilities::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string add = 1;
+  // repeated bytes add = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.add_.size());
   for (int i = 0, n = _impl_.add_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.add_.Get(i));
   }
 
-  // repeated string drop = 2;
+  // repeated bytes drop = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.drop_.size());
   for (int i = 0, n = _impl_.drop_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.drop_.Get(i));
   }
 
@@ -13499,7 +13485,7 @@ const char* CephFSPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string monitors = 1;
+      // repeated bytes monitors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -13508,9 +13494,6 @@ const char* CephFSPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi
             auto str = _internal_add_monitors();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.CephFSPersistentVolumeSource.monitors");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -13590,14 +13573,10 @@ uint8_t* CephFSPersistentVolumeSource::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   for (int i = 0, n = this->_internal_monitors_size(); i < n; i++) {
     const auto& s = this->_internal_monitors(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.CephFSPersistentVolumeSource.monitors");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -13648,11 +13627,11 @@ size_t CephFSPersistentVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.monitors_.size());
   for (int i = 0, n = _impl_.monitors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.monitors_.Get(i));
   }
 
@@ -13941,7 +13920,7 @@ const char* CephFSVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string monitors = 1;
+      // repeated bytes monitors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -13950,9 +13929,6 @@ const char* CephFSVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseCon
             auto str = _internal_add_monitors();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.CephFSVolumeSource.monitors");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -14032,14 +14008,10 @@ uint8_t* CephFSVolumeSource::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   for (int i = 0, n = this->_internal_monitors_size(); i < n; i++) {
     const auto& s = this->_internal_monitors(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.CephFSVolumeSource.monitors");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -14090,11 +14062,11 @@ size_t CephFSVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.monitors_.size());
   for (int i = 0, n = _impl_.monitors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.monitors_.Get(i));
   }
 
@@ -19257,7 +19229,7 @@ const char* Container::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // repeated string command = 3;
+      // repeated bytes command = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -19266,15 +19238,12 @@ const char* Container::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
             auto str = _internal_add_command();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.Container.command");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string args = 4;
+      // repeated bytes args = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -19283,9 +19252,6 @@ const char* Container::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
             auto str = _internal_add_args();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.Container.args");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else
@@ -19532,24 +19498,16 @@ uint8_t* Container::_InternalSerialize(
         2, this->_internal_image(), target);
   }
 
-  // repeated string command = 3;
+  // repeated bytes command = 3;
   for (int i = 0, n = this->_internal_command_size(); i < n; i++) {
     const auto& s = this->_internal_command(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.Container.command");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
-  // repeated string args = 4;
+  // repeated bytes args = 4;
   for (int i = 0, n = this->_internal_args_size(); i < n; i++) {
     const auto& s = this->_internal_args(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.Container.args");
-    target = stream->WriteString(4, s, target);
+    target = stream->WriteBytes(4, s, target);
   }
 
   // optional bytes workingDir = 5;
@@ -19706,19 +19664,19 @@ size_t Container::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string command = 3;
+  // repeated bytes command = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.command_.size());
   for (int i = 0, n = _impl_.command_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.command_.Get(i));
   }
 
-  // repeated string args = 4;
+  // repeated bytes args = 4;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.args_.size());
   for (int i = 0, n = _impl_.args_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.args_.Get(i));
   }
 
@@ -20110,7 +20068,7 @@ const char* ContainerImage::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string names = 1;
+      // repeated bytes names = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -20119,9 +20077,6 @@ const char* ContainerImage::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_names();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ContainerImage.names");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -20166,14 +20121,10 @@ uint8_t* ContainerImage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string names = 1;
+  // repeated bytes names = 1;
   for (int i = 0, n = this->_internal_names_size(); i < n; i++) {
     const auto& s = this->_internal_names(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ContainerImage.names");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -20199,11 +20150,11 @@ size_t ContainerImage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string names = 1;
+  // repeated bytes names = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.names_.size());
   for (int i = 0, n = _impl_.names_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.names_.Get(i));
   }
 
@@ -27201,7 +27152,7 @@ const char* EphemeralContainerCommon::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // repeated string command = 3;
+      // repeated bytes command = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -27210,15 +27161,12 @@ const char* EphemeralContainerCommon::_InternalParse(const char* ptr, ::_pbi::Pa
             auto str = _internal_add_command();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.EphemeralContainerCommon.command");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string args = 4;
+      // repeated bytes args = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -27227,9 +27175,6 @@ const char* EphemeralContainerCommon::_InternalParse(const char* ptr, ::_pbi::Pa
             auto str = _internal_add_args();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.EphemeralContainerCommon.args");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else
@@ -27476,24 +27421,16 @@ uint8_t* EphemeralContainerCommon::_InternalSerialize(
         2, this->_internal_image(), target);
   }
 
-  // repeated string command = 3;
+  // repeated bytes command = 3;
   for (int i = 0, n = this->_internal_command_size(); i < n; i++) {
     const auto& s = this->_internal_command(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.EphemeralContainerCommon.command");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
-  // repeated string args = 4;
+  // repeated bytes args = 4;
   for (int i = 0, n = this->_internal_args_size(); i < n; i++) {
     const auto& s = this->_internal_args(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.EphemeralContainerCommon.args");
-    target = stream->WriteString(4, s, target);
+    target = stream->WriteBytes(4, s, target);
   }
 
   // optional bytes workingDir = 5;
@@ -27650,19 +27587,19 @@ size_t EphemeralContainerCommon::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string command = 3;
+  // repeated bytes command = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.command_.size());
   for (int i = 0, n = _impl_.command_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.command_.Get(i));
   }
 
-  // repeated string args = 4;
+  // repeated bytes args = 4;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.args_.size());
   for (int i = 0, n = _impl_.args_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.args_.Get(i));
   }
 
@@ -29894,7 +29831,7 @@ const char* ExecAction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string command = 1;
+      // repeated bytes command = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -29903,9 +29840,6 @@ const char* ExecAction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
             auto str = _internal_add_command();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ExecAction.command");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -29940,14 +29874,10 @@ uint8_t* ExecAction::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string command = 1;
+  // repeated bytes command = 1;
   for (int i = 0, n = this->_internal_command_size(); i < n; i++) {
     const auto& s = this->_internal_command(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ExecAction.command");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -29966,11 +29896,11 @@ size_t ExecAction::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string command = 1;
+  // repeated bytes command = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.command_.size());
   for (int i = 0, n = _impl_.command_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.command_.Get(i));
   }
 
@@ -30135,7 +30065,7 @@ const char* FCVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string targetWWNs = 1;
+      // repeated bytes targetWWNs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -30144,9 +30074,6 @@ const char* FCVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_targetwwns();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.FCVolumeSource.targetWWNs");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -30179,7 +30106,7 @@ const char* FCVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // repeated string wwids = 5;
+      // repeated bytes wwids = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -30188,9 +30115,6 @@ const char* FCVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_wwids();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.FCVolumeSource.wwids");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else
@@ -30226,14 +30150,10 @@ uint8_t* FCVolumeSource::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string targetWWNs = 1;
+  // repeated bytes targetWWNs = 1;
   for (int i = 0, n = this->_internal_targetwwns_size(); i < n; i++) {
     const auto& s = this->_internal_targetwwns(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.FCVolumeSource.targetWWNs");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -30255,14 +30175,10 @@ uint8_t* FCVolumeSource::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_readonly(), target);
   }
 
-  // repeated string wwids = 5;
+  // repeated bytes wwids = 5;
   for (int i = 0, n = this->_internal_wwids_size(); i < n; i++) {
     const auto& s = this->_internal_wwids(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.FCVolumeSource.wwids");
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -30281,19 +30197,19 @@ size_t FCVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string targetWWNs = 1;
+  // repeated bytes targetWWNs = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.targetwwns_.size());
   for (int i = 0, n = _impl_.targetwwns_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.targetwwns_.Get(i));
   }
 
-  // repeated string wwids = 5;
+  // repeated bytes wwids = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.wwids_.size());
   for (int i = 0, n = _impl_.wwids_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.wwids_.Get(i));
   }
 
@@ -33867,7 +33783,7 @@ const char* HostAlias::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // repeated string hostnames = 2;
+      // repeated bytes hostnames = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -33876,9 +33792,6 @@ const char* HostAlias::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
             auto str = _internal_add_hostnames();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.HostAlias.hostnames");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -33921,14 +33834,10 @@ uint8_t* HostAlias::_InternalSerialize(
         1, this->_internal_ip(), target);
   }
 
-  // repeated string hostnames = 2;
+  // repeated bytes hostnames = 2;
   for (int i = 0, n = this->_internal_hostnames_size(); i < n; i++) {
     const auto& s = this->_internal_hostnames(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.HostAlias.hostnames");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -33947,11 +33856,11 @@ size_t HostAlias::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string hostnames = 2;
+  // repeated bytes hostnames = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.hostnames_.size());
   for (int i = 0, n = _impl_.hostnames_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.hostnames_.Get(i));
   }
 
@@ -34786,7 +34695,7 @@ const char* ISCSIPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // repeated string portals = 7;
+      // repeated bytes portals = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -34795,9 +34704,6 @@ const char* ISCSIPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi:
             auto str = _internal_add_portals();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ISCSIPersistentVolumeSource.portals");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
@@ -34905,14 +34811,10 @@ uint8_t* ISCSIPersistentVolumeSource::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_readonly(), target);
   }
 
-  // repeated string portals = 7;
+  // repeated bytes portals = 7;
   for (int i = 0, n = this->_internal_portals_size(); i < n; i++) {
     const auto& s = this->_internal_portals(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ISCSIPersistentVolumeSource.portals");
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
   // optional bool chapAuthDiscovery = 8;
@@ -34956,11 +34858,11 @@ size_t ISCSIPersistentVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string portals = 7;
+  // repeated bytes portals = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.portals_.size());
   for (int i = 0, n = _impl_.portals_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.portals_.Get(i));
   }
 
@@ -35428,7 +35330,7 @@ const char* ISCSIVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string portals = 7;
+      // repeated bytes portals = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -35437,9 +35339,6 @@ const char* ISCSIVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseCont
             auto str = _internal_add_portals();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ISCSIVolumeSource.portals");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
@@ -35547,14 +35446,10 @@ uint8_t* ISCSIVolumeSource::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_readonly(), target);
   }
 
-  // repeated string portals = 7;
+  // repeated bytes portals = 7;
   for (int i = 0, n = this->_internal_portals_size(); i < n; i++) {
     const auto& s = this->_internal_portals(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ISCSIVolumeSource.portals");
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
   // optional bool chapAuthDiscovery = 8;
@@ -35598,11 +35493,11 @@ size_t ISCSIVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string portals = 7;
+  // repeated bytes portals = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.portals_.size());
   for (int i = 0, n = _impl_.portals_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.portals_.Get(i));
   }
 
@@ -40865,7 +40760,7 @@ const char* NamespaceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string finalizers = 1;
+      // repeated bytes finalizers = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -40874,9 +40769,6 @@ const char* NamespaceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext*
             auto str = _internal_add_finalizers();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.NamespaceSpec.finalizers");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -40911,14 +40803,10 @@ uint8_t* NamespaceSpec::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string finalizers = 1;
+  // repeated bytes finalizers = 1;
   for (int i = 0, n = this->_internal_finalizers_size(); i < n; i++) {
     const auto& s = this->_internal_finalizers(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.NamespaceSpec.finalizers");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -40937,11 +40825,11 @@ size_t NamespaceSpec::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string finalizers = 1;
+  // repeated bytes finalizers = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.finalizers_.size());
   for (int i = 0, n = _impl_.finalizers_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.finalizers_.Get(i));
   }
 
@@ -44308,7 +44196,7 @@ const char* NodeSelectorRequirement::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // repeated string values = 3;
+      // repeated bytes values = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -44317,9 +44205,6 @@ const char* NodeSelectorRequirement::_InternalParse(const char* ptr, ::_pbi::Par
             auto str = _internal_add_values();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.NodeSelectorRequirement.values");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else
@@ -44368,14 +44253,10 @@ uint8_t* NodeSelectorRequirement::_InternalSerialize(
         2, this->_internal_operator_(), target);
   }
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   for (int i = 0, n = this->_internal_values_size(); i < n; i++) {
     const auto& s = this->_internal_values(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.NodeSelectorRequirement.values");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -44394,11 +44275,11 @@ size_t NodeSelectorRequirement::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.values_.size());
   for (int i = 0, n = _impl_.values_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.values_.Get(i));
   }
 
@@ -44927,7 +44808,7 @@ const char* NodeSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // repeated string podCIDRs = 7;
+      // repeated bytes podCIDRs = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -44936,9 +44817,6 @@ const char* NodeSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
             auto str = _internal_add_podcidrs();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.NodeSpec.podCIDRs");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
@@ -45014,14 +44892,10 @@ uint8_t* NodeSpec::_InternalSerialize(
         _Internal::configsource(this).GetCachedSize(), target, stream);
   }
 
-  // repeated string podCIDRs = 7;
+  // repeated bytes podCIDRs = 7;
   for (int i = 0, n = this->_internal_podcidrs_size(); i < n; i++) {
     const auto& s = this->_internal_podcidrs(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.NodeSpec.podCIDRs");
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -45047,11 +44921,11 @@ size_t NodeSpec::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated string podCIDRs = 7;
+  // repeated bytes podCIDRs = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.podcidrs_.size());
   for (int i = 0, n = _impl_.podcidrs_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.podcidrs_.Get(i));
   }
 
@@ -45490,7 +45364,7 @@ const char* NodeStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // repeated string volumesInUse = 9;
+      // repeated bytes volumesInUse = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr -= 1;
@@ -45499,9 +45373,6 @@ const char* NodeStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
             auto str = _internal_add_volumesinuse();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.NodeStatus.volumesInUse");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
         } else
@@ -45655,14 +45526,10 @@ uint8_t* NodeStatus::_InternalSerialize(
         InternalWriteMessage(8, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated string volumesInUse = 9;
+  // repeated bytes volumesInUse = 9;
   for (int i = 0, n = this->_internal_volumesinuse_size(); i < n; i++) {
     const auto& s = this->_internal_volumesinuse(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.NodeStatus.volumesInUse");
-    target = stream->WriteString(9, s, target);
+    target = stream->WriteBytes(9, s, target);
   }
 
   // repeated .k8s.io.api.core.v1.AttachedVolume volumesAttached = 10;
@@ -45735,11 +45602,11 @@ size_t NodeStatus::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated string volumesInUse = 9;
+  // repeated bytes volumesInUse = 9;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.volumesinuse_.size());
   for (int i = 0, n = _impl_.volumesinuse_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.volumesinuse_.Get(i));
   }
 
@@ -48906,7 +48773,7 @@ const char* PersistentVolumeClaimSpec::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string accessModes = 1;
+      // repeated bytes accessModes = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -48915,9 +48782,6 @@ const char* PersistentVolumeClaimSpec::_InternalParse(const char* ptr, ::_pbi::P
             auto str = _internal_add_accessmodes();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PersistentVolumeClaimSpec.accessModes");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -49021,14 +48885,10 @@ uint8_t* PersistentVolumeClaimSpec::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string accessModes = 1;
+  // repeated bytes accessModes = 1;
   for (int i = 0, n = this->_internal_accessmodes_size(); i < n; i++) {
     const auto& s = this->_internal_accessmodes(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PersistentVolumeClaimSpec.accessModes");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -49100,11 +48960,11 @@ size_t PersistentVolumeClaimSpec::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string accessModes = 1;
+  // repeated bytes accessModes = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.accessmodes_.size());
   for (int i = 0, n = _impl_.accessmodes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.accessmodes_.Get(i));
   }
 
@@ -49492,7 +49352,7 @@ const char* PersistentVolumeClaimStatus::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // repeated string accessModes = 2;
+      // repeated bytes accessModes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -49501,9 +49361,6 @@ const char* PersistentVolumeClaimStatus::_InternalParse(const char* ptr, ::_pbi:
             auto str = _internal_add_accessmodes();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PersistentVolumeClaimStatus.accessModes");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -49615,14 +49472,10 @@ uint8_t* PersistentVolumeClaimStatus::_InternalSerialize(
         1, this->_internal_phase(), target);
   }
 
-  // repeated string accessModes = 2;
+  // repeated bytes accessModes = 2;
   for (int i = 0, n = this->_internal_accessmodes_size(); i < n; i++) {
     const auto& s = this->_internal_accessmodes(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PersistentVolumeClaimStatus.accessModes");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   // map<string, .k8s.io.apimachinery.pkg.api.resource.Quantity> capacity = 3;
@@ -49744,11 +49597,11 @@ size_t PersistentVolumeClaimStatus::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string accessModes = 2;
+  // repeated bytes accessModes = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.accessmodes_.size());
   for (int i = 0, n = _impl_.accessmodes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.accessmodes_.Get(i));
   }
 
@@ -52071,7 +51924,7 @@ const char* PersistentVolumeSpec::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // repeated string accessModes = 3;
+      // repeated bytes accessModes = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -52080,9 +51933,6 @@ const char* PersistentVolumeSpec::_InternalParse(const char* ptr, ::_pbi::ParseC
             auto str = _internal_add_accessmodes();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PersistentVolumeSpec.accessModes");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else
@@ -52114,7 +51964,7 @@ const char* PersistentVolumeSpec::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // repeated string mountOptions = 7;
+      // repeated bytes mountOptions = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -52123,9 +51973,6 @@ const char* PersistentVolumeSpec::_InternalParse(const char* ptr, ::_pbi::ParseC
             auto str = _internal_add_mountoptions();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PersistentVolumeSpec.mountOptions");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
@@ -52221,14 +52068,10 @@ uint8_t* PersistentVolumeSpec::_InternalSerialize(
         _Internal::persistentvolumesource(this).GetCachedSize(), target, stream);
   }
 
-  // repeated string accessModes = 3;
+  // repeated bytes accessModes = 3;
   for (int i = 0, n = this->_internal_accessmodes_size(); i < n; i++) {
     const auto& s = this->_internal_accessmodes(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PersistentVolumeSpec.accessModes");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
   // optional .k8s.io.api.core.v1.ObjectReference claimRef = 4;
@@ -52250,14 +52093,10 @@ uint8_t* PersistentVolumeSpec::_InternalSerialize(
         6, this->_internal_storageclassname(), target);
   }
 
-  // repeated string mountOptions = 7;
+  // repeated bytes mountOptions = 7;
   for (int i = 0, n = this->_internal_mountoptions_size(); i < n; i++) {
     const auto& s = this->_internal_mountoptions(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PersistentVolumeSpec.mountOptions");
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
   // optional bytes volumeMode = 8;
@@ -52304,19 +52143,19 @@ size_t PersistentVolumeSpec::ByteSizeLong() const {
     total_size += PersistentVolumeSpec_CapacityEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // repeated string accessModes = 3;
+  // repeated bytes accessModes = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.accessmodes_.size());
   for (int i = 0, n = _impl_.accessmodes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.accessmodes_.Get(i));
   }
 
-  // repeated string mountOptions = 7;
+  // repeated bytes mountOptions = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mountoptions_.size());
   for (int i = 0, n = _impl_.mountoptions_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.mountoptions_.Get(i));
   }
 
@@ -53797,7 +53636,7 @@ const char* PodAffinityTerm::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // repeated string namespaces = 2;
+      // repeated bytes namespaces = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -53806,9 +53645,6 @@ const char* PodAffinityTerm::_InternalParse(const char* ptr, ::_pbi::ParseContex
             auto str = _internal_add_namespaces();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodAffinityTerm.namespaces");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -53831,7 +53667,7 @@ const char* PodAffinityTerm::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // repeated string matchLabelKeys = 5;
+      // repeated bytes matchLabelKeys = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -53840,15 +53676,12 @@ const char* PodAffinityTerm::_InternalParse(const char* ptr, ::_pbi::ParseContex
             auto str = _internal_add_matchlabelkeys();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodAffinityTerm.matchLabelKeys");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string mismatchLabelKeys = 6;
+      // repeated bytes mismatchLabelKeys = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -53857,9 +53690,6 @@ const char* PodAffinityTerm::_InternalParse(const char* ptr, ::_pbi::ParseContex
             auto str = _internal_add_mismatchlabelkeys();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodAffinityTerm.mismatchLabelKeys");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else
@@ -53903,14 +53733,10 @@ uint8_t* PodAffinityTerm::_InternalSerialize(
         _Internal::labelselector(this).GetCachedSize(), target, stream);
   }
 
-  // repeated string namespaces = 2;
+  // repeated bytes namespaces = 2;
   for (int i = 0, n = this->_internal_namespaces_size(); i < n; i++) {
     const auto& s = this->_internal_namespaces(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodAffinityTerm.namespaces");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   // optional bytes topologyKey = 3;
@@ -53926,24 +53752,16 @@ uint8_t* PodAffinityTerm::_InternalSerialize(
         _Internal::namespaceselector(this).GetCachedSize(), target, stream);
   }
 
-  // repeated string matchLabelKeys = 5;
+  // repeated bytes matchLabelKeys = 5;
   for (int i = 0, n = this->_internal_matchlabelkeys_size(); i < n; i++) {
     const auto& s = this->_internal_matchlabelkeys(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodAffinityTerm.matchLabelKeys");
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
-  // repeated string mismatchLabelKeys = 6;
+  // repeated bytes mismatchLabelKeys = 6;
   for (int i = 0, n = this->_internal_mismatchlabelkeys_size(); i < n; i++) {
     const auto& s = this->_internal_mismatchlabelkeys(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodAffinityTerm.mismatchLabelKeys");
-    target = stream->WriteString(6, s, target);
+    target = stream->WriteBytes(6, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -53962,27 +53780,27 @@ size_t PodAffinityTerm::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string namespaces = 2;
+  // repeated bytes namespaces = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.namespaces_.size());
   for (int i = 0, n = _impl_.namespaces_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.namespaces_.Get(i));
   }
 
-  // repeated string matchLabelKeys = 5;
+  // repeated bytes matchLabelKeys = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.matchlabelkeys_.size());
   for (int i = 0, n = _impl_.matchlabelkeys_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.matchlabelkeys_.Get(i));
   }
 
-  // repeated string mismatchLabelKeys = 6;
+  // repeated bytes mismatchLabelKeys = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mismatchlabelkeys_.size());
   for (int i = 0, n = _impl_.mismatchlabelkeys_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.mismatchlabelkeys_.Get(i));
   }
 
@@ -55195,7 +55013,7 @@ const char* PodDNSConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string nameservers = 1;
+      // repeated bytes nameservers = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -55204,15 +55022,12 @@ const char* PodDNSConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
             auto str = _internal_add_nameservers();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodDNSConfig.nameservers");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string searches = 2;
+      // repeated bytes searches = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -55221,9 +55036,6 @@ const char* PodDNSConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
             auto str = _internal_add_searches();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodDNSConfig.searches");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -55271,24 +55083,16 @@ uint8_t* PodDNSConfig::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string nameservers = 1;
+  // repeated bytes nameservers = 1;
   for (int i = 0, n = this->_internal_nameservers_size(); i < n; i++) {
     const auto& s = this->_internal_nameservers(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodDNSConfig.nameservers");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
-  // repeated string searches = 2;
+  // repeated bytes searches = 2;
   for (int i = 0, n = this->_internal_searches_size(); i < n; i++) {
     const auto& s = this->_internal_searches(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodDNSConfig.searches");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   // repeated .k8s.io.api.core.v1.PodDNSConfigOption options = 3;
@@ -55315,19 +55119,19 @@ size_t PodDNSConfig::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string nameservers = 1;
+  // repeated bytes nameservers = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.nameservers_.size());
   for (int i = 0, n = _impl_.nameservers_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.nameservers_.Get(i));
   }
 
-  // repeated string searches = 2;
+  // repeated bytes searches = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.searches_.size());
   for (int i = 0, n = _impl_.searches_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.searches_.Get(i));
   }
 
@@ -55822,7 +55626,7 @@ const char* PodExecOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // repeated string command = 6;
+      // repeated bytes command = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -55831,9 +55635,6 @@ const char* PodExecOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_command();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.PodExecOptions.command");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else
@@ -55900,14 +55701,10 @@ uint8_t* PodExecOptions::_InternalSerialize(
         5, this->_internal_container(), target);
   }
 
-  // repeated string command = 6;
+  // repeated bytes command = 6;
   for (int i = 0, n = this->_internal_command_size(); i < n; i++) {
     const auto& s = this->_internal_command(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.PodExecOptions.command");
-    target = stream->WriteString(6, s, target);
+    target = stream->WriteBytes(6, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -55926,11 +55723,11 @@ size_t PodExecOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string command = 6;
+  // repeated bytes command = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.command_.size());
   for (int i = 0, n = _impl_.command_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.command_.Get(i));
   }
 
@@ -66042,7 +65839,7 @@ const char* RBDPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string monitors = 1;
+      // repeated bytes monitors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -66051,9 +65848,6 @@ const char* RBDPersistentVolumeSource::_InternalParse(const char* ptr, ::_pbi::P
             auto str = _internal_add_monitors();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.RBDPersistentVolumeSource.monitors");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -66151,14 +65945,10 @@ uint8_t* RBDPersistentVolumeSource::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   for (int i = 0, n = this->_internal_monitors_size(); i < n; i++) {
     const auto& s = this->_internal_monitors(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.RBDPersistentVolumeSource.monitors");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -66221,11 +66011,11 @@ size_t RBDPersistentVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.monitors_.size());
   for (int i = 0, n = _impl_.monitors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.monitors_.Get(i));
   }
 
@@ -66584,7 +66374,7 @@ const char* RBDVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string monitors = 1;
+      // repeated bytes monitors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -66593,9 +66383,6 @@ const char* RBDVolumeSource::_InternalParse(const char* ptr, ::_pbi::ParseContex
             auto str = _internal_add_monitors();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.RBDVolumeSource.monitors");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -66693,14 +66480,10 @@ uint8_t* RBDVolumeSource::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   for (int i = 0, n = this->_internal_monitors_size(); i < n; i++) {
     const auto& s = this->_internal_monitors(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.RBDVolumeSource.monitors");
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -66763,11 +66546,11 @@ size_t RBDVolumeSource::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string monitors = 1;
+  // repeated bytes monitors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.monitors_.size());
   for (int i = 0, n = _impl_.monitors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.monitors_.Get(i));
   }
 
@@ -70152,7 +69935,7 @@ const char* ResourceQuotaSpec::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string scopes = 2;
+      // repeated bytes scopes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -70161,9 +69944,6 @@ const char* ResourceQuotaSpec::_InternalParse(const char* ptr, ::_pbi::ParseCont
             auto str = _internal_add_scopes();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ResourceQuotaSpec.scopes");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -70233,14 +70013,10 @@ uint8_t* ResourceQuotaSpec::_InternalSerialize(
     }
   }
 
-  // repeated string scopes = 2;
+  // repeated bytes scopes = 2;
   for (int i = 0, n = this->_internal_scopes_size(); i < n; i++) {
     const auto& s = this->_internal_scopes(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ResourceQuotaSpec.scopes");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -70276,11 +70052,11 @@ size_t ResourceQuotaSpec::ByteSizeLong() const {
     total_size += ResourceQuotaSpec_HardEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // repeated string scopes = 2;
+  // repeated bytes scopes = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.scopes_.size());
   for (int i = 0, n = _impl_.scopes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.scopes_.Get(i));
   }
 
@@ -72955,7 +72731,7 @@ const char* ScopedResourceSelectorRequirement::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // repeated string values = 3;
+      // repeated bytes values = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -72964,9 +72740,6 @@ const char* ScopedResourceSelectorRequirement::_InternalParse(const char* ptr, :
             auto str = _internal_add_values();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ScopedResourceSelectorRequirement.values");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else
@@ -73015,14 +72788,10 @@ uint8_t* ScopedResourceSelectorRequirement::_InternalSerialize(
         2, this->_internal_operator_(), target);
   }
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   for (int i = 0, n = this->_internal_values_size(); i < n; i++) {
     const auto& s = this->_internal_values(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ScopedResourceSelectorRequirement.values");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -73041,11 +72810,11 @@ size_t ScopedResourceSelectorRequirement::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string values = 3;
+  // repeated bytes values = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.values_.size());
   for (int i = 0, n = _impl_.values_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.values_.Get(i));
   }
 
@@ -78786,7 +78555,7 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // repeated string externalIPs = 5;
+      // repeated bytes externalIPs = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -78795,9 +78564,6 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
             auto str = _internal_add_externalips();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ServiceSpec.externalIPs");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else
@@ -78821,7 +78587,7 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // repeated string loadBalancerSourceRanges = 9;
+      // repeated bytes loadBalancerSourceRanges = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr -= 1;
@@ -78830,9 +78596,6 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
             auto str = _internal_add_loadbalancersourceranges();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ServiceSpec.loadBalancerSourceRanges");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
         } else
@@ -78891,7 +78654,7 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // repeated string clusterIPs = 18;
+      // repeated bytes clusterIPs = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           ptr -= 2;
@@ -78900,15 +78663,12 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
             auto str = _internal_add_clusterips();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ServiceSpec.clusterIPs");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<146>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated string ipFamilies = 19;
+      // repeated bytes ipFamilies = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
           ptr -= 2;
@@ -78917,9 +78677,6 @@ const char* ServiceSpec::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
             auto str = _internal_add_ipfamilies();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.ServiceSpec.ipFamilies");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<154>(ptr));
         } else
@@ -79033,14 +78790,10 @@ uint8_t* ServiceSpec::_InternalSerialize(
         4, this->_internal_type(), target);
   }
 
-  // repeated string externalIPs = 5;
+  // repeated bytes externalIPs = 5;
   for (int i = 0, n = this->_internal_externalips_size(); i < n; i++) {
     const auto& s = this->_internal_externalips(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ServiceSpec.externalIPs");
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
   // optional bytes sessionAffinity = 7;
@@ -79055,14 +78808,10 @@ uint8_t* ServiceSpec::_InternalSerialize(
         8, this->_internal_loadbalancerip(), target);
   }
 
-  // repeated string loadBalancerSourceRanges = 9;
+  // repeated bytes loadBalancerSourceRanges = 9;
   for (int i = 0, n = this->_internal_loadbalancersourceranges_size(); i < n; i++) {
     const auto& s = this->_internal_loadbalancersourceranges(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ServiceSpec.loadBalancerSourceRanges");
-    target = stream->WriteString(9, s, target);
+    target = stream->WriteBytes(9, s, target);
   }
 
   // optional bytes externalName = 10;
@@ -79102,24 +78851,16 @@ uint8_t* ServiceSpec::_InternalSerialize(
         17, this->_internal_ipfamilypolicy(), target);
   }
 
-  // repeated string clusterIPs = 18;
+  // repeated bytes clusterIPs = 18;
   for (int i = 0, n = this->_internal_clusterips_size(); i < n; i++) {
     const auto& s = this->_internal_clusterips(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ServiceSpec.clusterIPs");
-    target = stream->WriteString(18, s, target);
+    target = stream->WriteBytes(18, s, target);
   }
 
-  // repeated string ipFamilies = 19;
+  // repeated bytes ipFamilies = 19;
   for (int i = 0, n = this->_internal_ipfamilies_size(); i < n; i++) {
     const auto& s = this->_internal_ipfamilies(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.ServiceSpec.ipFamilies");
-    target = stream->WriteString(19, s, target);
+    target = stream->WriteBytes(19, s, target);
   }
 
   // optional bool allocateLoadBalancerNodePorts = 20;
@@ -79172,35 +78913,35 @@ size_t ServiceSpec::ByteSizeLong() const {
     total_size += ServiceSpec_SelectorEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // repeated string externalIPs = 5;
+  // repeated bytes externalIPs = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.externalips_.size());
   for (int i = 0, n = _impl_.externalips_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.externalips_.Get(i));
   }
 
-  // repeated string loadBalancerSourceRanges = 9;
+  // repeated bytes loadBalancerSourceRanges = 9;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.loadbalancersourceranges_.size());
   for (int i = 0, n = _impl_.loadbalancersourceranges_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.loadbalancersourceranges_.Get(i));
   }
 
-  // repeated string clusterIPs = 18;
+  // repeated bytes clusterIPs = 18;
   total_size += 2 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.clusterips_.size());
   for (int i = 0, n = _impl_.clusterips_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.clusterips_.Get(i));
   }
 
-  // repeated string ipFamilies = 19;
+  // repeated bytes ipFamilies = 19;
   total_size += 2 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.ipfamilies_.size());
   for (int i = 0, n = _impl_.ipfamilies_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.ipfamilies_.Get(i));
   }
 
@@ -82295,7 +82036,7 @@ const char* TopologySelectorLabelRequirement::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // repeated string values = 2;
+      // repeated bytes values = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -82304,9 +82045,6 @@ const char* TopologySelectorLabelRequirement::_InternalParse(const char* ptr, ::
             auto str = _internal_add_values();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.TopologySelectorLabelRequirement.values");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
@@ -82349,14 +82087,10 @@ uint8_t* TopologySelectorLabelRequirement::_InternalSerialize(
         1, this->_internal_key(), target);
   }
 
-  // repeated string values = 2;
+  // repeated bytes values = 2;
   for (int i = 0, n = this->_internal_values_size(); i < n; i++) {
     const auto& s = this->_internal_values(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.TopologySelectorLabelRequirement.values");
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -82375,11 +82109,11 @@ size_t TopologySelectorLabelRequirement::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string values = 2;
+  // repeated bytes values = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.values_.size());
   for (int i = 0, n = _impl_.values_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.values_.Get(i));
   }
 
@@ -82892,7 +82626,7 @@ const char* TopologySpreadConstraint::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // repeated string matchLabelKeys = 8;
+      // repeated bytes matchLabelKeys = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr -= 1;
@@ -82901,9 +82635,6 @@ const char* TopologySpreadConstraint::_InternalParse(const char* ptr, ::_pbi::Pa
             auto str = _internal_add_matchlabelkeys();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            #ifndef NDEBUG
-            ::_pbi::VerifyUTF8(str, "k8s.io.api.core.v1.TopologySpreadConstraint.matchLabelKeys");
-            #endif  // !NDEBUG
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
         } else
@@ -82983,14 +82714,10 @@ uint8_t* TopologySpreadConstraint::_InternalSerialize(
         7, this->_internal_nodetaintspolicy(), target);
   }
 
-  // repeated string matchLabelKeys = 8;
+  // repeated bytes matchLabelKeys = 8;
   for (int i = 0, n = this->_internal_matchlabelkeys_size(); i < n; i++) {
     const auto& s = this->_internal_matchlabelkeys(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "k8s.io.api.core.v1.TopologySpreadConstraint.matchLabelKeys");
-    target = stream->WriteString(8, s, target);
+    target = stream->WriteBytes(8, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -83009,11 +82736,11 @@ size_t TopologySpreadConstraint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string matchLabelKeys = 8;
+  // repeated bytes matchLabelKeys = 8;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.matchlabelkeys_.size());
   for (int i = 0, n = _impl_.matchlabelkeys_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.matchlabelkeys_.Get(i));
   }
 

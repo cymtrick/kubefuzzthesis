@@ -210,7 +210,7 @@ message UpdateTaskRequest {
 }
 
 message MetricsRequest {
-	repeated string filters = 1;
+	repeated bytes filters = 1;
 }
 
 message MetricsResponse {

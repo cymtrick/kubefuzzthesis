@@ -181,12 +181,12 @@ message VersionResponse {
 // DNSConfig specifies the DNS servers and search domains of a sandbox.
 message DNSConfig {
     // List of DNS servers of the cluster.
-    repeated string servers = 1;
+    repeated bytes servers = 1;
     // List of DNS search domains of the cluster.
-    repeated string searches = 2;
+    repeated bytes searches = 2;
     // List of DNS options. See https://linux.die.net/man/5/resolv.conf
     // for all available options.
-    repeated string options = 3;
+    repeated bytes options = 3;
 }
 
 enum Protocol {
@@ -858,11 +858,11 @@ message SELinuxOption {
 // permitted, inheritable, effective, bounding and ambient sets.
 message Capability {
     // List of capabilities to add.
-    repeated string add_capabilities = 1;
+    repeated bytes add_capabilities = 1;
     // List of capabilities to drop.
-    repeated string drop_capabilities = 2;
+    repeated bytes drop_capabilities = 2;
     // List of ambient capabilities to add.
-    repeated string add_ambient_capabilities = 3;
+    repeated bytes add_ambient_capabilities = 3;
 }
 
 // LinuxContainerSecurityContext holds linux security configuration that will be applied to a container.
@@ -917,10 +917,10 @@ message LinuxContainerSecurityContext {
     bool no_new_privs = 11;
     // masked_paths is a slice of paths that should be masked by the container
     // runtime, this can be passed directly to the OCI spec.
-    repeated string masked_paths = 13;
+    repeated bytes masked_paths = 13;
     // readonly_paths is a slice of paths that should be set as readonly by the
     // container runtime, this can be passed directly to the OCI spec.
-    repeated string readonly_paths = 14;
+    repeated bytes readonly_paths = 14;
     // Seccomp profile for the container.
     SecurityProfile seccomp = 15;
     // AppArmor profile for the container.
@@ -1066,9 +1066,9 @@ message ContainerConfig {
     // Image to use.
     ImageSpec image = 2;
     // Command to execute (i.e., entrypoint for docker)
-    repeated string command = 3;
+    repeated bytes command = 3;
     // Args for the Command (i.e., command for docker)
-    repeated string args = 4;
+    repeated bytes args = 4;
     // Current working directory of the command.
     string working_dir = 5;
     // List of environment variable to set in the container.
@@ -1309,7 +1309,7 @@ message ExecSyncRequest {
     // ID of the container.
     string container_id = 1;
     // Command to execute.
-    repeated string cmd = 2;
+    repeated bytes cmd = 2;
     // Timeout in seconds to stop the command. Default: 0 (run forever).
     int64 timeout = 3;
 }
@@ -1335,7 +1335,7 @@ message ExecRequest {
     // ID of the container in which to execute the command.
     string container_id = 1;
     // Command to execute.
-    repeated string cmd = 2;
+    repeated bytes cmd = 2;
     // Whether to exec the command in a TTY.
     bool tty = 3;
     // Whether to stream stdin.
@@ -1409,9 +1409,9 @@ message Image {
     // ID of the image.
     string id = 1;
     // Other names by which this image is known.
-    repeated string repo_tags = 2;
+    repeated bytes repo_tags = 2;
     // Digests by which this image is known.
-    repeated string repo_digests = 3;
+    repeated bytes repo_digests = 3;
     // Size of the image in bytes. Must be > 0.
     uint64 size = 4;
     // UID that will run the command(s). This is used as a default if no user is
@@ -1827,7 +1827,7 @@ message MetricDescriptor {
     // labels that have previously been declared in label_keys.
     // It is the responsibility of the runtime to correctly keep sorted the keys and values.
     // If the two slices have different length, the behavior is undefined.
-    repeated string label_keys = 3;
+    repeated bytes label_keys = 3;
 }
 
 message ListPodSandboxMetricsRequest {}
@@ -1858,7 +1858,7 @@ message Metric {
     // The corresponding LabelValues to the LabelKeys defined in the MetricDescriptor.
     // It is the responsibility of the runtime to correctly keep sorted the keys and values.
     // If the two slices have different length, the behavior is undefined.
-    repeated string label_values = 4;
+    repeated bytes label_values = 4;
     UInt64Value value = 5;
 }
 

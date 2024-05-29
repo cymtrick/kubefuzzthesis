@@ -63,7 +63,7 @@ message Event {
   // Note: All but the last IP can be arbitrarily set by the client.
   // +optional
   // +listType=atomic
-  repeated string sourceIPs = 8;
+  repeated bytes sourceIPs = 8;
 
   // UserAgent records the user agent string reported by the client.
   // Note that the UserAgent is provided by the client, and must not be trusted.
@@ -142,14 +142,14 @@ message GroupResources {
   // An empty list implies all resources and subresources in this API groups apply.
   // +optional
   // +listType=atomic
-  repeated string resources = 2;
+  repeated bytes resources = 2;
 
   // ResourceNames is a list of resource instance names that the policy matches.
   // Using this field requires Resources to be specified.
   // An empty list implies that every instance of the resource is matched.
   // +optional
   // +listType=atomic
-  repeated string resourceNames = 3;
+  repeated bytes resourceNames = 3;
 }
 
 // ObjectReference contains enough information to let you inspect or modify the referred object.
@@ -200,7 +200,7 @@ message Policy {
   // be specified per rule in which case the union of both are omitted.
   // +optional
   // +listType=atomic
-  repeated string omitStages = 3;
+  repeated bytes omitStages = 3;
 
   // OmitManagedFields indicates whether to omit the managed fields of the request
   // and response bodies from being written to the API audit log.
@@ -230,20 +230,20 @@ message PolicyRule {
   // An empty list implies every user.
   // +optional
   // +listType=atomic
-  repeated string users = 2;
+  repeated bytes users = 2;
 
   // The user groups this rule applies to. A user is considered matching
   // if it is a member of any of the UserGroups.
   // An empty list implies every user group.
   // +optional
   // +listType=atomic
-  repeated string userGroups = 3;
+  repeated bytes userGroups = 3;
 
   // The verbs that match this rule.
   // An empty list implies every verb.
   // +optional
   // +listType=atomic
-  repeated string verbs = 4;
+  repeated bytes verbs = 4;
 
   // Resources that this rule matches. An empty list implies all kinds in all API groups.
   // +optional
@@ -255,7 +255,7 @@ message PolicyRule {
   // An empty list implies every namespace.
   // +optional
   // +listType=atomic
-  repeated string namespaces = 6;
+  repeated bytes namespaces = 6;
 
   // NonResourceURLs is a set of URL paths that should be audited.
   // `*`s are allowed, but only as the full, final step in the path.
@@ -264,14 +264,14 @@ message PolicyRule {
   // - `/healthz*` - Log all health checks
   // +optional
   // +listType=atomic
-  repeated string nonResourceURLs = 7;
+  repeated bytes nonResourceURLs = 7;
 
   // OmitStages is a list of stages for which no events are created. Note that this can also
   // be specified policy wide in which case the union of both are omitted.
   // An empty list means no restrictions will apply.
   // +optional
   // +listType=atomic
-  repeated string omitStages = 8;
+  repeated bytes omitStages = 8;
 
   // OmitManagedFields indicates whether to omit the managed fields of the request
   // and response bodies from being written to the API audit log.

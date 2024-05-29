@@ -41,5 +41,5 @@ message Mount {
 	string target = 3;
 
 	// Options specifies zero or more fstab style mount options.
-	repeated string options = 4;
+	repeated bytes options = 4;
 }

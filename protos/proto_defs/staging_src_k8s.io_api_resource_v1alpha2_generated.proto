@@ -109,7 +109,7 @@ message PodSchedulingContextSpec {
   //
   // +listType=atomic
   // +optional
-  repeated string potentialNodes = 2;
+  repeated bytes potentialNodes = 2;
 }
 
 // PodSchedulingContextStatus describes where resources for the Pod can be allocated.
@@ -210,7 +210,7 @@ message ResourceClaimSchedulingStatus {
   //
   // +listType=atomic
   // +optional
-  repeated string unsuitableNodes = 2;
+  repeated bytes unsuitableNodes = 2;
 }
 
 // ResourceClaimSpec defines how a resource is to be allocated.

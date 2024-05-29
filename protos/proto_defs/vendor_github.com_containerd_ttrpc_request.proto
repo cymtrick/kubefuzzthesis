@@ -20,7 +20,7 @@ message Response {
 }
 
 message StringList {
-	repeated string list = 1;
+	repeated bytes list = 1;
 }
 
 message KeyValue {

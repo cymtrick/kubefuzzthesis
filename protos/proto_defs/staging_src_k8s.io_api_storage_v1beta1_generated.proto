@@ -128,7 +128,7 @@ message CSIDriverSpec {
   //
   // +optional
   // +listType=atomic
-  repeated string volumeLifecycleModes = 3;
+  repeated bytes volumeLifecycleModes = 3;
 
   // storageCapacity indicates that the CSI volume driver wants pod scheduling to consider the storage
   // capacity that the driver deployment will report by creating
@@ -265,7 +265,7 @@ message CSINodeDriver {
   // This can be empty if driver does not support topology.
   // +optional
   // +listType=atomic
-  repeated string topologyKeys = 3;
+  repeated bytes topologyKeys = 3;
 
   // allocatable represents the volume resources of a node that are available for scheduling.
   // +optional
@@ -415,7 +415,7 @@ message StorageClass {
   // mount of the PVs will simply fail if one is invalid.
   // +optional
   // +listType=atomic
-  repeated string mountOptions = 5;
+  repeated bytes mountOptions = 5;
 
   // allowVolumeExpansion shows whether the storage class allow volume expand
   // +optional

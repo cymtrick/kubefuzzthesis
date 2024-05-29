@@ -45,5 +45,5 @@ message ContainerResources {
 // ContainerDevices contains information about the devices assigned to a container
 message ContainerDevices {
     string resource_name = 1;
-    repeated string device_ids = 2;
+    repeated bytes device_ids = 2;
 }

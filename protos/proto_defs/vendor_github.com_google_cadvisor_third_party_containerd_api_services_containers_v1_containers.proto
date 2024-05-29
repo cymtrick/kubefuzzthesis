@@ -135,7 +135,7 @@ message ListContainersRequest {
 	//   filters[0] or filters[1] or ... or filters[n-1] or filters[n]
 	//
 	// If filters is zero-length or nil, all items will be returned.
-	repeated string filters = 1;
+	repeated bytes filters = 1;
 }
 
 message ListContainersResponse {
