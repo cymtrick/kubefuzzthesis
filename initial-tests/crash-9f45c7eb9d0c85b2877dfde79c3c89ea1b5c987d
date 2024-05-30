@@ -1,0 +1,20 @@
+pod {
+  metadata {
+    resourceVersion: "\221"
+  }
+  spec {
+    ephemeralContainers {
+      targetContainerName: "1"
+    }
+  }
+  status {
+    phase: "\000\000\000\000\000\000\000$"
+    conditions {
+      lastTransitionTime {
+      }
+    }
+    hostIP: "\263\263\263\263\263\263"
+  }
+}
+node {
+}

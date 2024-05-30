@@ -1,0 +1,33 @@
+pod {
+  metadata {
+    labels {
+      key: ""
+      value: "\001\000\000\000"
+    }
+  }
+  spec {
+    containers {
+      env {
+        name: "\213\213\213\213\213"
+      }
+      terminationMessagePolicy: "\316"
+    }
+    restartPolicy: "^"
+    securityContext {
+    }
+    readinessGates {
+    }
+    enableServiceLinks: false
+  }
+  status {
+    qosClass: "^"
+    resourceClaimStatuses {
+      resourceClaimName: "^"
+    }
+  }
+}
+node {
+  metadata {
+    name: ";"
+  }
+}

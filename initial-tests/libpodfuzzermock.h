@@ -88,6 +88,19 @@ extern void TestHandleMemExceeded(void* dataPtrPod, size_t dataSizePod, void* da
 extern void TestHandlePluginResources(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 extern void TestPurgingObsoleteStatusMapEntries(void* dataPtrPod, size_t dataSizePod);
 extern void TestValidateContainerLogStatus(void* dataPtrPod, size_t dataSizePod);
+extern void TestCreateMirrorPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeleteOutdatedMirrorPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeleteOrphanedMirrorPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestNetworkErrorsWithoutHostNetwork(void* dataPtrPod, size_t dataSizePod);
+extern void TestFilterOutInactivePods(void* dataPtrPod, size_t dataSizePod);
+extern void TestSyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeletePodDirsForDeletedPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestDoesNotDeletePodDirsForTerminatedPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestDoesNotDeletePodDirsIfContainerIsRunning(void* dataPtrPod, size_t dataSizePod);
+extern void TestGetPodsToSync(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithSortedContainers(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithReasonCache(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithDifferentRestartPolicies(void* dataPtrPod, size_t dataSizePod);
 
 #ifdef __cplusplus
 }

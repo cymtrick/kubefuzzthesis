@@ -19,18 +19,9 @@ public:
     }
 };
 
-void EnsureConsistentContainerNames(k8s::io::api::core::v1::Pod pod)
+void EnsureConsistentContainerNames(k8s::io::api::core::v1::PodStatus *status)
 {
-    auto* spec = pod.mutable_spec();
-    auto* status = pod.mutable_status();
-    if (spec->containers().empty()) {
-        auto* new_container = spec->mutable_containers()->Add();
-        new_container->set_name("DefaultContainer");
-    }
-    if (status->containerstatuses().empty()) {
-        auto* new_status = status->mutable_containerstatuses()->Add();
-        new_status->set_name(spec->containers(0).name());
-    }
+  
     MyProtobufMutator mutator;
     mutator.Seed(13435);
 
@@ -124,39 +115,28 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
 {
     try
     {
-        // if (test_proto_input.has_pod())
-        // {
-        //     k8s::io::api::core::v1::Pod test_proto = test_proto_input.pod();
-            
-        //     if (test_proto.has_metadata() &&
-        //         test_proto.has_spec() &&
-        //         test_proto.has_status())
-        //     {
-        //         size_t size = test_proto.ByteSizeLong();
-        //         std::vector<uint8_t> data(size);
-        //         test_proto.SerializeToArray(data.data(), size);
-        //         TestValidateContainerLogStatus(data.data(), size);
-        //     }
-        // }
-        
         if (test_proto_input.has_pod())
         {
-            
             k8s::io::api::core::v1::Pod test_proto = test_proto_input.pod();
             
             if (test_proto.has_metadata() &&
                 test_proto.has_spec() &&
                 test_proto.has_status())
             {
-                EnsureConsistentContainerNames(test_proto);
-
                 size_t size = test_proto.ByteSizeLong();
                 std::vector<uint8_t> data(size);
-                
                 test_proto.SerializeToArray(data.data(), size);
-                TestValidateContainerLogStatus(data.data(), size);
+                TestGenerateAPIPodStatusWithDifferentRestartPolicies(data.data(), size);
             }
         }
+        
+
+                // size_t size = test_proto_input.ByteSizeLong();
+                // std::vector<uint8_t> data(size);
+                
+                // test_proto_input.SerializeToArray(data.data(), size);
+                // TestValidateContainerLogStatus(data.data(), size);
+            
         // if (test_proto_input.has_pod() && test_proto_input.has_node())
         // {
         //     k8s::io::api::core::v1::Pod test_proto_pod = test_proto_input.pod();
@@ -173,10 +153,7 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
         //         TestPurgingObsoleteStatusMapEntries(podData.data(),sizePod,nodeData.data(),sizeNode);
         //     }
         // }
-        else
-        {
-            std::cerr << "Unsupported protobuf type: " << test_proto_input.GetTypeName() << std::endl;
-        }
+
     }
     catch (const std::exception &e)
     {

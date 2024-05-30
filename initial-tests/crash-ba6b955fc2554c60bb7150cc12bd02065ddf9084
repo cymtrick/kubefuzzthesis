@@ -1,0 +1,30 @@
+pod {
+  metadata {
+  }
+  spec {
+    containers {
+    }
+    restartPolicy: "\000"
+    serviceAccount: "\000"
+    initContainers {
+    }
+  }
+  status {
+    ephemeralContainerStatuses {
+      allocatedResources {
+        key: ""
+        value {
+        }
+      }
+      resources {
+        claims {
+          name: "2"
+        }
+      }
+    }
+  }
+}
+node {
+  metadata {
+  }
+}

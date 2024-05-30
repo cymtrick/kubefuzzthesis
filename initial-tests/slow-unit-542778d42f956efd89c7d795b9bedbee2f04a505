@@ -1,0 +1,42 @@
+pod {
+  metadata {
+    resourceVersion: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+  }
+  spec {
+    containers {
+      readinessProbe {
+      }
+      lifecycle {
+        preStop {
+        }
+      }
+      securityContext {
+        procMount: "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+      }
+      stdinOnce: false
+      terminationMessagePolicy: "\357"
+      volumeDevices {
+        name: "\001\000\000\000"
+      }
+    }
+    activeDeadlineSeconds: 0
+    nodeSelector {
+      key: "\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003\003"
+      value: ""
+    }
+    imagePullSecrets {
+    }
+    subdomain: "]"
+    automountServiceAccountToken: true
+    priorityClassName: "2"
+    priority: 0
+    ephemeralContainers {
+    }
+  }
+  status {
+  }
+}
+node {
+  spec {
+  }
+}
