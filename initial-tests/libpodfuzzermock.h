@@ -101,6 +101,8 @@ extern void TestGetPodsToSync(void* dataPtrPod, size_t dataSizePod);
 extern void TestGenerateAPIPodStatusWithSortedContainers(void* dataPtrPod, size_t dataSizePod);
 extern void TestGenerateAPIPodStatusWithReasonCache(void* dataPtrPod, size_t dataSizePod);
 extern void TestGenerateAPIPodStatusWithDifferentRestartPolicies(void* dataPtrPod, size_t dataSizePod);
+extern void TestHandlePodAdditionsInvokesPodAdmitHandlers(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestPodResourceAllocationReset(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 
 #ifdef __cplusplus
 }

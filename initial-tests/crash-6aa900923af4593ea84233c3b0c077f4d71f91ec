@@ -1,0 +1,18 @@
+pod {
+  metadata {
+    uid: ":\000\000\200\000\000\000\000"
+  }
+}
+node {
+  status {
+    capacity {
+      key: ""
+      value {
+        string: ""
+      }
+    }
+    phase: ":\000\000\200\000\000\000\000"
+    daemonEndpoints {
+    }
+  }
+}

@@ -6,7 +6,7 @@ INC_DIRS=-I$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protob
 GO_EXPORT_LIB=./libpodfuzzermock.a
 # Compiler settings
 CXX=clang++
-CXXFLAGS=-g -fsanitize=fuzzer,address $(INC_DIRS)
+CXXFLAGS=-g -fsanitize=fuzzer,address  $(INC_DIRS) 
 AR=ar
 
 # Libraries

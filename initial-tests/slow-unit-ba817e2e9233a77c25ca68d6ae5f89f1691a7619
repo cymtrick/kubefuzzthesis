@@ -1,0 +1,20 @@
+pod {
+  spec {
+    volumes {
+    }
+    serviceAccountName: "\000\000\000\000\000\000"
+    hostname: "\'"
+    initContainers {
+      volumeDevices {
+      }
+      resizePolicy {
+        restartPolicy: "\201\000\000\000"
+      }
+    }
+    tolerations {
+      operator: "sendInitialEvents"
+    }
+  }
+}
+node {
+}

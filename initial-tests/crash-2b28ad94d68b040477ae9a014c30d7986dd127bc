@@ -1,0 +1,12 @@
+pod {
+  metadata {
+    namespace: "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    uid: "\000\000\000\000\000\000\000\010"
+    managedFields {
+      fieldsV1 {
+      }
+    }
+  }
+}
+node {
+}
