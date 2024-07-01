@@ -1,0 +1,22 @@
+pod {
+  metadata {
+    uid: "\004\000\000\000\000\000\000\000"
+  }
+  spec {
+  }
+}
+node {
+  status {
+    capacity {
+      key: ""
+      value {
+        string: "error-cce035b74dce32580ed7e45bf6213774aadd0ef085dfc607db6271c728"
+      }
+    }
+    volumesInUse: "\223\223\223\223\223\223\223\223\223\223\223"
+    volumesAttached {
+    }
+    volumesAttached {
+    }
+  }
+}

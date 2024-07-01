@@ -74,13 +74,13 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-extern void DoesNotDeletePodDirsIfContainerIsRunning(void* dataPtr, size_t dataSize);
-extern void SyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtr, size_t dataSize);
-extern void SyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(void* dataPtr, size_t dataSize);
-extern void TestSyncPodsStartPod(void* dataPtr, size_t dataSize);
-extern void TestDispatchWorkOfCompletedPod(void* dataPtr, size_t dataSize);
-extern void TestDispatchWorkOfActivePod(void* dataPtr, size_t dataSize);
-extern void TestHandlePodRemovesWhenSourcesAreReady(void* dataPtr, size_t dataSize);
+extern void DoesNotDeletePodDirsIfContainerIsRunning(void* dataPtrPod, size_t dataSizePod);
+extern void SyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtrPod, size_t dataSizePod);
+extern void SyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(void* dataPtrPod, size_t dataSizePod);
+extern void TestSyncPodsStartPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDispatchWorkOfCompletedPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDispatchWorkOfActivePod(void* dataPtrPod, size_t dataSizePod);
+extern void TestHandlePodRemovesWhenSourcesAreReady(void* dataPtrPod, size_t dataSizePod);
 extern void TestHandlePortConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 extern void TestHandleHostNameConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 extern void TestHandleNodeSelectorBasedOnOS(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);

@@ -1,0 +1,4 @@
+Log file created at: 2024/07/01 16:37:49
+Running on machine: ubuntu
+Binary: Built with gc go1.21.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg

@@ -136,7 +136,7 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
                 std::vector<uint8_t> data_pod(size_pod);
                 test_proto_node.SerializeToArray(data_node.data(), size_node);
                 test_proto_pod.SerializeToArray(data_node.data(), size_pod);
-                // TestPodResourceAllocationReset(data_pod.data(),size_pod,data_node.data(),size_node);
+                // TestHandlePluginResources(data_pod.data(),size_pod,data_node.data(),size_node);
 
             }
         }
