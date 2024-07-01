@@ -121,22 +121,23 @@ DEFINE_PROTO_FUZZER(const k8s::io::api::core::v1::PodOrNode &test_proto_input)
                 size_t size = test_proto.ByteSizeLong();
                 std::vector<uint8_t> data(size);
                 test_proto.SerializeToArray(data.data(), size);
-                SyncPodsSetStatusToFailedForPodsThatRunTooLong(data.data(), size);
+                DoesNotDeletePodDirsIfContainerIsRunning(data.data(), size);
             
         }
-        else if (test_proto_input.has_node())
+        else if (test_proto_input.has_node() && test_proto_input.has_pod())
         {
-            k8s::io::api::core::v1::Node test_proto = test_proto_input.node();
-
-            if (test_proto.has_metadata())
+            k8s::io::api::core::v1::Node test_proto_node = test_proto_input.node();
+            k8s::io::api::core::v1::Pod test_proto_pod = test_proto_input.pod();
+            if (test_proto_node.has_metadata() && test_proto_pod.has_metadata())
             {
-                size_t size = test_proto.ByteSizeLong();
-                std::vector<uint8_t> data(size);
-                test_proto.SerializeToArray(data.data(), size);
-                std::cout << "Mutated name: " << test_proto.metadata().name()
-                          << "Mutated uid: " << test_proto.metadata().uid()
-                          << ", Mutated namespace: " << test_proto.metadata().namespace_() << std::endl;
-                std::cout << "Fuzzing Node with mutated metadata." << std::endl;
+                size_t size_node = test_proto_node.ByteSizeLong();
+                size_t size_pod = test_proto_pod.ByteSizeLong();
+                std::vector<uint8_t> data_node(size_node);
+                std::vector<uint8_t> data_pod(size_pod);
+                test_proto_node.SerializeToArray(data_node.data(), size_node);
+                test_proto_pod.SerializeToArray(data_node.data(), size_pod);
+                // TestPodResourceAllocationReset(data_pod.data(),size_pod,data_node.data(),size_node);
+
             }
         }
         else
