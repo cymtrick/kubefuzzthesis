@@ -74,10 +74,35 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-
-// FuzzPodMutator is the exported function for fuzzing pod mutator.
-//
-extern void FuzzPodMutator(char* data, size_t size);
+extern void DoesNotDeletePodDirsIfContainerIsRunning(void* dataPtrPod, size_t dataSizePod);
+extern void SyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtrPod, size_t dataSizePod);
+extern void SyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(void* dataPtrPod, size_t dataSizePod);
+extern void TestSyncPodsStartPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDispatchWorkOfCompletedPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDispatchWorkOfActivePod(void* dataPtrPod, size_t dataSizePod);
+extern void TestHandlePodRemovesWhenSourcesAreReady(void* dataPtrPod, size_t dataSizePod);
+extern void TestHandlePortConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleHostNameConflicts(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleNodeSelectorBasedOnOS(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandleMemExceeded(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestHandlePluginResources(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestPurgingObsoleteStatusMapEntries(void* dataPtrPod, size_t dataSizePod);
+extern void TestValidateContainerLogStatus(void* dataPtrPod, size_t dataSizePod);
+extern void TestCreateMirrorPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeleteOutdatedMirrorPod(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeleteOrphanedMirrorPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestNetworkErrorsWithoutHostNetwork(void* dataPtrPod, size_t dataSizePod);
+extern void TestFilterOutInactivePods(void* dataPtrPod, size_t dataSizePod);
+extern void TestSyncPodsSetStatusToFailedForPodsThatRunTooLong(void* dataPtrPod, size_t dataSizePod);
+extern void TestDeletePodDirsForDeletedPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestDoesNotDeletePodDirsForTerminatedPods(void* dataPtrPod, size_t dataSizePod);
+extern void TestDoesNotDeletePodDirsIfContainerIsRunning(void* dataPtrPod, size_t dataSizePod);
+extern void TestGetPodsToSync(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithSortedContainers(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithReasonCache(void* dataPtrPod, size_t dataSizePod);
+extern void TestGenerateAPIPodStatusWithDifferentRestartPolicies(void* dataPtrPod, size_t dataSizePod);
+extern void TestHandlePodAdditionsInvokesPodAdmitHandlers(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
+extern void TestPodResourceAllocationReset(void* dataPtrPod, size_t dataSizePod, void* dataPtrNode, size_t dataSizeNode);
 
 #ifdef __cplusplus
 }
